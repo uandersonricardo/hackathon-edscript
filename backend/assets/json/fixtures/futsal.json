@@ -1,0 +1,2251 @@
+[
+    {
+        "stId": 201,
+        "xid": "29",
+        "stN": "Futsal",
+        "iconId": 29,
+        "pid": 2,
+        "mdt": 1,
+        "cmt": 1,
+        "lvt": true,
+        "fCnt": 11,
+        "oCnt": 51,
+        "aCnt": 0,
+        "fCM": 11,
+        "oCM": 51,
+        "ord": 50220,
+        "cs": [
+            {
+                "cId": 10000625,
+                "xid": "183",
+                "cN": "Espanha",
+                "fCnt": 2,
+                "oCnt": 10,
+                "aCnt": 0,
+                "fCM": 2,
+                "oCM": 10,
+                "ord": 50002,
+                "iso": "ESP",
+                "sns": [
+                    {
+                        "sId": 860313,
+                        "lId": 951895,
+                        "seaN": "Taça de Espanha 2026",
+                        "cshOut": true,
+                        "seaSURL": "copa-de-espana-2026",
+                        "lName": "Taça de Espanha",
+                        "fCnt": 2,
+                        "oCnt": 10,
+                        "aCnt": 0,
+                        "fCM": 2,
+                        "oCM": 10,
+                        "fs": [
+                            {
+                                "fId": 72632334,
+                                "fsd": 1774108800000,
+                                "cshOut": false,
+                                "ante": false,
+                                "hcId": 1356968,
+                                "hcBId": "70240",
+                                "hcCIC": "ESP",
+                                "acId": 1356990,
+                                "acBId": "26218",
+                                "acCIC": "ESP",
+                                "hcN": "Jaen FS",
+                                "acN": "Inter FS",
+                                "xid": "70117312",
+                                "lxid": "1252",
+                                "lbO": false,
+                                "lSt": false,
+                                "vld": true,
+                                "frz": false,
+                                "fDS": 5,
+                                "mmp": 1,
+                                "mDat": {
+                                    "st": "Por iniciar",
+                                    "sud": 0
+                                },
+                                "mCod": 98397,
+                                "ce": false,
+                                "spl": false,
+                                "btgs": [
+                                    {
+                                        "btgId": 8676,
+                                        "btgN": "1x2",
+                                        "mrkp": "_id=8676",
+                                        "btgNO": "1x2",
+                                        "btgSpl": false,
+                                        "btgSiOn": false,
+                                        "btgCe": false,
+                                        "btgMId": 8,
+                                        "btgMN": "Partida",
+                                        "btgMOrd": 1,
+                                        "mbtgMId": 41,
+                                        "mbtgMN": "H/D/A",
+                                        "mbtgMOrd": 0,
+                                        "hsd": [
+                                            {
+                                                "id": 26,
+                                                "name": "1",
+                                                "ord": 1
+                                            },
+                                            {
+                                                "id": 27,
+                                                "name": "X",
+                                                "ord": 2
+                                            },
+                                            {
+                                                "id": 28,
+                                                "name": "2",
+                                                "ord": 3
+                                            }
+                                        ],
+                                        "dt": [
+                                            3
+                                        ],
+                                        "prm": false,
+                                        "cshOut": true,
+                                        "ord": 5,
+                                        "fos": [
+                                            {
+                                                "foId": 9616818399,
+                                                "btId": 1238002,
+                                                "btN": "1x2",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 4.11,
+                                                "hSh": "Jaen FS",
+                                                "pSh": "Home",
+                                                "oc": "Jaen FS",
+                                                "tmId": 51039,
+                                                "hSDId": 0,
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            },
+                                            {
+                                                "foId": 9616818400,
+                                                "btId": 1238003,
+                                                "btN": "1x2",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 4.87,
+                                                "hSh": "Empate",
+                                                "pSh": "Empate",
+                                                "oc": "Empate",
+                                                "tmId": 51039,
+                                                "hSDId": 0,
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            },
+                                            {
+                                                "foId": 9616818401,
+                                                "btId": 1238004,
+                                                "btN": "1x2",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 1.63,
+                                                "hSh": "Inter FS",
+                                                "pSh": "Away",
+                                                "oc": "Inter FS",
+                                                "tmId": 51039,
+                                                "hSDId": 0,
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            }
+                                        ],
+                                        "lineItem": false
+                                    },
+                                    {
+                                        "btgId": 8758,
+                                        "btgN": "Total",
+                                        "mrkp": "_id=8758",
+                                        "btgNO": "Total",
+                                        "btgSpl": false,
+                                        "btgSiOn": false,
+                                        "btgCe": false,
+                                        "btgMId": 1,
+                                        "btgMN": "Gols",
+                                        "btgMOrd": 2,
+                                        "mbtgMId": 17,
+                                        "mbtgMN": "Goals",
+                                        "mbtgMOrd": 0,
+                                        "hsd": [
+                                            {
+                                                "id": 11,
+                                                "name": "Mais",
+                                                "ord": 1
+                                            },
+                                            {
+                                                "id": 10,
+                                                "name": "Menos",
+                                                "ord": 2
+                                            }
+                                        ],
+                                        "cvp": 1,
+                                        "dt": [
+                                            2
+                                        ],
+                                        "prm": false,
+                                        "cshOut": true,
+                                        "ord": 30,
+                                        "fos": [
+                                            {
+                                                "foId": 9616818397,
+                                                "btId": 1243505,
+                                                "btN": "Total",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 2.1,
+                                                "hSh": "Mais de 5.5",
+                                                "pSh": "Over 5.5",
+                                                "oc": "Mais de",
+                                                "tmId": 95387,
+                                                "hSDId": 0,
+                                                "sv": "5.5",
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            },
+                                            {
+                                                "foId": 9616818398,
+                                                "btId": 1243506,
+                                                "btN": "Total",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 1.71,
+                                                "hSh": "Menos de 5.5",
+                                                "pSh": "Under 5.5",
+                                                "oc": "Menos de",
+                                                "tmId": 95387,
+                                                "hSDId": 0,
+                                                "sv": "5.5",
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            }
+                                        ],
+                                        "lineItem": false
+                                    }
+                                ]
+                            },
+                            {
+                                "fId": 72632337,
+                                "fsd": 1774121400000,
+                                "cshOut": false,
+                                "ante": false,
+                                "hcId": 1356972,
+                                "hcBId": "26215",
+                                "hcCIC": "ESP",
+                                "acId": 1356987,
+                                "acBId": "26216",
+                                "acCIC": "ESP",
+                                "hcN": "FC Barcelona Lassa",
+                                "acN": "Palma Futsal",
+                                "xid": "70117316",
+                                "lxid": "1252",
+                                "lbO": false,
+                                "lSt": false,
+                                "vld": true,
+                                "frz": false,
+                                "fDS": 5,
+                                "mmp": 1,
+                                "mDat": {
+                                    "st": "Por iniciar",
+                                    "sud": 0
+                                },
+                                "mCod": 101173,
+                                "ce": false,
+                                "spl": false,
+                                "btgs": [
+                                    {
+                                        "btgId": 8676,
+                                        "btgN": "1x2",
+                                        "mrkp": "_id=8676",
+                                        "btgNO": "1x2",
+                                        "btgSpl": false,
+                                        "btgSiOn": false,
+                                        "btgCe": false,
+                                        "btgMId": 8,
+                                        "btgMN": "Partida",
+                                        "btgMOrd": 1,
+                                        "mbtgMId": 41,
+                                        "mbtgMN": "H/D/A",
+                                        "mbtgMOrd": 0,
+                                        "hsd": [
+                                            {
+                                                "id": 26,
+                                                "name": "1",
+                                                "ord": 1
+                                            },
+                                            {
+                                                "id": 27,
+                                                "name": "X",
+                                                "ord": 2
+                                            },
+                                            {
+                                                "id": 28,
+                                                "name": "2",
+                                                "ord": 3
+                                            }
+                                        ],
+                                        "dt": [
+                                            3
+                                        ],
+                                        "prm": false,
+                                        "cshOut": true,
+                                        "ord": 5,
+                                        "fos": [
+                                            {
+                                                "foId": 9616846964,
+                                                "btId": 1238002,
+                                                "btN": "1x2",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 1.28,
+                                                "hSh": "FC Barcelona Lassa",
+                                                "pSh": "Home",
+                                                "oc": "FC Barcelona Lassa",
+                                                "tmId": 51039,
+                                                "hSDId": 0,
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            },
+                                            {
+                                                "foId": 9616846965,
+                                                "btId": 1238003,
+                                                "btN": "1x2",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 7.04,
+                                                "hSh": "Empate",
+                                                "pSh": "Empate",
+                                                "oc": "Empate",
+                                                "tmId": 51039,
+                                                "hSDId": 0,
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            },
+                                            {
+                                                "foId": 9616846966,
+                                                "btId": 1238004,
+                                                "btN": "1x2",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 7.24,
+                                                "hSh": "Palma Futsal",
+                                                "pSh": "Away",
+                                                "oc": "Palma Futsal",
+                                                "tmId": 51039,
+                                                "hSDId": 0,
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            }
+                                        ],
+                                        "lineItem": false
+                                    },
+                                    {
+                                        "btgId": 8758,
+                                        "btgN": "Total",
+                                        "mrkp": "_id=8758",
+                                        "btgNO": "Total",
+                                        "btgSpl": false,
+                                        "btgSiOn": false,
+                                        "btgCe": false,
+                                        "btgMId": 1,
+                                        "btgMN": "Gols",
+                                        "btgMOrd": 2,
+                                        "mbtgMId": 17,
+                                        "mbtgMN": "Goals",
+                                        "mbtgMOrd": 0,
+                                        "hsd": [
+                                            {
+                                                "id": 11,
+                                                "name": "Mais",
+                                                "ord": 1
+                                            },
+                                            {
+                                                "id": 10,
+                                                "name": "Menos",
+                                                "ord": 2
+                                            }
+                                        ],
+                                        "cvp": 1,
+                                        "dt": [
+                                            2
+                                        ],
+                                        "prm": false,
+                                        "cshOut": true,
+                                        "ord": 30,
+                                        "fos": [
+                                            {
+                                                "foId": 9616991205,
+                                                "btId": 1243503,
+                                                "btN": "Total",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 1.75,
+                                                "hSh": "Mais de 6.5",
+                                                "pSh": "Over 6.5",
+                                                "oc": "Mais de",
+                                                "tmId": 95389,
+                                                "hSDId": 0,
+                                                "sv": "6.5",
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            },
+                                            {
+                                                "foId": 9616991206,
+                                                "btId": 1243504,
+                                                "btN": "Total",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 2.04,
+                                                "hSh": "Menos de 6.5",
+                                                "pSh": "Under 6.5",
+                                                "oc": "Menos de",
+                                                "tmId": 95389,
+                                                "hSDId": 0,
+                                                "sv": "6.5",
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            }
+                                        ],
+                                        "lineItem": false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "cSURL": "spain"
+            },
+            {
+                "cId": 10000681,
+                "xid": "186",
+                "cN": "Portugal",
+                "fCnt": 6,
+                "oCnt": 30,
+                "aCnt": 0,
+                "fCM": 6,
+                "oCM": 30,
+                "ord": 50010,
+                "iso": "PRT",
+                "sns": [
+                    {
+                        "sId": 841716,
+                        "lId": 949220,
+                        "seaN": "1ª Divisao 25/26",
+                        "cshOut": true,
+                        "seaSURL": "1a-divisao-25-26",
+                        "lName": "1ª Divisao",
+                        "fCnt": 6,
+                        "oCnt": 30,
+                        "aCnt": 0,
+                        "fCM": 6,
+                        "oCM": 30,
+                        "fs": [
+                            {
+                                "fId": 72542385,
+                                "fsd": 1774105200000,
+                                "cshOut": false,
+                                "ante": false,
+                                "hcId": 1381294,
+                                "hcBId": "26259",
+                                "hcCIC": "PRT",
+                                "acId": 1382293,
+                                "acBId": "496286",
+                                "acCIC": "PRT",
+                                "hcN": "SL Benfica",
+                                "acN": "Electrico FC",
+                                "xid": "62701237",
+                                "lxid": "596",
+                                "lbO": false,
+                                "lSt": false,
+                                "vld": true,
+                                "frz": false,
+                                "fDS": 5,
+                                "mmp": 1,
+                                "mDat": {
+                                    "st": "Por iniciar",
+                                    "sud": 0
+                                },
+                                "mCod": 164005,
+                                "ce": false,
+                                "spl": false,
+                                "btgs": [
+                                    {
+                                        "btgId": 8676,
+                                        "btgN": "1x2",
+                                        "mrkp": "_id=8676",
+                                        "btgNO": "1x2",
+                                        "btgSpl": false,
+                                        "btgSiOn": false,
+                                        "btgCe": false,
+                                        "btgMId": 8,
+                                        "btgMN": "Partida",
+                                        "btgMOrd": 1,
+                                        "mbtgMId": 41,
+                                        "mbtgMN": "H/D/A",
+                                        "mbtgMOrd": 0,
+                                        "hsd": [
+                                            {
+                                                "id": 26,
+                                                "name": "1",
+                                                "ord": 1
+                                            },
+                                            {
+                                                "id": 27,
+                                                "name": "X",
+                                                "ord": 2
+                                            },
+                                            {
+                                                "id": 28,
+                                                "name": "2",
+                                                "ord": 3
+                                            }
+                                        ],
+                                        "dt": [
+                                            3
+                                        ],
+                                        "prm": false,
+                                        "cshOut": true,
+                                        "ord": 5,
+                                        "fos": [
+                                            {
+                                                "foId": 9617205644,
+                                                "btId": 1238002,
+                                                "btN": "1x2",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 1.09,
+                                                "hSh": "SL Benfica",
+                                                "pSh": "Home",
+                                                "oc": "SL Benfica",
+                                                "tmId": 51039,
+                                                "hSDId": 0,
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            },
+                                            {
+                                                "foId": 9617205645,
+                                                "btId": 1238003,
+                                                "btN": "1x2",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 12.26,
+                                                "hSh": "Empate",
+                                                "pSh": "Empate",
+                                                "oc": "Empate",
+                                                "tmId": 51039,
+                                                "hSDId": 0,
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            },
+                                            {
+                                                "foId": 9617205646,
+                                                "btId": 1238004,
+                                                "btN": "1x2",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 16.98,
+                                                "hSh": "Electrico FC",
+                                                "pSh": "Away",
+                                                "oc": "Electrico FC",
+                                                "tmId": 51039,
+                                                "hSDId": 0,
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            }
+                                        ],
+                                        "lineItem": false
+                                    },
+                                    {
+                                        "btgId": 8758,
+                                        "btgN": "Total",
+                                        "mrkp": "_id=8758",
+                                        "btgNO": "Total",
+                                        "btgSpl": false,
+                                        "btgSiOn": false,
+                                        "btgCe": false,
+                                        "btgMId": 1,
+                                        "btgMN": "Gols",
+                                        "btgMOrd": 2,
+                                        "mbtgMId": 17,
+                                        "mbtgMN": "Goals",
+                                        "mbtgMOrd": 0,
+                                        "hsd": [
+                                            {
+                                                "id": 11,
+                                                "name": "Mais",
+                                                "ord": 1
+                                            },
+                                            {
+                                                "id": 10,
+                                                "name": "Menos",
+                                                "ord": 2
+                                            }
+                                        ],
+                                        "cvp": 1,
+                                        "dt": [
+                                            2
+                                        ],
+                                        "prm": false,
+                                        "cshOut": true,
+                                        "ord": 30,
+                                        "fos": [
+                                            {
+                                                "foId": 9616637146,
+                                                "btId": 1243503,
+                                                "btN": "Total",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 1.83,
+                                                "hSh": "Mais de 6.5",
+                                                "pSh": "Over 6.5",
+                                                "oc": "Mais de",
+                                                "tmId": 95389,
+                                                "hSDId": 0,
+                                                "sv": "6.5",
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            },
+                                            {
+                                                "foId": 9616637147,
+                                                "btId": 1243504,
+                                                "btN": "Total",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 1.94,
+                                                "hSh": "Menos de 6.5",
+                                                "pSh": "Under 6.5",
+                                                "oc": "Menos de",
+                                                "tmId": 95389,
+                                                "hSDId": 0,
+                                                "sv": "6.5",
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            }
+                                        ],
+                                        "lineItem": false
+                                    }
+                                ]
+                            },
+                            {
+                                "fId": 72542384,
+                                "fsd": 1774107000000,
+                                "cshOut": false,
+                                "ante": false,
+                                "hcId": 1381296,
+                                "hcBId": "54239",
+                                "hcCIC": "PRT",
+                                "acId": 1557767,
+                                "acBId": "828548",
+                                "acCIC": "PRT",
+                                "hcN": "SC Braga/Aaum",
+                                "acN": "Scu Torreense",
+                                "xid": "62701241",
+                                "lxid": "596",
+                                "lbO": false,
+                                "lSt": false,
+                                "vld": true,
+                                "frz": false,
+                                "fDS": 5,
+                                "mmp": 1,
+                                "mDat": {
+                                    "st": "Por iniciar",
+                                    "sud": 0
+                                },
+                                "mCod": 164003,
+                                "ce": false,
+                                "spl": false,
+                                "btgs": [
+                                    {
+                                        "btgId": 8676,
+                                        "btgN": "1x2",
+                                        "mrkp": "_id=8676",
+                                        "btgNO": "1x2",
+                                        "btgSpl": false,
+                                        "btgSiOn": false,
+                                        "btgCe": false,
+                                        "btgMId": 8,
+                                        "btgMN": "Partida",
+                                        "btgMOrd": 1,
+                                        "mbtgMId": 41,
+                                        "mbtgMN": "H/D/A",
+                                        "mbtgMOrd": 0,
+                                        "hsd": [
+                                            {
+                                                "id": 26,
+                                                "name": "1",
+                                                "ord": 1
+                                            },
+                                            {
+                                                "id": 27,
+                                                "name": "X",
+                                                "ord": 2
+                                            },
+                                            {
+                                                "id": 28,
+                                                "name": "2",
+                                                "ord": 3
+                                            }
+                                        ],
+                                        "dt": [
+                                            3
+                                        ],
+                                        "prm": false,
+                                        "cshOut": true,
+                                        "ord": 5,
+                                        "fos": [
+                                            {
+                                                "foId": 9616595347,
+                                                "btId": 1238002,
+                                                "btN": "1x2",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 1.31,
+                                                "hSh": "SC Braga/Aaum",
+                                                "pSh": "Home",
+                                                "oc": "SC Braga/Aaum",
+                                                "tmId": 51039,
+                                                "hSDId": 0,
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            },
+                                            {
+                                                "foId": 9616595348,
+                                                "btId": 1238003,
+                                                "btN": "1x2",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 6.41,
+                                                "hSh": "Empate",
+                                                "pSh": "Empate",
+                                                "oc": "Empate",
+                                                "tmId": 51039,
+                                                "hSDId": 0,
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            },
+                                            {
+                                                "foId": 9616595349,
+                                                "btId": 1238004,
+                                                "btN": "1x2",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 7.01,
+                                                "hSh": "Scu Torreense",
+                                                "pSh": "Away",
+                                                "oc": "Scu Torreense",
+                                                "tmId": 51039,
+                                                "hSDId": 0,
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            }
+                                        ],
+                                        "lineItem": false
+                                    },
+                                    {
+                                        "btgId": 8758,
+                                        "btgN": "Total",
+                                        "mrkp": "_id=8758",
+                                        "btgNO": "Total",
+                                        "btgSpl": false,
+                                        "btgSiOn": false,
+                                        "btgCe": false,
+                                        "btgMId": 1,
+                                        "btgMN": "Gols",
+                                        "btgMOrd": 2,
+                                        "mbtgMId": 17,
+                                        "mbtgMN": "Goals",
+                                        "mbtgMOrd": 0,
+                                        "hsd": [
+                                            {
+                                                "id": 11,
+                                                "name": "Mais",
+                                                "ord": 1
+                                            },
+                                            {
+                                                "id": 10,
+                                                "name": "Menos",
+                                                "ord": 2
+                                            }
+                                        ],
+                                        "cvp": 1,
+                                        "dt": [
+                                            2
+                                        ],
+                                        "prm": false,
+                                        "cshOut": true,
+                                        "ord": 30,
+                                        "fos": [
+                                            {
+                                                "foId": 9616637223,
+                                                "btId": 1243505,
+                                                "btN": "Total",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 1.78,
+                                                "hSh": "Mais de 5.5",
+                                                "pSh": "Over 5.5",
+                                                "oc": "Mais de",
+                                                "tmId": 95387,
+                                                "hSDId": 0,
+                                                "sv": "5.5",
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            },
+                                            {
+                                                "foId": 9616637224,
+                                                "btId": 1243506,
+                                                "btN": "Total",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 2.01,
+                                                "hSh": "Menos de 5.5",
+                                                "pSh": "Under 5.5",
+                                                "oc": "Menos de",
+                                                "tmId": 95387,
+                                                "hSDId": 0,
+                                                "sv": "5.5",
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            }
+                                        ],
+                                        "lineItem": false
+                                    }
+                                ]
+                            },
+                            {
+                                "fId": 72542370,
+                                "fsd": 1774108800000,
+                                "cshOut": false,
+                                "ante": false,
+                                "hcId": 1382936,
+                                "hcBId": "222424",
+                                "hcCIC": "PRT",
+                                "acId": 1381292,
+                                "acBId": "26256",
+                                "acCIC": "PRT",
+                                "hcN": "Crc Quinta Lombos",
+                                "acN": "AD Fundão",
+                                "xid": "62701239",
+                                "lxid": "596",
+                                "lbO": false,
+                                "lSt": false,
+                                "vld": true,
+                                "frz": false,
+                                "fDS": 5,
+                                "mmp": 1,
+                                "mDat": {
+                                    "st": "Por iniciar",
+                                    "sud": 0
+                                },
+                                "mCod": 163991,
+                                "ce": false,
+                                "spl": false,
+                                "btgs": [
+                                    {
+                                        "btgId": 8676,
+                                        "btgN": "1x2",
+                                        "mrkp": "_id=8676",
+                                        "btgNO": "1x2",
+                                        "btgSpl": false,
+                                        "btgSiOn": false,
+                                        "btgCe": false,
+                                        "btgMId": 8,
+                                        "btgMN": "Partida",
+                                        "btgMOrd": 1,
+                                        "mbtgMId": 41,
+                                        "mbtgMN": "H/D/A",
+                                        "mbtgMOrd": 0,
+                                        "hsd": [
+                                            {
+                                                "id": 26,
+                                                "name": "1",
+                                                "ord": 1
+                                            },
+                                            {
+                                                "id": 27,
+                                                "name": "X",
+                                                "ord": 2
+                                            },
+                                            {
+                                                "id": 28,
+                                                "name": "2",
+                                                "ord": 3
+                                            }
+                                        ],
+                                        "dt": [
+                                            3
+                                        ],
+                                        "prm": false,
+                                        "cshOut": true,
+                                        "ord": 5,
+                                        "fos": [
+                                            {
+                                                "foId": 9616595230,
+                                                "btId": 1238002,
+                                                "btN": "1x2",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 2.16,
+                                                "hSh": "Crc Quinta Lombos",
+                                                "pSh": "Home",
+                                                "oc": "Crc Quinta Lombos",
+                                                "tmId": 51039,
+                                                "hSDId": 0,
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            },
+                                            {
+                                                "foId": 9616595231,
+                                                "btId": 1238003,
+                                                "btN": "1x2",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 4.73,
+                                                "hSh": "Empate",
+                                                "pSh": "Empate",
+                                                "oc": "Empate",
+                                                "tmId": 51039,
+                                                "hSDId": 0,
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            },
+                                            {
+                                                "foId": 9616595232,
+                                                "btId": 1238004,
+                                                "btN": "1x2",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 2.6,
+                                                "hSh": "AD Fundão",
+                                                "pSh": "Away",
+                                                "oc": "AD Fundão",
+                                                "tmId": 51039,
+                                                "hSDId": 0,
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            }
+                                        ],
+                                        "lineItem": false
+                                    },
+                                    {
+                                        "btgId": 8758,
+                                        "btgN": "Total",
+                                        "mrkp": "_id=8758",
+                                        "btgNO": "Total",
+                                        "btgSpl": false,
+                                        "btgSiOn": false,
+                                        "btgCe": false,
+                                        "btgMId": 1,
+                                        "btgMN": "Gols",
+                                        "btgMOrd": 2,
+                                        "mbtgMId": 17,
+                                        "mbtgMN": "Goals",
+                                        "mbtgMOrd": 0,
+                                        "hsd": [
+                                            {
+                                                "id": 11,
+                                                "name": "Mais",
+                                                "ord": 1
+                                            },
+                                            {
+                                                "id": 10,
+                                                "name": "Menos",
+                                                "ord": 2
+                                            }
+                                        ],
+                                        "cvp": 1,
+                                        "dt": [
+                                            2
+                                        ],
+                                        "prm": false,
+                                        "cshOut": true,
+                                        "ord": 30,
+                                        "fos": [
+                                            {
+                                                "foId": 9616614865,
+                                                "btId": 1243503,
+                                                "btN": "Total",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 2.12,
+                                                "hSh": "Mais de 6.5",
+                                                "pSh": "Over 6.5",
+                                                "oc": "Mais de",
+                                                "tmId": 95389,
+                                                "hSDId": 0,
+                                                "sv": "6.5",
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            },
+                                            {
+                                                "foId": 9616614866,
+                                                "btId": 1243504,
+                                                "btN": "Total",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 1.7,
+                                                "hSh": "Menos de 6.5",
+                                                "pSh": "Under 6.5",
+                                                "oc": "Menos de",
+                                                "tmId": 95389,
+                                                "hSDId": 0,
+                                                "sv": "6.5",
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            }
+                                        ],
+                                        "lineItem": false
+                                    }
+                                ]
+                            },
+                            {
+                                "fId": 72542430,
+                                "fsd": 1774116000000,
+                                "cshOut": false,
+                                "ante": false,
+                                "hcId": 1568506,
+                                "hcBId": "840264",
+                                "hcCIC": "PRT",
+                                "acId": 2026872,
+                                "acBId": "963755",
+                                "acCIC": "PRT",
+                                "hcN": "Ferreira Do Zezere",
+                                "acN": "FC Famalicao",
+                                "xid": "62701243",
+                                "lxid": "596",
+                                "lbO": false,
+                                "lSt": false,
+                                "vld": true,
+                                "frz": false,
+                                "fDS": 5,
+                                "mmp": 1,
+                                "mDat": {
+                                    "st": "Por iniciar",
+                                    "sud": 0
+                                },
+                                "mCod": 164459,
+                                "ce": false,
+                                "spl": false,
+                                "btgs": [
+                                    {
+                                        "btgId": 8676,
+                                        "btgN": "1x2",
+                                        "mrkp": "_id=8676",
+                                        "btgNO": "1x2",
+                                        "btgSpl": false,
+                                        "btgSiOn": false,
+                                        "btgCe": false,
+                                        "btgMId": 8,
+                                        "btgMN": "Partida",
+                                        "btgMOrd": 1,
+                                        "mbtgMId": 41,
+                                        "mbtgMN": "H/D/A",
+                                        "mbtgMOrd": 0,
+                                        "hsd": [
+                                            {
+                                                "id": 26,
+                                                "name": "1",
+                                                "ord": 1
+                                            },
+                                            {
+                                                "id": 27,
+                                                "name": "X",
+                                                "ord": 2
+                                            },
+                                            {
+                                                "id": 28,
+                                                "name": "2",
+                                                "ord": 3
+                                            }
+                                        ],
+                                        "dt": [
+                                            3
+                                        ],
+                                        "prm": false,
+                                        "cshOut": true,
+                                        "ord": 5,
+                                        "fos": [
+                                            {
+                                                "foId": 9616595456,
+                                                "btId": 1238002,
+                                                "btN": "1x2",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 1.27,
+                                                "hSh": "Ferreira Do Zezere",
+                                                "pSh": "Home",
+                                                "oc": "Ferreira Do Zezere",
+                                                "tmId": 51039,
+                                                "hSDId": 0,
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            },
+                                            {
+                                                "foId": 9616595457,
+                                                "btId": 1238003,
+                                                "btN": "1x2",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 7.07,
+                                                "hSh": "Empate",
+                                                "pSh": "Empate",
+                                                "oc": "Empate",
+                                                "tmId": 51039,
+                                                "hSDId": 0,
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            },
+                                            {
+                                                "foId": 9616595458,
+                                                "btId": 1238004,
+                                                "btN": "1x2",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 7.47,
+                                                "hSh": "FC Famalicao",
+                                                "pSh": "Away",
+                                                "oc": "FC Famalicao",
+                                                "tmId": 51039,
+                                                "hSDId": 0,
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            }
+                                        ],
+                                        "lineItem": false
+                                    },
+                                    {
+                                        "btgId": 8758,
+                                        "btgN": "Total",
+                                        "mrkp": "_id=8758",
+                                        "btgNO": "Total",
+                                        "btgSpl": false,
+                                        "btgSiOn": false,
+                                        "btgCe": false,
+                                        "btgMId": 1,
+                                        "btgMN": "Gols",
+                                        "btgMOrd": 2,
+                                        "mbtgMId": 17,
+                                        "mbtgMN": "Goals",
+                                        "mbtgMOrd": 0,
+                                        "hsd": [
+                                            {
+                                                "id": 11,
+                                                "name": "Mais",
+                                                "ord": 1
+                                            },
+                                            {
+                                                "id": 10,
+                                                "name": "Menos",
+                                                "ord": 2
+                                            }
+                                        ],
+                                        "cvp": 1,
+                                        "dt": [
+                                            2
+                                        ],
+                                        "prm": false,
+                                        "cshOut": true,
+                                        "ord": 30,
+                                        "fos": [
+                                            {
+                                                "foId": 9617369880,
+                                                "btId": 1243503,
+                                                "btN": "Total",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 1.84,
+                                                "hSh": "Mais de 6.5",
+                                                "pSh": "Over 6.5",
+                                                "oc": "Mais de",
+                                                "tmId": 95389,
+                                                "hSDId": 0,
+                                                "sv": "6.5",
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            },
+                                            {
+                                                "foId": 9617369881,
+                                                "btId": 1243504,
+                                                "btN": "Total",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 1.94,
+                                                "hSh": "Menos de 6.5",
+                                                "pSh": "Under 6.5",
+                                                "oc": "Menos de",
+                                                "tmId": 95389,
+                                                "hSDId": 0,
+                                                "sv": "6.5",
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            }
+                                        ],
+                                        "lineItem": false
+                                    }
+                                ]
+                            },
+                            {
+                                "fId": 72542396,
+                                "fsd": 1774125900000,
+                                "cshOut": false,
+                                "ante": false,
+                                "hcId": 1382290,
+                                "hcBId": "26270",
+                                "hcCIC": "PRT",
+                                "acId": 1467387,
+                                "acBId": "747965",
+                                "acCIC": "PRT",
+                                "hcN": "Sporting CP",
+                                "acN": "Adcr Caxinas",
+                                "xid": "62701245",
+                                "lxid": "596",
+                                "lbO": false,
+                                "lSt": false,
+                                "vld": true,
+                                "frz": false,
+                                "fDS": 5,
+                                "mmp": 1,
+                                "mDat": {
+                                    "st": "Por iniciar",
+                                    "sud": 0
+                                },
+                                "mCod": 164161,
+                                "ce": false,
+                                "spl": false,
+                                "btgs": [
+                                    {
+                                        "btgId": 8676,
+                                        "btgN": "1x2",
+                                        "mrkp": "_id=8676",
+                                        "btgNO": "1x2",
+                                        "btgSpl": false,
+                                        "btgSiOn": false,
+                                        "btgCe": false,
+                                        "btgMId": 8,
+                                        "btgMN": "Partida",
+                                        "btgMOrd": 1,
+                                        "mbtgMId": 41,
+                                        "mbtgMN": "H/D/A",
+                                        "mbtgMOrd": 0,
+                                        "hsd": [
+                                            {
+                                                "id": 26,
+                                                "name": "1",
+                                                "ord": 1
+                                            },
+                                            {
+                                                "id": 27,
+                                                "name": "X",
+                                                "ord": 2
+                                            },
+                                            {
+                                                "id": 28,
+                                                "name": "2",
+                                                "ord": 3
+                                            }
+                                        ],
+                                        "dt": [
+                                            3
+                                        ],
+                                        "prm": false,
+                                        "cshOut": true,
+                                        "ord": 5,
+                                        "fos": [
+                                            {
+                                                "foId": 9617211830,
+                                                "btId": 1238002,
+                                                "btN": "1x2",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 1.02,
+                                                "hSh": "Sporting CP",
+                                                "pSh": "Home",
+                                                "oc": "Sporting CP",
+                                                "tmId": 51039,
+                                                "hSDId": 0,
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            },
+                                            {
+                                                "foId": 9617211831,
+                                                "btId": 1238003,
+                                                "btN": "1x2",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 23.05,
+                                                "hSh": "Empate",
+                                                "pSh": "Empate",
+                                                "oc": "Empate",
+                                                "tmId": 51039,
+                                                "hSDId": 0,
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            },
+                                            {
+                                                "foId": 9617211832,
+                                                "btId": 1238004,
+                                                "btN": "1x2",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 28.85,
+                                                "hSh": "Adcr Caxinas",
+                                                "pSh": "Away",
+                                                "oc": "Adcr Caxinas",
+                                                "tmId": 51039,
+                                                "hSDId": 0,
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            }
+                                        ],
+                                        "lineItem": false
+                                    },
+                                    {
+                                        "btgId": 8758,
+                                        "btgN": "Total",
+                                        "mrkp": "_id=8758",
+                                        "btgNO": "Total",
+                                        "btgSpl": false,
+                                        "btgSiOn": false,
+                                        "btgCe": false,
+                                        "btgMId": 1,
+                                        "btgMN": "Gols",
+                                        "btgMOrd": 2,
+                                        "mbtgMId": 17,
+                                        "mbtgMN": "Goals",
+                                        "mbtgMOrd": 0,
+                                        "hsd": [
+                                            {
+                                                "id": 11,
+                                                "name": "Mais",
+                                                "ord": 1
+                                            },
+                                            {
+                                                "id": 10,
+                                                "name": "Menos",
+                                                "ord": 2
+                                            }
+                                        ],
+                                        "cvp": 1,
+                                        "dt": [
+                                            2
+                                        ],
+                                        "prm": false,
+                                        "cshOut": true,
+                                        "ord": 30,
+                                        "fos": [
+                                            {
+                                                "foId": 9616614722,
+                                                "btId": 1244399,
+                                                "btN": "Total",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 1.84,
+                                                "hSh": "Mais de 7.5",
+                                                "pSh": "Over 7.5",
+                                                "oc": "Mais de",
+                                                "tmId": 95391,
+                                                "hSDId": 0,
+                                                "sv": "7.5",
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            },
+                                            {
+                                                "foId": 9616614723,
+                                                "btId": 1244400,
+                                                "btN": "Total",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 1.94,
+                                                "hSh": "Menos de 7.5",
+                                                "pSh": "Under 7.5",
+                                                "oc": "Menos de",
+                                                "tmId": 95391,
+                                                "hSDId": 0,
+                                                "sv": "7.5",
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            }
+                                        ],
+                                        "lineItem": false
+                                    }
+                                ]
+                            },
+                            {
+                                "fId": 72542399,
+                                "fsd": 1774126800000,
+                                "cshOut": false,
+                                "ante": false,
+                                "hcId": 3478168,
+                                "hcBId": "44125",
+                                "hcCIC": "PRT",
+                                "acId": 1382289,
+                                "acBId": "54247",
+                                "acCIC": "PRT",
+                                "hcN": "Rio Ave FC",
+                                "acN": "Leões de Porto Salvo",
+                                "xid": "62701235",
+                                "lxid": "596",
+                                "lbO": false,
+                                "lSt": false,
+                                "vld": true,
+                                "frz": false,
+                                "fDS": 5,
+                                "mmp": 1,
+                                "mDat": {
+                                    "st": "Por iniciar",
+                                    "sud": 0
+                                },
+                                "mCod": 164164,
+                                "ce": false,
+                                "spl": false,
+                                "btgs": [
+                                    {
+                                        "btgId": 8676,
+                                        "btgN": "1x2",
+                                        "mrkp": "_id=8676",
+                                        "btgNO": "1x2",
+                                        "btgSpl": false,
+                                        "btgSiOn": false,
+                                        "btgCe": false,
+                                        "btgMId": 8,
+                                        "btgMN": "Partida",
+                                        "btgMOrd": 1,
+                                        "mbtgMId": 41,
+                                        "mbtgMN": "H/D/A",
+                                        "mbtgMOrd": 0,
+                                        "hsd": [
+                                            {
+                                                "id": 26,
+                                                "name": "1",
+                                                "ord": 1
+                                            },
+                                            {
+                                                "id": 27,
+                                                "name": "X",
+                                                "ord": 2
+                                            },
+                                            {
+                                                "id": 28,
+                                                "name": "2",
+                                                "ord": 3
+                                            }
+                                        ],
+                                        "dt": [
+                                            3
+                                        ],
+                                        "prm": false,
+                                        "cshOut": true,
+                                        "ord": 5,
+                                        "fos": [
+                                            {
+                                                "foId": 9616595756,
+                                                "btId": 1238002,
+                                                "btN": "1x2",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 3.92,
+                                                "hSh": "Rio Ave FC",
+                                                "pSh": "Home",
+                                                "oc": "Rio Ave FC",
+                                                "tmId": 51039,
+                                                "hSDId": 0,
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            },
+                                            {
+                                                "foId": 9616595757,
+                                                "btId": 1238003,
+                                                "btN": "1x2",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 5.2,
+                                                "hSh": "Empate",
+                                                "pSh": "Empate",
+                                                "oc": "Empate",
+                                                "tmId": 51039,
+                                                "hSDId": 0,
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            },
+                                            {
+                                                "foId": 9616595758,
+                                                "btId": 1238004,
+                                                "btN": "1x2",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 1.63,
+                                                "hSh": "Leões de Porto Salvo",
+                                                "pSh": "Away",
+                                                "oc": "Leões de Porto Salvo",
+                                                "tmId": 51039,
+                                                "hSDId": 0,
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            }
+                                        ],
+                                        "lineItem": false
+                                    },
+                                    {
+                                        "btgId": 8758,
+                                        "btgN": "Total",
+                                        "mrkp": "_id=8758",
+                                        "btgNO": "Total",
+                                        "btgSpl": false,
+                                        "btgSiOn": false,
+                                        "btgCe": false,
+                                        "btgMId": 1,
+                                        "btgMN": "Gols",
+                                        "btgMOrd": 2,
+                                        "mbtgMId": 17,
+                                        "mbtgMN": "Goals",
+                                        "mbtgMOrd": 0,
+                                        "hsd": [
+                                            {
+                                                "id": 11,
+                                                "name": "Mais",
+                                                "ord": 1
+                                            },
+                                            {
+                                                "id": 10,
+                                                "name": "Menos",
+                                                "ord": 2
+                                            }
+                                        ],
+                                        "cvp": 1,
+                                        "dt": [
+                                            2
+                                        ],
+                                        "prm": false,
+                                        "cshOut": true,
+                                        "ord": 30,
+                                        "fos": [
+                                            {
+                                                "foId": 9616620959,
+                                                "btId": 1243503,
+                                                "btN": "Total",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 2.16,
+                                                "hSh": "Mais de 6.5",
+                                                "pSh": "Over 6.5",
+                                                "oc": "Mais de",
+                                                "tmId": 95389,
+                                                "hSDId": 0,
+                                                "sv": "6.5",
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            },
+                                            {
+                                                "foId": 9616620960,
+                                                "btId": 1243504,
+                                                "btN": "Total",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 1.67,
+                                                "hSh": "Menos de 6.5",
+                                                "pSh": "Under 6.5",
+                                                "oc": "Menos de",
+                                                "tmId": 95389,
+                                                "hSDId": 0,
+                                                "sv": "6.5",
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            }
+                                        ],
+                                        "lineItem": false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "cSURL": "portugal"
+            },
+            {
+                "cId": 10000805,
+                "xid": "185",
+                "cN": "Itália",
+                "fCnt": 2,
+                "oCnt": 6,
+                "aCnt": 0,
+                "fCM": 2,
+                "oCM": 6,
+                "iso": "ITA",
+                "sns": [
+                    {
+                        "sId": 843780,
+                        "lId": 950981,
+                        "seaN": "Série A 25/26",
+                        "cshOut": true,
+                        "seaSURL": "serie-a-25-26",
+                        "lName": "Série A",
+                        "fCnt": 2,
+                        "oCnt": 6,
+                        "aCnt": 0,
+                        "fCM": 2,
+                        "oCM": 6,
+                        "fs": [
+                            {
+                                "fId": 72634016,
+                                "fsd": 1774110600000,
+                                "cshOut": false,
+                                "ante": false,
+                                "hcId": 1379393,
+                                "hcBId": "290782",
+                                "hcCIC": "ITA",
+                                "acId": 3315965,
+                                "acBId": "753193",
+                                "acCIC": "ITA",
+                                "hcN": "Came Treviso C5",
+                                "acN": "Pirossigeno Cosenza",
+                                "xid": "63134401",
+                                "lxid": "595",
+                                "lbO": false,
+                                "lSt": false,
+                                "vld": true,
+                                "frz": false,
+                                "fDS": 3,
+                                "mmp": 1,
+                                "mDat": {
+                                    "st": "Por iniciar",
+                                    "sud": 0
+                                },
+                                "mCod": 162904,
+                                "ce": false,
+                                "spl": false,
+                                "btgs": [
+                                    {
+                                        "btgId": 8676,
+                                        "btgN": "1x2",
+                                        "mrkp": "_id=8676",
+                                        "btgNO": "1x2",
+                                        "btgSpl": false,
+                                        "btgSiOn": false,
+                                        "btgCe": false,
+                                        "btgMId": 8,
+                                        "btgMN": "Partida",
+                                        "btgMOrd": 1,
+                                        "mbtgMId": 41,
+                                        "mbtgMN": "H/D/A",
+                                        "mbtgMOrd": 0,
+                                        "hsd": [
+                                            {
+                                                "id": 26,
+                                                "name": "1",
+                                                "ord": 1
+                                            },
+                                            {
+                                                "id": 27,
+                                                "name": "X",
+                                                "ord": 2
+                                            },
+                                            {
+                                                "id": 28,
+                                                "name": "2",
+                                                "ord": 3
+                                            }
+                                        ],
+                                        "dt": [
+                                            3
+                                        ],
+                                        "prm": false,
+                                        "cshOut": true,
+                                        "ord": 5,
+                                        "fos": [
+                                            {
+                                                "foId": 9617105829,
+                                                "btId": 1238002,
+                                                "btN": "1x2",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 2.22,
+                                                "hSh": "Came Treviso C5",
+                                                "pSh": "Home",
+                                                "oc": "Came Treviso C5",
+                                                "tmId": 51039,
+                                                "hSDId": 0,
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            },
+                                            {
+                                                "foId": 9617105830,
+                                                "btId": 1238003,
+                                                "btN": "1x2",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 4.56,
+                                                "hSh": "Empate",
+                                                "pSh": "Empate",
+                                                "oc": "Empate",
+                                                "tmId": 51039,
+                                                "hSDId": 0,
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            },
+                                            {
+                                                "foId": 9617105831,
+                                                "btId": 1238004,
+                                                "btN": "1x2",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 2.56,
+                                                "hSh": "Pirossigeno Cosenza",
+                                                "pSh": "Away",
+                                                "oc": "Pirossigeno Cosenza",
+                                                "tmId": 51039,
+                                                "hSDId": 0,
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            }
+                                        ],
+                                        "lineItem": false
+                                    }
+                                ]
+                            },
+                            {
+                                "fId": 72634020,
+                                "fsd": 1774112400000,
+                                "cshOut": false,
+                                "ante": false,
+                                "hcId": 1805612,
+                                "hcBId": "874127",
+                                "hcCIC": "ITA",
+                                "acId": 1366805,
+                                "acBId": "372164",
+                                "acCIC": "ITA",
+                                "hcN": "Fortitudo Pomezia",
+                                "acN": "Feldi Eboli",
+                                "xid": "63134397",
+                                "lxid": "595",
+                                "lbO": false,
+                                "lSt": false,
+                                "vld": true,
+                                "frz": false,
+                                "fDS": 3,
+                                "mmp": 1,
+                                "mDat": {
+                                    "st": "Por iniciar",
+                                    "sud": 0
+                                },
+                                "mCod": 163410,
+                                "ce": false,
+                                "spl": false,
+                                "btgs": [
+                                    {
+                                        "btgId": 8676,
+                                        "btgN": "1x2",
+                                        "mrkp": "_id=8676",
+                                        "btgNO": "1x2",
+                                        "btgSpl": false,
+                                        "btgSiOn": false,
+                                        "btgCe": false,
+                                        "btgMId": 8,
+                                        "btgMN": "Partida",
+                                        "btgMOrd": 1,
+                                        "mbtgMId": 41,
+                                        "mbtgMN": "H/D/A",
+                                        "mbtgMOrd": 0,
+                                        "hsd": [
+                                            {
+                                                "id": 26,
+                                                "name": "1",
+                                                "ord": 1
+                                            },
+                                            {
+                                                "id": 27,
+                                                "name": "X",
+                                                "ord": 2
+                                            },
+                                            {
+                                                "id": 28,
+                                                "name": "2",
+                                                "ord": 3
+                                            }
+                                        ],
+                                        "dt": [
+                                            3
+                                        ],
+                                        "prm": false,
+                                        "cshOut": true,
+                                        "ord": 5,
+                                        "fos": [
+                                            {
+                                                "foId": 9617106329,
+                                                "btId": 1238002,
+                                                "btN": "1x2",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 5.73,
+                                                "hSh": "Fortitudo Pomezia",
+                                                "pSh": "Home",
+                                                "oc": "Fortitudo Pomezia",
+                                                "tmId": 51039,
+                                                "hSDId": 0,
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            },
+                                            {
+                                                "foId": 9617106330,
+                                                "btId": 1238003,
+                                                "btN": "1x2",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 5.9,
+                                                "hSh": "Empate",
+                                                "pSh": "Empate",
+                                                "oc": "Empate",
+                                                "tmId": 51039,
+                                                "hSDId": 0,
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            },
+                                            {
+                                                "foId": 9617106331,
+                                                "btId": 1238004,
+                                                "btN": "1x2",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 1.4,
+                                                "hSh": "Feldi Eboli",
+                                                "pSh": "Away",
+                                                "oc": "Feldi Eboli",
+                                                "tmId": 51039,
+                                                "hSDId": 0,
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            }
+                                        ],
+                                        "lineItem": false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "cSURL": "italy"
+            },
+            {
+                "cId": 10001069,
+                "xid": "429",
+                "cN": "Polônia",
+                "fCnt": 1,
+                "oCnt": 5,
+                "aCnt": 0,
+                "fCM": 1,
+                "oCM": 5,
+                "iso": "POL",
+                "sns": [
+                    {
+                        "sId": 841997,
+                        "lId": 953389,
+                        "seaN": "Ekstraklasa 25/26",
+                        "cshOut": true,
+                        "seaSURL": "ekstraklasa-25-26",
+                        "lName": "Ekstraklasa",
+                        "fCnt": 1,
+                        "oCnt": 5,
+                        "aCnt": 0,
+                        "fCM": 1,
+                        "oCM": 5,
+                        "fs": [
+                            {
+                                "fId": 72632343,
+                                "fsd": 1774105200000,
+                                "cshOut": false,
+                                "ante": false,
+                                "hcId": 1458548,
+                                "hcBId": "388610",
+                                "hcCIC": "POL",
+                                "acId": 1463498,
+                                "acBId": "739887",
+                                "acCIC": "POL",
+                                "hcN": "AZS US Katowice",
+                                "acN": "Dreman Komprachcice",
+                                "xid": "61723226",
+                                "lxid": "26444",
+                                "lbO": false,
+                                "lSt": false,
+                                "vld": true,
+                                "frz": false,
+                                "fDS": 5,
+                                "mmp": 1,
+                                "mDat": {
+                                    "st": "Por iniciar",
+                                    "sud": 0
+                                },
+                                "mCod": 102620,
+                                "ce": false,
+                                "spl": false,
+                                "btgs": [
+                                    {
+                                        "btgId": 8676,
+                                        "btgN": "1x2",
+                                        "mrkp": "_id=8676",
+                                        "btgNO": "1x2",
+                                        "btgSpl": false,
+                                        "btgSiOn": false,
+                                        "btgCe": false,
+                                        "btgMId": 8,
+                                        "btgMN": "Partida",
+                                        "btgMOrd": 1,
+                                        "mbtgMId": 41,
+                                        "mbtgMN": "H/D/A",
+                                        "mbtgMOrd": 0,
+                                        "hsd": [
+                                            {
+                                                "id": 26,
+                                                "name": "1",
+                                                "ord": 1
+                                            },
+                                            {
+                                                "id": 27,
+                                                "name": "X",
+                                                "ord": 2
+                                            },
+                                            {
+                                                "id": 28,
+                                                "name": "2",
+                                                "ord": 3
+                                            }
+                                        ],
+                                        "dt": [
+                                            3
+                                        ],
+                                        "prm": false,
+                                        "cshOut": true,
+                                        "ord": 5,
+                                        "fos": [
+                                            {
+                                                "foId": 9616856787,
+                                                "btId": 1238002,
+                                                "btN": "1x2",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 2.33,
+                                                "hSh": "AZS US Katowice",
+                                                "pSh": "Home",
+                                                "oc": "AZS US Katowice",
+                                                "tmId": 51039,
+                                                "hSDId": 0,
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            },
+                                            {
+                                                "foId": 9616856788,
+                                                "btId": 1238003,
+                                                "btN": "1x2",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 4.99,
+                                                "hSh": "Empate",
+                                                "pSh": "Empate",
+                                                "oc": "Empate",
+                                                "tmId": 51039,
+                                                "hSDId": 0,
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            },
+                                            {
+                                                "foId": 9616856789,
+                                                "btId": 1238004,
+                                                "btN": "1x2",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 2.33,
+                                                "hSh": "Dreman Komprachcice",
+                                                "pSh": "Away",
+                                                "oc": "Dreman Komprachcice",
+                                                "tmId": 51039,
+                                                "hSDId": 0,
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            }
+                                        ],
+                                        "lineItem": false
+                                    },
+                                    {
+                                        "btgId": 8758,
+                                        "btgN": "Total",
+                                        "mrkp": "_id=8758",
+                                        "btgNO": "Total",
+                                        "btgSpl": false,
+                                        "btgSiOn": false,
+                                        "btgCe": false,
+                                        "btgMId": 1,
+                                        "btgMN": "Gols",
+                                        "btgMOrd": 2,
+                                        "mbtgMId": 17,
+                                        "mbtgMN": "Goals",
+                                        "mbtgMOrd": 0,
+                                        "hsd": [
+                                            {
+                                                "id": 11,
+                                                "name": "Mais",
+                                                "ord": 1
+                                            },
+                                            {
+                                                "id": 10,
+                                                "name": "Menos",
+                                                "ord": 2
+                                            }
+                                        ],
+                                        "cvp": 1,
+                                        "dt": [
+                                            2
+                                        ],
+                                        "prm": false,
+                                        "cshOut": true,
+                                        "ord": 30,
+                                        "fos": [
+                                            {
+                                                "foId": 9616896155,
+                                                "btId": 1244399,
+                                                "btN": "Total",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 2.33,
+                                                "hSh": "Mais de 7.5",
+                                                "pSh": "Over 7.5",
+                                                "oc": "Mais de",
+                                                "tmId": 95391,
+                                                "hSDId": 0,
+                                                "sv": "7.5",
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            },
+                                            {
+                                                "foId": 9616896156,
+                                                "btId": 1244400,
+                                                "btN": "Total",
+                                                "valid": true,
+                                                "tvalid": true,
+                                                "freeze": false,
+                                                "prm": false,
+                                                "lineItem": false,
+                                                "hO": 1.58,
+                                                "hSh": "Menos de 7.5",
+                                                "pSh": "Under 7.5",
+                                                "oc": "Menos de",
+                                                "tmId": 95391,
+                                                "hSDId": 0,
+                                                "sv": "7.5",
+                                                "foCe": false,
+                                                "btCe": false,
+                                                "taCe": false
+                                            }
+                                        ],
+                                        "lineItem": false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "cSURL": "poland"
+            }
+        ],
+        "stSURL": "futsal"
+    }
+]

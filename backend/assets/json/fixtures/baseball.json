@@ -1,0 +1,1467 @@
+{
+    "success": true,
+    "responseCodes": [],
+    "data": [
+        {
+            "stId": 209,
+            "xid": "3",
+            "stN": "Beisebol",
+            "iconId": 3,
+            "pid": 2,
+            "mdt": 1,
+            "cmt": 4,
+            "lvt": true,
+            "fCnt": 13,
+            "oCnt": 26,
+            "aCnt": 0,
+            "fCM": 13,
+            "oCM": 26,
+            "ord": 50075,
+            "cs": [
+                {
+                    "cId": 10000654,
+                    "xid": "16",
+                    "cN": "Estados Unidos",
+                    "fCnt": 13,
+                    "oCnt": 26,
+                    "aCnt": 0,
+                    "fCM": 13,
+                    "oCM": 26,
+                    "ord": 50001,
+                    "iso": "USA",
+                    "sns": [
+                        {
+                            "sId": 855381,
+                            "lId": 951119,
+                            "seaN": "MLB Treino Primavera 2026",
+                            "cshOut": true,
+                            "seaSURL": "mlb-spring-training-2026",
+                            "lName": "MLB Treino Primavera",
+                            "fCnt": 13,
+                            "oCnt": 26,
+                            "aCnt": 0,
+                            "fCM": 13,
+                            "oCM": 26,
+                            "sns": [
+                                {
+                                    "sId": 855382,
+                                    "lId": 951119,
+                                    "seaN": "Cactus League",
+                                    "cshOut": true,
+                                    "pseaN": "MLB Spring Training 2026",
+                                    "seaSURL": "mlb-spring-training",
+                                    "lName": "MLB Treino Primavera",
+                                    "fCnt": 7,
+                                    "oCnt": 14,
+                                    "aCnt": 0,
+                                    "fCM": 7,
+                                    "oCM": 14,
+                                    "fs": [
+                                        {
+                                            "fId": 72619469,
+                                            "fsd": 1774116300000,
+                                            "cshOut": false,
+                                            "ante": false,
+                                            "hcId": 1367698,
+                                            "hcBId": "3638",
+                                            "hcCIC": "USA",
+                                            "acId": 1371942,
+                                            "acBId": "3645",
+                                            "acCIC": "USA",
+                                            "hcN": "LA Dodgers",
+                                            "acN": "Athletics",
+                                            "xid": "67502558",
+                                            "lxid": "2456",
+                                            "lbO": false,
+                                            "lSt": false,
+                                            "vld": true,
+                                            "frz": false,
+                                            "ssid": 6427084,
+                                            "fDS": 2,
+                                            "mmp": 1,
+                                            "mDat": {
+                                                "st": "Por iniciar",
+                                                "sud": 0
+                                            },
+                                            "mCod": 53677,
+                                            "ce": false,
+                                            "spl": false,
+                                            "btgs": [
+                                                {
+                                                    "btgId": 9164,
+                                                    "btgN": "Vencedor (incluindo entrada extra)",
+                                                    "mrkp": "_id=9164",
+                                                    "btgNO": "Vencedor (incluindo entrada extra)",
+                                                    "btgSpl": false,
+                                                    "btgSiOn": false,
+                                                    "btgCe": false,
+                                                    "btgMId": 8,
+                                                    "btgMN": "Partida",
+                                                    "btgMOrd": 1,
+                                                    "mbtgMId": 16,
+                                                    "mbtgMN": "Draw No Bet",
+                                                    "hsd": [
+                                                        {
+                                                            "id": 15,
+                                                            "name": "1",
+                                                            "ord": 1
+                                                        },
+                                                        {
+                                                            "id": 16,
+                                                            "name": "2",
+                                                            "ord": 2
+                                                        }
+                                                    ],
+                                                    "cvp": 1,
+                                                    "dt": [
+                                                        2
+                                                    ],
+                                                    "prm": false,
+                                                    "cshOut": true,
+                                                    "ord": 5,
+                                                    "fos": [
+                                                        {
+                                                            "foId": 9615403656,
+                                                            "btId": 1261315,
+                                                            "btN": "Winner (incl. extra innings)",
+                                                            "valid": true,
+                                                            "tvalid": true,
+                                                            "freeze": false,
+                                                            "prm": false,
+                                                            "lineItem": true,
+                                                            "hO": 1.49,
+                                                            "hSh": "LA Dodgers",
+                                                            "pSh": "Home",
+                                                            "oc": "LA Dodgers",
+                                                            "tmId": 118431,
+                                                            "hSDId": 0,
+                                                            "foCe": false,
+                                                            "btCe": false,
+                                                            "taCe": false
+                                                        },
+                                                        {
+                                                            "foId": 9615403657,
+                                                            "btId": 1261318,
+                                                            "btN": "Winner (incl. extra innings)",
+                                                            "valid": true,
+                                                            "tvalid": true,
+                                                            "freeze": false,
+                                                            "prm": false,
+                                                            "lineItem": true,
+                                                            "hO": 2.33,
+                                                            "hSh": "Athletics",
+                                                            "pSh": "Away",
+                                                            "oc": "Athletics",
+                                                            "tmId": 118431,
+                                                            "hSDId": 0,
+                                                            "foCe": false,
+                                                            "btCe": false,
+                                                            "taCe": false
+                                                        }
+                                                    ],
+                                                    "lineItem": true
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "fId": 72619471,
+                                            "fsd": 1774119900000,
+                                            "cshOut": false,
+                                            "ante": false,
+                                            "hcId": 1367713,
+                                            "hcBId": "3651",
+                                            "hcCIC": "USA",
+                                            "acId": 1367745,
+                                            "acBId": "3628",
+                                            "acCIC": "USA",
+                                            "hcN": "Kansas City Royals",
+                                            "acN": "Colorado Rockies",
+                                            "xid": "67502556",
+                                            "lxid": "2456",
+                                            "lbO": false,
+                                            "lSt": false,
+                                            "vld": true,
+                                            "frz": false,
+                                            "ssid": 6427083,
+                                            "fDS": 2,
+                                            "mmp": 1,
+                                            "mDat": {
+                                                "st": "Por iniciar",
+                                                "sud": 0
+                                            },
+                                            "mCod": 53886,
+                                            "ce": false,
+                                            "spl": false,
+                                            "btgs": [
+                                                {
+                                                    "btgId": 9164,
+                                                    "btgN": "Vencedor (incluindo entrada extra)",
+                                                    "mrkp": "_id=9164",
+                                                    "btgNO": "Vencedor (incluindo entrada extra)",
+                                                    "btgSpl": false,
+                                                    "btgSiOn": false,
+                                                    "btgCe": false,
+                                                    "btgMId": 8,
+                                                    "btgMN": "Partida",
+                                                    "btgMOrd": 1,
+                                                    "mbtgMId": 16,
+                                                    "mbtgMN": "Draw No Bet",
+                                                    "hsd": [
+                                                        {
+                                                            "id": 15,
+                                                            "name": "1",
+                                                            "ord": 1
+                                                        },
+                                                        {
+                                                            "id": 16,
+                                                            "name": "2",
+                                                            "ord": 2
+                                                        }
+                                                    ],
+                                                    "cvp": 1,
+                                                    "dt": [
+                                                        2
+                                                    ],
+                                                    "prm": false,
+                                                    "cshOut": true,
+                                                    "ord": 5,
+                                                    "fos": [
+                                                        {
+                                                            "foId": 9615403724,
+                                                            "btId": 1261315,
+                                                            "btN": "Winner (incl. extra innings)",
+                                                            "valid": true,
+                                                            "tvalid": true,
+                                                            "freeze": false,
+                                                            "prm": false,
+                                                            "lineItem": true,
+                                                            "hO": 1.52,
+                                                            "hSh": "Kansas City Royals",
+                                                            "pSh": "Home",
+                                                            "oc": "Kansas City Royals",
+                                                            "tmId": 118431,
+                                                            "hSDId": 0,
+                                                            "foCe": false,
+                                                            "btCe": false,
+                                                            "taCe": false
+                                                        },
+                                                        {
+                                                            "foId": 9615403725,
+                                                            "btId": 1261318,
+                                                            "btN": "Winner (incl. extra innings)",
+                                                            "valid": true,
+                                                            "tvalid": true,
+                                                            "freeze": false,
+                                                            "prm": false,
+                                                            "lineItem": true,
+                                                            "hO": 2.25,
+                                                            "hSh": "Colorado Rockies",
+                                                            "pSh": "Away",
+                                                            "oc": "Colorado Rockies",
+                                                            "tmId": 118431,
+                                                            "hSDId": 0,
+                                                            "foCe": false,
+                                                            "btCe": false,
+                                                            "taCe": false
+                                                        }
+                                                    ],
+                                                    "lineItem": true
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "fId": 72619479,
+                                            "fsd": 1774119900000,
+                                            "cshOut": false,
+                                            "ante": false,
+                                            "hcId": 1367743,
+                                            "hcBId": "3634",
+                                            "hcCIC": "USA",
+                                            "acId": 1367746,
+                                            "acBId": "3650",
+                                            "acCIC": "USA",
+                                            "hcN": "San Francisco Giants",
+                                            "acN": "Cleveland Guardians",
+                                            "xid": "67502560",
+                                            "lxid": "2456",
+                                            "lbO": false,
+                                            "lSt": false,
+                                            "vld": true,
+                                            "frz": false,
+                                            "ssid": 6427085,
+                                            "fDS": 2,
+                                            "mmp": 1,
+                                            "mDat": {
+                                                "st": "Por iniciar",
+                                                "sud": 0
+                                            },
+                                            "mCod": 58036,
+                                            "ce": false,
+                                            "spl": false,
+                                            "btgs": [
+                                                {
+                                                    "btgId": 9164,
+                                                    "btgN": "Vencedor (incluindo entrada extra)",
+                                                    "mrkp": "_id=9164",
+                                                    "btgNO": "Vencedor (incluindo entrada extra)",
+                                                    "btgSpl": false,
+                                                    "btgSiOn": false,
+                                                    "btgCe": false,
+                                                    "btgMId": 8,
+                                                    "btgMN": "Partida",
+                                                    "btgMOrd": 1,
+                                                    "mbtgMId": 16,
+                                                    "mbtgMN": "Draw No Bet",
+                                                    "hsd": [
+                                                        {
+                                                            "id": 15,
+                                                            "name": "1",
+                                                            "ord": 1
+                                                        },
+                                                        {
+                                                            "id": 16,
+                                                            "name": "2",
+                                                            "ord": 2
+                                                        }
+                                                    ],
+                                                    "cvp": 1,
+                                                    "dt": [
+                                                        2
+                                                    ],
+                                                    "prm": false,
+                                                    "cshOut": true,
+                                                    "ord": 5,
+                                                    "fos": [
+                                                        {
+                                                            "foId": 9615408093,
+                                                            "btId": 1261315,
+                                                            "btN": "Winner (incl. extra innings)",
+                                                            "valid": true,
+                                                            "tvalid": true,
+                                                            "freeze": false,
+                                                            "prm": false,
+                                                            "lineItem": true,
+                                                            "hO": 1.72,
+                                                            "hSh": "San Francisco Giants",
+                                                            "pSh": "Home",
+                                                            "oc": "San Francisco Giants",
+                                                            "tmId": 118431,
+                                                            "hSDId": 0,
+                                                            "foCe": false,
+                                                            "btCe": false,
+                                                            "taCe": false
+                                                        },
+                                                        {
+                                                            "foId": 9615408094,
+                                                            "btId": 1261318,
+                                                            "btN": "Winner (incl. extra innings)",
+                                                            "valid": true,
+                                                            "tvalid": true,
+                                                            "freeze": false,
+                                                            "prm": false,
+                                                            "lineItem": true,
+                                                            "hO": 1.93,
+                                                            "hSh": "Cleveland Guardians",
+                                                            "pSh": "Away",
+                                                            "oc": "Cleveland Guardians",
+                                                            "tmId": 118431,
+                                                            "hSDId": 0,
+                                                            "foCe": false,
+                                                            "btCe": false,
+                                                            "taCe": false
+                                                        }
+                                                    ],
+                                                    "lineItem": true
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "fId": 72619477,
+                                            "fsd": 1774123800000,
+                                            "cshOut": false,
+                                            "ante": false,
+                                            "hcId": 1367744,
+                                            "hcBId": "3640",
+                                            "hcCIC": "USA",
+                                            "acId": 1367742,
+                                            "acBId": "3647",
+                                            "acCIC": "USA",
+                                            "hcN": "Arizona Diamondbacks",
+                                            "acN": "Texas Rangers",
+                                            "xid": "67502568",
+                                            "lxid": "2456",
+                                            "lbO": false,
+                                            "lSt": false,
+                                            "vld": true,
+                                            "frz": false,
+                                            "ssid": 6427087,
+                                            "fDS": 2,
+                                            "mmp": 1,
+                                            "mDat": {
+                                                "st": "Por iniciar",
+                                                "sud": 0
+                                            },
+                                            "mCod": 57924,
+                                            "ce": false,
+                                            "spl": false,
+                                            "btgs": [
+                                                {
+                                                    "btgId": 9164,
+                                                    "btgN": "Vencedor (incluindo entrada extra)",
+                                                    "mrkp": "_id=9164",
+                                                    "btgNO": "Vencedor (incluindo entrada extra)",
+                                                    "btgSpl": false,
+                                                    "btgSiOn": false,
+                                                    "btgCe": false,
+                                                    "btgMId": 8,
+                                                    "btgMN": "Partida",
+                                                    "btgMOrd": 1,
+                                                    "mbtgMId": 16,
+                                                    "mbtgMN": "Draw No Bet",
+                                                    "hsd": [
+                                                        {
+                                                            "id": 15,
+                                                            "name": "1",
+                                                            "ord": 1
+                                                        },
+                                                        {
+                                                            "id": 16,
+                                                            "name": "2",
+                                                            "ord": 2
+                                                        }
+                                                    ],
+                                                    "cvp": 1,
+                                                    "dt": [
+                                                        2
+                                                    ],
+                                                    "prm": false,
+                                                    "cshOut": true,
+                                                    "ord": 5,
+                                                    "fos": [
+                                                        {
+                                                            "foId": 9615403882,
+                                                            "btId": 1261315,
+                                                            "btN": "Winner (incl. extra innings)",
+                                                            "valid": true,
+                                                            "tvalid": true,
+                                                            "freeze": false,
+                                                            "prm": false,
+                                                            "lineItem": true,
+                                                            "hO": 1.85,
+                                                            "hSh": "Arizona Diamondbacks",
+                                                            "pSh": "Home",
+                                                            "oc": "Arizona Diamondbacks",
+                                                            "tmId": 118431,
+                                                            "hSDId": 0,
+                                                            "foCe": false,
+                                                            "btCe": false,
+                                                            "taCe": false
+                                                        },
+                                                        {
+                                                            "foId": 9615403883,
+                                                            "btId": 1261318,
+                                                            "btN": "Winner (incl. extra innings)",
+                                                            "valid": true,
+                                                            "tvalid": true,
+                                                            "freeze": false,
+                                                            "prm": false,
+                                                            "lineItem": true,
+                                                            "hO": 1.79,
+                                                            "hSh": "Texas Rangers",
+                                                            "pSh": "Away",
+                                                            "oc": "Texas Rangers",
+                                                            "tmId": 118431,
+                                                            "hSDId": 0,
+                                                            "foCe": false,
+                                                            "btCe": false,
+                                                            "taCe": false
+                                                        }
+                                                    ],
+                                                    "lineItem": true
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "fId": 72619478,
+                                            "fsd": 1774123800000,
+                                            "cshOut": false,
+                                            "ante": false,
+                                            "hcId": 1371944,
+                                            "hcBId": "3630",
+                                            "hcCIC": "USA",
+                                            "acId": 1367714,
+                                            "acBId": "3636",
+                                            "acCIC": "USA",
+                                            "hcN": "Milwaukee Brewers",
+                                            "acN": "San Diego Padres",
+                                            "xid": "67502570",
+                                            "lxid": "2456",
+                                            "lbO": false,
+                                            "lSt": false,
+                                            "vld": true,
+                                            "frz": false,
+                                            "ssid": 6427088,
+                                            "fDS": 2,
+                                            "mmp": 1,
+                                            "mDat": {
+                                                "st": "Por iniciar",
+                                                "sud": 0
+                                            },
+                                            "mCod": 58022,
+                                            "ce": false,
+                                            "spl": false,
+                                            "btgs": [
+                                                {
+                                                    "btgId": 9164,
+                                                    "btgN": "Vencedor (incluindo entrada extra)",
+                                                    "mrkp": "_id=9164",
+                                                    "btgNO": "Vencedor (incluindo entrada extra)",
+                                                    "btgSpl": false,
+                                                    "btgSiOn": false,
+                                                    "btgCe": false,
+                                                    "btgMId": 8,
+                                                    "btgMN": "Partida",
+                                                    "btgMOrd": 1,
+                                                    "mbtgMId": 16,
+                                                    "mbtgMN": "Draw No Bet",
+                                                    "hsd": [
+                                                        {
+                                                            "id": 15,
+                                                            "name": "1",
+                                                            "ord": 1
+                                                        },
+                                                        {
+                                                            "id": 16,
+                                                            "name": "2",
+                                                            "ord": 2
+                                                        }
+                                                    ],
+                                                    "cvp": 1,
+                                                    "dt": [
+                                                        2
+                                                    ],
+                                                    "prm": false,
+                                                    "cshOut": true,
+                                                    "ord": 5,
+                                                    "fos": [
+                                                        {
+                                                            "foId": 9615408089,
+                                                            "btId": 1261315,
+                                                            "btN": "Winner (incl. extra innings)",
+                                                            "valid": true,
+                                                            "tvalid": true,
+                                                            "freeze": false,
+                                                            "prm": false,
+                                                            "lineItem": true,
+                                                            "hO": 1.86,
+                                                            "hSh": "Milwaukee Brewers",
+                                                            "pSh": "Home",
+                                                            "oc": "Milwaukee Brewers",
+                                                            "tmId": 118431,
+                                                            "hSDId": 0,
+                                                            "foCe": false,
+                                                            "btCe": false,
+                                                            "taCe": false
+                                                        },
+                                                        {
+                                                            "foId": 9615408090,
+                                                            "btId": 1261318,
+                                                            "btN": "Winner (incl. extra innings)",
+                                                            "valid": true,
+                                                            "tvalid": true,
+                                                            "freeze": false,
+                                                            "prm": false,
+                                                            "lineItem": true,
+                                                            "hO": 1.77,
+                                                            "hSh": "San Diego Padres",
+                                                            "pSh": "Away",
+                                                            "oc": "San Diego Padres",
+                                                            "tmId": 118431,
+                                                            "hSDId": 0,
+                                                            "foCe": false,
+                                                            "btCe": false,
+                                                            "taCe": false
+                                                        }
+                                                    ],
+                                                    "lineItem": true
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "fId": 72619474,
+                                            "fsd": 1774141500000,
+                                            "cshOut": false,
+                                            "ante": false,
+                                            "hcId": 1367741,
+                                            "hcBId": "3633",
+                                            "hcCIC": "USA",
+                                            "acId": 1367699,
+                                            "acBId": "3644",
+                                            "acCIC": "USA",
+                                            "hcN": "Cincinnati Reds",
+                                            "acN": "Chicago White Sox",
+                                            "xid": "67502564",
+                                            "lxid": "2456",
+                                            "lbO": false,
+                                            "lSt": false,
+                                            "vld": true,
+                                            "frz": false,
+                                            "ssid": 6427086,
+                                            "fDS": 2,
+                                            "mmp": 1,
+                                            "mDat": {
+                                                "st": "Por iniciar",
+                                                "sud": 0
+                                            },
+                                            "mCod": 54655,
+                                            "ce": false,
+                                            "spl": false,
+                                            "btgs": [
+                                                {
+                                                    "btgId": 9164,
+                                                    "btgN": "Vencedor (incluindo entrada extra)",
+                                                    "mrkp": "_id=9164",
+                                                    "btgNO": "Vencedor (incluindo entrada extra)",
+                                                    "btgSpl": false,
+                                                    "btgSiOn": false,
+                                                    "btgCe": false,
+                                                    "btgMId": 8,
+                                                    "btgMN": "Partida",
+                                                    "btgMOrd": 1,
+                                                    "mbtgMId": 16,
+                                                    "mbtgMN": "Draw No Bet",
+                                                    "hsd": [
+                                                        {
+                                                            "id": 15,
+                                                            "name": "1",
+                                                            "ord": 1
+                                                        },
+                                                        {
+                                                            "id": 16,
+                                                            "name": "2",
+                                                            "ord": 2
+                                                        }
+                                                    ],
+                                                    "cvp": 1,
+                                                    "dt": [
+                                                        2
+                                                    ],
+                                                    "prm": false,
+                                                    "cshOut": true,
+                                                    "ord": 5,
+                                                    "fos": [
+                                                        {
+                                                            "foId": 9615403836,
+                                                            "btId": 1261315,
+                                                            "btN": "Winner (incl. extra innings)",
+                                                            "valid": true,
+                                                            "tvalid": true,
+                                                            "freeze": false,
+                                                            "prm": false,
+                                                            "lineItem": true,
+                                                            "hO": 1.69,
+                                                            "hSh": "Cincinnati Reds",
+                                                            "pSh": "Home",
+                                                            "oc": "Cincinnati Reds",
+                                                            "tmId": 118431,
+                                                            "hSDId": 0,
+                                                            "foCe": false,
+                                                            "btCe": false,
+                                                            "taCe": false
+                                                        },
+                                                        {
+                                                            "foId": 9615403837,
+                                                            "btId": 1261318,
+                                                            "btN": "Winner (incl. extra innings)",
+                                                            "valid": true,
+                                                            "tvalid": true,
+                                                            "freeze": false,
+                                                            "prm": false,
+                                                            "lineItem": true,
+                                                            "hO": 1.97,
+                                                            "hSh": "Chicago White Sox",
+                                                            "pSh": "Away",
+                                                            "oc": "Chicago White Sox",
+                                                            "tmId": 118431,
+                                                            "hSDId": 0,
+                                                            "foCe": false,
+                                                            "btCe": false,
+                                                            "taCe": false
+                                                        }
+                                                    ],
+                                                    "lineItem": true
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "fId": 72619475,
+                                            "fsd": 1774141800000,
+                                            "cshOut": false,
+                                            "ante": false,
+                                            "hcId": 1367684,
+                                            "hcBId": "3641",
+                                            "hcCIC": "USA",
+                                            "acId": 1367686,
+                                            "acBId": "3627",
+                                            "acCIC": "USA",
+                                            "hcN": "Seattle Mariners",
+                                            "acN": "Chicago Cubs",
+                                            "xid": "67502566",
+                                            "lxid": "2456",
+                                            "lbO": false,
+                                            "lSt": false,
+                                            "vld": true,
+                                            "frz": false,
+                                            "ssid": 6427089,
+                                            "fDS": 2,
+                                            "mmp": 1,
+                                            "mDat": {
+                                                "st": "Por iniciar",
+                                                "sud": 0
+                                            },
+                                            "mCod": 54883,
+                                            "ce": false,
+                                            "spl": false,
+                                            "btgs": [
+                                                {
+                                                    "btgId": 9164,
+                                                    "btgN": "Vencedor (incluindo entrada extra)",
+                                                    "mrkp": "_id=9164",
+                                                    "btgNO": "Vencedor (incluindo entrada extra)",
+                                                    "btgSpl": false,
+                                                    "btgSiOn": false,
+                                                    "btgCe": false,
+                                                    "btgMId": 8,
+                                                    "btgMN": "Partida",
+                                                    "btgMOrd": 1,
+                                                    "mbtgMId": 16,
+                                                    "mbtgMN": "Draw No Bet",
+                                                    "hsd": [
+                                                        {
+                                                            "id": 15,
+                                                            "name": "1",
+                                                            "ord": 1
+                                                        },
+                                                        {
+                                                            "id": 16,
+                                                            "name": "2",
+                                                            "ord": 2
+                                                        }
+                                                    ],
+                                                    "cvp": 1,
+                                                    "dt": [
+                                                        2
+                                                    ],
+                                                    "prm": false,
+                                                    "cshOut": true,
+                                                    "ord": 5,
+                                                    "fos": [
+                                                        {
+                                                            "foId": 9615403838,
+                                                            "btId": 1261315,
+                                                            "btN": "Winner (incl. extra innings)",
+                                                            "valid": true,
+                                                            "tvalid": true,
+                                                            "freeze": false,
+                                                            "prm": false,
+                                                            "lineItem": true,
+                                                            "hO": 1.78,
+                                                            "hSh": "Seattle Mariners",
+                                                            "pSh": "Home",
+                                                            "oc": "Seattle Mariners",
+                                                            "tmId": 118431,
+                                                            "hSDId": 0,
+                                                            "foCe": false,
+                                                            "btCe": false,
+                                                            "taCe": false
+                                                        },
+                                                        {
+                                                            "foId": 9615403839,
+                                                            "btId": 1261318,
+                                                            "btN": "Winner (incl. extra innings)",
+                                                            "valid": true,
+                                                            "tvalid": true,
+                                                            "freeze": false,
+                                                            "prm": false,
+                                                            "lineItem": true,
+                                                            "hO": 1.86,
+                                                            "hSh": "Chicago Cubs",
+                                                            "pSh": "Away",
+                                                            "oc": "Chicago Cubs",
+                                                            "tmId": 118431,
+                                                            "hSDId": 0,
+                                                            "foCe": false,
+                                                            "btCe": false,
+                                                            "taCe": false
+                                                        }
+                                                    ],
+                                                    "lineItem": true
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "sId": 855386,
+                                    "lId": 951119,
+                                    "seaN": "Grapefruit League",
+                                    "cshOut": true,
+                                    "pseaN": "MLB Spring Training 2026",
+                                    "seaSURL": "mlb-spring-training",
+                                    "lName": "MLB Treino Primavera",
+                                    "fCnt": 6,
+                                    "oCnt": 12,
+                                    "aCnt": 0,
+                                    "fCM": 6,
+                                    "oCM": 12,
+                                    "fs": [
+                                        {
+                                            "fId": 72619468,
+                                            "fsd": 1774112700000,
+                                            "cshOut": false,
+                                            "ante": false,
+                                            "hcId": 1367703,
+                                            "hcBId": "3637",
+                                            "hcCIC": "USA",
+                                            "acId": 1367722,
+                                            "acBId": "3642",
+                                            "acCIC": "CAN",
+                                            "hcN": "Pittsburgh Pirates",
+                                            "acN": "Toronto Blue Jays",
+                                            "xid": "67502544",
+                                            "lxid": "2456",
+                                            "lbO": false,
+                                            "lSt": false,
+                                            "vld": true,
+                                            "frz": false,
+                                            "ssid": 6427074,
+                                            "fDS": 2,
+                                            "mmp": 1,
+                                            "mDat": {
+                                                "st": "Por iniciar",
+                                                "sud": 0
+                                            },
+                                            "mCod": 53652,
+                                            "ce": false,
+                                            "spl": false,
+                                            "btgs": [
+                                                {
+                                                    "btgId": 9164,
+                                                    "btgN": "Vencedor (incluindo entrada extra)",
+                                                    "mrkp": "_id=9164",
+                                                    "btgNO": "Vencedor (incluindo entrada extra)",
+                                                    "btgSpl": false,
+                                                    "btgSiOn": false,
+                                                    "btgCe": false,
+                                                    "btgMId": 8,
+                                                    "btgMN": "Partida",
+                                                    "btgMOrd": 1,
+                                                    "mbtgMId": 16,
+                                                    "mbtgMN": "Draw No Bet",
+                                                    "hsd": [
+                                                        {
+                                                            "id": 15,
+                                                            "name": "1",
+                                                            "ord": 1
+                                                        },
+                                                        {
+                                                            "id": 16,
+                                                            "name": "2",
+                                                            "ord": 2
+                                                        }
+                                                    ],
+                                                    "cvp": 1,
+                                                    "dt": [
+                                                        2
+                                                    ],
+                                                    "prm": false,
+                                                    "cshOut": true,
+                                                    "ord": 5,
+                                                    "fos": [
+                                                        {
+                                                            "foId": 9615403650,
+                                                            "btId": 1261315,
+                                                            "btN": "Winner (incl. extra innings)",
+                                                            "valid": true,
+                                                            "tvalid": true,
+                                                            "freeze": false,
+                                                            "prm": false,
+                                                            "lineItem": true,
+                                                            "hO": 1.73,
+                                                            "hSh": "Pittsburgh Pirates",
+                                                            "pSh": "Home",
+                                                            "oc": "Pittsburgh Pirates",
+                                                            "tmId": 118431,
+                                                            "hSDId": 0,
+                                                            "foCe": false,
+                                                            "btCe": false,
+                                                            "taCe": false
+                                                        },
+                                                        {
+                                                            "foId": 9615403651,
+                                                            "btId": 1261318,
+                                                            "btN": "Winner (incl. extra innings)",
+                                                            "valid": true,
+                                                            "tvalid": true,
+                                                            "freeze": false,
+                                                            "prm": false,
+                                                            "lineItem": true,
+                                                            "hO": 1.92,
+                                                            "hSh": "Toronto Blue Jays",
+                                                            "pSh": "Away",
+                                                            "oc": "Toronto Blue Jays",
+                                                            "tmId": 118431,
+                                                            "hSDId": 0,
+                                                            "foCe": false,
+                                                            "btCe": false,
+                                                            "taCe": false
+                                                        }
+                                                    ],
+                                                    "lineItem": true
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "fId": 72619470,
+                                            "fsd": 1774112700000,
+                                            "cshOut": false,
+                                            "ante": false,
+                                            "hcId": 1367719,
+                                            "hcBId": "3652",
+                                            "hcCIC": "USA",
+                                            "acId": 1367718,
+                                            "acBId": "3635",
+                                            "acCIC": "USA",
+                                            "hcN": "Baltimore Orioles",
+                                            "acN": "Philadelphia Phillies",
+                                            "xid": "67502546",
+                                            "lxid": "2456",
+                                            "lbO": false,
+                                            "lSt": false,
+                                            "vld": true,
+                                            "frz": false,
+                                            "ssid": 6427071,
+                                            "fDS": 2,
+                                            "mmp": 1,
+                                            "mDat": {
+                                                "st": "Por iniciar",
+                                                "sud": 0
+                                            },
+                                            "mCod": 53876,
+                                            "ce": false,
+                                            "spl": false,
+                                            "btgs": [
+                                                {
+                                                    "btgId": 9164,
+                                                    "btgN": "Vencedor (incluindo entrada extra)",
+                                                    "mrkp": "_id=9164",
+                                                    "btgNO": "Vencedor (incluindo entrada extra)",
+                                                    "btgSpl": false,
+                                                    "btgSiOn": false,
+                                                    "btgCe": false,
+                                                    "btgMId": 8,
+                                                    "btgMN": "Partida",
+                                                    "btgMOrd": 1,
+                                                    "mbtgMId": 16,
+                                                    "mbtgMN": "Draw No Bet",
+                                                    "hsd": [
+                                                        {
+                                                            "id": 15,
+                                                            "name": "1",
+                                                            "ord": 1
+                                                        },
+                                                        {
+                                                            "id": 16,
+                                                            "name": "2",
+                                                            "ord": 2
+                                                        }
+                                                    ],
+                                                    "cvp": 1,
+                                                    "dt": [
+                                                        2
+                                                    ],
+                                                    "prm": false,
+                                                    "cshOut": true,
+                                                    "ord": 5,
+                                                    "fos": [
+                                                        {
+                                                            "foId": 9615403718,
+                                                            "btId": 1261315,
+                                                            "btN": "Winner (incl. extra innings)",
+                                                            "valid": true,
+                                                            "tvalid": true,
+                                                            "freeze": false,
+                                                            "prm": false,
+                                                            "lineItem": true,
+                                                            "hO": 1.75,
+                                                            "hSh": "Baltimore Orioles",
+                                                            "pSh": "Home",
+                                                            "oc": "Baltimore Orioles",
+                                                            "tmId": 118431,
+                                                            "hSDId": 0,
+                                                            "foCe": false,
+                                                            "btCe": false,
+                                                            "taCe": false
+                                                        },
+                                                        {
+                                                            "foId": 9615403719,
+                                                            "btId": 1261318,
+                                                            "btN": "Winner (incl. extra innings)",
+                                                            "valid": true,
+                                                            "tvalid": true,
+                                                            "freeze": false,
+                                                            "prm": false,
+                                                            "lineItem": true,
+                                                            "hO": 1.89,
+                                                            "hSh": "Philadelphia Phillies",
+                                                            "pSh": "Away",
+                                                            "oc": "Philadelphia Phillies",
+                                                            "tmId": 118431,
+                                                            "hSDId": 0,
+                                                            "foCe": false,
+                                                            "btCe": false,
+                                                            "taCe": false
+                                                        }
+                                                    ],
+                                                    "lineItem": true
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "fId": 72619472,
+                                            "fsd": 1774112700000,
+                                            "cshOut": false,
+                                            "ante": false,
+                                            "hcId": 1373401,
+                                            "hcBId": "3646",
+                                            "hcCIC": "USA",
+                                            "acId": 1367723,
+                                            "acBId": "3656",
+                                            "acCIC": "USA",
+                                            "hcN": "Boston Red Sox",
+                                            "acN": "Atlanta Braves",
+                                            "xid": "67502548",
+                                            "lxid": "2456",
+                                            "lbO": false,
+                                            "lSt": false,
+                                            "vld": true,
+                                            "frz": false,
+                                            "ssid": 6427072,
+                                            "fDS": 2,
+                                            "mmp": 1,
+                                            "mDat": {
+                                                "st": "Por iniciar",
+                                                "sud": 0
+                                            },
+                                            "mCod": 54053,
+                                            "ce": false,
+                                            "spl": false,
+                                            "btgs": [
+                                                {
+                                                    "btgId": 9164,
+                                                    "btgN": "Vencedor (incluindo entrada extra)",
+                                                    "mrkp": "_id=9164",
+                                                    "btgNO": "Vencedor (incluindo entrada extra)",
+                                                    "btgSpl": false,
+                                                    "btgSiOn": false,
+                                                    "btgCe": false,
+                                                    "btgMId": 8,
+                                                    "btgMN": "Partida",
+                                                    "btgMOrd": 1,
+                                                    "mbtgMId": 16,
+                                                    "mbtgMN": "Draw No Bet",
+                                                    "hsd": [
+                                                        {
+                                                            "id": 15,
+                                                            "name": "1",
+                                                            "ord": 1
+                                                        },
+                                                        {
+                                                            "id": 16,
+                                                            "name": "2",
+                                                            "ord": 2
+                                                        }
+                                                    ],
+                                                    "cvp": 1,
+                                                    "dt": [
+                                                        2
+                                                    ],
+                                                    "prm": false,
+                                                    "cshOut": true,
+                                                    "ord": 5,
+                                                    "fos": [
+                                                        {
+                                                            "foId": 9615403786,
+                                                            "btId": 1261315,
+                                                            "btN": "Winner (incl. extra innings)",
+                                                            "valid": true,
+                                                            "tvalid": true,
+                                                            "freeze": false,
+                                                            "prm": false,
+                                                            "lineItem": true,
+                                                            "hO": 1.65,
+                                                            "hSh": "Boston Red Sox",
+                                                            "pSh": "Home",
+                                                            "oc": "Boston Red Sox",
+                                                            "tmId": 118431,
+                                                            "hSDId": 0,
+                                                            "foCe": false,
+                                                            "btCe": false,
+                                                            "taCe": false
+                                                        },
+                                                        {
+                                                            "foId": 9615403787,
+                                                            "btId": 1261318,
+                                                            "btN": "Winner (incl. extra innings)",
+                                                            "valid": true,
+                                                            "tvalid": true,
+                                                            "freeze": false,
+                                                            "prm": false,
+                                                            "lineItem": true,
+                                                            "hO": 2.03,
+                                                            "hSh": "Atlanta Braves",
+                                                            "pSh": "Away",
+                                                            "oc": "Atlanta Braves",
+                                                            "tmId": 118431,
+                                                            "hSDId": 0,
+                                                            "foCe": false,
+                                                            "btCe": false,
+                                                            "taCe": false
+                                                        }
+                                                    ],
+                                                    "lineItem": true
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "fId": 72619473,
+                                            "fsd": 1774112700000,
+                                            "cshOut": false,
+                                            "ante": false,
+                                            "hcId": 1367710,
+                                            "hcBId": "3632",
+                                            "hcCIC": "USA",
+                                            "acId": 1367709,
+                                            "acBId": "3639",
+                                            "acCIC": "USA",
+                                            "hcN": "St. Louis Cardinals",
+                                            "acN": "Miami Marlins",
+                                            "xid": "67502550",
+                                            "lxid": "2456",
+                                            "lbO": false,
+                                            "lSt": false,
+                                            "vld": true,
+                                            "frz": false,
+                                            "ssid": 6427076,
+                                            "fDS": 2,
+                                            "mmp": 1,
+                                            "mDat": {
+                                                "st": "Por iniciar",
+                                                "sud": 0
+                                            },
+                                            "mCod": 54083,
+                                            "ce": false,
+                                            "spl": false,
+                                            "btgs": [
+                                                {
+                                                    "btgId": 9164,
+                                                    "btgN": "Vencedor (incluindo entrada extra)",
+                                                    "mrkp": "_id=9164",
+                                                    "btgNO": "Vencedor (incluindo entrada extra)",
+                                                    "btgSpl": false,
+                                                    "btgSiOn": false,
+                                                    "btgCe": false,
+                                                    "btgMId": 8,
+                                                    "btgMN": "Partida",
+                                                    "btgMOrd": 1,
+                                                    "mbtgMId": 16,
+                                                    "mbtgMN": "Draw No Bet",
+                                                    "hsd": [
+                                                        {
+                                                            "id": 15,
+                                                            "name": "1",
+                                                            "ord": 1
+                                                        },
+                                                        {
+                                                            "id": 16,
+                                                            "name": "2",
+                                                            "ord": 2
+                                                        }
+                                                    ],
+                                                    "cvp": 1,
+                                                    "dt": [
+                                                        2
+                                                    ],
+                                                    "prm": false,
+                                                    "cshOut": true,
+                                                    "ord": 5,
+                                                    "fos": [
+                                                        {
+                                                            "foId": 9615403788,
+                                                            "btId": 1261315,
+                                                            "btN": "Winner (incl. extra innings)",
+                                                            "valid": true,
+                                                            "tvalid": true,
+                                                            "freeze": false,
+                                                            "prm": false,
+                                                            "lineItem": true,
+                                                            "hO": 1.82,
+                                                            "hSh": "St. Louis Cardinals",
+                                                            "pSh": "Home",
+                                                            "oc": "St. Louis Cardinals",
+                                                            "tmId": 118431,
+                                                            "hSDId": 0,
+                                                            "foCe": false,
+                                                            "btCe": false,
+                                                            "taCe": false
+                                                        },
+                                                        {
+                                                            "foId": 9615403789,
+                                                            "btId": 1261318,
+                                                            "btN": "Winner (incl. extra innings)",
+                                                            "valid": true,
+                                                            "tvalid": true,
+                                                            "freeze": false,
+                                                            "prm": false,
+                                                            "lineItem": true,
+                                                            "hO": 1.82,
+                                                            "hSh": "Miami Marlins",
+                                                            "pSh": "Away",
+                                                            "oc": "Miami Marlins",
+                                                            "tmId": 118431,
+                                                            "hSDId": 0,
+                                                            "foCe": false,
+                                                            "btCe": false,
+                                                            "taCe": false
+                                                        }
+                                                    ],
+                                                    "lineItem": true
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "fId": 72619476,
+                                            "fsd": 1774112700000,
+                                            "cshOut": false,
+                                            "ante": false,
+                                            "hcId": 1367729,
+                                            "hcBId": "3648",
+                                            "hcCIC": "USA",
+                                            "acId": 1367702,
+                                            "acBId": "3654",
+                                            "acCIC": "USA",
+                                            "hcN": "Detroit Tigers",
+                                            "acN": "New York Yankees",
+                                            "xid": "67502552",
+                                            "lxid": "2456",
+                                            "lbO": false,
+                                            "lSt": false,
+                                            "vld": true,
+                                            "frz": false,
+                                            "ssid": 6427073,
+                                            "fDS": 2,
+                                            "mmp": 1,
+                                            "mDat": {
+                                                "st": "Por iniciar",
+                                                "sud": 0
+                                            },
+                                            "mCod": 57793,
+                                            "ce": false,
+                                            "spl": false,
+                                            "btgs": [
+                                                {
+                                                    "btgId": 9164,
+                                                    "btgN": "Vencedor (incluindo entrada extra)",
+                                                    "mrkp": "_id=9164",
+                                                    "btgNO": "Vencedor (incluindo entrada extra)",
+                                                    "btgSpl": false,
+                                                    "btgSiOn": false,
+                                                    "btgCe": false,
+                                                    "btgMId": 8,
+                                                    "btgMN": "Partida",
+                                                    "btgMOrd": 1,
+                                                    "mbtgMId": 16,
+                                                    "mbtgMN": "Draw No Bet",
+                                                    "hsd": [
+                                                        {
+                                                            "id": 15,
+                                                            "name": "1",
+                                                            "ord": 1
+                                                        },
+                                                        {
+                                                            "id": 16,
+                                                            "name": "2",
+                                                            "ord": 2
+                                                        }
+                                                    ],
+                                                    "cvp": 1,
+                                                    "dt": [
+                                                        2
+                                                    ],
+                                                    "prm": false,
+                                                    "cshOut": true,
+                                                    "ord": 5,
+                                                    "fos": [
+                                                        {
+                                                            "foId": 9615403880,
+                                                            "btId": 1261315,
+                                                            "btN": "Winner (incl. extra innings)",
+                                                            "valid": true,
+                                                            "tvalid": true,
+                                                            "freeze": false,
+                                                            "prm": false,
+                                                            "lineItem": true,
+                                                            "hO": 1.62,
+                                                            "hSh": "Detroit Tigers",
+                                                            "pSh": "Home",
+                                                            "oc": "Detroit Tigers",
+                                                            "tmId": 118431,
+                                                            "hSDId": 0,
+                                                            "foCe": false,
+                                                            "btCe": false,
+                                                            "taCe": false
+                                                        },
+                                                        {
+                                                            "foId": 9615403881,
+                                                            "btId": 1261318,
+                                                            "btN": "Winner (incl. extra innings)",
+                                                            "valid": true,
+                                                            "tvalid": true,
+                                                            "freeze": false,
+                                                            "prm": false,
+                                                            "lineItem": true,
+                                                            "hO": 2.07,
+                                                            "hSh": "New York Yankees",
+                                                            "pSh": "Away",
+                                                            "oc": "New York Yankees",
+                                                            "tmId": 118431,
+                                                            "hSDId": 0,
+                                                            "foCe": false,
+                                                            "btCe": false,
+                                                            "taCe": false
+                                                        }
+                                                    ],
+                                                    "lineItem": true
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "fId": 72619481,
+                                            "fsd": 1774112700000,
+                                            "cshOut": false,
+                                            "ante": false,
+                                            "hcId": 1375704,
+                                            "hcBId": "3653",
+                                            "hcCIC": "USA",
+                                            "acId": 1371945,
+                                            "acBId": "3649",
+                                            "acCIC": "USA",
+                                            "hcN": "Tampa Bay Rays",
+                                            "acN": "Minnesota Twins",
+                                            "xid": "67502562",
+                                            "lxid": "2456",
+                                            "lbO": false,
+                                            "lSt": false,
+                                            "vld": true,
+                                            "frz": false,
+                                            "ssid": 6427079,
+                                            "fDS": 2,
+                                            "mmp": 1,
+                                            "mDat": {
+                                                "st": "Por iniciar",
+                                                "sud": 0
+                                            },
+                                            "mCod": 61588,
+                                            "ce": false,
+                                            "spl": false,
+                                            "btgs": [
+                                                {
+                                                    "btgId": 9164,
+                                                    "btgN": "Vencedor (incluindo entrada extra)",
+                                                    "mrkp": "_id=9164",
+                                                    "btgNO": "Vencedor (incluindo entrada extra)",
+                                                    "btgSpl": false,
+                                                    "btgSiOn": false,
+                                                    "btgCe": false,
+                                                    "btgMId": 8,
+                                                    "btgMN": "Partida",
+                                                    "btgMOrd": 1,
+                                                    "mbtgMId": 16,
+                                                    "mbtgMN": "Draw No Bet",
+                                                    "hsd": [
+                                                        {
+                                                            "id": 15,
+                                                            "name": "1",
+                                                            "ord": 1
+                                                        },
+                                                        {
+                                                            "id": 16,
+                                                            "name": "2",
+                                                            "ord": 2
+                                                        }
+                                                    ],
+                                                    "cvp": 1,
+                                                    "dt": [
+                                                        2
+                                                    ],
+                                                    "prm": false,
+                                                    "cshOut": true,
+                                                    "ord": 5,
+                                                    "fos": [
+                                                        {
+                                                            "foId": 9615408171,
+                                                            "btId": 1261315,
+                                                            "btN": "Winner (incl. extra innings)",
+                                                            "valid": true,
+                                                            "tvalid": true,
+                                                            "freeze": false,
+                                                            "prm": false,
+                                                            "lineItem": true,
+                                                            "hO": 1.9,
+                                                            "hSh": "Tampa Bay Rays",
+                                                            "pSh": "Home",
+                                                            "oc": "Tampa Bay Rays",
+                                                            "tmId": 118431,
+                                                            "hSDId": 0,
+                                                            "foCe": false,
+                                                            "btCe": false,
+                                                            "taCe": false
+                                                        },
+                                                        {
+                                                            "foId": 9615408172,
+                                                            "btId": 1261318,
+                                                            "btN": "Winner (incl. extra innings)",
+                                                            "valid": true,
+                                                            "tvalid": true,
+                                                            "freeze": false,
+                                                            "prm": false,
+                                                            "lineItem": true,
+                                                            "hO": 1.75,
+                                                            "hSh": "Minnesota Twins",
+                                                            "pSh": "Away",
+                                                            "oc": "Minnesota Twins",
+                                                            "tmId": 118431,
+                                                            "hSDId": 0,
+                                                            "foCe": false,
+                                                            "btCe": false,
+                                                            "taCe": false
+                                                        }
+                                                    ],
+                                                    "lineItem": true
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "fs": []
+                        }
+                    ],
+                    "cSURL": "usa"
+                }
+            ],
+            "stSURL": "baseball"
+        }
+    ],
+    "type": null
+}

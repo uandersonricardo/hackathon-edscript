@@ -1,0 +1,816 @@
+{
+    "success": true,
+    "responseCodes": [],
+    "data": [
+        {
+            "stId": 211,
+            "xid": "137",
+            "stN": "eFootball",
+            "iconId": 153,
+            "pid": 2,
+            "mdt": 1,
+            "cmt": 1,
+            "lvt": true,
+            "fCnt": 6,
+            "oCnt": 18,
+            "aCnt": 0,
+            "fCM": 6,
+            "oCM": 18,
+            "ord": 15,
+            "cs": [
+                {
+                    "cId": 10002557,
+                    "xid": "2440",
+                    "cN": "Eadriatic League",
+                    "fCnt": 6,
+                    "oCnt": 18,
+                    "aCnt": 0,
+                    "fCM": 6,
+                    "oCM": 18,
+                    "sns": [
+                        {
+                            "sId": 779097,
+                            "lId": 981707,
+                            "seaN": "eAdriatic League",
+                            "cshOut": false,
+                            "seaSURL": "eadriatic-league",
+                            "lName": "eAdriatic League",
+                            "fCnt": 6,
+                            "oCnt": 18,
+                            "aCnt": 0,
+                            "fCM": 6,
+                            "oCM": 18,
+                            "fs": [
+                                {
+                                    "fId": 72606147,
+                                    "fsd": 1774103400000,
+                                    "cshOut": false,
+                                    "ante": false,
+                                    "hcId": 3301470,
+                                    "hcBId": "1052373",
+                                    "acId": 4489930,
+                                    "acBId": "1198691",
+                                    "hcN": "ACF Fiorentina (Cleo)",
+                                    "acN": "SSC Napoli (Haidan)",
+                                    "xid": "70092736",
+                                    "lxid": "39749",
+                                    "lbO": true,
+                                    "lSt": false,
+                                    "vld": true,
+                                    "frz": false,
+                                    "fDS": 3,
+                                    "mmp": 1,
+                                    "mDat": {
+                                        "st": "Por iniciar",
+                                        "sud": 0
+                                    },
+                                    "mCod": 163643,
+                                    "ce": false,
+                                    "spl": false,
+                                    "btgs": [
+                                        {
+                                            "btgId": 114762,
+                                            "btgN": "1x2",
+                                            "mrkp": "_id=114762",
+                                            "btgNO": "1x2",
+                                            "btgSpl": false,
+                                            "btgSiOn": false,
+                                            "btgCe": false,
+                                            "btgMId": 8,
+                                            "btgMN": "Partida",
+                                            "btgMOrd": 1,
+                                            "mbtgMId": 41,
+                                            "mbtgMN": "H/D/A",
+                                            "mbtgMOrd": 0,
+                                            "hsd": [
+                                                {
+                                                    "id": 26,
+                                                    "name": "1",
+                                                    "ord": 1
+                                                },
+                                                {
+                                                    "id": 27,
+                                                    "name": "X",
+                                                    "ord": 2
+                                                },
+                                                {
+                                                    "id": 28,
+                                                    "name": "2",
+                                                    "ord": 3
+                                                }
+                                            ],
+                                            "dt": [
+                                                3
+                                            ],
+                                            "prm": true,
+                                            "cshOut": false,
+                                            "ord": 1,
+                                            "fos": [
+                                                {
+                                                    "foId": 9617405587,
+                                                    "btId": 2115765,
+                                                    "btN": "1x2",
+                                                    "valid": true,
+                                                    "tvalid": true,
+                                                    "freeze": false,
+                                                    "prm": true,
+                                                    "lineItem": true,
+                                                    "hO": 1.43,
+                                                    "hSh": "ACF Fiorentina (Cleo)",
+                                                    "pSh": "Home",
+                                                    "oc": "ACF Fiorentina (Cleo)",
+                                                    "tmId": 301301,
+                                                    "hSDId": 0,
+                                                    "foCe": false,
+                                                    "btCe": false,
+                                                    "taCe": false
+                                                },
+                                                {
+                                                    "foId": 9617405588,
+                                                    "btId": 2115766,
+                                                    "btN": "1x2",
+                                                    "valid": true,
+                                                    "tvalid": true,
+                                                    "freeze": false,
+                                                    "prm": true,
+                                                    "lineItem": true,
+                                                    "hO": 7.45,
+                                                    "hSh": "Empate",
+                                                    "pSh": "Empate",
+                                                    "oc": "Empate",
+                                                    "tmId": 301301,
+                                                    "hSDId": 0,
+                                                    "foCe": false,
+                                                    "btCe": false,
+                                                    "taCe": false
+                                                },
+                                                {
+                                                    "foId": 9617405589,
+                                                    "btId": 2115767,
+                                                    "btN": "1x2",
+                                                    "valid": true,
+                                                    "tvalid": true,
+                                                    "freeze": false,
+                                                    "prm": true,
+                                                    "lineItem": true,
+                                                    "hO": 4.04,
+                                                    "hSh": "SSC Napoli (Haidan)",
+                                                    "pSh": "Away",
+                                                    "oc": "SSC Napoli (Haidan)",
+                                                    "tmId": 301301,
+                                                    "hSDId": 0,
+                                                    "foCe": false,
+                                                    "btCe": false,
+                                                    "taCe": false
+                                                }
+                                            ],
+                                            "lineItem": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "fId": 72606556,
+                                    "fsd": 1774103400000,
+                                    "cshOut": false,
+                                    "ante": false,
+                                    "hcId": 4650182,
+                                    "hcBId": "1213289",
+                                    "acId": 4356559,
+                                    "acBId": "1132315",
+                                    "hcN": "FC Inter Milano (Dominic)",
+                                    "acN": "AS Roma (Mateo)",
+                                    "xid": "70092690",
+                                    "lxid": "39749",
+                                    "lbO": true,
+                                    "lSt": false,
+                                    "vld": true,
+                                    "frz": false,
+                                    "fDS": 3,
+                                    "mmp": 1,
+                                    "mDat": {
+                                        "st": "Por iniciar",
+                                        "sud": 0
+                                    },
+                                    "mCod": 163802,
+                                    "ce": false,
+                                    "spl": false,
+                                    "btgs": [
+                                        {
+                                            "btgId": 114762,
+                                            "btgN": "1x2",
+                                            "mrkp": "_id=114762",
+                                            "btgNO": "1x2",
+                                            "btgSpl": false,
+                                            "btgSiOn": false,
+                                            "btgCe": false,
+                                            "btgMId": 8,
+                                            "btgMN": "Partida",
+                                            "btgMOrd": 1,
+                                            "mbtgMId": 41,
+                                            "mbtgMN": "H/D/A",
+                                            "mbtgMOrd": 0,
+                                            "hsd": [
+                                                {
+                                                    "id": 26,
+                                                    "name": "1",
+                                                    "ord": 1
+                                                },
+                                                {
+                                                    "id": 27,
+                                                    "name": "X",
+                                                    "ord": 2
+                                                },
+                                                {
+                                                    "id": 28,
+                                                    "name": "2",
+                                                    "ord": 3
+                                                }
+                                            ],
+                                            "dt": [
+                                                3
+                                            ],
+                                            "prm": true,
+                                            "cshOut": false,
+                                            "ord": 1,
+                                            "fos": [
+                                                {
+                                                    "foId": 9617405580,
+                                                    "btId": 2115765,
+                                                    "btN": "1x2",
+                                                    "valid": true,
+                                                    "tvalid": true,
+                                                    "freeze": false,
+                                                    "prm": true,
+                                                    "lineItem": true,
+                                                    "hO": 1.9,
+                                                    "hSh": "FC Inter Milano (Dominic)",
+                                                    "pSh": "Home",
+                                                    "oc": "FC Inter Milano (Dominic)",
+                                                    "tmId": 301301,
+                                                    "hSDId": 0,
+                                                    "foCe": false,
+                                                    "btCe": false,
+                                                    "taCe": false
+                                                },
+                                                {
+                                                    "foId": 9617405581,
+                                                    "btId": 2115766,
+                                                    "btN": "1x2",
+                                                    "valid": true,
+                                                    "tvalid": true,
+                                                    "freeze": false,
+                                                    "prm": true,
+                                                    "lineItem": true,
+                                                    "hO": 6.75,
+                                                    "hSh": "Empate",
+                                                    "pSh": "Empate",
+                                                    "oc": "Empate",
+                                                    "tmId": 301301,
+                                                    "hSDId": 0,
+                                                    "foCe": false,
+                                                    "btCe": false,
+                                                    "taCe": false
+                                                },
+                                                {
+                                                    "foId": 9617405582,
+                                                    "btId": 2115767,
+                                                    "btN": "1x2",
+                                                    "valid": true,
+                                                    "tvalid": true,
+                                                    "freeze": false,
+                                                    "prm": true,
+                                                    "lineItem": true,
+                                                    "hO": 2.47,
+                                                    "hSh": "AS Roma (Mateo)",
+                                                    "pSh": "Away",
+                                                    "oc": "AS Roma (Mateo)",
+                                                    "tmId": 301301,
+                                                    "hSDId": 0,
+                                                    "foCe": false,
+                                                    "btCe": false,
+                                                    "taCe": false
+                                                }
+                                            ],
+                                            "lineItem": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "fId": 72605489,
+                                    "fsd": 1774104300000,
+                                    "cshOut": false,
+                                    "ante": false,
+                                    "hcId": 4356559,
+                                    "hcBId": "1132315",
+                                    "acId": 3296866,
+                                    "acBId": "1050165",
+                                    "hcN": "AS Roma (Mateo)",
+                                    "acN": "SS Lazio (Beckham)",
+                                    "xid": "70092350",
+                                    "lxid": "39749",
+                                    "lbO": true,
+                                    "lSt": false,
+                                    "vld": true,
+                                    "frz": false,
+                                    "fDS": 3,
+                                    "mmp": 1,
+                                    "mDat": {
+                                        "st": "Por iniciar",
+                                        "sud": 0
+                                    },
+                                    "mCod": 160439,
+                                    "ce": false,
+                                    "spl": false,
+                                    "btgs": [
+                                        {
+                                            "btgId": 114762,
+                                            "btgN": "1x2",
+                                            "mrkp": "_id=114762",
+                                            "btgNO": "1x2",
+                                            "btgSpl": false,
+                                            "btgSiOn": false,
+                                            "btgCe": false,
+                                            "btgMId": 8,
+                                            "btgMN": "Partida",
+                                            "btgMOrd": 1,
+                                            "mbtgMId": 41,
+                                            "mbtgMN": "H/D/A",
+                                            "mbtgMOrd": 0,
+                                            "hsd": [
+                                                {
+                                                    "id": 26,
+                                                    "name": "1",
+                                                    "ord": 1
+                                                },
+                                                {
+                                                    "id": 27,
+                                                    "name": "X",
+                                                    "ord": 2
+                                                },
+                                                {
+                                                    "id": 28,
+                                                    "name": "2",
+                                                    "ord": 3
+                                                }
+                                            ],
+                                            "dt": [
+                                                3
+                                            ],
+                                            "prm": true,
+                                            "cshOut": false,
+                                            "ord": 1,
+                                            "fos": [
+                                                {
+                                                    "foId": 9617450673,
+                                                    "btId": 2115765,
+                                                    "btN": "1x2",
+                                                    "valid": true,
+                                                    "tvalid": true,
+                                                    "freeze": false,
+                                                    "prm": true,
+                                                    "lineItem": true,
+                                                    "hO": 2.04,
+                                                    "hSh": "AS Roma (Mateo)",
+                                                    "pSh": "Home",
+                                                    "oc": "AS Roma (Mateo)",
+                                                    "tmId": 301301,
+                                                    "hSDId": 0,
+                                                    "foCe": false,
+                                                    "btCe": false,
+                                                    "taCe": false
+                                                },
+                                                {
+                                                    "foId": 9617450674,
+                                                    "btId": 2115766,
+                                                    "btN": "1x2",
+                                                    "valid": true,
+                                                    "tvalid": true,
+                                                    "freeze": false,
+                                                    "prm": true,
+                                                    "lineItem": true,
+                                                    "hO": 6.28,
+                                                    "hSh": "Empate",
+                                                    "pSh": "Empate",
+                                                    "oc": "Empate",
+                                                    "tmId": 301301,
+                                                    "hSDId": 0,
+                                                    "foCe": false,
+                                                    "btCe": false,
+                                                    "taCe": false
+                                                },
+                                                {
+                                                    "foId": 9617450675,
+                                                    "btId": 2115767,
+                                                    "btN": "1x2",
+                                                    "valid": true,
+                                                    "tvalid": true,
+                                                    "freeze": false,
+                                                    "prm": true,
+                                                    "lineItem": true,
+                                                    "hO": 2.22,
+                                                    "hSh": "SS Lazio (Beckham)",
+                                                    "pSh": "Away",
+                                                    "oc": "SS Lazio (Beckham)",
+                                                    "tmId": 301301,
+                                                    "hSDId": 0,
+                                                    "foCe": false,
+                                                    "btCe": false,
+                                                    "taCe": false
+                                                }
+                                            ],
+                                            "lineItem": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "fId": 72606085,
+                                    "fsd": 1774104300000,
+                                    "cshOut": false,
+                                    "ante": false,
+                                    "hcId": 4650182,
+                                    "hcBId": "1213289",
+                                    "acId": 4489930,
+                                    "acBId": "1198691",
+                                    "hcN": "FC Inter Milano (Dominic)",
+                                    "acN": "SSC Napoli (Haidan)",
+                                    "xid": "70092568",
+                                    "lxid": "39749",
+                                    "lbO": true,
+                                    "lSt": false,
+                                    "vld": true,
+                                    "frz": false,
+                                    "fDS": 3,
+                                    "mmp": 1,
+                                    "mDat": {
+                                        "st": "Por iniciar",
+                                        "sud": 0
+                                    },
+                                    "mCod": 162070,
+                                    "ce": false,
+                                    "spl": false,
+                                    "btgs": [
+                                        {
+                                            "btgId": 114762,
+                                            "btgN": "1x2",
+                                            "mrkp": "_id=114762",
+                                            "btgNO": "1x2",
+                                            "btgSpl": false,
+                                            "btgSiOn": false,
+                                            "btgCe": false,
+                                            "btgMId": 8,
+                                            "btgMN": "Partida",
+                                            "btgMOrd": 1,
+                                            "mbtgMId": 41,
+                                            "mbtgMN": "H/D/A",
+                                            "mbtgMOrd": 0,
+                                            "hsd": [
+                                                {
+                                                    "id": 26,
+                                                    "name": "1",
+                                                    "ord": 1
+                                                },
+                                                {
+                                                    "id": 27,
+                                                    "name": "X",
+                                                    "ord": 2
+                                                },
+                                                {
+                                                    "id": 28,
+                                                    "name": "2",
+                                                    "ord": 3
+                                                }
+                                            ],
+                                            "dt": [
+                                                3
+                                            ],
+                                            "prm": true,
+                                            "cshOut": false,
+                                            "ord": 1,
+                                            "fos": [
+                                                {
+                                                    "foId": 9617450678,
+                                                    "btId": 2115765,
+                                                    "btN": "1x2",
+                                                    "valid": true,
+                                                    "tvalid": true,
+                                                    "freeze": false,
+                                                    "prm": true,
+                                                    "lineItem": true,
+                                                    "hO": 1.74,
+                                                    "hSh": "FC Inter Milano (Dominic)",
+                                                    "pSh": "Home",
+                                                    "oc": "FC Inter Milano (Dominic)",
+                                                    "tmId": 301301,
+                                                    "hSDId": 0,
+                                                    "foCe": false,
+                                                    "btCe": false,
+                                                    "taCe": false
+                                                },
+                                                {
+                                                    "foId": 9617450679,
+                                                    "btId": 2115766,
+                                                    "btN": "1x2",
+                                                    "valid": true,
+                                                    "tvalid": true,
+                                                    "freeze": false,
+                                                    "prm": true,
+                                                    "lineItem": true,
+                                                    "hO": 8.13,
+                                                    "hSh": "Empate",
+                                                    "pSh": "Empate",
+                                                    "oc": "Empate",
+                                                    "tmId": 301301,
+                                                    "hSDId": 0,
+                                                    "foCe": false,
+                                                    "btCe": false,
+                                                    "taCe": false
+                                                },
+                                                {
+                                                    "foId": 9617450680,
+                                                    "btId": 2115767,
+                                                    "btN": "1x2",
+                                                    "valid": true,
+                                                    "tvalid": true,
+                                                    "freeze": false,
+                                                    "prm": true,
+                                                    "lineItem": true,
+                                                    "hO": 2.48,
+                                                    "hSh": "SSC Napoli (Haidan)",
+                                                    "pSh": "Away",
+                                                    "oc": "SSC Napoli (Haidan)",
+                                                    "tmId": 301301,
+                                                    "hSDId": 0,
+                                                    "foCe": false,
+                                                    "btCe": false,
+                                                    "taCe": false
+                                                }
+                                            ],
+                                            "lineItem": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "fId": 72605516,
+                                    "fsd": 1774105200000,
+                                    "cshOut": false,
+                                    "ante": false,
+                                    "hcId": 4356559,
+                                    "hcBId": "1132315",
+                                    "acId": 3301470,
+                                    "acBId": "1052373",
+                                    "hcN": "AS Roma (Mateo)",
+                                    "acN": "ACF Fiorentina (Cleo)",
+                                    "xid": "70092450",
+                                    "lxid": "39749",
+                                    "lbO": true,
+                                    "lSt": false,
+                                    "vld": true,
+                                    "frz": false,
+                                    "fDS": 3,
+                                    "mmp": 1,
+                                    "mDat": {
+                                        "st": "Por iniciar",
+                                        "sud": 0
+                                    },
+                                    "mCod": 161649,
+                                    "ce": false,
+                                    "spl": false,
+                                    "btgs": [
+                                        {
+                                            "btgId": 114762,
+                                            "btgN": "1x2",
+                                            "mrkp": "_id=114762",
+                                            "btgNO": "1x2",
+                                            "btgSpl": false,
+                                            "btgSiOn": false,
+                                            "btgCe": false,
+                                            "btgMId": 8,
+                                            "btgMN": "Partida",
+                                            "btgMOrd": 1,
+                                            "mbtgMId": 41,
+                                            "mbtgMN": "H/D/A",
+                                            "mbtgMOrd": 0,
+                                            "hsd": [
+                                                {
+                                                    "id": 26,
+                                                    "name": "1",
+                                                    "ord": 1
+                                                },
+                                                {
+                                                    "id": 27,
+                                                    "name": "X",
+                                                    "ord": 2
+                                                },
+                                                {
+                                                    "id": 28,
+                                                    "name": "2",
+                                                    "ord": 3
+                                                }
+                                            ],
+                                            "dt": [
+                                                3
+                                            ],
+                                            "prm": true,
+                                            "cshOut": false,
+                                            "ord": 1,
+                                            "fos": [
+                                                {
+                                                    "foId": 9617506207,
+                                                    "btId": 2115765,
+                                                    "btN": "1x2",
+                                                    "valid": true,
+                                                    "tvalid": true,
+                                                    "freeze": false,
+                                                    "prm": true,
+                                                    "lineItem": true,
+                                                    "hO": 3.66,
+                                                    "hSh": "AS Roma (Mateo)",
+                                                    "pSh": "Home",
+                                                    "oc": "AS Roma (Mateo)",
+                                                    "tmId": 301301,
+                                                    "hSDId": 0,
+                                                    "foCe": false,
+                                                    "btCe": false,
+                                                    "taCe": false
+                                                },
+                                                {
+                                                    "foId": 9617506208,
+                                                    "btId": 2115766,
+                                                    "btN": "1x2",
+                                                    "valid": true,
+                                                    "tvalid": true,
+                                                    "freeze": false,
+                                                    "prm": true,
+                                                    "lineItem": true,
+                                                    "hO": 5.94,
+                                                    "hSh": "Empate",
+                                                    "pSh": "Empate",
+                                                    "oc": "Empate",
+                                                    "tmId": 301301,
+                                                    "hSDId": 0,
+                                                    "foCe": false,
+                                                    "btCe": false,
+                                                    "taCe": false
+                                                },
+                                                {
+                                                    "foId": 9617506209,
+                                                    "btId": 2115767,
+                                                    "btN": "1x2",
+                                                    "valid": true,
+                                                    "tvalid": true,
+                                                    "freeze": false,
+                                                    "prm": true,
+                                                    "lineItem": true,
+                                                    "hO": 1.52,
+                                                    "hSh": "ACF Fiorentina (Cleo)",
+                                                    "pSh": "Away",
+                                                    "oc": "ACF Fiorentina (Cleo)",
+                                                    "tmId": 301301,
+                                                    "hSDId": 0,
+                                                    "foCe": false,
+                                                    "btCe": false,
+                                                    "taCe": false
+                                                }
+                                            ],
+                                            "lineItem": true
+                                        }
+                                    ]
+                                },
+                                {
+                                    "fId": 72606580,
+                                    "fsd": 1774105200000,
+                                    "cshOut": false,
+                                    "ante": false,
+                                    "hcId": 4650182,
+                                    "hcBId": "1213289",
+                                    "acId": 3296866,
+                                    "acBId": "1050165",
+                                    "hcN": "FC Inter Milano (Dominic)",
+                                    "acN": "SS Lazio (Beckham)",
+                                    "xid": "70092738",
+                                    "lxid": "39749",
+                                    "lbO": true,
+                                    "lSt": false,
+                                    "vld": true,
+                                    "frz": false,
+                                    "fDS": 3,
+                                    "mmp": 1,
+                                    "mDat": {
+                                        "st": "Por iniciar",
+                                        "sud": 0
+                                    },
+                                    "mCod": 164568,
+                                    "ce": false,
+                                    "spl": false,
+                                    "btgs": [
+                                        {
+                                            "btgId": 114762,
+                                            "btgN": "1x2",
+                                            "mrkp": "_id=114762",
+                                            "btgNO": "1x2",
+                                            "btgSpl": false,
+                                            "btgSiOn": false,
+                                            "btgCe": false,
+                                            "btgMId": 8,
+                                            "btgMN": "Partida",
+                                            "btgMOrd": 1,
+                                            "mbtgMId": 41,
+                                            "mbtgMN": "H/D/A",
+                                            "mbtgMOrd": 0,
+                                            "hsd": [
+                                                {
+                                                    "id": 26,
+                                                    "name": "1",
+                                                    "ord": 1
+                                                },
+                                                {
+                                                    "id": 27,
+                                                    "name": "X",
+                                                    "ord": 2
+                                                },
+                                                {
+                                                    "id": 28,
+                                                    "name": "2",
+                                                    "ord": 3
+                                                }
+                                            ],
+                                            "dt": [
+                                                3
+                                            ],
+                                            "prm": true,
+                                            "cshOut": false,
+                                            "ord": 1,
+                                            "fos": [
+                                                {
+                                                    "foId": 9617506260,
+                                                    "btId": 2115765,
+                                                    "btN": "1x2",
+                                                    "valid": true,
+                                                    "tvalid": true,
+                                                    "freeze": false,
+                                                    "prm": true,
+                                                    "lineItem": true,
+                                                    "hO": 1.85,
+                                                    "hSh": "FC Inter Milano (Dominic)",
+                                                    "pSh": "Home",
+                                                    "oc": "FC Inter Milano (Dominic)",
+                                                    "tmId": 301301,
+                                                    "hSDId": 0,
+                                                    "foCe": false,
+                                                    "btCe": false,
+                                                    "taCe": false
+                                                },
+                                                {
+                                                    "foId": 9617506261,
+                                                    "btId": 2115766,
+                                                    "btN": "1x2",
+                                                    "valid": true,
+                                                    "tvalid": true,
+                                                    "freeze": false,
+                                                    "prm": true,
+                                                    "lineItem": true,
+                                                    "hO": 7.08,
+                                                    "hSh": "Empate",
+                                                    "pSh": "Empate",
+                                                    "oc": "Empate",
+                                                    "tmId": 301301,
+                                                    "hSDId": 0,
+                                                    "foCe": false,
+                                                    "btCe": false,
+                                                    "taCe": false
+                                                },
+                                                {
+                                                    "foId": 9617506262,
+                                                    "btId": 2115767,
+                                                    "btN": "1x2",
+                                                    "valid": true,
+                                                    "tvalid": true,
+                                                    "freeze": false,
+                                                    "prm": true,
+                                                    "lineItem": true,
+                                                    "hO": 2.39,
+                                                    "hSh": "SS Lazio (Beckham)",
+                                                    "pSh": "Away",
+                                                    "oc": "SS Lazio (Beckham)",
+                                                    "tmId": 301301,
+                                                    "hSDId": 0,
+                                                    "foCe": false,
+                                                    "btCe": false,
+                                                    "taCe": false
+                                                }
+                                            ],
+                                            "lineItem": true
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "cSURL": "eadriatic-league"
+                }
+            ],
+            "stSURL": "e-football"
+        }
+    ],
+    "type": null
+}

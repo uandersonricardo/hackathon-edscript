@@ -1,0 +1,222 @@
+{
+    "success": true,
+    "responseCodes": [],
+    "data": [
+        {
+            "stId": 284,
+            "xid": "28",
+            "stN": "Curling",
+            "iconId": 28,
+            "pid": 2,
+            "mdt": 1,
+            "cmt": 4,
+            "lvt": false,
+            "fCnt": 2,
+            "oCnt": 4,
+            "aCnt": 0,
+            "fCM": 2,
+            "oCM": 4,
+            "ord": 50140,
+            "cs": [
+                {
+                    "cId": 10001629,
+                    "xid": "178",
+                    "cN": "Internacional",
+                    "fCnt": 2,
+                    "oCnt": 4,
+                    "aCnt": 0,
+                    "fCM": 2,
+                    "oCM": 4,
+                    "sns": [
+                        {
+                            "sId": 860012,
+                            "lId": 966550,
+                            "seaN": "Campeonato do Mundo Feminino 2026",
+                            "cshOut": false,
+                            "seaSURL": "world-championship-women-2026",
+                            "lName": "Campeonato do Mundo Feminino",
+                            "fCnt": 2,
+                            "oCnt": 4,
+                            "aCnt": 0,
+                            "fCM": 2,
+                            "oCM": 4,
+                            "fs": [
+                                {
+                                    "fId": 72625413,
+                                    "fsd": 1774108800000,
+                                    "cshOut": false,
+                                    "ante": false,
+                                    "hcId": 1511650,
+                                    "hcBId": "5718",
+                                    "hcCIC": "SWE",
+                                    "acId": 1511658,
+                                    "acBId": "34483",
+                                    "acCIC": "KOR",
+                                    "hcN": "Suécia",
+                                    "acN": "Coreia do Sul",
+                                    "xid": "70102150",
+                                    "lxid": "636",
+                                    "lbO": false,
+                                    "lSt": false,
+                                    "vld": true,
+                                    "frz": false,
+                                    "fDS": 2,
+                                    "mmp": 1,
+                                    "mDat": {
+                                        "st": "Por iniciar",
+                                        "sud": 0
+                                    },
+                                    "mCod": 113503,
+                                    "ce": false,
+                                    "spl": false,
+                                    "btgs": [
+                                        {
+                                            "btgId": 10859,
+                                            "btgN": "Vencedor",
+                                            "mrkp": "_id=10859",
+                                            "btgNO": "Vencedor",
+                                            "btgSpl": false,
+                                            "btgSiOn": false,
+                                            "btgCe": false,
+                                            "dt": [
+                                                3
+                                            ],
+                                            "prm": false,
+                                            "cshOut": true,
+                                            "fos": [
+                                                {
+                                                    "foId": 9616291787,
+                                                    "btId": 1698502,
+                                                    "btN": "Winner",
+                                                    "valid": true,
+                                                    "tvalid": true,
+                                                    "freeze": false,
+                                                    "prm": false,
+                                                    "lineItem": false,
+                                                    "hO": 1.74,
+                                                    "hSh": "Suécia",
+                                                    "pSh": "Home",
+                                                    "oc": "Suécia",
+                                                    "tmId": 159561,
+                                                    "foCe": false,
+                                                    "btCe": false,
+                                                    "taCe": false
+                                                },
+                                                {
+                                                    "foId": 9616291788,
+                                                    "btId": 1698503,
+                                                    "btN": "Winner",
+                                                    "valid": true,
+                                                    "tvalid": true,
+                                                    "freeze": false,
+                                                    "prm": false,
+                                                    "lineItem": false,
+                                                    "hO": 1.98,
+                                                    "hSh": "Coreia do Sul",
+                                                    "pSh": "Away",
+                                                    "oc": "Coreia do Sul",
+                                                    "tmId": 159561,
+                                                    "foCe": false,
+                                                    "btCe": false,
+                                                    "taCe": false
+                                                }
+                                            ],
+                                            "lineItem": false
+                                        }
+                                    ]
+                                },
+                                {
+                                    "fId": 72634873,
+                                    "fsd": 1774108800000,
+                                    "cshOut": false,
+                                    "ante": false,
+                                    "hcId": 1511648,
+                                    "hcBId": "5715",
+                                    "hcCIC": "JPN",
+                                    "acId": 1566761,
+                                    "acBId": "388406",
+                                    "acCIC": "TUR",
+                                    "hcN": "Japão",
+                                    "acN": "Turquia",
+                                    "xid": "70121964",
+                                    "lxid": "636",
+                                    "lbO": false,
+                                    "lSt": false,
+                                    "vld": true,
+                                    "frz": false,
+                                    "fDS": 2,
+                                    "mmp": 1,
+                                    "mDat": {
+                                        "st": "Por iniciar",
+                                        "sud": 0
+                                    },
+                                    "mCod": 171083,
+                                    "ce": false,
+                                    "spl": false,
+                                    "btgs": [
+                                        {
+                                            "btgId": 10859,
+                                            "btgN": "Vencedor",
+                                            "mrkp": "_id=10859",
+                                            "btgNO": "Vencedor",
+                                            "btgSpl": false,
+                                            "btgSiOn": false,
+                                            "btgCe": false,
+                                            "dt": [
+                                                3
+                                            ],
+                                            "prm": false,
+                                            "cshOut": true,
+                                            "fos": [
+                                                {
+                                                    "foId": 9617246318,
+                                                    "btId": 1698502,
+                                                    "btN": "Winner",
+                                                    "valid": true,
+                                                    "tvalid": true,
+                                                    "freeze": false,
+                                                    "prm": false,
+                                                    "lineItem": false,
+                                                    "hO": 1.27,
+                                                    "hSh": "Japão",
+                                                    "pSh": "Home",
+                                                    "oc": "Japão",
+                                                    "tmId": 159561,
+                                                    "foCe": false,
+                                                    "btCe": false,
+                                                    "taCe": false
+                                                },
+                                                {
+                                                    "foId": 9617246319,
+                                                    "btId": 1698503,
+                                                    "btN": "Winner",
+                                                    "valid": true,
+                                                    "tvalid": true,
+                                                    "freeze": false,
+                                                    "prm": false,
+                                                    "lineItem": false,
+                                                    "hO": 3.4,
+                                                    "hSh": "Turquia",
+                                                    "pSh": "Away",
+                                                    "oc": "Turquia",
+                                                    "tmId": 159561,
+                                                    "foCe": false,
+                                                    "btCe": false,
+                                                    "taCe": false
+                                                }
+                                            ],
+                                            "lineItem": false
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "cSURL": "international"
+                }
+            ],
+            "stSURL": "curling"
+        }
+    ],
+    "type": null
+}

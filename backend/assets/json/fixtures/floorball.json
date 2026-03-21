@@ -1,0 +1,316 @@
+{
+    "success": true,
+    "responseCodes": [],
+    "data": [
+        {
+            "stId": 198,
+            "xid": "7",
+            "stN": "Hóquei de Salão",
+            "iconId": 7,
+            "pid": 2,
+            "mdt": 1,
+            "cmt": 1,
+            "lvt": true,
+            "fCnt": 2,
+            "oCnt": 6,
+            "aCnt": 0,
+            "fCM": 2,
+            "oCM": 6,
+            "ord": 50245,
+            "cs": [
+                {
+                    "cId": 10002540,
+                    "xid": "557",
+                    "cN": "Eslováquia",
+                    "fCnt": 2,
+                    "oCnt": 6,
+                    "aCnt": 0,
+                    "fCM": 2,
+                    "oCM": 6,
+                    "iso": "SVK",
+                    "sns": [
+                        {
+                            "sId": 843721,
+                            "lId": 981049,
+                            "seaN": "Extraliga 25/26",
+                            "cshOut": false,
+                            "seaSURL": "extraliga-25-26",
+                            "lName": "Extraliga",
+                            "fCnt": 2,
+                            "oCnt": 6,
+                            "aCnt": 0,
+                            "fCM": 2,
+                            "oCM": 6,
+                            "fs": [
+                                {
+                                    "fId": 72573085,
+                                    "fsd": 1774108800000,
+                                    "cshOut": false,
+                                    "ante": false,
+                                    "hcId": 2715562,
+                                    "hcBId": "993061",
+                                    "hcCIC": "SVK",
+                                    "acId": 3310306,
+                                    "acBId": "108359",
+                                    "hcN": "SK Lido Prirodovedec Bratislava",
+                                    "acN": "FBC Grasshoppers Uniza Zilina",
+                                    "xid": "70044056",
+                                    "lxid": "39283",
+                                    "lbO": false,
+                                    "lSt": false,
+                                    "vld": true,
+                                    "frz": false,
+                                    "fDS": 3,
+                                    "mmp": 1,
+                                    "mDat": {
+                                        "st": "Por iniciar",
+                                        "sud": 0
+                                    },
+                                    "mCod": 160069,
+                                    "ce": false,
+                                    "spl": false,
+                                    "btgs": [
+                                        {
+                                            "btgId": 8632,
+                                            "btgN": "1x2",
+                                            "mrkp": "_id=8632",
+                                            "btgNO": "1x2",
+                                            "btgSpl": false,
+                                            "btgSiOn": false,
+                                            "btgCe": false,
+                                            "btgMId": 8,
+                                            "btgMN": "Partida",
+                                            "btgMOrd": 1,
+                                            "ptn": "MATCH",
+                                            "pto": -99,
+                                            "mbtgMId": 41,
+                                            "mbtgMN": "H/D/A",
+                                            "mbtgMOrd": 0,
+                                            "hsd": [
+                                                {
+                                                    "id": 26,
+                                                    "name": "1",
+                                                    "ord": 1
+                                                },
+                                                {
+                                                    "id": 27,
+                                                    "name": "X",
+                                                    "ord": 2
+                                                },
+                                                {
+                                                    "id": 28,
+                                                    "name": "2",
+                                                    "ord": 3
+                                                }
+                                            ],
+                                            "dt": [
+                                                3
+                                            ],
+                                            "prm": false,
+                                            "cshOut": true,
+                                            "ord": 1,
+                                            "fos": [
+                                                {
+                                                    "foId": 9609357254,
+                                                    "btId": 1237260,
+                                                    "btN": "1x2",
+                                                    "valid": true,
+                                                    "tvalid": true,
+                                                    "freeze": false,
+                                                    "prm": false,
+                                                    "lineItem": false,
+                                                    "hO": 1.9,
+                                                    "hSh": "SK Lido Prirodovedec Bratislava",
+                                                    "pSh": "Home",
+                                                    "oc": "SK Lido Prirodovedec Bratislava",
+                                                    "tmId": 50423,
+                                                    "hSDId": 0,
+                                                    "foCe": false,
+                                                    "btCe": false,
+                                                    "taCe": false
+                                                },
+                                                {
+                                                    "foId": 9609357255,
+                                                    "btId": 1237266,
+                                                    "btN": "1x2",
+                                                    "valid": true,
+                                                    "tvalid": true,
+                                                    "freeze": false,
+                                                    "prm": false,
+                                                    "lineItem": false,
+                                                    "hO": 4.97,
+                                                    "hSh": "Empate",
+                                                    "pSh": "Empate",
+                                                    "oc": "Empate",
+                                                    "tmId": 50423,
+                                                    "hSDId": 0,
+                                                    "foCe": false,
+                                                    "btCe": false,
+                                                    "taCe": false
+                                                },
+                                                {
+                                                    "foId": 9609357256,
+                                                    "btId": 1237270,
+                                                    "btN": "1x2",
+                                                    "valid": true,
+                                                    "tvalid": true,
+                                                    "freeze": false,
+                                                    "prm": false,
+                                                    "lineItem": false,
+                                                    "hO": 3.21,
+                                                    "hSh": "FBC Grasshoppers Uniza Zilina",
+                                                    "pSh": "Away",
+                                                    "oc": "FBC Grasshoppers Uniza Zilina",
+                                                    "tmId": 50423,
+                                                    "hSDId": 0,
+                                                    "foCe": false,
+                                                    "btCe": false,
+                                                    "taCe": false
+                                                }
+                                            ],
+                                            "lineItem": false
+                                        }
+                                    ]
+                                },
+                                {
+                                    "fId": 72573086,
+                                    "fsd": 1774112400000,
+                                    "cshOut": false,
+                                    "ante": false,
+                                    "hcId": 2715563,
+                                    "hcBId": "80881",
+                                    "hcCIC": "SVK",
+                                    "acId": 2693531,
+                                    "acBId": "993059",
+                                    "acCIC": "SVK",
+                                    "hcN": "SK 1.FBC Trencin",
+                                    "acN": "Tsunami Zahorska Bystrica",
+                                    "xid": "70044048",
+                                    "lxid": "39283",
+                                    "lbO": false,
+                                    "lSt": false,
+                                    "vld": true,
+                                    "frz": false,
+                                    "fDS": 3,
+                                    "mmp": 1,
+                                    "mDat": {
+                                        "st": "Por iniciar",
+                                        "sud": 0
+                                    },
+                                    "mCod": 160072,
+                                    "ce": false,
+                                    "spl": false,
+                                    "btgs": [
+                                        {
+                                            "btgId": 8632,
+                                            "btgN": "1x2",
+                                            "mrkp": "_id=8632",
+                                            "btgNO": "1x2",
+                                            "btgSpl": false,
+                                            "btgSiOn": false,
+                                            "btgCe": false,
+                                            "btgMId": 8,
+                                            "btgMN": "Partida",
+                                            "btgMOrd": 1,
+                                            "ptn": "MATCH",
+                                            "pto": -99,
+                                            "mbtgMId": 41,
+                                            "mbtgMN": "H/D/A",
+                                            "mbtgMOrd": 0,
+                                            "hsd": [
+                                                {
+                                                    "id": 26,
+                                                    "name": "1",
+                                                    "ord": 1
+                                                },
+                                                {
+                                                    "id": 27,
+                                                    "name": "X",
+                                                    "ord": 2
+                                                },
+                                                {
+                                                    "id": 28,
+                                                    "name": "2",
+                                                    "ord": 3
+                                                }
+                                            ],
+                                            "dt": [
+                                                3
+                                            ],
+                                            "prm": false,
+                                            "cshOut": true,
+                                            "ord": 1,
+                                            "fos": [
+                                                {
+                                                    "foId": 9609357257,
+                                                    "btId": 1237260,
+                                                    "btN": "1x2",
+                                                    "valid": true,
+                                                    "tvalid": true,
+                                                    "freeze": false,
+                                                    "prm": false,
+                                                    "lineItem": false,
+                                                    "hO": 1.51,
+                                                    "hSh": "SK 1.FBC Trencin",
+                                                    "pSh": "Home",
+                                                    "oc": "SK 1.FBC Trencin",
+                                                    "tmId": 50423,
+                                                    "hSDId": 0,
+                                                    "foCe": false,
+                                                    "btCe": false,
+                                                    "taCe": false
+                                                },
+                                                {
+                                                    "foId": 9609357258,
+                                                    "btId": 1237266,
+                                                    "btN": "1x2",
+                                                    "valid": true,
+                                                    "tvalid": true,
+                                                    "freeze": false,
+                                                    "prm": false,
+                                                    "lineItem": false,
+                                                    "hO": 5.27,
+                                                    "hSh": "Empate",
+                                                    "pSh": "Empate",
+                                                    "oc": "Empate",
+                                                    "tmId": 50423,
+                                                    "hSDId": 0,
+                                                    "foCe": false,
+                                                    "btCe": false,
+                                                    "taCe": false
+                                                },
+                                                {
+                                                    "foId": 9609357259,
+                                                    "btId": 1237270,
+                                                    "btN": "1x2",
+                                                    "valid": true,
+                                                    "tvalid": true,
+                                                    "freeze": false,
+                                                    "prm": false,
+                                                    "lineItem": false,
+                                                    "hO": 5.31,
+                                                    "hSh": "Tsunami Zahorska Bystrica",
+                                                    "pSh": "Away",
+                                                    "oc": "Tsunami Zahorska Bystrica",
+                                                    "tmId": 50423,
+                                                    "hSDId": 0,
+                                                    "foCe": false,
+                                                    "btCe": false,
+                                                    "taCe": false
+                                                }
+                                            ],
+                                            "lineItem": false
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "cSURL": "slovakia"
+                }
+            ],
+            "stSURL": "floorball"
+        }
+    ],
+    "type": null
+}
