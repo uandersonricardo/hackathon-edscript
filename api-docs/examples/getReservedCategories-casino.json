@@ -1,0 +1,136 @@
+{
+    "success": true,
+    "responseCodes": [
+        {
+            "responseCode": 1,
+            "responseKey": "SUCCESS",
+            "responseMessage": ""
+        }
+    ],
+    "data": {
+        "state": {
+            "code": 0,
+            "message": "Success.",
+            "reference": "0bf7497a-dd6d-4b77-add7-20318b9fded5"
+        },
+        "categories": [
+            {
+                "id": 166,
+                "name": "Jogos Do Raul",
+                "count": 8,
+                "webCount": 8,
+                "mobileCount": 8,
+                "isCustom": true,
+                "order": 0
+            },
+            {
+                "id": 1,
+                "name": "Blackjack",
+                "count": 23,
+                "webCount": 19,
+                "mobileCount": 19,
+                "order": 1
+            },
+            {
+                "id": 98,
+                "name": "Fortune",
+                "count": 10,
+                "webCount": 10,
+                "mobileCount": 10,
+                "isCustom": true,
+                "order": 1
+            },
+            {
+                "id": 11,
+                "name": "Crash Games",
+                "count": 58,
+                "webCount": 51,
+                "mobileCount": 51,
+                "order": 2
+            },
+            {
+                "id": 96,
+                "name": "Jogos exclusivos",
+                "count": 5,
+                "webCount": 4,
+                "mobileCount": 4,
+                "isCustom": true,
+                "order": 2
+            },
+            {
+                "id": 64,
+                "name": "Torneios",
+                "count": 8,
+                "webCount": 8,
+                "mobileCount": 8,
+                "isCustom": true,
+                "order": 3
+            },
+            {
+                "id": 90,
+                "name": "Jogo em portugues",
+                "count": 1,
+                "webCount": 1,
+                "mobileCount": 1,
+                "isCustom": true,
+                "order": 5
+            },
+            {
+                "id": 32,
+                "name": "Lottery",
+                "count": 1,
+                "webCount": 1,
+                "mobileCount": 1,
+                "order": 6
+            },
+            {
+                "id": 134,
+                "name": "Fast Games",
+                "count": 10,
+                "webCount": 5,
+                "mobileCount": 5,
+                "order": 0
+            },
+            {
+                "id": 20,
+                "name": "Instant Games",
+                "count": 57,
+                "webCount": 50,
+                "mobileCount": 50,
+                "order": 0
+            },
+            {
+                "id": 15,
+                "name": "Outros Jogos",
+                "count": 24,
+                "webCount": 22,
+                "mobileCount": 22,
+                "order": 0
+            },
+            {
+                "id": 2,
+                "name": "Roleta",
+                "count": 17,
+                "webCount": 13,
+                "mobileCount": 13,
+                "order": 0
+            },
+            {
+                "id": 17,
+                "name": "Video Bingo",
+                "count": 64,
+                "webCount": 54,
+                "mobileCount": 54,
+                "order": 0
+            },
+            {
+                "id": 12,
+                "name": "Video Slots",
+                "count": 3225,
+                "webCount": 2663,
+                "mobileCount": 2661,
+                "order": 0
+            }
+        ]
+    }
+}

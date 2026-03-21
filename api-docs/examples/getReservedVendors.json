@@ -1,0 +1,493 @@
+{
+    "success": true,
+    "responseCodes": [
+        {
+            "responseCode": 1,
+            "responseKey": "SUCCESS",
+            "responseMessage": ""
+        }
+    ],
+    "data": {
+        "state": {
+            "code": 0,
+            "message": "Success.",
+            "reference": "1670a647-eb3c-4927-8e71-164da9c58430"
+        },
+        "vendors": [
+            {
+                "id": 37,
+                "name": "1x2 Gaming",
+                "code": "1x2_mgs",
+                "freePlay": true,
+                "orderByCasino": 1
+            },
+            {
+                "id": 94,
+                "name": "All41 Studios",
+                "code": "all41_mgs",
+                "freePlay": true,
+                "orderByCasino": 4
+            },
+            {
+                "id": 8,
+                "name": "Ezugi",
+                "code": "ezugi",
+                "freePlay": false,
+                "orderByCasino": 6
+            },
+            {
+                "id": 73,
+                "name": "Crazy Tooth Studios",
+                "code": "crazy_mgs",
+                "freePlay": true,
+                "orderByCasino": 7
+            },
+            {
+                "id": 54,
+                "name": "Electric Elephant",
+                "code": "electric_mgs",
+                "freePlay": true,
+                "orderByCasino": 8
+            },
+            {
+                "id": 92,
+                "name": "Endorphina",
+                "code": "endorphina",
+                "freePlay": true,
+                "orderByCasino": 9
+            },
+            {
+                "id": 130,
+                "name": "Evolution",
+                "code": "evol",
+                "freePlay": false,
+                "orderByCasino": 13
+            },
+            {
+                "id": 45,
+                "name": "Fortune Factory Studios",
+                "code": "fortune_mgs",
+                "freePlay": true,
+                "orderByCasino": 14
+            },
+            {
+                "id": 51,
+                "name": "Foxium",
+                "code": "foxium_mgs",
+                "freePlay": true,
+                "orderByCasino": 15
+            },
+            {
+                "id": 72,
+                "name": "Gameburger Studios",
+                "code": "gameburger_mgs",
+                "freePlay": true,
+                "orderByCasino": 17
+            },
+            {
+                "id": 36,
+                "name": "Iron Dog Studio",
+                "code": "iron_dog_mgs",
+                "freePlay": true,
+                "orderByCasino": 20
+            },
+            {
+                "id": 35,
+                "name": "JFTW",
+                "code": "jftw_mgs",
+                "freePlay": true,
+                "orderByCasino": 22
+            },
+            {
+                "id": 50,
+                "name": "Lightning Box",
+                "code": "lightning_mgs",
+                "freePlay": true,
+                "orderByCasino": 24
+            },
+            {
+                "id": 1,
+                "name": "Games Global",
+                "code": "mgs",
+                "freePlay": true,
+                "orderByCasino": 25
+            },
+            {
+                "id": 70,
+                "name": "Neon Valley Studios",
+                "code": "neon_mgs",
+                "freePlay": false,
+                "orderByCasino": 26
+            },
+            {
+                "id": 53,
+                "name": "Old Skool",
+                "code": "old_skool_mgs",
+                "freePlay": true,
+                "orderByCasino": 28
+            },
+            {
+                "id": 52,
+                "name": "PG Soft",
+                "code": "pgsoft",
+                "freePlay": false,
+                "orderByCasino": 30
+            },
+            {
+                "id": 113,
+                "name": "Playson",
+                "code": "playson",
+                "freePlay": true,
+                "orderByCasino": 32
+            },
+            {
+                "id": 80,
+                "name": "Pragmatic Play",
+                "code": "pragmatic_play",
+                "freePlay": true,
+                "orderByCasino": 33
+            },
+            {
+                "id": 71,
+                "name": "Pulse 8 Studios",
+                "code": "pulse_mgs",
+                "freePlay": true,
+                "orderByCasino": 34
+            },
+            {
+                "id": 95,
+                "name": "Real Dealer Studios",
+                "code": "real_dealer_mgs",
+                "freePlay": true,
+                "orderByCasino": 37
+            },
+            {
+                "id": 131,
+                "name": "Red Rake",
+                "code": "red_rake",
+                "freePlay": true,
+                "liveFreePlay": true,
+                "orderByCasino": 38
+            },
+            {
+                "id": 27,
+                "name": "Slingshot Studios",
+                "code": "slingshot_mgs",
+                "freePlay": false,
+                "orderByCasino": 39
+            },
+            {
+                "id": 118,
+                "name": "Spinomenal",
+                "code": "spinomenal",
+                "freePlay": true,
+                "orderByCasino": 41
+            },
+            {
+                "id": 69,
+                "name": "Stormcraft Studios",
+                "code": "stormcraft_mgs",
+                "freePlay": true,
+                "orderByCasino": 43
+            },
+            {
+                "id": 56,
+                "name": "Switch Studios",
+                "code": "switch_mgs",
+                "freePlay": true,
+                "orderByCasino": 44
+            },
+            {
+                "id": 19,
+                "name": "Triple Edge Studios",
+                "code": "triple_mgs",
+                "freePlay": true,
+                "orderByCasino": 46
+            },
+            {
+                "id": 3,
+                "name": "Wazdan",
+                "code": "wazdan",
+                "freePlay": false,
+                "orderByCasino": 48
+            },
+            {
+                "id": 192,
+                "name": "3 Oaks Gaming",
+                "code": "3_oaks_alea",
+                "freePlay": true
+            },
+            {
+                "id": 148,
+                "name": "Alchemy Gaming",
+                "code": "alchemy_mgs",
+                "freePlay": true
+            },
+            {
+                "id": 149,
+                "name": "Area Vegas",
+                "code": "areavegas_mgs",
+                "freePlay": true
+            },
+            {
+                "id": 150,
+                "name": "Aurum Signature Studios",
+                "code": "aurumstud_mgs",
+                "freePlay": true
+            },
+            {
+                "id": 145,
+                "name": "Aviatrix",
+                "code": "aviatrix",
+                "freePlay": true
+            },
+            {
+                "id": 189,
+                "name": "Banana Games",
+                "code": "bananag",
+                "freePlay": true
+            },
+            {
+                "id": 138,
+                "name": "Big Time Gaming",
+                "code": "bigtime_oss",
+                "freePlay": false
+            },
+            {
+                "id": 115,
+                "name": "Booming Games",
+                "code": "booming_games",
+                "freePlay": true
+            },
+            {
+                "id": 151,
+                "name": "Buck Stakes Entertainment",
+                "code": "buckstakes_mgs",
+                "freePlay": true
+            },
+            {
+                "id": 184,
+                "name": "Caleta",
+                "code": "caleta_alea",
+                "freePlay": true
+            },
+            {
+                "id": 152,
+                "name": "Circular Arrow",
+                "code": "circarrow_mgs",
+                "freePlay": true
+            },
+            {
+                "id": 142,
+                "name": "Darwin Gaming",
+                "code": "darwin_gaming",
+                "freePlay": true
+            },
+            {
+                "id": 10513,
+                "name": "EsportesDaSorte",
+                "code": "EsportesDaSorte",
+                "freePlay": true
+            },
+            {
+                "id": 153,
+                "name": "Eurostar Studios",
+                "code": "eurostarstu_mgs",
+                "freePlay": true
+            },
+            {
+                "id": 91,
+                "name": "Fazi",
+                "code": "fazi",
+                "freePlay": true
+            },
+            {
+                "id": 103,
+                "name": "FBMDS",
+                "code": "fbm_gaming",
+                "freePlay": false
+            },
+            {
+                "id": 154,
+                "name": "Gacha Studios",
+                "code": "gachastud_mgs",
+                "freePlay": true
+            },
+            {
+                "id": 121,
+                "name": "Gaming Corps",
+                "code": "gamingcorps",
+                "freePlay": true,
+                "liveFreePlay": true
+            },
+            {
+                "id": 156,
+                "name": "Gold Coin Studios",
+                "code": "goldcoin_mgs",
+                "freePlay": true
+            },
+            {
+                "id": 155,
+                "name": "Gong Gaming",
+                "code": "gonggaming_mgs",
+                "freePlay": true
+            },
+            {
+                "id": 176,
+                "name": "Hacksaw Gaming",
+                "code": "hacksaw_alea",
+                "freePlay": true
+            },
+            {
+                "id": 157,
+                "name": "Half Pixel Studios",
+                "code": "halfpixel_mgs",
+                "freePlay": true
+            },
+            {
+                "id": 158,
+                "name": "Hammertime Games",
+                "code": "hammertime_mgs",
+                "freePlay": true
+            },
+            {
+                "id": 159,
+                "name": "High Limit Studios",
+                "code": "highlimitst_mgs",
+                "freePlay": true
+            },
+            {
+                "id": 193,
+                "name": "Hypetech",
+                "code": "hypetech_alea",
+                "freePlay": false
+            },
+            {
+                "id": 160,
+                "name": "Infinity Dragon Studios",
+                "code": "infdragonst_mgs",
+                "freePlay": true
+            },
+            {
+                "id": 161,
+                "name": "INO Games",
+                "code": "inogames_mgs",
+                "freePlay": true
+            },
+            {
+                "id": 139,
+                "name": "Jogo Global",
+                "code": "jogo",
+                "freePlay": true
+            },
+            {
+                "id": 162,
+                "name": "Nailed It! Games",
+                "code": "nailedit_mgs",
+                "freePlay": true
+            },
+            {
+                "id": 163,
+                "name": "Neko Games",
+                "code": "nekogames_mgs",
+                "freePlay": true
+            },
+            {
+                "id": 133,
+                "name": "NetEnt",
+                "code": "netent_oss",
+                "freePlay": false
+            },
+            {
+                "id": 124,
+                "name": "Nolimit City",
+                "code": "nolimit_oss",
+                "freePlay": false
+            },
+            {
+                "id": 164,
+                "name": "Northern Lights Gaming",
+                "code": "northlight_mgs",
+                "freePlay": true
+            },
+            {
+                "id": 165,
+                "name": "Oros Gaming",
+                "code": "orosgaming_mgs",
+                "freePlay": true
+            },
+            {
+                "id": 166,
+                "name": "PearFiction Studios",
+                "code": "pearfiction_mgs",
+                "freePlay": true
+            },
+            {
+                "id": 194,
+                "name": "Platipus",
+                "code": "platipus_alea",
+                "freePlay": true
+            },
+            {
+                "id": 180,
+                "name": "PopOK",
+                "code": "popok_creed",
+                "freePlay": true
+            },
+            {
+                "id": 134,
+                "name": "Red Tiger",
+                "code": "red_tiger_oss",
+                "freePlay": false
+            },
+            {
+                "id": 143,
+                "name": "Ruby Play",
+                "code": "ruby_play",
+                "freePlay": true
+            },
+            {
+                "id": 106,
+                "name": "Smart Soft",
+                "code": "smart_soft",
+                "freePlay": true
+            },
+            {
+                "id": 167,
+                "name": "Snowborn Games",
+                "code": "snowborn_mgs",
+                "freePlay": true
+            },
+            {
+                "id": 168,
+                "name": "SpinPlay Games",
+                "code": "spinplay_mgs",
+                "freePlay": true
+            },
+            {
+                "id": 188,
+                "name": "Spribe",
+                "code": "spribe_mgs",
+                "freePlay": false
+            },
+            {
+                "id": 185,
+                "name": "Tada Gaming",
+                "code": "tada",
+                "freePlay": true
+            },
+            {
+                "id": 187,
+                "name": "Wishbone Games",
+                "code": "wishbone_mgs",
+                "freePlay": true
+            },
+            {
+                "id": 195,
+                "name": "Zitro",
+                "code": "zitro_mgs",
+                "freePlay": false
+            }
+        ]
+    }
+}

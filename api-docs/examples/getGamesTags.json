@@ -1,0 +1,574 @@
+{
+    "success": true,
+    "responseCodes": [
+        {
+            "responseCode": 1,
+            "responseKey": "SUCCESS",
+            "responseMessage": "Success."
+        }
+    ],
+    "data": {
+        "state": {
+            "code": 0,
+            "message": "Success.",
+            "reference": "daca079d-7718-4728-bd2f-66accac9846d"
+        },
+        "list": [
+            {
+                "gameId": 6656,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 6657,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 6658,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 6659,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 6660,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 6661,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 15366,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 6662,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 17159,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 6663,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 6664,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 6665,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 6668,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 6669,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 6670,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 19727,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 6671,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 6672,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 26641,
+                "tagIds": [
+                    12,
+                    14
+                ]
+            },
+            {
+                "gameId": 6673,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 18066,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 6674,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 16531,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 6675,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 16532,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 6676,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 6677,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 6678,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 6679,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 18712,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 6680,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 6681,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 6682,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 6683,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 18075,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 19611,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 6684,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 6685,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 18077,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 6686,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 6687,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 6688,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 13987,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 15656,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 15657,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 16810,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 16812,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 17837,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 17198,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 22960,
+                "tagIds": [
+                    12
+                ]
+            },
+            {
+                "gameId": 17200,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 17203,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 15413,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 15415,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 15419,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 15547,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 14140,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 15549,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 17469,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 14141,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 19396,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 15685,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 14405,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 24517,
+                "tagIds": [
+                    14
+                ]
+            },
+            {
+                "gameId": 15687,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 17864,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 17866,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 14667,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 13133,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 17871,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 17872,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 17233,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 17875,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 13396,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 17109,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 19542,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 14681,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 13530,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 19419,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 19547,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 15201,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 26595,
+                "tagIds": [
+                    12,
+                    14
+                ]
+            },
+            {
+                "gameId": 26596,
+                "tagIds": [
+                    12,
+                    14
+                ]
+            },
+            {
+                "gameId": 16616,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 15595,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 14702,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 17398,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 17015,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 16120,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 6653,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 6654,
+                "tagIds": [
+                    4
+                ]
+            },
+            {
+                "gameId": 6655,
+                "tagIds": [
+                    4
+                ]
+            }
+        ]
+    }
+}

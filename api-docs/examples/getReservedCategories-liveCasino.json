@@ -1,0 +1,109 @@
+{
+    "success": true,
+    "responseCodes": [
+        {
+            "responseCode": 1,
+            "responseKey": "SUCCESS",
+            "responseMessage": ""
+        }
+    ],
+    "data": {
+        "state": {
+            "code": 0,
+            "message": "Success.",
+            "reference": "11df7e85-8cfa-45a5-8e12-42fc2c9e5b2b"
+        },
+        "categories": [
+            {
+                "id": 18,
+                "name": "Baccarat",
+                "count": 133,
+                "webCount": 133,
+                "mobileCount": 133,
+                "order": 1
+            },
+            {
+                "id": 1,
+                "name": "Blackjack",
+                "count": 466,
+                "webCount": 466,
+                "mobileCount": 466,
+                "order": 1
+            },
+            {
+                "id": 96,
+                "name": "Jogos exclusivos",
+                "count": 1,
+                "webCount": 1,
+                "mobileCount": 1,
+                "isCustom": true,
+                "order": 4
+            },
+            {
+                "id": 90,
+                "name": "Jogo em portugues",
+                "count": 11,
+                "webCount": 11,
+                "mobileCount": 11,
+                "isCustom": true,
+                "order": 5
+            },
+            {
+                "id": 11,
+                "name": "Crash Games",
+                "count": 1,
+                "webCount": 1,
+                "mobileCount": 1,
+                "order": 999
+            },
+            {
+                "id": 19,
+                "name": "Jogos ao Vivo",
+                "count": 53,
+                "webCount": 53,
+                "mobileCount": 53,
+                "order": 0
+            },
+            {
+                "id": 32,
+                "name": "Lottery",
+                "count": 1,
+                "webCount": 1,
+                "mobileCount": 1,
+                "order": 0
+            },
+            {
+                "id": 15,
+                "name": "Outros Jogos",
+                "count": 14,
+                "webCount": 14,
+                "mobileCount": 14,
+                "order": 0
+            },
+            {
+                "id": 4,
+                "name": "Poker",
+                "count": 13,
+                "webCount": 13,
+                "mobileCount": 13,
+                "order": 0
+            },
+            {
+                "id": 2,
+                "name": "Roleta",
+                "count": 75,
+                "webCount": 75,
+                "mobileCount": 75,
+                "order": 0
+            },
+            {
+                "id": 17,
+                "name": "Video Bingo",
+                "count": 2,
+                "webCount": 2,
+                "mobileCount": 2,
+                "order": 0
+            }
+        ]
+    }
+}

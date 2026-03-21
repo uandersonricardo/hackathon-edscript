@@ -1,0 +1,41 @@
+{
+    "success": true,
+    "responseCodes": [
+        {
+            "responseCode": 1,
+            "responseKey": "SUCCESS",
+            "responseMessage": "Success."
+        }
+    ],
+    "data": {
+        "state": {
+            "code": 0,
+            "message": "Success.",
+            "reference": "b597bddd-ec5c-4bb0-8075-1dc8548f1ba2"
+        },
+        "map": {
+            "1": "Drops & Wins",
+            "2": "Promo",
+            "3": "Tournament",
+            "4": "Jackpot ",
+            "5": "freespins",
+            "6": "Halloween",
+            "7": "WORLD CUP",
+            "8": "CHRISTMAS",
+            "9": "BRANDED",
+            "10": "TESTEST",
+            "11": "Test13",
+            "12": "Early Release",
+            "13": "Test2",
+            "14": "EXCLUSIVE",
+            "15": "Torneio PG",
+            "16": "HOT",
+            "17": "FREE",
+            "18": "TagM1",
+            "19": "TestTagM1",
+            "20": "TestM1newName",
+            "21": "CASHBACK",
+            "22": "COMPRA DE BÔNUS"
+        }
+    }
+}
