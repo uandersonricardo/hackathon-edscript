@@ -42,6 +42,14 @@ export default function Index() {
 
   return (
     <View style={styles.container}>
+      <TouchableOpacity
+        style={styles.wheelBanner}
+        onPress={() => router.push("/wheel")}
+        activeOpacity={0.85}
+      >
+        <Text style={styles.wheelBannerText}>🎡 Roda da Sorte</Text>
+        <Text style={styles.wheelBannerSub}>Gire e ganhe prêmios!</Text>
+      </TouchableOpacity>
       <Text style={styles.header}>Casino Categories</Text>
       <FlatList
         data={categories}
@@ -100,5 +108,25 @@ const styles = StyleSheet.create({
   error: {
     color: "red",
     fontSize: 16,
+  },
+  wheelBanner: {
+    marginHorizontal: 16,
+    marginBottom: 16,
+    backgroundColor: "#050a2e",
+    borderRadius: 12,
+    paddingVertical: 16,
+    paddingHorizontal: 20,
+    alignItems: "center",
+  },
+  wheelBannerText: {
+    fontSize: 20,
+    fontWeight: "bold",
+    color: "#FFD700",
+    letterSpacing: 1,
+  },
+  wheelBannerSub: {
+    fontSize: 13,
+    color: "#aab4c8",
+    marginTop: 4,
   },
 });

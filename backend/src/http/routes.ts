@@ -13,7 +13,7 @@ import {
   superOdds,
   tags,
   vendors,
-} from "./assets";
+} from "../assets";
 
 const router = Router();
 
@@ -44,5 +44,15 @@ router.get("/fixtures/:sport", (req: Request, res: Response, _next: NextFunction
 
   res.json(data);
 });
+
+// TODO: Login & Register & Profile
+// TODO: Register Bet
+// TODO: Send Support Messages (Chat)
+// TODO: Get History
+// TODO: Get Achievements
+// TODO: Get User
+// TODO: Get Homepage
+// TODO: Get Match Stats
+// TODO: Get Ranking
 
 export default router;
