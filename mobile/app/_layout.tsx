@@ -16,6 +16,15 @@ export default function RootLayout() {
             headerTitleStyle: { fontWeight: "bold" },
           }}
         />
+        <Stack.Screen
+          name="game"
+          options={{
+            title: "Runner",
+            headerStyle: { backgroundColor: "#0a0a1e" },
+            headerTintColor: "#00eeff",
+            headerTitleStyle: { fontWeight: "bold" },
+          }}
+        />
       </Stack>
       <StatusBar style="auto" />
     </>
