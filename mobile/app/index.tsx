@@ -1,9 +1,10 @@
 import { useRouter } from "expo-router";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { ActivityIndicator, FlatList, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 import { getCasinoCategories, type Category } from "../requests/casino";
-import { Canvas } from "@react-three/fiber/native";
+import { Canvas } from "@react-three/fiber";
+import { Edson } from "@/games/soccer/Edson";
 
 export default function Index() {
   const router = useRouter();
@@ -30,6 +31,27 @@ export default function Index() {
     return (
       <View style={styles.center}>
         <Text style={styles.error}>{error}</Text>
+        <TouchableOpacity style={styles.wheelBanner} onPress={() => router.push("/wheel")} activeOpacity={0.85}>
+          <Text style={styles.wheelBannerText}>🎡 Roda da Sorte</Text>
+          <Text style={styles.wheelBannerSub}>Gire e ganhe prêmios!</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.gameBanner} onPress={() => router.push("/game")} activeOpacity={0.85}>
+          <Text style={styles.gameBannerText}>🏃 Runner</Text>
+          <Text style={styles.gameBannerSub}>Swipe to dodge obstacles!</Text>
+        </TouchableOpacity>
+        <Canvas style={{ width: "100%", height: 200, marginTop: 20 }} camera={{ position: [0, 3, 5], fov: 50 }}>
+          <Suspense
+            fallback={
+              <mesh>
+                <sphereGeometry args={[0.5, 32, 32]} />
+                <meshStandardMaterial color="lightblue" />
+              </mesh>
+            }
+          >
+            <directionalLight position={[0, 0, 2]} intensity={10} />
+            <Edson />
+          </Suspense>
+        </Canvas>
       </View>
     );
   }
@@ -44,20 +66,6 @@ export default function Index() {
         <Text style={styles.gameBannerText}>🏃 Runner</Text>
         <Text style={styles.gameBannerSub}>Swipe to dodge obstacles!</Text>
       </TouchableOpacity>
-      <Canvas
-        camera={{ position: [0, 3.5, 7], fov: 65 }}
-        style={{ width: "100%", height: 300, flex: 1 }}
-        onCreated={({ gl }) => {
-          gl.setClearColor("#f0f");
-        }}
-      >
-        <mesh>
-          <boxGeometry args={[2, 2, 2]} />
-          <meshPhongMaterial />
-        </mesh>
-        <ambientLight intensity={0.1} />
-        <directionalLight position={[0, 0, 5]} color="red" />
-      </Canvas>
       <Text style={styles.header}>Casino Categories</Text>
       <FlatList
         data={categories}

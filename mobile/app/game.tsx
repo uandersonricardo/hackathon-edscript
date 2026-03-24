@@ -1,4 +1,4 @@
-import GameScreen from '../src/game';
+import GameScreen from "../games/soccer";
 
 export default function GameRoute() {
   return <GameScreen />;
