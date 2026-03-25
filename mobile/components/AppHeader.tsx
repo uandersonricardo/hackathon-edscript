@@ -3,8 +3,16 @@ import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from "reac
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { Colors } from "../constants/theme";
+import { CategoryButton } from "./CategoryButton";
 
 const LOGO = require("../assets/images/logo-reduced-green.png");
+
+const CATEGORIES = [
+  { label: "Esportes", icon: require("../assets/icons/fixtures.png") },
+  { label: "Cassino", icon: require("../assets/icons/casino.png") },
+  { label: "Cassino ao vivo", icon: require("../assets/icons/liveCasino.png") },
+  { label: "Virtuais", icon: require("../assets/icons/virtuals.png") },
+] as const;
 
 export function AppHeader() {
   const insets = useSafeAreaInsets();
@@ -36,6 +44,11 @@ export function AppHeader() {
           selectionColor={Colors.dark.primary}
         />
       </View>
+      <View style={styles.categoriesRow}>
+        {CATEGORIES.map((cat) => (
+          <CategoryButton key={cat.label} label={cat.label} icon={cat.icon} />
+        ))}
+      </View>
     </View>
   );
 }
@@ -46,8 +59,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingBottom: 20,
     gap: 20,
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: "rgba(255,255,255,0.08)",
   },
   topRow: {
     flexDirection: "row",
@@ -106,5 +117,10 @@ const styles = StyleSheet.create({
     color: Colors.dark.text,
     fontSize: 14,
     paddingVertical: 0,
+  },
+  categoriesRow: {
+    flexDirection: "row",
+    gap: 12,
+    paddingHorizontal: 2,
   },
 });

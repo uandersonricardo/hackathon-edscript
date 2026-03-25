@@ -67,9 +67,7 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
     backgroundColor: Colors.dark.inputBackground,
-    borderTopWidth: StyleSheet.hairlineWidth,
-    borderTopColor: "rgba(255,255,255,0.08)",
-    paddingTop: 10,
+    paddingTop: 12,
   },
   tab: {
     flex: 1,
