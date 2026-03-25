@@ -1,9 +1,11 @@
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 
+import { AuthProvider } from "../contexts/AuthContext";
+
 export default function RootLayout() {
   return (
-    <>
+    <AuthProvider>
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="modal" options={{ presentation: "modal" }} />
@@ -27,6 +29,6 @@ export default function RootLayout() {
         />
       </Stack>
       <StatusBar style="inverted" />
-    </>
+    </AuthProvider>
   );
 }

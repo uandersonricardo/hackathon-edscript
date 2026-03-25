@@ -2,6 +2,7 @@ import { Bell, Plus, Search } from "lucide-react-native";
 import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
+import { useAuth } from "../contexts/AuthContext";
 import { Colors } from "../constants/theme";
 import { CategoryButton } from "./CategoryButton";
 
@@ -16,6 +17,7 @@ const CATEGORIES = [
 
 export function AppHeader() {
   const insets = useSafeAreaInsets();
+  const { isLoggedIn } = useAuth();
 
   return (
     <View style={[styles.container, { paddingTop: insets.top + 8 }]}>
@@ -23,16 +25,31 @@ export function AppHeader() {
         <Image source={LOGO} style={styles.logo} resizeMode="contain" />
 
         <View style={styles.actions}>
-          <TouchableOpacity style={styles.notifButton} activeOpacity={0.7}>
-            <Bell size={20} color={Colors.dark.text} />
-          </TouchableOpacity>
+          {isLoggedIn ? (
+            <>
+              <TouchableOpacity style={styles.notifButton} activeOpacity={0.7}>
+                <Bell size={20} color={Colors.dark.text} />
+                <View style={styles.notifBadge} />
+              </TouchableOpacity>
 
-          <TouchableOpacity style={styles.balanceButton} activeOpacity={0.7}>
-            <View style={styles.depositIcon}>
-              <Plus size={12} color={Colors.dark.background} strokeWidth={3} />
-            </View>
-            <Text style={styles.balanceText}>$100.00</Text>
-          </TouchableOpacity>
+              <TouchableOpacity style={styles.balanceButton} activeOpacity={0.7}>
+                <View style={styles.depositIcon}>
+                  <Plus size={12} color={Colors.dark.background} strokeWidth={3} />
+                </View>
+                <Text style={styles.balanceText}>$100.00</Text>
+              </TouchableOpacity>
+            </>
+          ) : (
+            <>
+              <TouchableOpacity style={styles.loginButton} activeOpacity={0.7}>
+                <Text style={styles.loginText}>Entrar</Text>
+              </TouchableOpacity>
+
+              <TouchableOpacity style={styles.registerButton} activeOpacity={0.7}>
+                <Text style={styles.registerText}>Criar conta</Text>
+              </TouchableOpacity>
+            </>
+          )}
         </View>
       </View>
       <View style={styles.searchRow}>
@@ -77,6 +94,17 @@ const styles = StyleSheet.create({
   notifButton: {
     padding: 6,
   },
+  notifBadge: {
+    position: "absolute",
+    top: 3,
+    right: 5,
+    width: 10,
+    height: 10,
+    borderRadius: 5,
+    backgroundColor: Colors.dark.secondary,
+    borderWidth: 2,
+    borderColor: Colors.dark.background,
+  },
   balanceButton: {
     flexDirection: "row",
     alignItems: "center",
@@ -99,6 +127,29 @@ const styles = StyleSheet.create({
     color: Colors.dark.text,
     fontSize: 15,
     fontWeight: "600",
+  },
+  loginButton: {
+    backgroundColor: Colors.dark.inputBackground,
+    borderRadius: 13,
+    paddingVertical: 13,
+    paddingHorizontal: 15,
+    marginRight: 4,
+  },
+  loginText: {
+    color: Colors.dark.text,
+    fontSize: 15,
+    fontWeight: "600",
+  },
+  registerButton: {
+    backgroundColor: Colors.dark.primary,
+    borderRadius: 13,
+    paddingVertical: 13,
+    paddingHorizontal: 15,
+  },
+  registerText: {
+    color: Colors.dark.background,
+    fontSize: 15,
+    fontWeight: "700",
   },
   searchRow: {
     flexDirection: "row",

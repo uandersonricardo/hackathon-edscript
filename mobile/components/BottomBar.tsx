@@ -1,8 +1,9 @@
 import { BottomTabBarProps } from "@react-navigation/bottom-tabs";
-import { Home, Trophy, Clock, Headphones } from "lucide-react-native";
+import { Home, Trophy, Clock, Headphones, UserCircle } from "lucide-react-native";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
+import { useAuth } from "../contexts/AuthContext";
 import { Colors } from "../constants/theme";
 
 const AVATAR_URI = require("../assets/avatars/1.png");
@@ -24,6 +25,7 @@ const TAB_LABELS: Record<string, string> = {
 
 export function BottomBar({ state, descriptors, navigation }: BottomTabBarProps) {
   const insets = useSafeAreaInsets();
+  const { isLoggedIn } = useAuth();
 
   return (
     <View style={[styles.container, { paddingBottom: insets.bottom }]}>
@@ -49,9 +51,13 @@ export function BottomBar({ state, descriptors, navigation }: BottomTabBarProps)
             accessibilityState={isFocused ? { selected: true } : {}}
           >
             {route.name === "profile" ? (
-              <View style={[styles.avatarWrapper, isFocused && styles.avatarFocused]}>
-                <Image source={AVATAR_URI} style={styles.avatar} />
-              </View>
+              isLoggedIn ? (
+                <View style={[styles.avatarWrapper, isFocused && styles.avatarFocused]}>
+                  <Image source={AVATAR_URI} style={styles.avatar} />
+                </View>
+              ) : (
+                <UserCircle size={24} color={color} />
+              )
             ) : (
               TAB_ICONS[route.name]?.(color)
             )}
