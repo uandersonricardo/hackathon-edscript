@@ -1,7 +1,9 @@
 import { LinearGradient } from "expo-linear-gradient";
+import { useEffect } from "react";
 import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 import Animated, { useAnimatedStyle, useSharedValue, withTiming } from "react-native-reanimated";
 
+import { useSearch } from "../contexts/SearchContext";
 import { Colors } from "../constants/theme";
 
 interface Props {
@@ -10,23 +12,29 @@ interface Props {
 }
 
 export function CategoryButton({ label, icon }: Props) {
+  const { activeCategory, toggleCategory } = useSearch();
+  const isActive = activeCategory === label;
+
   const shadowOpacity = useSharedValue(0);
+
+  useEffect(() => {
+    shadowOpacity.value = withTiming(isActive ? 1 : 0, { duration: 150 });
+  }, [isActive]);
 
   const animStyle = useAnimatedStyle(() => ({
     shadowOpacity: shadowOpacity.value,
   }));
 
+  const handlePressIn = () => {
+    toggleCategory(label);
+  };
+
   return (
     <View style={styles.outer}>
-      <Pressable
-        onPressIn={() => {
-          shadowOpacity.value = withTiming(0.85, { duration: 150 });
-        }}
-        onPressOut={() => {
-          shadowOpacity.value = withTiming(0, { duration: 200 });
-        }}
-      >
-        <Animated.View style={[styles.inner, animStyle]}>
+      <Pressable onPressIn={handlePressIn}>
+        <Animated.View
+          style={[styles.inner, activeCategory && (isActive ? styles.active : styles.inactive), animStyle]}
+        >
           <LinearGradient
             colors={["rgba(7,4,46,0.20)", "rgba(58,231,126,0.20)"]}
             start={{ x: 0.5, y: 0 }}
@@ -58,6 +66,12 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 0 },
     shadowRadius: 10,
     elevation: 8,
+  },
+  active: {
+    shadowOpacity: 1,
+  },
+  inactive: {
+    opacity: 0.7,
   },
   card: {
     alignItems: "center",

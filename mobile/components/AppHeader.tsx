@@ -3,6 +3,7 @@ import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from "reac
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { useAuth } from "../contexts/AuthContext";
+import { useSearch } from "../contexts/SearchContext";
 import { Colors } from "../constants/theme";
 import { CategoryButton } from "./CategoryButton";
 
@@ -17,7 +18,8 @@ const CATEGORIES = [
 
 export function AppHeader() {
   const insets = useSafeAreaInsets();
-  const { isLoggedIn } = useAuth();
+  const { isLoggedIn, login } = useAuth();
+  const { searchQuery, setSearchQuery } = useSearch();
 
   return (
     <View style={[styles.container, { paddingTop: insets.top + 8 }]}>
@@ -28,20 +30,20 @@ export function AppHeader() {
           {isLoggedIn ? (
             <>
               <TouchableOpacity style={styles.notifButton} activeOpacity={0.7}>
-                <Bell size={20} color={Colors.dark.text} />
+                <Bell size={24} color={Colors.dark.text} />
                 <View style={styles.notifBadge} />
               </TouchableOpacity>
 
               <TouchableOpacity style={styles.balanceButton} activeOpacity={0.7}>
                 <View style={styles.depositIcon}>
-                  <Plus size={12} color={Colors.dark.background} strokeWidth={3} />
+                  <Plus size={20} color={Colors.dark.background} strokeWidth={2.5} />
                 </View>
-                <Text style={styles.balanceText}>$100.00</Text>
+                <Text style={styles.balanceText}>R$100,00</Text>
               </TouchableOpacity>
             </>
           ) : (
             <>
-              <TouchableOpacity style={styles.loginButton} activeOpacity={0.7}>
+              <TouchableOpacity style={styles.loginButton} activeOpacity={0.7} onPress={login}>
                 <Text style={styles.loginText}>Entrar</Text>
               </TouchableOpacity>
 
@@ -59,6 +61,8 @@ export function AppHeader() {
           placeholder="Pesquise aqui"
           placeholderTextColor={Colors.dark.textMuted}
           selectionColor={Colors.dark.primary}
+          value={searchQuery}
+          onChangeText={setSearchQuery}
         />
       </View>
       <View style={styles.categoriesRow}>
@@ -98,9 +102,9 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: 3,
     right: 5,
-    width: 10,
-    height: 10,
-    borderRadius: 5,
+    width: 12,
+    height: 12,
+    borderRadius: 6,
     backgroundColor: Colors.dark.secondary,
     borderWidth: 2,
     borderColor: Colors.dark.background,
@@ -116,9 +120,9 @@ const styles = StyleSheet.create({
     gap: 8,
   },
   depositIcon: {
-    width: 22,
-    height: 22,
-    borderRadius: 11,
+    width: 32,
+    height: 32,
+    borderRadius: 18,
     backgroundColor: Colors.dark.primary,
     alignItems: "center",
     justifyContent: "center",

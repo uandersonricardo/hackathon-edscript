@@ -1,11 +1,17 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 import { Colors } from "../../constants/theme";
+import { useAuth } from "../../contexts/AuthContext";
 
 export default function Profile() {
+  const { logout } = useAuth();
+
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Perfil</Text>
+      <TouchableOpacity onPress={logout}>
+        <Text style={styles.text}>Logout</Text>
+      </TouchableOpacity>
     </View>
   );
 }
