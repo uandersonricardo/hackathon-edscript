@@ -5,6 +5,7 @@ import { CameraIcon } from "lucide-react-native";
 
 import { getCasinoCategories, type Category } from "../../requests/casino";
 import { Colors } from "@/constants/theme";
+import { BannerCarousel } from "@/components/BannerCarousel";
 
 export default function Index() {
   const router = useRouter();
@@ -37,14 +38,7 @@ export default function Index() {
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.wheelBanner} onPress={() => router.push("/wheel")} activeOpacity={0.85}>
-        <Text style={styles.wheelBannerText}>🎡 Roda da Sorte</Text>
-        <Text style={styles.wheelBannerSub}>Gire e ganhe prêmios!</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.gameBanner} onPress={() => router.push("/game")} activeOpacity={0.85}>
-        <Text style={styles.gameBannerText}>🏃 Runner</Text>
-        <Text style={styles.gameBannerSub}>Swipe to dodge obstacles!</Text>
-      </TouchableOpacity>
+      <BannerCarousel />
       <CameraIcon />
       <Text style={styles.header}>Casino Categories</Text>
       <FlatList
@@ -107,49 +101,5 @@ const styles = StyleSheet.create({
   error: {
     color: "red",
     fontSize: 16,
-  },
-  wheelBanner: {
-    marginHorizontal: 16,
-    marginBottom: 16,
-    backgroundColor: "#0a0a1e",
-    borderRadius: 12,
-    paddingVertical: 16,
-    paddingHorizontal: 20,
-    alignItems: "center",
-    borderWidth: 1,
-    borderColor: "#00eeff44",
-  },
-  wheelBannerText: {
-    fontSize: 20,
-    fontWeight: "bold",
-    color: "#FFD700",
-    letterSpacing: 1,
-  },
-  wheelBannerSub: {
-    fontSize: 13,
-    color: "#aab4c8",
-    marginTop: 4,
-  },
-  gameBanner: {
-    marginHorizontal: 16,
-    marginBottom: 16,
-    backgroundColor: "#0a0a1e",
-    borderRadius: 12,
-    paddingVertical: 16,
-    paddingHorizontal: 20,
-    alignItems: "center",
-    borderWidth: 1,
-    borderColor: "#00eeff44",
-  },
-  gameBannerText: {
-    fontSize: 20,
-    fontWeight: "bold",
-    color: "#00eeff",
-    letterSpacing: 1,
-  },
-  gameBannerSub: {
-    fontSize: 13,
-    color: "#aab4c8",
-    marginTop: 4,
   },
 });
