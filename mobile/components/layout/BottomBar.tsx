@@ -3,10 +3,10 @@ import { Home, Trophy, Clock, Headphones, UserCircle } from "lucide-react-native
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
-import { useAuth } from "../contexts/AuthContext";
-import { Colors } from "../constants/theme";
+import { useAuth } from "../../contexts/AuthContext";
+import { Colors } from "../../constants/theme";
 
-const AVATAR_URI = require("../assets/avatars/1.png");
+const AVATAR_URI = require("../../assets/avatars/1.png");
 
 const TAB_ICONS: Record<string, (color: string) => React.ReactNode> = {
   index: (color) => <Home size={22} color={color} />,

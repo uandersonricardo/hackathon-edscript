@@ -7,32 +7,32 @@ import PagerView from "react-native-pager-view";
 const slides = [
   {
     route: "/wheel" as const,
-    image: require("../assets/elements/eds_vip.png"),
+    image: require("../../assets/elements/eds_vip.png"),
     titleColor: "#FFD700",
   },
   {
     route: "/game" as const,
-    image: require("../assets/elements/eds_vip.png"),
+    image: require("../../assets/elements/eds_vip.png"),
     titleColor: "#00eeff",
   },
   {
     route: "/game" as const,
-    image: require("../assets/elements/eds_vip.png"),
+    image: require("../../assets/elements/eds_vip.png"),
     titleColor: "#00eeff",
   },
   {
     route: "/game" as const,
-    image: require("../assets/elements/eds_vip.png"),
+    image: require("../../assets/elements/eds_vip.png"),
     titleColor: "#00eeff",
   },
   {
     route: "/game" as const,
-    image: require("../assets/elements/eds_vip.png"),
+    image: require("../../assets/elements/eds_vip.png"),
     titleColor: "#00eeff",
   },
   {
     route: "/game" as const,
-    image: require("../assets/elements/eds_vip.png"),
+    image: require("../../assets/elements/eds_vip.png"),
     titleColor: "#00eeff",
   },
 ];

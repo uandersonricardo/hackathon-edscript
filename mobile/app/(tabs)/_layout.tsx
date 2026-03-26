@@ -1,8 +1,8 @@
 import { Tabs } from "expo-router";
 import { useState } from "react";
 
-import { AppHeader } from "../../components/AppHeader";
-import { BottomBar } from "../../components/BottomBar";
+import { AppHeader } from "../../components/layout/AppHeader";
+import { BottomBar } from "../../components/layout/BottomBar";
 
 const TABS_WITHOUT_HEADER = new Set(["support"]);
 

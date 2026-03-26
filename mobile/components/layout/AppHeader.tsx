@@ -2,18 +2,18 @@ import { Bell, Plus, Search } from "lucide-react-native";
 import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
-import { useAuth } from "../contexts/AuthContext";
-import { useSearch } from "../contexts/SearchContext";
-import { Colors } from "../constants/theme";
+import { useAuth } from "../../contexts/AuthContext";
+import { useSearch } from "../../contexts/SearchContext";
+import { Colors } from "../../constants/theme";
 import { CategoryButton } from "./CategoryButton";
 
-const LOGO = require("../assets/images/logo-reduced-green.png");
+const LOGO = require("../../assets/images/logo-reduced-green.png");
 
 const CATEGORIES = [
-  { label: "Esportes", icon: require("../assets/icons/fixtures.png") },
-  { label: "Cassino", icon: require("../assets/icons/casino.png") },
-  { label: "Cassino ao vivo", icon: require("../assets/icons/liveCasino.png") },
-  { label: "Virtuais", icon: require("../assets/icons/virtuals.png") },
+  { label: "Esportes", icon: require("../../assets/icons/fixtures.png") },
+  { label: "Cassino", icon: require("../../assets/icons/casino.png") },
+  { label: "Cassino ao vivo", icon: require("../../assets/icons/liveCasino.png") },
+  { label: "Virtuais", icon: require("../../assets/icons/virtuals.png") },
 ] as const;
 
 export function AppHeader() {

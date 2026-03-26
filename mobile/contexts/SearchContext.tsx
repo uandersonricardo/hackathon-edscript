@@ -13,7 +13,7 @@ const SearchContext = createContext<SearchContextValue | null>(null);
 
 export function SearchProvider({ children }: { children: React.ReactNode }) {
   const [searchQuery, setSearchQuery] = useState("");
-  const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const [activeCategory, setActiveCategory] = useState<string | null>("Cassino");
 
   const toggleCategory = (category: string) => {
     setActiveCategory((prev) => (prev === category ? null : category));
@@ -25,7 +25,9 @@ export function SearchProvider({ children }: { children: React.ReactNode }) {
   };
 
   return (
-    <SearchContext.Provider value={{ searchQuery, activeCategory, setSearchQuery, setActiveCategory, toggleCategory, clearFilters }}>
+    <SearchContext.Provider
+      value={{ searchQuery, activeCategory, setSearchQuery, setActiveCategory, toggleCategory, clearFilters }}
+    >
       {children}
     </SearchContext.Provider>
   );

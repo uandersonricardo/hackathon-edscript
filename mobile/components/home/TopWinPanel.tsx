@@ -4,7 +4,7 @@ import { Colors } from "@/constants/theme";
 import TopWinLeftShape from "@/svgs/TopWinLeftShape";
 import TopWinRightShape from "@/svgs/TopWinRightShape";
 
-const AVATAR_URI = require("../assets/avatars/1.png");
+const AVATAR_URI = require("../../assets/avatars/1.png");
 
 export function TopWinPanel() {
   return (

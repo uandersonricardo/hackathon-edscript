@@ -3,8 +3,8 @@ import { useEffect } from "react";
 import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 import Animated, { useAnimatedStyle, useSharedValue, withTiming } from "react-native-reanimated";
 
-import { useSearch } from "../contexts/SearchContext";
-import { Colors } from "../constants/theme";
+import { useSearch } from "../../contexts/SearchContext";
+import { Colors } from "../../constants/theme";
 
 interface Props {
   label: string;

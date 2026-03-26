@@ -3,7 +3,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import { ChartColumnIcon, SquareStarIcon } from "lucide-react-native";
 import { Image, Pressable, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
-const AVATAR_URI = require("../assets/avatars/1.png");
+const AVATAR_URI = require("../../assets/avatars/1.png");
 
 export function MatchPanel() {
   return (

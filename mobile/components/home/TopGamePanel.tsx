@@ -3,7 +3,7 @@ import { Image, StyleSheet, Text, View } from "react-native";
 import { Colors } from "@/constants/theme";
 import TopGameShape from "@/svgs/TopGameShape";
 
-const GAME_IMG = require("../assets/elements/game_example.png");
+const GAME_IMG = require("../../assets/elements/game_example.png");
 
 export function TopGamePanel() {
   return (

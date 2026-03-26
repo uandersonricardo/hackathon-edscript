@@ -16,6 +16,7 @@ export const Colors = {
     tertiary: "#0B18DE",
     primaryMuted: "#174B49",
     tertiaryStroke: "#707BE8",
+    card: "#02001A",
   },
   dark: {
     text: "#FFFFFF",
@@ -27,6 +28,7 @@ export const Colors = {
     tertiary: "#0B18DE",
     primaryMuted: "#174B49",
     tertiaryStroke: "#707BE8",
+    card: "#02001A",
   },
 };
 
