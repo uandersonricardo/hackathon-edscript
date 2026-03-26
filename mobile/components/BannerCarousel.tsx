@@ -1,20 +1,38 @@
 import { Colors } from "@/constants/theme";
-import { useRouter } from "expo-router";
+import { Link, useRouter } from "expo-router";
 import { useEffect, useRef, useState } from "react";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import PagerView from "react-native-pager-view";
 
 const slides = [
   {
     route: "/wheel" as const,
-    title: "🎡 Roda da Sorte",
-    subtitle: "Gire e ganhe prêmios!",
+    image: require("../assets/elements/eds_vip.png"),
     titleColor: "#FFD700",
   },
   {
     route: "/game" as const,
-    title: "🏃 Runner",
-    subtitle: "Swipe to dodge obstacles!",
+    image: require("../assets/elements/eds_vip.png"),
+    titleColor: "#00eeff",
+  },
+  {
+    route: "/game" as const,
+    image: require("../assets/elements/eds_vip.png"),
+    titleColor: "#00eeff",
+  },
+  {
+    route: "/game" as const,
+    image: require("../assets/elements/eds_vip.png"),
+    titleColor: "#00eeff",
+  },
+  {
+    route: "/game" as const,
+    image: require("../assets/elements/eds_vip.png"),
+    titleColor: "#00eeff",
+  },
+  {
+    route: "/game" as const,
+    image: require("../assets/elements/eds_vip.png"),
     titleColor: "#00eeff",
   },
 ];
@@ -43,16 +61,14 @@ export function BannerCarousel() {
         initialPage={0}
         onPageSelected={(e) => setCurrentPage(e.nativeEvent.position)}
       >
-        {slides.map((slide) => (
-          <TouchableOpacity
-            key={slide.route}
-            style={styles.slide}
-            onPress={() => router.push(slide.route)}
-            activeOpacity={0.85}
-          >
-            <Text style={[styles.title, { color: slide.titleColor }]}>{slide.title}</Text>
-            <Text style={styles.subtitle}>{slide.subtitle}</Text>
-          </TouchableOpacity>
+        {slides.map((slide, index) => (
+          <View key={index} style={styles.carouselFixedOuter}>
+            <Link href={slide.route} asChild>
+              <TouchableOpacity style={styles.carouselFixedInner} activeOpacity={0.85}>
+                <Image source={slide.image} style={styles.carouselImage} resizeMode="cover" />
+              </TouchableOpacity>
+            </Link>
+          </View>
         ))}
       </PagerView>
       <View style={styles.dots}>
@@ -66,24 +82,18 @@ export function BannerCarousel() {
 
 const styles = StyleSheet.create({
   wrapper: {
-    marginHorizontal: 16,
-    marginBottom: 16,
+    flex: 1,
   },
   pager: {
     height: 90,
-    borderRadius: 12,
+    borderRadius: 15,
+    borderWidth: 1.5,
+    borderColor: Colors.dark.tertiaryStroke,
+    backgroundColor: Colors.dark.background,
     overflow: "hidden",
   },
   slide: {
     flex: 1,
-    backgroundColor: "#0a0a1e",
-    borderRadius: 12,
-    paddingVertical: 16,
-    paddingHorizontal: 20,
-    alignItems: "center",
-    justifyContent: "center",
-    borderWidth: 1,
-    borderColor: "#00eeff44",
   },
   title: {
     fontSize: 20,
@@ -111,5 +121,13 @@ const styles = StyleSheet.create({
   dotActive: {
     backgroundColor: Colors.dark.primary,
     opacity: 1,
+  },
+  carouselFixedOuter: {
+    margin: -3,
+  },
+  carouselFixedInner: {},
+  carouselImage: {
+    height: 90,
+    width: "100%",
   },
 });

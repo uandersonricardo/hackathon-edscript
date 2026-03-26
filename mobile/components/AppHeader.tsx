@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: Colors.dark.background,
     paddingHorizontal: 16,
-    paddingBottom: 20,
+    paddingBottom: 8,
     gap: 20,
   },
   topRow: {

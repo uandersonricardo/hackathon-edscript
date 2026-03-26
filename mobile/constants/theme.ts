@@ -13,6 +13,9 @@ export const Colors = {
     background: "#07042E",
     primary: "#3AE77E",
     secondary: "#E7E13A",
+    tertiary: "#0B18DE",
+    primaryMuted: "#174B49",
+    tertiaryStroke: "#707BE8",
   },
   dark: {
     text: "#FFFFFF",
@@ -21,6 +24,9 @@ export const Colors = {
     background: "#07042E",
     primary: "#3AE77E",
     secondary: "#E7E13A",
+    tertiary: "#0B18DE",
+    primaryMuted: "#174B49",
+    tertiaryStroke: "#707BE8",
   },
 };
 
