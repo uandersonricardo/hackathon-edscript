@@ -46,14 +46,22 @@ const styles = StyleSheet.create({
   card: {
     flex: 1,
     height: 139,
-    borderRadius: 20,
-    borderBottomLeftRadius: 0,
-    overflow: "hidden",
     position: "relative",
+    shadowColor: Colors.dark.primary,
+    shadowOffset: { width: 1, height: 1 },
+    shadowRadius: 1,
+    elevation: 8,
+    shadowOpacity: 1,
+    borderTopWidth: StyleSheet.hairlineWidth,
+    borderLeftWidth: StyleSheet.hairlineWidth,
+    borderColor: Colors.dark.tertiaryStroke,
+    borderRadius: 20,
   },
   backgroundImage: {
     flex: 1,
     flexDirection: "column",
+    borderRadius: 20,
+    overflow: "hidden",
   },
   backgroundImageStyle: {
     resizeMode: "cover",
@@ -135,7 +143,6 @@ const styles = StyleSheet.create({
     fontSize: 15,
     fontWeight: "600",
     letterSpacing: -0.3,
-    lineHeight: 18,
     marginTop: 4,
   },
   providerName: {

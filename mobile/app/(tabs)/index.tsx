@@ -7,6 +7,7 @@ import { HomeScreen } from "@/components/home/HomeScreen";
 import { CasinoScreen } from "@/components/home/CasinoScreen";
 import { LiveCasinoScreen } from "@/components/home/LiveCasinoScreen";
 import { VirtualsScreen } from "@/components/home/VirtualsScreen";
+import { FixturesScreen } from "@/components/home/FixturesScreen";
 
 function ActiveScreen({ category }: { category: string | null }) {
   switch (category) {
@@ -16,6 +17,8 @@ function ActiveScreen({ category }: { category: string | null }) {
       return <LiveCasinoScreen />;
     case "Virtuais":
       return <VirtualsScreen />;
+    case "Esportes":
+      return <FixturesScreen />;
     default:
       return <HomeScreen />;
   }
