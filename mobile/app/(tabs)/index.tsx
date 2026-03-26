@@ -1,6 +1,7 @@
 import { Link, useRouter } from "expo-router";
 import { useEffect, useState } from "react";
 import { ActivityIndicator, Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
 
 import { getCasinoCategories, type Category } from "../../requests/casino";
 import { Colors } from "@/constants/theme";
@@ -20,7 +21,7 @@ export default function Index() {
   useEffect(() => {
     getCasinoCategories()
       .then(setCategories)
-      .catch(() => setError("Failed to load categories"))
+      .catch(() => {})
       .finally(() => setLoading(false));
   }, []);
 
@@ -41,42 +42,58 @@ export default function Index() {
   }
 
   return (
-    <ScrollView style={styles.container}>
-      <View style={styles.carouselContainer}>
-        <View style={styles.carouselFixedOuter}>
-          <Link href="/wheel" asChild>
-            <TouchableOpacity style={styles.carouselFixedInner} activeOpacity={0.85}>
-              <Image source={dailyPrize} style={styles.carouselImage} resizeMode="contain" />
-            </TouchableOpacity>
-          </Link>
+    <View style={styles.wrapper}>
+      <ScrollView style={styles.container}>
+        <View style={styles.carouselContainer}>
+          <View style={styles.carouselFixedOuter}>
+            <Link href="/wheel" asChild>
+              <TouchableOpacity style={styles.carouselFixedInner} activeOpacity={0.85}>
+                <Image source={dailyPrize} style={styles.carouselImage} resizeMode="contain" />
+              </TouchableOpacity>
+            </Link>
+          </View>
+          <BannerCarousel />
         </View>
-        <BannerCarousel />
-      </View>
 
-      <TopWinPanel />
+        <TopWinPanel />
 
-      <View style={styles.titleContainer}>
-        <Text style={styles.title}>Partidas rolando agora</Text>
-        <Text style={styles.seeAll}>Ver todos</Text>
-      </View>
-      <MatchPanel />
+        <View style={styles.titleContainer}>
+          <Text style={styles.title}>Partidas rolando agora</Text>
+          <Text style={styles.seeAll}>Ver todos</Text>
+        </View>
+        <MatchPanel />
 
-      <View style={styles.titleContainer}>
-        <Text style={styles.title}>Jogos que mais renderam hoje</Text>
-        <Text style={styles.seeAll}>Ver todos</Text>
-      </View>
-      <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.gamesProfitContainer}>
-        <TopGamePanel />
-        <TopGamePanel />
-        <TopGamePanel />
+        <View style={styles.titleContainer}>
+          <Text style={styles.title}>Jogos que mais renderam hoje</Text>
+          <Text style={styles.seeAll}>Ver todos</Text>
+        </View>
+        <ScrollView
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          contentContainerStyle={styles.gamesProfitContainer}
+        >
+          <TopGamePanel />
+          <TopGamePanel />
+          <TopGamePanel />
+        </ScrollView>
+
+        <View style={{ width: 1, height: 16 }} />
       </ScrollView>
-
-      <View style={{ width: 1, height: 16 }} />
-    </ScrollView>
+      <LinearGradient
+        colors={[Colors.dark.background, `${Colors.dark.background}00`]}
+        start={{ x: 0.5, y: 0 }}
+        end={{ x: 0.5, y: 0.4 }}
+        style={styles.topFade}
+        pointerEvents="none"
+      />
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
+  wrapper: {
+    flex: 1,
+  },
   container: {
     flex: 1,
     backgroundColor: Colors.dark.background,
@@ -154,5 +171,12 @@ const styles = StyleSheet.create({
   gamesProfitContainer: {
     gap: 8,
     paddingHorizontal: 16,
+  },
+  topFade: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    height: 40,
   },
 });
