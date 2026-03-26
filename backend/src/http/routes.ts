@@ -14,6 +14,10 @@ import {
   tags,
   vendors,
 } from "../assets";
+import Auth from "../lib/auth";
+import User from "../lib/user";
+import { authenticateUser } from "./middlewares";
+import Ranking from "../lib/ranking";
 
 const router = Router();
 
@@ -45,14 +49,116 @@ router.get("/fixtures/:sport", (req: Request, res: Response, _next: NextFunction
   res.json(data);
 });
 
-// TODO: Login & Register & Profile
-// TODO: Register Bet
+router.post("/auth/login", (req, res) => {
+  const { username, password } = req.body;
+
+  try {
+    const user = Auth.login(username, password);
+    res.json({ success: true, data: user });
+  } catch (err) {
+    res.status(401).json({ success: false, message: "The credentials provided are incorrect" });
+  }
+});
+
+router.post("/auth/register", (req, res) => {
+  const attributes = req.body;
+
+  try {
+    const user = new User(attributes);
+    Auth.register(user);
+
+    res.json({ success: true, data: user });
+  } catch (err) {
+    res.status(401).json({ success: false, message: "The credentials provided are incorrect" });
+  }
+});
+
+router.get("/users/:id", (req, res) => {
+  const user = Auth.findUser(req.params.id);
+
+  if (!user) {
+    res.status(404).json({ success: false, message: "User not found" });
+    return;
+  }
+
+  res.json({ success: true, data: user });
+});
+
+router.post("/bet", authenticateUser, (req, res) => {
+  const userId = (req as any).userId;
+  const user = Auth.findUser(userId);
+
+  if (!user) {
+    res.status(404).json({ success: false, message: "User not found" });
+    return;
+  }
+
+  const { amount, type } = req.body;
+
+  if (amount > user.maxBetAmount) {
+    res.status(400).json({ success: false, message: "Max bet amount exceeded" });
+    return;
+  }
+
+  user.balance -= amount;
+  user.history.push({
+    date: new Date(),
+    type: type,
+    value: amount,
+  });
+
+  res.json({ success: true, data: null });
+});
+
+router.get("/history", authenticateUser, (req, res) => {
+  const userId = (req as any).userId;
+  const user = Auth.findUser(userId);
+
+  if (!user) {
+    res.status(404).json({ success: false, message: "User not found" });
+    return;
+  }
+
+  const history = user.history.entries;
+
+  res.json({ success: true, data: history });
+});
+
+router.get("/achievements", authenticateUser, (req, res) => {
+  const userId = (req as any).userId;
+  const user = Auth.findUser(userId);
+
+  if (!user) {
+    res.status(404).json({ success: false, message: "User not found" });
+    return;
+  }
+
+  const achievements = user.achievements;
+
+  res.json({ success: true, data: achievements });
+});
+
+router.get("/homepage", authenticateUser, (req, res) => {
+  const userId = (req as any).userId;
+  const user = Auth.findUser(userId);
+
+  if (!user) {
+    res.status(404).json({ success: false, message: "User not found" });
+    return;
+  }
+
+  const homepage = user.embedding.getHomepage();
+
+  res.json({ success: true, data: homepage });
+});
+
+router.get("/ranking", (_req, res) => {
+  const ranking = Ranking.top10;
+
+  res.json({ success: true, data: ranking });
+});
+
 // TODO: Send Support Messages (Chat)
-// TODO: Get History
-// TODO: Get Achievements
-// TODO: Get User
-// TODO: Get Homepage
 // TODO: Get Match Stats
-// TODO: Get Ranking
 
 export default router;
