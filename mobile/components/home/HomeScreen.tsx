@@ -4,7 +4,7 @@ import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "rea
 import { Colors } from "@/constants/theme";
 import { BannerCarousel } from "@/components/layout/BannerCarousel";
 import { TopWinPanel } from "@/components/home/TopWinPanel";
-import { MatchPanel } from "@/components/home/MatchPanel";
+import { LiveMatchPanel } from "@/components/home/LiveMatchPanel";
 import { TopGamePanel } from "@/components/home/TopGamePanel";
 import { useSearch } from "@/contexts/SearchContext";
 
@@ -34,13 +34,30 @@ export function HomeScreen() {
           <Text style={styles.seeAll}>Ver todos</Text>
         </TouchableOpacity>
       </View>
-      <MatchPanel
-        homeTeam={{ name: "Auckland FC", imageUrl: require("../../assets/avatars/1.png") }}
-        awayTeam={{ name: "Macarthur FC", imageUrl: require("../../assets/avatars/2.png") }}
-        odds={{ home: 1.81, draw: 3.56, away: 4.86 }}
-        live
-        startSecond={34 * 60 + 13}
-      />
+
+      <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+        <LiveMatchPanel
+          championshipName="A-League Men"
+          homeTeam={{ name: "Auckland FC", imageUrl: require("../../assets/avatars/1.png"), score: 0 }}
+          awayTeam={{ name: "Macarthur FC", imageUrl: require("../../assets/avatars/2.png"), score: 1 }}
+          odds={{ home: 1.81, draw: 3.56, away: 4.86 }}
+          startSecond={34 * 60 + 13}
+        />
+        <LiveMatchPanel
+          championshipName="A-League Men"
+          homeTeam={{ name: "Auckland FC", imageUrl: require("../../assets/avatars/1.png"), score: 0 }}
+          awayTeam={{ name: "Macarthur FC", imageUrl: require("../../assets/avatars/2.png"), score: 1 }}
+          odds={{ home: 1.81, draw: 3.56, away: 4.86 }}
+          startSecond={34 * 60 + 13}
+        />
+        <LiveMatchPanel
+          championshipName="A-League Men"
+          homeTeam={{ name: "Auckland FC", imageUrl: require("../../assets/avatars/1.png"), score: 0 }}
+          awayTeam={{ name: "Macarthur FC", imageUrl: require("../../assets/avatars/2.png"), score: 1 }}
+          odds={{ home: 1.81, draw: 3.56, away: 4.86 }}
+          startSecond={34 * 60 + 13}
+        />
+      </ScrollView>
 
       <View style={styles.titleContainer}>
         <Text style={styles.title}>Jogos que mais renderam hoje</Text>
@@ -54,7 +71,7 @@ export function HomeScreen() {
         <TopGamePanel />
       </ScrollView>
 
-      <View style={{ width: 1, height: 16 }} />
+      <View style={{ width: 1, height: 32 }} />
     </ScrollView>
   );
 }

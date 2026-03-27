@@ -15,7 +15,7 @@ export interface MatchOdds {
   away: number;
 }
 
-interface MatchPanelProps {
+interface FutureMatchPanelProps {
   homeTeam: TeamInfo;
   awayTeam: TeamInfo;
   odds: MatchOdds;
@@ -29,7 +29,14 @@ function randomDelta(base: number): number {
   return Math.round((base + delta) * 100) / 100;
 }
 
-export function MatchPanel({ homeTeam, awayTeam, odds, date, live = false, startSecond = 0 }: MatchPanelProps) {
+export function FutureMatchPanel({
+  homeTeam,
+  awayTeam,
+  odds,
+  date,
+  live = false,
+  startSecond = 0,
+}: FutureMatchPanelProps) {
   const [second, setSecond] = useState(startSecond);
   const [currentOdds, setCurrentOdds] = useState<MatchOdds>(odds);
   const secondRef = useRef(startSecond);
@@ -78,7 +85,7 @@ export function MatchPanel({ homeTeam, awayTeam, odds, date, live = false, start
             <Text style={styles.bbText}>BB</Text>
           </View>
           <View style={styles.timeContainer}>
-            {live && (
+            {false && live && (
               <View style={styles.liveBadge}>
                 <View style={styles.liveDot} />
                 <Text style={styles.liveText}>AO VIVO</Text>

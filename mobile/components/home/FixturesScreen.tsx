@@ -10,13 +10,14 @@ import {
   View,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { ChevronDown, SlidersHorizontal, X } from "lucide-react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { Colors } from "@/constants/theme";
-import { MatchPanel } from "./MatchPanel";
+import { FutureMatchPanel } from "./FutureMatchPanel";
 import { SuperOddsPanel } from "./SuperOddsPanel";
+import { LiveMatchPanel } from "./LiveMatchPanel";
 
 const SPORTS = [
   { id: "futebol", emoji: "⚽", label: "Futebol" },
@@ -492,27 +493,52 @@ export function FixturesScreen() {
   const [championshipOpen, setChampionshipOpen] = useState(true);
   const [filterModalOpen, setFilterModalOpen] = useState(false);
   const [filters, setFilters] = useState<FilterState>(DEFAULT_FILTERS);
+  const scrollRef = useRef<ScrollView>(null);
+  const filterRowY = useRef(0);
 
   const activeCount = countActiveFilters(filters);
 
+  const scrollToFilter = () => scrollRef.current?.scrollTo({ y: filterRowY.current, animated: true });
+
   return (
     <>
-      <ScrollView style={styles.container}>
+      <ScrollView ref={scrollRef} style={styles.container}>
         <View style={styles.titleContainer}>
           <Text style={styles.title}>Partidas rolando agora</Text>
-          <Text style={styles.seeAll}>Ver todos</Text>
+          <TouchableOpacity onPress={scrollToFilter} activeOpacity={0.75}>
+            <Text style={styles.seeAll}>Ver todos</Text>
+          </TouchableOpacity>
         </View>
-        <MatchPanel
-          homeTeam={{ name: "Auckland FC", imageUrl: require("../../assets/avatars/1.png") }}
-          awayTeam={{ name: "Macarthur FC", imageUrl: require("../../assets/avatars/2.png") }}
-          odds={{ home: 1.81, draw: 3.56, away: 4.86 }}
-          live
-          startSecond={34 * 60 + 13}
-        />
+
+        <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+          <LiveMatchPanel
+            championshipName="A-League Men"
+            homeTeam={{ name: "Auckland FC", imageUrl: require("../../assets/avatars/1.png"), score: 0 }}
+            awayTeam={{ name: "Macarthur FC", imageUrl: require("../../assets/avatars/2.png"), score: 1 }}
+            odds={{ home: 1.81, draw: 3.56, away: 4.86 }}
+            startSecond={34 * 60 + 13}
+          />
+          <LiveMatchPanel
+            championshipName="A-League Men"
+            homeTeam={{ name: "Auckland FC", imageUrl: require("../../assets/avatars/1.png"), score: 0 }}
+            awayTeam={{ name: "Macarthur FC", imageUrl: require("../../assets/avatars/2.png"), score: 1 }}
+            odds={{ home: 1.81, draw: 3.56, away: 4.86 }}
+            startSecond={34 * 60 + 13}
+          />
+          <LiveMatchPanel
+            championshipName="A-League Men"
+            homeTeam={{ name: "Auckland FC", imageUrl: require("../../assets/avatars/1.png"), score: 0 }}
+            awayTeam={{ name: "Macarthur FC", imageUrl: require("../../assets/avatars/2.png"), score: 1 }}
+            odds={{ home: 1.81, draw: 3.56, away: 4.86 }}
+            startSecond={34 * 60 + 13}
+          />
+        </ScrollView>
 
         <View style={styles.titleContainer}>
           <Text style={styles.title}>Super odds</Text>
-          <Text style={styles.seeAll}>Ver todos</Text>
+          <TouchableOpacity onPress={scrollToFilter} activeOpacity={0.75}>
+            <Text style={styles.seeAll}>Ver todos</Text>
+          </TouchableOpacity>
         </View>
 
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
@@ -551,7 +577,24 @@ export function FixturesScreen() {
           />
         </ScrollView>
 
-        <View style={styles.filterTriggerRow}>
+        <View style={styles.titleContainer}>
+          <Text style={styles.title}>Partidas populares</Text>
+          <TouchableOpacity onPress={scrollToFilter} activeOpacity={0.75}>
+            <Text style={styles.seeAll}>Ver todos</Text>
+          </TouchableOpacity>
+        </View>
+        <FutureMatchPanel
+          homeTeam={{ name: "Auckland FC", imageUrl: require("../../assets/avatars/1.png") }}
+          awayTeam={{ name: "Macarthur FC", imageUrl: require("../../assets/avatars/2.png") }}
+          odds={{ home: 1.81, draw: 3.56, away: 4.86 }}
+          live
+          startSecond={34 * 60 + 13}
+        />
+
+        <View
+          style={styles.filterTriggerRow}
+          onLayout={(e) => { filterRowY.current = e.nativeEvent.layout.y; }}
+        >
           <TouchableOpacity
             style={[styles.filterButton, activeCount > 0 && styles.filterButtonActive]}
             onPress={() => setFilterModalOpen(true)}
