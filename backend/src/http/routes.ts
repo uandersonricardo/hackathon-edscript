@@ -22,7 +22,7 @@ import Ranking from "../lib/ranking";
 const router = Router();
 
 const vendorMap = new Map<number, string>(
-  ((vendors as any).data.vendors as { id: number; name: string }[]).map((v) => [v.id, v.name])
+  ((vendors as any).data.vendors as { id: number; name: string }[]).map((v) => [v.id, v.name]),
 );
 
 function sortGames(games: any[]): any[] {
@@ -49,9 +49,7 @@ router.get("/casino/games", (req, res) => {
   const categoryId = req.query.categoryId ? parseInt(req.query.categoryId as string) : undefined;
 
   const allGames = (casinoGames as any).data.games as any[];
-  const filtered = sortGames(
-    categoryId != null ? allGames.filter((g) => g.categoryId === categoryId) : allGames
-  );
+  const filtered = sortGames(categoryId != null ? allGames.filter((g) => g.categoryId === categoryId) : allGames);
   const total = filtered.length;
   const games = filtered
     .slice((page - 1) * limit, page * limit)
@@ -68,9 +66,7 @@ router.get("/live-casino/games", (req, res) => {
   const categoryId = req.query.categoryId ? parseInt(req.query.categoryId as string) : undefined;
 
   const allGames = (liveCasinoGames as any).data.games as any[];
-  const filtered = sortGames(
-    categoryId != null ? allGames.filter((g) => g.categoryId === categoryId) : allGames
-  );
+  const filtered = sortGames(categoryId != null ? allGames.filter((g) => g.categoryId === categoryId) : allGames);
   const total = filtered.length;
   const games = filtered
     .slice((page - 1) * limit, page * limit)

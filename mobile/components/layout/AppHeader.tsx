@@ -1,6 +1,7 @@
 import { Bell, Plus, Search } from "lucide-react-native";
 import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { useRouter } from "expo-router";
 
 import { useAuth } from "../../contexts/AuthContext";
 import { useSearch } from "../../contexts/SearchContext";
@@ -18,7 +19,8 @@ const CATEGORIES = [
 
 export function AppHeader() {
   const insets = useSafeAreaInsets();
-  const { isLoggedIn, login } = useAuth();
+  const router = useRouter();
+  const { isLoggedIn, user } = useAuth();
   const { searchQuery, setSearchQuery } = useSearch();
 
   return (
@@ -38,16 +40,16 @@ export function AppHeader() {
                 <View style={styles.depositIcon}>
                   <Plus size={20} color={Colors.dark.background} strokeWidth={2.5} />
                 </View>
-                <Text style={styles.balanceText}>R$100,00</Text>
+                <Text style={styles.balanceText}>R${user?.balance?.toFixed(2) ?? "0,00"}</Text>
               </TouchableOpacity>
             </>
           ) : (
             <>
-              <TouchableOpacity style={styles.loginButton} activeOpacity={0.7} onPress={login}>
+              <TouchableOpacity style={styles.loginButton} activeOpacity={0.7} onPress={() => router.push("/login")}>
                 <Text style={styles.loginText}>Entrar</Text>
               </TouchableOpacity>
 
-              <TouchableOpacity style={styles.registerButton} activeOpacity={0.7}>
+              <TouchableOpacity style={styles.registerButton} activeOpacity={0.7} onPress={() => router.push("/register")}>
                 <Text style={styles.registerText}>Criar conta</Text>
               </TouchableOpacity>
             </>
