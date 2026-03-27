@@ -18,6 +18,7 @@ import Auth from "../lib/auth";
 import User from "../lib/user";
 import { authenticateUser } from "./middlewares";
 import Ranking from "../lib/ranking";
+import SupportAgent from "../agents/support-agent";
 
 const router = Router();
 
@@ -355,5 +356,48 @@ router.get("/notifications", authenticateUser, (_req, res) => {
 
 // TODO: Send Support Messages (Chat)
 // TODO: Get Match Stats
+
+// ── Support Chat ──────────────────────────────────────────────────────────────
+
+const supportSessions = new Map<string, SupportAgent>();
+
+function getOrCreateSession(user: User): SupportAgent {
+  if (!supportSessions.has(user.id)) {
+    supportSessions.set(user.id, new SupportAgent(user));
+  }
+  return supportSessions.get(user.id)!;
+}
+
+router.get("/support/chat", authenticateUser, (_req, res) => {
+  const user = Auth.findUser((_req as any).userId)!;
+  const session = getOrCreateSession(user);
+  const history = session.getHistory().map((m, i) => ({
+    id: String(i),
+    from: m.role === "user" ? "user" : "agent",
+    content: m.content,
+  }));
+  res.json({ success: true, data: history });
+});
+
+router.post("/support/chat", authenticateUser, async (req, res) => {
+  const user = Auth.findUser((req as any).userId)!;
+  const { message } = req.body;
+
+  if (!message || typeof message !== "string" || !message.trim()) {
+    res.status(400).json({ success: false, message: "Message is required" });
+    return;
+  }
+
+  const session = getOrCreateSession(user);
+  const response = await session.chat(message.trim());
+  res.json({ success: true, data: { response } });
+});
+
+router.delete("/support/chat", authenticateUser, (req, res) => {
+  const user = Auth.findUser((req as any).userId)!;
+  const session = getOrCreateSession(user);
+  session.reset(user);
+  res.json({ success: true, data: null });
+});
 
 export default router;
