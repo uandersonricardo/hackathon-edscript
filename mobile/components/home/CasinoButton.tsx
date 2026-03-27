@@ -1,7 +1,9 @@
 import { Colors } from "@/constants/theme";
 import { FavoriteButton } from "@/components/common/FavoriteButton";
+import { GameModal } from "@/components/common/GameModal";
 import { LinearGradient } from "expo-linear-gradient";
-import { type ImageSourcePropType, StyleSheet, View, Image, ImageBackground, Text } from "react-native";
+import { useState } from "react";
+import { type ImageSourcePropType, StyleSheet, View, Image, ImageBackground, Text, TouchableOpacity } from "react-native";
 
 interface Props {
   label: string;
@@ -12,9 +14,12 @@ interface Props {
 }
 
 export function CasinoButton({ label, icon, vendorName, popular, newGame }: Props) {
+  const [modalVisible, setModalVisible] = useState(false);
+
   return (
-    <View style={styles.card}>
-      <View style={{ width: "100%", height: "100%" }}>
+    <>
+      <TouchableOpacity style={styles.card} onPress={() => setModalVisible(true)} activeOpacity={0.85}>
+        <View style={{ width: "100%", height: "100%" }}>
         <LinearGradient
           colors={["#07042E", "rgba(23, 13, 148, 0)"]}
           start={{ x: 0, y: 0 }}
@@ -53,7 +58,16 @@ export function CasinoButton({ label, icon, vendorName, popular, newGame }: Prop
           </View>
         </View>
       </View>
-    </View>
+      </TouchableOpacity>
+
+      <GameModal
+        visible={modalVisible}
+        onClose={() => setModalVisible(false)}
+        label={label}
+        icon={icon}
+        vendorName={vendorName}
+      />
+    </>
   );
 }
 

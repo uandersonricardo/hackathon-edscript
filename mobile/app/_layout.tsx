@@ -37,6 +37,7 @@ export default function RootLayout() {
             />
             <Stack.Screen name="deposit" options={{ headerShown: false }} />
             <Stack.Screen name="ranking" options={{ headerShown: false }} />
+            <Stack.Screen name="play" options={{ headerShown: false }} />
           </Stack>
           <StatusBar style="inverted" />
         </SearchProvider>

@@ -1,7 +1,9 @@
 import { Colors } from "@/constants/theme";
 import { FavoriteButton } from "@/components/common/FavoriteButton";
+import { GameModal } from "@/components/common/GameModal";
 import { LinearGradient } from "expo-linear-gradient";
-import { type ImageSourcePropType, Image, StyleSheet, View, ImageBackground, Text } from "react-native";
+import { useState } from "react";
+import { type ImageSourcePropType, Image, StyleSheet, View, ImageBackground, Text, TouchableOpacity } from "react-native";
 import CardBackgroundShape from "@/svgs/CardBackgroundShape";
 
 interface Props {
@@ -12,6 +14,8 @@ interface Props {
 }
 
 export function VirtualButton({ label, icon, background, instant }: Props) {
+  const [modalVisible, setModalVisible] = useState(false);
+
   const inner = (
     <>
       <LinearGradient
@@ -41,15 +45,24 @@ export function VirtualButton({ label, icon, background, instant }: Props) {
   );
 
   return (
-    <View style={styles.card}>
-      {typeof background === "string" ? (
-        <View style={[styles.backgroundImage, { backgroundColor: background }]}>{inner}</View>
-      ) : (
-        <ImageBackground source={background} style={styles.backgroundImage} imageStyle={styles.backgroundImageStyle}>
-          {inner}
-        </ImageBackground>
-      )}
-    </View>
+    <>
+      <TouchableOpacity style={styles.card} onPress={() => setModalVisible(true)} activeOpacity={0.85}>
+        {typeof background === "string" ? (
+          <View style={[styles.backgroundImage, { backgroundColor: background }]}>{inner}</View>
+        ) : (
+          <ImageBackground source={background} style={styles.backgroundImage} imageStyle={styles.backgroundImageStyle}>
+            {inner}
+          </ImageBackground>
+        )}
+      </TouchableOpacity>
+
+      <GameModal
+        visible={modalVisible}
+        onClose={() => setModalVisible(false)}
+        label={label}
+        icon={icon}
+      />
+    </>
   );
 }
 
