@@ -5,7 +5,7 @@ import { AppHeader } from "../../components/layout/AppHeader";
 import { BottomBar } from "../../components/layout/BottomBar";
 
 const TABS_WITHOUT_HEADER = new Set(["support"]);
-const TABS_WITHOUT_SEARCH = new Set(["profile", "history"]);
+const TABS_WITHOUT_SEARCH = new Set(["profile", "history", "prizes"]);
 
 export default function TabsLayout() {
   const [activeTab, setActiveTab] = useState("index");

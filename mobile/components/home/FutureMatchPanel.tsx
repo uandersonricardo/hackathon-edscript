@@ -22,6 +22,7 @@ interface FutureMatchPanelProps {
   date?: string;
   live?: boolean;
   startSecond?: number;
+  more?: number;
 }
 
 function randomDelta(base: number): number {
@@ -36,6 +37,7 @@ export function FutureMatchPanel({
   date,
   live = false,
   startSecond = 0,
+  more = Math.floor(Math.random() * 1000),
 }: FutureMatchPanelProps) {
   const [second, setSecond] = useState(startSecond);
   const [currentOdds, setCurrentOdds] = useState<MatchOdds>(odds);
@@ -49,7 +51,6 @@ export function FutureMatchPanel({
       setSecond(secondRef.current);
     }, 1000);
 
-    // Fluctuate odds every 3–6 seconds
     const oddsTimer = setInterval(
       () => {
         setCurrentOdds((prev) => ({
@@ -91,7 +92,7 @@ export function FutureMatchPanel({
                 <Text style={styles.liveText}>AO VIVO</Text>
               </View>
             )}
-            <Text style={styles.moreText}>+1057</Text>
+            <Text style={styles.moreText}>+{more}</Text>
           </View>
         </View>
         <View style={styles.bottomContainer}>
@@ -198,7 +199,6 @@ const styles = StyleSheet.create({
   timeText: {
     color: Colors.dark.text,
     fontSize: 13,
-    width: 40,
   },
   bbText: {
     color: Colors.dark.background,
