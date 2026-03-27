@@ -1,4 +1,4 @@
-import { Link, useRouter } from "expo-router";
+import { Link } from "expo-router";
 import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 import { Colors } from "@/constants/theme";
@@ -6,10 +6,13 @@ import { BannerCarousel } from "@/components/layout/BannerCarousel";
 import { TopWinPanel } from "@/components/home/TopWinPanel";
 import { MatchPanel } from "@/components/home/MatchPanel";
 import { TopGamePanel } from "@/components/home/TopGamePanel";
+import { useSearch } from "@/contexts/SearchContext";
 
 const dailyPrize = require("../../assets/elements/premio_diario.png");
 
 export function HomeScreen() {
+  const { setActiveCategory } = useSearch();
+
   return (
     <ScrollView style={styles.container}>
       <View style={styles.carouselContainer}>
@@ -27,13 +30,17 @@ export function HomeScreen() {
 
       <View style={styles.titleContainer}>
         <Text style={styles.title}>Partidas rolando agora</Text>
-        <Text style={styles.seeAll}>Ver todos</Text>
+        <TouchableOpacity activeOpacity={0.85} onPress={() => setActiveCategory("Esportes")}>
+          <Text style={styles.seeAll}>Ver todos</Text>
+        </TouchableOpacity>
       </View>
       <MatchPanel />
 
       <View style={styles.titleContainer}>
         <Text style={styles.title}>Jogos que mais renderam hoje</Text>
-        <Text style={styles.seeAll}>Ver todos</Text>
+        <TouchableOpacity activeOpacity={0.85} onPress={() => setActiveCategory("Cassino")}>
+          <Text style={styles.seeAll}>Ver todos</Text>
+        </TouchableOpacity>
       </View>
       <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.gamesProfitContainer}>
         <TopGamePanel />

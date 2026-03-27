@@ -1,4 +1,5 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { useRouter } from "expo-router";
 
 import { Colors } from "@/constants/theme";
 import TopWinLeftShape from "@/svgs/TopWinLeftShape";
@@ -7,8 +8,10 @@ import TopWinRightShape from "@/svgs/TopWinRightShape";
 const AVATAR_URI = require("../../assets/avatars/1.png");
 
 export function TopWinPanel() {
+  const router = useRouter();
+
   return (
-    <View style={styles.wrapper}>
+    <TouchableOpacity style={styles.wrapper} activeOpacity={0.85} onPress={() => router.push("/ranking")}>
       <TopWinLeftShape style={styles.leftShape} />
       <TopWinRightShape style={styles.rightShape} />
       <View style={styles.content}>
@@ -19,7 +22,7 @@ export function TopWinPanel() {
           <Text style={styles.amount}>R$ 20.278,37</Text>
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 }
 

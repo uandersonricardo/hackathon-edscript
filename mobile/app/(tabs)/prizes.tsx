@@ -1,5 +1,6 @@
 import { LinearGradient } from "expo-linear-gradient";
-import { Image, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { useRouter } from "expo-router";
 
 import { Colors } from "../../constants/theme";
 
@@ -9,11 +10,12 @@ const PRIZES = [
   { label: "Torneios", image: require("../../assets/prizes/torneio.png") },
   { label: "Missões", image: require("../../assets/prizes/missoes.png") },
   { label: "Baús", image: require("../../assets/prizes/baus.png") },
+  { label: "Ranking Semanal", image: require("../../assets/prizes/torneio.png") },
 ];
 
-function PrizeButton({ label, image }: { label: string; image: number }) {
+function PrizeButton({ label, image, onPress }: { label: string; image: number; onPress?: () => void }) {
   return (
-    <Pressable style={styles.cardWrapper}>
+    <TouchableOpacity style={styles.cardWrapper} activeOpacity={0.85} onPress={onPress}>
       <View style={styles.card}>
         <LinearGradient
           colors={["rgba(7,4,46,0.10)", "rgba(58,231,126,0.5)"]}
@@ -32,17 +34,24 @@ function PrizeButton({ label, image }: { label: string; image: number }) {
           <Image source={image} style={styles.image} resizeMode="cover" />
         </LinearGradient>
       </View>
-    </Pressable>
+    </TouchableOpacity>
   );
 }
 
 export default function Prizes() {
+  const router = useRouter();
+
   return (
     <ScrollView style={styles.container} contentContainerStyle={styles.content}>
       <Text style={styles.title}>Prêmios</Text>
       <View style={styles.grid}>
         {PRIZES.map((prize) => (
-          <PrizeButton key={prize.label} label={prize.label} image={prize.image} />
+          <PrizeButton
+            key={prize.label}
+            label={prize.label}
+            image={prize.image}
+            onPress={prize.label === "Ranking Semanal" ? () => router.push("/ranking") : undefined}
+          />
         ))}
       </View>
     </ScrollView>
@@ -107,7 +116,7 @@ const styles = StyleSheet.create({
   },
   cardLabel: {
     color: Colors.dark.text,
-    fontSize: 19,
+    fontSize: 18,
     fontWeight: "600",
     fontStyle: "italic",
   },
