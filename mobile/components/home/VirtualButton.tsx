@@ -1,43 +1,54 @@
 import { Colors } from "@/constants/theme";
 import { FavoriteButton } from "@/components/common/FavoriteButton";
 import { LinearGradient } from "expo-linear-gradient";
-import { Image, StyleSheet, View, ImageBackground, Text } from "react-native";
+import { type ImageSourcePropType, Image, StyleSheet, View, ImageBackground, Text } from "react-native";
 import CardBackgroundShape from "@/svgs/CardBackgroundShape";
 
 interface Props {
   label: string;
-  icon: number;
+  icon: ImageSourcePropType;
+  background: ImageSourcePropType | string;
+  instant?: boolean;
 }
 
-export function VirtualButton({ label, icon }: Props) {
+export function VirtualButton({ label, icon, background, instant }: Props) {
+  const inner = (
+    <>
+      <LinearGradient
+        colors={["#07042E", "rgba(23, 13, 148, 0)"]}
+        start={{ x: 0, y: 0 }}
+        end={{ x: 1, y: 0 }}
+        style={styles.leftGradient}
+      />
+      <View style={styles.starColumn}>
+        {instant ? (
+          <View style={styles.instantBadge}>
+            <Text style={styles.instantText}>INSTANTÂNEO</Text>
+          </View>
+        ) : (
+          <View />
+        )}
+        <FavoriteButton />
+      </View>
+      <View style={styles.infoContainer}>
+        <CardBackgroundShape style={styles.cardBackground} />
+      </View>
+      <View style={styles.titleContainer}>
+        <Image source={icon} style={styles.characterImage} resizeMode="contain" />
+        <Text style={styles.gameTitle}>{label}</Text>
+      </View>
+    </>
+  );
+
   return (
     <View style={styles.card}>
-      {/* Left-side gradient — sits at the top of the flex column */}
-      <ImageBackground
-        source={require("../../assets/elements/game_example.png")}
-        style={styles.backgroundImage}
-        imageStyle={styles.backgroundImageStyle}
-      >
-        <LinearGradient
-          colors={["#07042E", "rgba(23, 13, 148, 0)"]}
-          start={{ x: 0, y: 0 }}
-          end={{ x: 1, y: 0 }}
-          style={styles.leftGradient}
-        />
-        <View style={styles.starColumn}>
-          <View style={styles.popularBadge}>
-            <Text style={styles.popularText}>POPULAR</Text>
-          </View>
-          <FavoriteButton />
-        </View>
-        <View style={styles.infoContainer}>
-          <CardBackgroundShape style={styles.cardBackground} />
-        </View>
-        <View style={styles.titleContainer}>
-          <Image source={require("../../assets/avatars/1.png")} style={styles.characterImage} resizeMode="contain" />
-          <Text style={styles.gameTitle}>{label}</Text>
-        </View>
-      </ImageBackground>
+      {typeof background === "string" ? (
+        <View style={[styles.backgroundImage, { backgroundColor: background }]}>{inner}</View>
+      ) : (
+        <ImageBackground source={background} style={styles.backgroundImage} imageStyle={styles.backgroundImageStyle}>
+          {inner}
+        </ImageBackground>
+      )}
     </View>
   );
 }
@@ -66,10 +77,6 @@ const styles = StyleSheet.create({
   backgroundImageStyle: {
     resizeMode: "cover",
   },
-  imageContainer: {
-    flex: 1,
-    justifyContent: "flex-end",
-  },
   leftGradient: {
     width: "100%",
     height: "100%",
@@ -82,12 +89,6 @@ const styles = StyleSheet.create({
     width: 50,
     height: 50,
     zIndex: 2,
-  },
-  spacer: {
-    flex: 1,
-  },
-  bottomGradient: {
-    height: 74,
   },
   infoContainer: {
     marginTop: "auto",
@@ -111,19 +112,13 @@ const styles = StyleSheet.create({
     paddingTop: 8,
     paddingBottom: 4,
   },
-  badgesContainer: {
-    position: "absolute",
-    bottom: "100%",
-    gap: 2,
-    marginBottom: 2,
-  },
-  popularBadge: {
+  instantBadge: {
     backgroundColor: Colors.dark.primary,
     borderRadius: 100,
     paddingHorizontal: 6,
     paddingVertical: 2,
   },
-  popularText: {
+  instantText: {
     color: "#04013A",
     fontSize: 8,
     fontWeight: "600",
@@ -144,12 +139,6 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     letterSpacing: -0.3,
     marginTop: 4,
-  },
-  providerName: {
-    color: "#E6E6E6",
-    fontSize: 10,
-    fontWeight: "400",
-    letterSpacing: -0.3,
   },
   cardBackground: {
     width: "70%",

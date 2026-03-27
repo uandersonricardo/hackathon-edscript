@@ -1,17 +1,19 @@
 import { Colors } from "@/constants/theme";
 import { FavoriteButton } from "@/components/common/FavoriteButton";
 import { LinearGradient } from "expo-linear-gradient";
-import { Image, StyleSheet, View, ImageBackground, Text } from "react-native";
+import { type ImageSourcePropType, StyleSheet, View, Image, ImageBackground, Text } from "react-native";
 
 interface Props {
   label: string;
-  icon: number;
+  icon: ImageSourcePropType;
+  vendorName?: string | null;
+  popular?: boolean;
+  newGame?: boolean;
 }
 
-export function CasinoButton({ label, icon }: Props) {
+export function CasinoButton({ label, icon, vendorName, popular, newGame }: Props) {
   return (
     <View style={styles.card}>
-      {/* Left-side gradient — sits at the top of the flex column */}
       <View style={{ width: "100%", height: "100%" }}>
         <LinearGradient
           colors={["#07042E", "rgba(23, 13, 148, 0)"]}
@@ -20,26 +22,31 @@ export function CasinoButton({ label, icon }: Props) {
           style={styles.leftGradient}
         />
 
-        {/* Character image floats to the right via alignSelf, zIndex lifts it above bottom gradient */}
         <View style={styles.imageContainer}>
-          <ImageBackground
-            source={require("../../assets/elements/game_example.png")}
-            style={styles.backgroundImage}
-            imageStyle={styles.backgroundImageStyle}
-          >
-            <Image source={require("../../assets/avatars/1.png")} style={styles.characterImage} resizeMode="contain" />
+          <ImageBackground source={icon} style={styles.backgroundImage} imageStyle={styles.backgroundImageStyle}>
+            <Image source={icon} style={styles.characterImage} resizeMode="contain" />
           </ImageBackground>
         </View>
-        {/* Info section — marginTop: 'auto' anchors it to the bottom */}
         <View style={styles.infoContainer}>
           <View style={styles.titleContainer}>
             <View style={styles.badgesContainer}>
-              <View style={styles.popularBadge}>
-                <Text style={styles.popularText}>POPULAR</Text>
-              </View>
+              {newGame && (
+                <View style={styles.popularBadge}>
+                  <Text style={styles.popularText}>NOVO</Text>
+                </View>
+              )}
+              {popular && (
+                <View style={styles.popularBadge}>
+                  <Text style={styles.popularText}>POPULAR</Text>
+                </View>
+              )}
             </View>
-            <Text style={styles.gameTitle}>Fortune{"\n"}OX</Text>
-            <Text style={styles.providerName}>PG Soft</Text>
+            <Text style={styles.gameTitle} numberOfLines={2}>
+              {label}
+            </Text>
+            <Text style={styles.providerName} numberOfLines={1}>
+              {vendorName ?? "Esportes da Sorte"}
+            </Text>
           </View>
           <View style={styles.starColumn}>
             <FavoriteButton />
@@ -107,6 +114,7 @@ const styles = StyleSheet.create({
     bottom: "100%",
     gap: 2,
     marginBottom: 2,
+    alignItems: "flex-start",
   },
   popularBadge: {
     backgroundColor: Colors.dark.primary,
@@ -120,12 +128,12 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     letterSpacing: -0.206,
   },
-
   titleContainer: {
     gap: 2,
     zIndex: 2,
     flex: 1,
     position: "relative",
+    height: 54,
   },
   gameTitle: {
     color: "#E6E6E6",

@@ -1,142 +1,148 @@
 {
-    "success": true,
-    "responseCodes": [
+  "success": true,
+  "responseCodes": [
+    {
+      "responseCode": 1,
+      "responseKey": "SUCCESS",
+      "responseMessage": ""
+    }
+  ],
+  "data": [
+    {
+      "provider": {
+        "providerId": 1,
+        "code": "golden-race",
+        "name": "Golden Race",
+        "virtual": true
+      },
+      "categories": [
         {
-            "responseCode": 1,
-            "responseKey": "SUCCESS",
-            "responseMessage": ""
-        }
-    ],
-    "data": [
-        {
-            "provider": {
-                "providerId": 1,
-                "code": "golden-race",
-                "name": "Golden Race",
-                "virtual": true
-            },
-            "games": [
-                {
-                    "iframeProviderGameId": "10185",
-                    "name": "Libertadores",
-                    "order": "1",
-                    "icon": "10185"
-                },
-                {
-                    "iframeProviderGameId": "10177",
-                    "name": "Liga Inglaterra",
-                    "order": "2",
-                    "icon": "10177"
-                },
-                {
-                    "iframeProviderGameId": "10179",
-                    "name": "Liga Espanha",
-                    "order": "3",
-                    "icon": "10179"
-                },
-                {
-                    "iframeProviderGameId": "10163",
-                    "name": "Copa do Mundo",
-                    "order": "4",
-                    "icon": "10163"
-                },
-                {
-                    "iframeProviderGameId": "10402",
-                    "name": "Eurocopa 2024",
-                    "order": "5",
-                    "icon": "10402"
-                },
-                {
-                    "iframeProviderGameId": "10203",
-                    "name": "Cavalos 6",
-                    "order": "6",
-                    "icon": "10203"
-                },
-                {
-                    "iframeProviderGameId": "10174",
-                    "name": "Galgos 6",
-                    "order": "7",
-                    "icon": "10174"
-                },
-                {
-                    "iframeProviderGameId": "10186",
-                    "name": "Libertadores - Instantâneos",
-                    "order": "8",
-                    "icon": "10186"
-                },
-                {
-                    "iframeProviderGameId": "10191",
-                    "name": "Liga Inglaterra - Instantâneos",
-                    "order": "9",
-                    "icon": "10191"
-                },
-                {
-                    "iframeProviderGameId": "10282",
-                    "name": "Liga Espanha - Instantâneos",
-                    "order": "10",
-                    "icon": "10282"
-                },
-                {
-                    "iframeProviderGameId": "10187",
-                    "name": "Copa do Mundo Instantâneos",
-                    "order": "11",
-                    "icon": "10187"
-                },
-                {
-                    "iframeProviderGameId": "10403",
-                    "name": "Eurocopa 2024 - Instantâneos",
-                    "order": "12",
-                    "icon": "10403"
-                },
-                {
-                    "iframeProviderGameId": "10206",
-                    "name": "Cavalos 6 - Instantâneos",
-                    "order": "13",
-                    "icon": "10206"
-                },
-                {
-                    "iframeProviderGameId": "10175",
-                    "name": "Galgos - Instantâneos",
-                    "order": "14",
-                    "icon": "10175"
-                },
-                {
-                    "iframeProviderGameId": "10159",
-                    "name": "Giro 2 Vitória",
-                    "order": "15",
-                    "icon": "10159"
-                }
-            ]
+          "id": 2,
+          "name": "Esportes"
         },
         {
-            "provider": {
-                "providerId": 3,
-                "code": "betmakers",
-                "name": "Betmakers",
-                "virtual": false
-            },
-            "games": [
-                {
-                    "iframeProviderGameId": "betmakers-lobby",
-                    "name": "Betmakers Lobby",
-                    "icon": "betmakers-lobby"
-                }
-            ]
+          "id": 3,
+          "name": "Corridas"
         },
         {
-            "provider": {
-                "providerId": 5,
-                "code": "ultraplay",
-                "name": "UltraPlay",
-                "virtual": false
-            },
-            "games": [
-                {
-                    "iframeProviderGameId": "ultraplay-lobby",
-                    "name": "UltraPlay Lobby",
-                    "icon": "ultraplay-lobby"
-                }
-            ]
+          "id": 4,
+          "name": "Jogos"
         }
-    ]
+      ],
+      "games": [
+        {
+          "iframeProviderGameId": "10185",
+          "name": "Libertadores",
+          "order": "1",
+          "icon": "10185",
+          "categoryId": "2"
+        },
+        {
+          "iframeProviderGameId": "10177",
+          "name": "Liga Inglaterra",
+          "order": "2",
+          "icon": "10177",
+          "categoryId": "2"
+        },
+        {
+          "iframeProviderGameId": "10179",
+          "name": "Liga Espanha",
+          "order": "3",
+          "icon": "10179",
+          "categoryId": "2"
+        },
+        {
+          "iframeProviderGameId": "10163",
+          "name": "Copa do Mundo",
+          "order": "4",
+          "icon": "10163",
+          "categoryId": "2"
+        },
+        {
+          "iframeProviderGameId": "10402",
+          "name": "Eurocopa 2024",
+          "order": "5",
+          "icon": "10402",
+          "categoryId": "2"
+        },
+        {
+          "iframeProviderGameId": "10203",
+          "name": "Cavalos 6 Horse Racing",
+          "order": "6",
+          "icon": "10203",
+          "categoryId": "3"
+        },
+        {
+          "iframeProviderGameId": "10174",
+          "name": "Galgos 6 Greyhounds",
+          "order": "7",
+          "icon": "10174",
+          "categoryId": "3"
+        },
+        {
+          "iframeProviderGameId": "10186",
+          "name": "Libertadores",
+          "order": "8",
+          "icon": "10186",
+          "categoryId": "2",
+          "instant": true
+        },
+        {
+          "iframeProviderGameId": "10191",
+          "name": "Liga Inglaterra",
+          "order": "9",
+          "icon": "10191",
+          "categoryId": "2",
+          "instant": true
+        },
+        {
+          "iframeProviderGameId": "10282",
+          "name": "Liga Espanha",
+          "order": "10",
+          "icon": "10282",
+          "categoryId": "2",
+          "instant": true
+        },
+        {
+          "iframeProviderGameId": "10187",
+          "name": "Copa do Mundo",
+          "order": "11",
+          "icon": "10187",
+          "categoryId": "2",
+          "instant": true
+        },
+        {
+          "iframeProviderGameId": "10403",
+          "name": "Eurocopa 2024",
+          "order": "12",
+          "icon": "10403",
+          "categoryId": "2",
+          "instant": true
+        },
+        {
+          "iframeProviderGameId": "10206",
+          "name": "Cavalos 6 Horse Racing",
+          "order": "13",
+          "icon": "10206",
+          "categoryId": "3",
+          "instant": true
+        },
+        {
+          "iframeProviderGameId": "10175",
+          "name": "Galgos 6 Greyhounds",
+          "order": "14",
+          "icon": "10175",
+          "categoryId": "3",
+          "instant": true
+        },
+        {
+          "iframeProviderGameId": "10159",
+          "name": "Giro 2 Vitória",
+          "order": "15",
+          "icon": "10159",
+          "categoryId": "4"
+        }
+      ]
+    }
+  ]
 }

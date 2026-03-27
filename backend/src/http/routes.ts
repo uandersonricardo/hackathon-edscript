@@ -21,6 +21,21 @@ import Ranking from "../lib/ranking";
 
 const router = Router();
 
+const vendorMap = new Map<number, string>(
+  ((vendors as any).data.vendors as { id: number; name: string }[]).map((v) => [v.id, v.name])
+);
+
+function sortGames(games: any[]): any[] {
+  return [...games].sort((a, b) => {
+    const aOrder = a.orderBy ?? Infinity;
+    const bOrder = b.orderBy ?? Infinity;
+    if (aOrder !== bOrder) return aOrder - bOrder;
+    if (b.popular !== a.popular) return b.popular ? 1 : -1;
+    if (b.newGame !== a.newGame) return b.newGame ? 1 : -1;
+    return 0;
+  });
+}
+
 router.get("/sports", (_req, res) => res.json(sports));
 router.get("/vendors", (_req, res) => res.json(vendors));
 router.get("/tags", (_req, res) => res.json(tags));
@@ -28,10 +43,67 @@ router.get("/games-tags", (_req, res) => res.json(gamesTags));
 router.get("/popular-odds", (_req, res) => res.json(popularOdds));
 router.get("/super-odds", (_req, res) => res.json(superOdds));
 router.get("/casino/categories", (_req, res) => res.json(casinoCategories));
-router.get("/casino/games", (_req, res) => res.json(casinoGames));
+router.get("/casino/games", (req, res) => {
+  const page = Math.max(1, parseInt(req.query.page as string) || 1);
+  const limit = Math.min(100, Math.max(1, parseInt(req.query.limit as string) || 20));
+  const categoryId = req.query.categoryId ? parseInt(req.query.categoryId as string) : undefined;
+
+  const allGames = (casinoGames as any).data.games as any[];
+  const filtered = sortGames(
+    categoryId != null ? allGames.filter((g) => g.categoryId === categoryId) : allGames
+  );
+  const total = filtered.length;
+  const games = filtered
+    .slice((page - 1) * limit, page * limit)
+    .map((g: any) => ({ ...g, vendorName: vendorMap.get(g.vendorId) ?? null }));
+
+  res.json({ success: true, data: { games, total, page, limit } });
+});
+
 router.get("/live-casino/categories", (_req, res) => res.json(liveCasinoCategories));
-router.get("/live-casino/games", (_req, res) => res.json(liveCasinoGames));
+
+router.get("/live-casino/games", (req, res) => {
+  const page = Math.max(1, parseInt(req.query.page as string) || 1);
+  const limit = Math.min(100, Math.max(1, parseInt(req.query.limit as string) || 20));
+  const categoryId = req.query.categoryId ? parseInt(req.query.categoryId as string) : undefined;
+
+  const allGames = (liveCasinoGames as any).data.games as any[];
+  const filtered = sortGames(
+    categoryId != null ? allGames.filter((g) => g.categoryId === categoryId) : allGames
+  );
+  const total = filtered.length;
+  const games = filtered
+    .slice((page - 1) * limit, page * limit)
+    .map((g: any) => ({ ...g, vendorName: vendorMap.get(g.vendorId) ?? null }));
+
+  res.json({ success: true, data: { games, total, page, limit } });
+});
 router.get("/iframe/games", (_req, res) => res.json(iframeGames));
+
+router.get("/virtuals/categories", (_req, res) => {
+  const provider = (iframeGames as any).data[0];
+  const allGames = provider.games as any[];
+  const categories = (provider.categories as { id: number; name: string }[]).map((cat) => {
+    const count = allGames.filter((g) => String(g.categoryId) === String(cat.id)).length;
+    return { ...cat, count, mobileCount: count, webCount: count, order: cat.id };
+  });
+  res.json({ success: true, data: { categories } });
+});
+
+router.get("/virtuals/games", (req, res) => {
+  const page = Math.max(1, parseInt(req.query.page as string) || 1);
+  const limit = Math.min(100, Math.max(1, parseInt(req.query.limit as string) || 20));
+  const categoryId = req.query.categoryId ? String(req.query.categoryId) : undefined;
+
+  const provider = (iframeGames as any).data[0];
+  const allGames = provider.games as any[];
+  const filtered = categoryId != null ? allGames.filter((g) => String(g.categoryId) === categoryId) : allGames;
+  const sorted = [...filtered].sort((a, b) => Number(a.order) - Number(b.order));
+  const total = sorted.length;
+  const games = sorted.slice((page - 1) * limit, page * limit);
+
+  res.json({ success: true, data: { games, total, page, limit } });
+});
 
 router.get("/fixtures", (_req, res) => {
   res.json({ success: true, data: Object.keys(fixtures) });

@@ -1,33 +1,17 @@
-import { ChevronDown, ChevronLeft, ChevronUp, SlidersHorizontal } from "lucide-react-native";
 import { useState } from "react";
-import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { useQuery } from "@tanstack/react-query";
+import { ChevronDown, ChevronLeft, ChevronUp, SlidersHorizontal } from "lucide-react-native";
+import { ActivityIndicator, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 import { Colors } from "@/constants/theme";
 import { VirtualButton } from "@/components/home/VirtualButton";
-
-const gameIcon = require("../../assets/elements/game_example.png");
-
-const INSTANTANEOS = [
-  { id: 1, label: "Fortuna Rabbit" },
-  { id: 2, label: "Sugar Rush" },
-  { id: 3, label: "Big Bass" },
-  { id: 4, label: "Gates of Olympus" },
-  { id: 5, label: "Sweet Bonanza" },
-  { id: 6, label: "Book of Dead" },
-];
-
-const GOLDEN_RACE = [
-  { id: 1, label: "Wolf Gold" },
-  { id: 2, label: "Fire Joker" },
-  { id: 3, label: "Razor Shark" },
-  { id: 4, label: "Reactoonz" },
-  { id: 5, label: "Starburst" },
-  { id: 6, label: "Gonzo's Quest" },
-];
+import { GamesFilterModal } from "@/components/home/GamesFilterModal";
+import { getVirtualCategories, getVirtualGames, type Category, type VirtualGame } from "@/requests/casino";
+import { getVirtualBackground, getVirtualImage } from "@/utils/virtualImages";
 
 interface GroupProps {
   title: string;
-  items: { id: number; label: string }[];
+  items: VirtualGame[];
 }
 
 function GameGroup({ title, items }: GroupProps) {
@@ -47,8 +31,13 @@ function GameGroup({ title, items }: GroupProps) {
       {expanded && (
         <View style={styles.grid}>
           {items.map((item) => (
-            <View key={item.id} style={styles.gridItem}>
-              <VirtualButton label={item.label} icon={gameIcon} />
+            <View key={item.iframeProviderGameId} style={styles.gridItem}>
+              <VirtualButton
+                label={item.name}
+                icon={getVirtualImage(item.icon)}
+                background={getVirtualBackground(item.icon)}
+                instant={item.instant}
+              />
             </View>
           ))}
         </View>
@@ -58,24 +47,72 @@ function GameGroup({ title, items }: GroupProps) {
 }
 
 export function VirtualsScreen() {
+  const [activeCategoryId, setActiveCategoryId] = useState<number | undefined>(undefined);
+  const [modalVisible, setModalVisible] = useState(false);
+
+  const { data: categories = [] } = useQuery({
+    queryKey: ["virtual-categories"],
+    queryFn: getVirtualCategories,
+  });
+
+  const { data: gamesPage, isFetching } = useQuery({
+    queryKey: ["virtual-games", activeCategoryId],
+    queryFn: () => getVirtualGames(1, 100, activeCategoryId),
+  });
+
+  const allGames = gamesPage?.games ?? [];
+
+  const instantGames = allGames.filter((g) => g.instant);
+  const groups = [
+    ...(instantGames.length > 0 ? [{ category: { id: -1, name: "Instantâneos" }, items: instantGames }] : []),
+    ...(categories as Category[])
+      .map((cat) => ({
+        category: cat,
+        items: allGames.filter((g) => String(g.categoryId) === String(cat.id)),
+      }))
+      .filter((g) => g.items.length > 0),
+  ];
+
+  const activeCategory = (categories as Category[]).find((c) => c.id === activeCategoryId);
+
   return (
-    <ScrollView style={styles.container} contentContainerStyle={styles.content}>
-      <View style={styles.header}>
-        <TouchableOpacity style={styles.backButton} activeOpacity={0.75}>
-          <ChevronLeft size={22} color={Colors.dark.text} />
-        </TouchableOpacity>
-        <Text style={styles.headerTitle}>Virtuais</Text>
-        <TouchableOpacity style={styles.filterButton} activeOpacity={0.75}>
-          <SlidersHorizontal size={16} color={Colors.dark.text} />
-          <Text style={styles.filterText}>Filtros</Text>
-        </TouchableOpacity>
-      </View>
+    <View style={styles.container}>
+      <ScrollView contentContainerStyle={styles.content}>
+        <View style={styles.header}>
+          <TouchableOpacity style={styles.backButton} activeOpacity={0.75}>
+            <ChevronLeft size={22} color={Colors.dark.text} />
+          </TouchableOpacity>
+          <Text style={styles.headerTitle}>Virtuais</Text>
+          <TouchableOpacity
+            style={[styles.filterButton, activeCategoryId != null && styles.filterButtonActive]}
+            onPress={() => setModalVisible(true)}
+            activeOpacity={0.75}
+          >
+            <SlidersHorizontal size={16} color={activeCategoryId != null ? "#04013A" : Colors.dark.text} />
+            <Text style={[styles.filterText, activeCategoryId != null && styles.filterTextActive]}>
+              {activeCategory?.name ?? "Filtros"}
+              {activeCategoryId != null ? " · 1" : ""}
+            </Text>
+          </TouchableOpacity>
+        </View>
 
-      <GameGroup title="Instantâneos" items={INSTANTANEOS} />
-      <GameGroup title="Golden Race" items={GOLDEN_RACE} />
+        {isFetching ? (
+          <ActivityIndicator color={Colors.dark.primary} style={styles.centerLoader} />
+        ) : (
+          groups.map(({ category, items }) => <GameGroup key={category.id} title={category.name} items={items} />)
+        )}
 
-      <View style={{ height: 16 }} />
-    </ScrollView>
+        <View style={{ height: 16 }} />
+      </ScrollView>
+
+      <GamesFilterModal
+        visible={modalVisible}
+        categories={categories}
+        activeCategoryId={activeCategoryId}
+        onApply={setActiveCategoryId}
+        onClose={() => setModalVisible(false)}
+      />
+    </View>
   );
 }
 
@@ -110,10 +147,17 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
     paddingHorizontal: 14,
   },
+  filterButtonActive: {
+    backgroundColor: Colors.dark.primary,
+  },
   filterText: {
     color: Colors.dark.text,
     fontSize: 13,
     fontWeight: "500",
+  },
+  filterTextActive: {
+    color: "#04013A",
+    fontWeight: "600",
   },
   group: {
     marginBottom: 8,
@@ -127,7 +171,7 @@ const styles = StyleSheet.create({
   },
   groupTitle: {
     color: Colors.dark.text,
-    fontSize: 17,
+    fontSize: 18,
     fontWeight: "600",
   },
   grid: {
@@ -139,5 +183,8 @@ const styles = StyleSheet.create({
     width: "33.33%",
     paddingHorizontal: 4,
     paddingBottom: 12,
+  },
+  centerLoader: {
+    marginTop: 40,
   },
 });
