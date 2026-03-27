@@ -1,32 +1,98 @@
 import { Colors } from "@/constants/theme";
 import { LinearGradient } from "expo-linear-gradient";
 import { ChartColumnIcon, SquareStarIcon } from "lucide-react-native";
-import { Image, Pressable, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { useEffect, useRef, useState } from "react";
+import { Image, ImageSourcePropType, Pressable, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
-const AVATAR_URI = require("../../assets/avatars/1.png");
+export interface TeamInfo {
+  name: string;
+  imageUrl: ImageSourcePropType;
+}
 
-export function MatchPanel() {
+export interface MatchOdds {
+  home: number;
+  draw: number;
+  away: number;
+}
+
+interface MatchPanelProps {
+  homeTeam: TeamInfo;
+  awayTeam: TeamInfo;
+  odds: MatchOdds;
+  date?: string;
+  live?: boolean;
+  startSecond?: number;
+}
+
+function randomDelta(base: number): number {
+  const delta = (Math.random() - 0.5) * 0.1 * base;
+  return Math.round((base + delta) * 100) / 100;
+}
+
+export function MatchPanel({ homeTeam, awayTeam, odds, date, live = false, startSecond = 0 }: MatchPanelProps) {
+  const [second, setSecond] = useState(startSecond);
+  const [currentOdds, setCurrentOdds] = useState<MatchOdds>(odds);
+  const secondRef = useRef(startSecond);
+
+  useEffect(() => {
+    if (!live) return;
+
+    const clockTimer = setInterval(() => {
+      secondRef.current = Math.min(secondRef.current + 1, 90 * 60);
+      setSecond(secondRef.current);
+    }, 1000);
+
+    // Fluctuate odds every 3–6 seconds
+    const oddsTimer = setInterval(
+      () => {
+        setCurrentOdds((prev) => ({
+          home: randomDelta(prev.home),
+          draw: randomDelta(prev.draw),
+          away: randomDelta(prev.away),
+        }));
+      },
+      3000 + Math.random() * 3000,
+    );
+
+    return () => {
+      clearInterval(clockTimer);
+      clearInterval(oddsTimer);
+    };
+  }, [live]);
+
+  const timeLabel = live
+    ? `${String(Math.floor(second / 60)).padStart(2, "0")}:${String(second % 60).padStart(2, "0")}`
+    : (date ?? "");
+
   return (
     <View style={styles.wrapper}>
       <LinearGradient
         colors={["rgba(7,4,46,0.20)", "rgba(58,231,126,0.30)"]}
-        start={{ x: 0.45, y: 0 }} // 216deg approximation
+        start={{ x: 0.45, y: 0 }}
         end={{ x: 0.4, y: 0.9 }}
         style={styles.gradient}
       >
         <View style={styles.topContainer}>
           <View style={styles.timeContainer}>
-            <Text style={styles.timeText}>Hoje, 18:30</Text>
+            <Text style={styles.timeText}>{timeLabel}</Text>
             <Text style={styles.bbText}>BB</Text>
           </View>
-          <Text style={styles.moreText}>+1057</Text>
+          <View style={styles.timeContainer}>
+            {live && (
+              <View style={styles.liveBadge}>
+                <View style={styles.liveDot} />
+                <Text style={styles.liveText}>AO VIVO</Text>
+              </View>
+            )}
+            <Text style={styles.moreText}>+1057</Text>
+          </View>
         </View>
         <View style={styles.bottomContainer}>
           <View style={styles.oddsContainer}>
             <View style={styles.oddContainer}>
               <View style={styles.teamContainer}>
-                <SquareStarIcon size={11} color={Colors.dark.text} />
-                <Text style={styles.teamText}>Auckland FC</Text>
+                <Image source={homeTeam.imageUrl} style={styles.teamImage} />
+                <Text style={styles.teamText}>{homeTeam.name}</Text>
               </View>
               <Pressable style={styles.outerButton}>
                 <LinearGradient
@@ -35,7 +101,7 @@ export function MatchPanel() {
                   end={{ x: 0.5, y: 1 }}
                   style={styles.gradientButton}
                 >
-                  <Text style={styles.textButton}>1.81</Text>
+                  <Text style={styles.textButton}>{currentOdds.home.toFixed(2)}</Text>
                 </LinearGradient>
               </Pressable>
             </View>
@@ -51,15 +117,15 @@ export function MatchPanel() {
                   end={{ x: 0.5, y: 1 }}
                   style={styles.gradientButton}
                 >
-                  <Text style={styles.textButton}>3.56</Text>
+                  <Text style={styles.textButton}>{currentOdds.draw.toFixed(2)}</Text>
                 </LinearGradient>
               </Pressable>
             </View>
             <View style={styles.separator} />
             <View style={styles.oddContainer}>
               <View style={styles.teamContainer}>
-                <SquareStarIcon size={11} color={Colors.dark.text} />
-                <Text style={styles.teamText}>Macarthur FC</Text>
+                <Image source={awayTeam.imageUrl} style={styles.teamImage} />
+                <Text style={styles.teamText}>{awayTeam.name}</Text>
               </View>
               <Pressable style={styles.outerButton}>
                 <LinearGradient
@@ -68,7 +134,7 @@ export function MatchPanel() {
                   end={{ x: 0.5, y: 1 }}
                   style={styles.gradientButton}
                 >
-                  <Text style={styles.textButton}>4.86</Text>
+                  <Text style={styles.textButton}>{currentOdds.away.toFixed(2)}</Text>
                 </LinearGradient>
               </Pressable>
             </View>
@@ -125,6 +191,7 @@ const styles = StyleSheet.create({
   timeText: {
     color: Colors.dark.text,
     fontSize: 13,
+    width: 40,
   },
   bbText: {
     color: Colors.dark.background,
@@ -134,7 +201,29 @@ const styles = StyleSheet.create({
     fontSize: 11,
     paddingVertical: 1,
     paddingHorizontal: 4,
-    fontWeight: 500,
+    fontWeight: "500",
+  },
+  liveBadge: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 4,
+    backgroundColor: "rgba(231,58,58,0.20)",
+    borderRadius: 4,
+    paddingVertical: 1,
+    paddingHorizontal: 5,
+    borderWidth: 0.75,
+    borderColor: "#E73A3A",
+  },
+  liveDot: {
+    width: 5,
+    height: 5,
+    borderRadius: 3,
+    backgroundColor: "#E73A3A",
+  },
+  liveText: {
+    color: "#E73A3A",
+    fontSize: 10,
+    fontWeight: "700",
   },
   moreText: {
     color: Colors.dark.text,
@@ -143,7 +232,7 @@ const styles = StyleSheet.create({
     fontSize: 11,
     paddingVertical: 1,
     paddingHorizontal: 4,
-    fontWeight: 500,
+    fontWeight: "500",
   },
   textButton: {
     color: Colors.dark.text,
@@ -169,6 +258,11 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     gap: 4,
+  },
+  teamImage: {
+    width: 14,
+    height: 14,
+    resizeMode: "contain",
   },
   teamText: {
     color: Colors.dark.text,

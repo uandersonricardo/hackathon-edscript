@@ -12,7 +12,13 @@ export function FixturesScreen() {
         <Text style={styles.title}>Partidas rolando agora</Text>
         <Text style={styles.seeAll}>Ver todos</Text>
       </View>
-      <MatchPanel />
+      <MatchPanel
+        homeTeam={{ name: "Auckland FC", imageUrl: require("../../assets/avatars/1.png") }}
+        awayTeam={{ name: "Macarthur FC", imageUrl: require("../../assets/avatars/2.png") }}
+        odds={{ home: 1.81, draw: 3.56, away: 4.86 }}
+        live
+        startSecond={34 * 60 + 13}
+      />
 
       <View style={styles.titleContainer}>
         <Text style={styles.title}>Super odds</Text>
