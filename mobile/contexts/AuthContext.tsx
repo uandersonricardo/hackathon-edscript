@@ -1,8 +1,11 @@
 import { useMutation } from "@tanstack/react-query";
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 import { login as apiLogin, register as apiRegister, type AuthUser, type RegisterAttributes } from "../requests/auth";
 import { useRouter } from "expo-router";
+import * as SecureStore from "expo-secure-store";
+
+const USER_STORAGE_KEY = "auth_user";
 
 interface AuthContextValue {
   user: AuthUser | null;
@@ -24,10 +27,25 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [registerError, setRegisterError] = useState<string | null>(null);
   const router = useRouter();
 
+  useEffect(() => {
+    SecureStore.getItemAsync(USER_STORAGE_KEY).then((stored) => {
+      if (stored) setUser(JSON.parse(stored));
+    });
+  }, []);
+
+  const persistUser = (u: AuthUser | null) => {
+    setUser(u);
+    if (u) {
+      SecureStore.setItemAsync(USER_STORAGE_KEY, JSON.stringify(u));
+    } else {
+      SecureStore.deleteItemAsync(USER_STORAGE_KEY);
+    }
+  };
+
   const loginMutation = useMutation({
     mutationFn: ({ username, password }: { username: string; password: string }) => apiLogin(username, password),
     onSuccess: (data) => {
-      setUser(data);
+      persistUser(data);
       setLoginError(null);
     },
     onError: (err: Error) => {
@@ -38,7 +56,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const registerMutation = useMutation({
     mutationFn: (attributes: RegisterAttributes) => apiRegister(attributes),
     onSuccess: (data) => {
-      setUser(data);
+      persistUser(data);
       setRegisterError(null);
     },
     onError: (err: Error) => {
@@ -55,7 +73,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   };
 
   const logout = () => {
-    setUser(null);
+    persistUser(null);
     setLoginError(null);
     setRegisterError(null);
     loginMutation.reset();
