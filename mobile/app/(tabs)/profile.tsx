@@ -70,11 +70,11 @@ function TabSwitcher({ active, onChange }: { active: "conta" | "config"; onChang
   );
 }
 
-type GridItem = { icon: React.ReactNode; label: string };
+type GridItem = { icon: React.ReactNode; label: string; onPress?: () => void };
 
-function GridTile({ icon, label }: GridItem) {
+function GridTile({ icon, label, onPress }: GridItem) {
   return (
-    <TouchableOpacity style={styles.gridTile} activeOpacity={0.7}>
+    <TouchableOpacity style={styles.gridTile} activeOpacity={0.7} onPress={onPress}>
       <LinearGradient
         colors={["#568469", "rgba(70, 71, 141, 0.3)"]}
         start={{ x: 0.7, y: 1 }}
@@ -88,7 +88,7 @@ function GridTile({ icon, label }: GridItem) {
   );
 }
 
-function ContaTab({ onDeposit }: { onDeposit: () => void }) {
+function ContaTab({ onDeposit, onNotifications }: { onDeposit: () => void; onNotifications: () => void }) {
   const iconColor = Colors.dark.text;
   const iconSize = 20;
 
@@ -103,7 +103,7 @@ function ContaTab({ onDeposit }: { onDeposit: () => void }) {
         <GridTile icon={<ArrowUpFromLine size={iconSize} color={iconColor} />} label="Sacar" />
         <GridTile icon={<Tag size={iconSize} color={iconColor} />} label="Promoções" />
         <GridTile icon={<Heart size={iconSize} color={iconColor} />} label="Favoritos" />
-        <GridTile icon={<Bell size={iconSize} color={iconColor} />} label="Notificações" />
+        <GridTile icon={<Bell size={iconSize} color={iconColor} />} label="Notificações" onPress={onNotifications} />
         <GridTile icon={<Clock size={iconSize} color={iconColor} />} label="Histórico" />
         <GridTile icon={<ArrowLeftRight size={iconSize} color={iconColor} />} label="Transações" />
         <GridTile icon={<Zap size={iconSize} color={iconColor} />} label="Ativar Bônus" />
@@ -359,7 +359,11 @@ export default function Profile() {
 
       <TabSwitcher active={activeTab} onChange={setActiveTab} />
 
-      {activeTab === "conta" ? <ContaTab onDeposit={() => router.push("/deposit")} /> : <ConfigTab />}
+      {activeTab === "conta" ? (
+        <ContaTab onDeposit={() => router.push("/deposit")} onNotifications={() => router.push("/notifications")} />
+      ) : (
+        <ConfigTab />
+      )}
 
       <TouchableOpacity style={styles.logoutButton} onPress={logout} activeOpacity={0.7}>
         <LogOut size={18} color={Colors.dark.primary} />

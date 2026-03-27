@@ -32,7 +32,7 @@ export function AppHeader({ compact }: { compact: boolean }) {
         <View style={styles.actions}>
           {isLoggedIn ? (
             <>
-              <TouchableOpacity style={styles.notifButton} activeOpacity={0.7}>
+              <TouchableOpacity style={styles.notifButton} activeOpacity={0.7} onPress={() => router.push("/notifications")}>
                 <Bell size={24} color={Colors.dark.text} />
                 <View style={styles.notifBadge} />
               </TouchableOpacity>

@@ -226,6 +226,133 @@ router.get("/ranking", (_req, res) => {
   res.json({ success: true, data: ranking });
 });
 
+// ── Notifications ─────────────────────────────────────────────────────────────
+
+type NormalNotification = {
+  id: string;
+  type: "normal";
+  title: string;
+  body: string;
+  createdAt: string;
+  read: boolean;
+};
+
+type BetSuggestion = {
+  match: string;
+  selection: string;
+  odd: number;
+  amount: number;
+};
+
+type AgenticNotification = {
+  id: string;
+  type: "agentic";
+  agent: "onboarding" | "tipster" | "support";
+  title: string;
+  body: string;
+  createdAt: string;
+  read: boolean;
+  bet?: BetSuggestion;
+  supportAction?: { label: string; target: string };
+};
+
+type Notification = NormalNotification | AgenticNotification;
+
+const D = (daysAgo: number, hoursAgo = 0) =>
+  new Date(Date.now() - daysAgo * 864e5 - hoursAgo * 36e5).toISOString();
+
+const MOCK_NOTIFICATIONS: Notification[] = [
+  // ── Hoje ──────────────────────────────────────────────────────────────────
+  {
+    id: "n1",
+    type: "agentic",
+    agent: "tipster",
+    title: "Dica quente: Flamengo x Palmeiras",
+    body: "Analisei os últimos 10 confrontos e as estatísticas apontam alta chance de gols dos dois lados. Aqui está minha sugestão para você:",
+    createdAt: D(0, 0.3),
+    read: false,
+    bet: { match: "Flamengo x Palmeiras", selection: "Ambas marcam – Sim", odd: 1.85, amount: 50 },
+  },
+  {
+    id: "n2",
+    type: "agentic",
+    agent: "support",
+    title: "Precisa de ajuda com o depósito?",
+    body: "Notei que você iniciou um depósito mas ele não foi concluído. Se tiver algum problema com o pagamento, posso te ajudar agora mesmo.",
+    createdAt: D(0, 1),
+    read: false,
+    supportAction: { label: "Ir para depósito", target: "deposit" },
+  },
+  {
+    id: "n3",
+    type: "normal",
+    title: "Seu depósito foi confirmado",
+    body: "R$ 200,00 foram adicionados à sua conta com sucesso.",
+    createdAt: D(0, 3),
+    read: true,
+  },
+  // ── Ontem ─────────────────────────────────────────────────────────────────
+  {
+    id: "n4",
+    type: "agentic",
+    agent: "onboarding",
+    title: "Bem-vindo à plataforma!",
+    body: "Sabia que você pode usar o cashout para garantir seus ganhos antes do fim da partida? Vá em Histórico e acompanhe suas apostas em tempo real.",
+    createdAt: D(1, 2),
+    read: false,
+  },
+  {
+    id: "n5",
+    type: "normal",
+    title: "Sua missão foi concluída!",
+    body: "Parabéns! Você completou a missão 'Primeira aposta do dia' e ganhou 50 pontos de experiência.",
+    createdAt: D(1, 5),
+    read: true,
+  },
+  // ── Na última semana ──────────────────────────────────────────────────────
+  {
+    id: "n6",
+    type: "agentic",
+    agent: "tipster",
+    title: "Super odd: Real Madrid na Champions",
+    body: "Real Madrid está em grande fase e enfrenta um adversário enfraquecido. Odd excelente para aproveitar agora:",
+    createdAt: D(3, 1),
+    read: true,
+    bet: { match: "Real Madrid x Bayern", selection: "Real Madrid – Vitória", odd: 2.1, amount: 30 },
+  },
+  {
+    id: "n7",
+    type: "agentic",
+    agent: "onboarding",
+    title: "Explore o Cassino ao Vivo",
+    body: "Você ainda não experimentou o Cassino ao Vivo! Temos dealers reais 24h por dia com blackjack, roleta e muito mais. Toque em Início e selecione 'Cassino ao vivo'.",
+    createdAt: D(5, 0),
+    read: true,
+  },
+  // ── Mais antigas ──────────────────────────────────────────────────────────
+  {
+    id: "n8",
+    type: "agentic",
+    agent: "support",
+    title: "Como está sendo sua experiência?",
+    body: "Percebi que você teve dificuldade para encontrar as regras de um jogo. Posso explicar como funciona qualquer jogo do catálogo — é só me pedir!",
+    createdAt: D(10, 0),
+    read: true,
+  },
+  {
+    id: "n9",
+    type: "normal",
+    title: "Bônus de boas-vindas ativado",
+    body: "Seu bônus de R$ 50,00 foi creditado. Ele estará disponível após sua primeira aposta.",
+    createdAt: D(14, 0),
+    read: true,
+  },
+];
+
+router.get("/notifications", authenticateUser, (_req, res) => {
+  res.json({ success: true, data: MOCK_NOTIFICATIONS });
+});
+
 // TODO: Send Support Messages (Chat)
 // TODO: Get Match Stats
 
