@@ -37,7 +37,7 @@ export function AppHeader({ compact }: { compact: boolean }) {
                 <View style={styles.notifBadge} />
               </TouchableOpacity>
 
-              <TouchableOpacity style={styles.balanceButton} activeOpacity={0.7}>
+              <TouchableOpacity style={styles.balanceButton} activeOpacity={0.7} onPress={() => router.push("/deposit")}>
                 <View style={styles.depositIcon}>
                   <Plus size={20} color={Colors.dark.background} strokeWidth={2.5} />
                 </View>

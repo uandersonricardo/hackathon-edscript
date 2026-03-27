@@ -8,6 +8,7 @@ import { useAuth } from "../../contexts/AuthContext";
 import { Colors } from "../../constants/theme";
 
 const AVATAR_URI = require("../../assets/avatars/1.png");
+const NOT_ALLOWED_TABS = ["profile", "history"];
 
 const TAB_ICONS: Record<string, (color: string) => React.ReactNode> = {
   index: (color) => <Home size={22} color={color} />,
@@ -37,7 +38,7 @@ export function BottomBar({ state, descriptors, navigation }: BottomTabBarProps)
         const label = TAB_LABELS[route.name] ?? route.name;
 
         const onPress = () => {
-          if (route.name === "profile" && !isLoggedIn) {
+          if (NOT_ALLOWED_TABS.includes(route.name) && !isLoggedIn) {
             router.push("/login");
             return;
           }

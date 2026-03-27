@@ -35,6 +35,7 @@ export default function RootLayout() {
                 headerTitleStyle: { fontWeight: "bold" },
               }}
             />
+            <Stack.Screen name="deposit" options={{ headerShown: false }} />
           </Stack>
           <StatusBar style="inverted" />
         </SearchProvider>

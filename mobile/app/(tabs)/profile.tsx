@@ -15,6 +15,7 @@ import { useState } from "react";
 import { Image, ScrollView, StyleSheet, Switch, Text, TouchableOpacity, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { LinearGradient } from "expo-linear-gradient";
+import { useRouter } from "expo-router";
 
 import { Colors } from "../../constants/theme";
 import { useAuth } from "../../contexts/AuthContext";
@@ -87,13 +88,13 @@ function GridTile({ icon, label }: GridItem) {
   );
 }
 
-function ContaTab() {
+function ContaTab({ onDeposit }: { onDeposit: () => void }) {
   const iconColor = Colors.dark.text;
   const iconSize = 20;
 
   return (
     <View style={styles.section}>
-      <TouchableOpacity style={styles.depositButton} activeOpacity={0.85}>
+      <TouchableOpacity style={styles.depositButton} activeOpacity={0.85} onPress={onDeposit}>
         <ArrowDownToLine size={20} color={Colors.dark.background} strokeWidth={2.5} />
         <Text style={styles.depositButtonText}>Depositar</Text>
       </TouchableOpacity>
@@ -328,6 +329,7 @@ function Divider({ light }: { light?: boolean }) {
 
 export default function Profile() {
   const insets = useSafeAreaInsets();
+  const router = useRouter();
   const { user, logout } = useAuth();
   const [activeTab, setActiveTab] = useState<"conta" | "config">("conta");
 
@@ -357,7 +359,7 @@ export default function Profile() {
 
       <TabSwitcher active={activeTab} onChange={setActiveTab} />
 
-      {activeTab === "conta" ? <ContaTab /> : <ConfigTab />}
+      {activeTab === "conta" ? <ContaTab onDeposit={() => router.push("/deposit")} /> : <ConfigTab />}
 
       <TouchableOpacity style={styles.logoutButton} onPress={logout} activeOpacity={0.7}>
         <LogOut size={18} color={Colors.dark.primary} />
