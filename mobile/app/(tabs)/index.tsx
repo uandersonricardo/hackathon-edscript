@@ -1,7 +1,5 @@
 import { StyleSheet, View } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
 
-import { Colors } from "@/constants/theme";
 import { useSearch } from "@/contexts/SearchContext";
 import { HomeScreen } from "@/components/home/HomeScreen";
 import { CasinoScreen } from "@/components/home/CasinoScreen";
@@ -30,13 +28,6 @@ export default function Index() {
   return (
     <View style={styles.wrapper}>
       <ActiveScreen category={activeCategory} />
-      <LinearGradient
-        colors={[Colors.dark.background, `${Colors.dark.background}00`]}
-        start={{ x: 0.5, y: 0 }}
-        end={{ x: 0.5, y: 0.4 }}
-        style={styles.topFade}
-        pointerEvents="none"
-      />
     </View>
   );
 }
@@ -44,12 +35,5 @@ export default function Index() {
 const styles = StyleSheet.create({
   wrapper: {
     flex: 1,
-  },
-  topFade: {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    right: 0,
-    height: 40,
   },
 });

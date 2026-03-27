@@ -2,6 +2,7 @@ import { BottomTabBarProps } from "@react-navigation/bottom-tabs";
 import { Home, Trophy, Clock, Headphones, UserCircle } from "lucide-react-native";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { useRouter } from "expo-router";
 
 import { useAuth } from "../../contexts/AuthContext";
 import { Colors } from "../../constants/theme";
@@ -25,6 +26,7 @@ const TAB_LABELS: Record<string, string> = {
 
 export function BottomBar({ state, descriptors, navigation }: BottomTabBarProps) {
   const insets = useSafeAreaInsets();
+  const router = useRouter();
   const { isLoggedIn } = useAuth();
 
   return (
@@ -35,6 +37,11 @@ export function BottomBar({ state, descriptors, navigation }: BottomTabBarProps)
         const label = TAB_LABELS[route.name] ?? route.name;
 
         const onPress = () => {
+          if (route.name === "profile" && !isLoggedIn) {
+            router.push("/login");
+            return;
+          }
+
           const event = navigation.emit({ type: "tabPress", target: route.key, canPreventDefault: true });
           if (!isFocused && !event.defaultPrevented) {
             navigation.navigate(route.name);

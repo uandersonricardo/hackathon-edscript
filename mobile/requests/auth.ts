@@ -2,14 +2,56 @@ import type { ApiResponse } from "../types/api";
 
 const BASE_URL = "http://localhost:3333/api";
 
+export type HistoryEntry = {
+  date: Date;
+  type: "casino" | "liveCasino" | "virtual" | "fixture" | "deposit" | "withdrawal";
+  value: any;
+};
+
+export type Embedding = {
+  casino: number;
+  casinoCategories: number[];
+  liveCasino: number;
+  liveCasinoCategories: number[];
+  virtuals: number;
+  virtualCategories: number[];
+  fixtures: number;
+  fixtureLeagues: number[];
+};
+
+export type RecurrentPlan = {
+  name: string;
+  amount: number;
+  startDate: Date;
+  bonus: number;
+  cardBrand: string;
+  cardLastDigits: string;
+  cardExpirationDate: string;
+  cardName: string;
+};
+
+export type Achievements = {
+  rank: string;
+  experience: number;
+  missions: string[];
+  rewards: string[];
+};
+
 export type AuthUser = {
   id: string;
   username: string;
   email: string;
   name: string;
   imageUrl: string;
+  taxDocument: string;
+  address: string;
+  birthDate: Date;
   balance: number;
   maxBetAmount: number;
+  recurrentPlan: RecurrentPlan | null;
+  embedding: Embedding;
+  history: HistoryEntry[];
+  achievements: Achievements;
 };
 
 export type RegisterAttributes = {

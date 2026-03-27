@@ -2,6 +2,7 @@ import { useMutation } from "@tanstack/react-query";
 import { createContext, useContext, useState } from "react";
 
 import { login as apiLogin, register as apiRegister, type AuthUser, type RegisterAttributes } from "../requests/auth";
+import { useRouter } from "expo-router";
 
 interface AuthContextValue {
   user: AuthUser | null;
@@ -21,10 +22,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<AuthUser | null>(null);
   const [loginError, setLoginError] = useState<string | null>(null);
   const [registerError, setRegisterError] = useState<string | null>(null);
+  const router = useRouter();
 
   const loginMutation = useMutation({
-    mutationFn: ({ username, password }: { username: string; password: string }) =>
-      apiLogin(username, password),
+    mutationFn: ({ username, password }: { username: string; password: string }) => apiLogin(username, password),
     onSuccess: (data) => {
       setUser(data);
       setLoginError(null);
@@ -59,6 +60,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     setRegisterError(null);
     loginMutation.reset();
     registerMutation.reset();
+    router.replace("/(tabs)");
   };
 
   return (

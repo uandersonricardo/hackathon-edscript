@@ -5,14 +5,17 @@ import { AppHeader } from "../../components/layout/AppHeader";
 import { BottomBar } from "../../components/layout/BottomBar";
 
 const TABS_WITHOUT_HEADER = new Set(["support"]);
+const TABS_WITHOUT_SEARCH = new Set(["profile"]);
 
 export default function TabsLayout() {
   const [activeTab, setActiveTab] = useState("index");
+
   const showHeader = !TABS_WITHOUT_HEADER.has(activeTab);
+  const compact = !TABS_WITHOUT_SEARCH.has(activeTab);
 
   return (
     <>
-      {showHeader && <AppHeader />}
+      {showHeader && <AppHeader compact={compact} />}
       <Tabs
         tabBar={(props) => <BottomBar {...props} />}
         screenOptions={{ headerShown: false }}

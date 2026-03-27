@@ -15,8 +15,10 @@ export const Colors = {
     secondary: "#E7E13A",
     tertiary: "#0B18DE",
     primaryMuted: "#174B49",
+    primaryLight: "#AAFFCB",
     tertiaryStroke: "#707BE8",
     card: "#02001A",
+    diamond: "#A630EB",
   },
   dark: {
     text: "#FFFFFF",
@@ -27,8 +29,10 @@ export const Colors = {
     secondary: "#E7E13A",
     tertiary: "#0B18DE",
     primaryMuted: "#174B49",
+    primaryLight: "#AAFFCB",
     tertiaryStroke: "#707BE8",
     card: "#02001A",
+    diamond: "#A630EB",
   },
 };
 

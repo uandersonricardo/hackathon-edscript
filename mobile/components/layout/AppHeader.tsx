@@ -7,6 +7,7 @@ import { useAuth } from "../../contexts/AuthContext";
 import { useSearch } from "../../contexts/SearchContext";
 import { Colors } from "../../constants/theme";
 import { CategoryButton } from "./CategoryButton";
+import { LinearGradient } from "expo-linear-gradient";
 
 const LOGO = require("../../assets/images/logo-reduced-green.png");
 
@@ -17,7 +18,7 @@ const CATEGORIES = [
   { label: "Virtuais", icon: require("../../assets/icons/virtuals.png") },
 ] as const;
 
-export function AppHeader() {
+export function AppHeader({ compact }: { compact: boolean }) {
   const insets = useSafeAreaInsets();
   const router = useRouter();
   const { isLoggedIn, user } = useAuth();
@@ -49,29 +50,44 @@ export function AppHeader() {
                 <Text style={styles.loginText}>Entrar</Text>
               </TouchableOpacity>
 
-              <TouchableOpacity style={styles.registerButton} activeOpacity={0.7} onPress={() => router.push("/register")}>
+              <TouchableOpacity
+                style={styles.registerButton}
+                activeOpacity={0.7}
+                onPress={() => router.push("/register")}
+              >
                 <Text style={styles.registerText}>Criar conta</Text>
               </TouchableOpacity>
             </>
           )}
         </View>
       </View>
-      <View style={styles.searchRow}>
-        <Search size={16} color={Colors.dark.textMuted} style={styles.searchIcon} />
-        <TextInput
-          style={styles.searchInput}
-          placeholder="Pesquise aqui"
-          placeholderTextColor={Colors.dark.textMuted}
-          selectionColor={Colors.dark.primary}
-          value={searchQuery}
-          onChangeText={setSearchQuery}
-        />
-      </View>
-      <View style={styles.categoriesRow}>
-        {CATEGORIES.map((cat) => (
-          <CategoryButton key={cat.label} label={cat.label} icon={cat.icon} />
-        ))}
-      </View>
+      {compact && (
+        <>
+          <View style={styles.searchRow}>
+            <Search size={16} color={Colors.dark.textMuted} style={styles.searchIcon} />
+            <TextInput
+              style={styles.searchInput}
+              placeholder="Pesquise aqui"
+              placeholderTextColor={Colors.dark.textMuted}
+              selectionColor={Colors.dark.primary}
+              value={searchQuery}
+              onChangeText={setSearchQuery}
+            />
+          </View>
+          <View style={styles.categoriesRow}>
+            {CATEGORIES.map((cat) => (
+              <CategoryButton key={cat.label} label={cat.label} icon={cat.icon} />
+            ))}
+          </View>
+        </>
+      )}
+      <LinearGradient
+        colors={[Colors.dark.background, `${Colors.dark.background}00`]}
+        start={{ x: 0.5, y: 0 }}
+        end={{ x: 0.5, y: 0.4 }}
+        style={styles.topFade}
+        pointerEvents="none"
+      />
     </View>
   );
 }
@@ -82,6 +98,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingBottom: 8,
     gap: 20,
+    position: "relative",
   },
   topRow: {
     flexDirection: "row",
@@ -179,5 +196,13 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     gap: 12,
     paddingHorizontal: 2,
+  },
+  topFade: {
+    position: "absolute",
+    bottom: -40,
+    left: 0,
+    right: 0,
+    height: 40,
+    zIndex: 10,
   },
 });
