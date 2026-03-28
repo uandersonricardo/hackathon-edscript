@@ -26,7 +26,7 @@ Projeto desenvolvido para o **Hackathon EDScript 2026**, Desafio 01: **Mobile & 
 Três agentes de IA cobrindo o ciclo de vida completo do usuário, com LLMs reais via OpenRouter e backend próprio:
 
 | Agente | Função |
-|---|---|---|
+|---|---|
 | **Onboarding** | Conduz o novo usuário pelo cadastro, explica funcionalidades e personaliza a experiência inicial com base nas preferências coletadas |
 | **Tipster** | Analisa as partidas disponíveis e sugere apostas personalizadas contextualmente à tela que o usuário está navegando |
 | **Suporte** | Atendimento conversacional com histórico persistido, responde dúvidas, resolve problemas e encaminha ações dentro do app |
