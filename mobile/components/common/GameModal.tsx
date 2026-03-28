@@ -33,14 +33,14 @@ export function GameModal({ visible, onClose, label, icon, vendorName }: Props) 
   return (
     <Modal visible={visible} animationType="slide" transparent onRequestClose={onClose}>
       <View style={styles.overlay}>
-        <SafeAreaView style={styles.sheet}>
+        <SafeAreaView style={[styles.sheet, label !== "Fortune Tiger" && { minHeight: "55%" }]}>
           <TouchableOpacity style={styles.closeButton} onPress={onClose} activeOpacity={0.8}>
             <X size={20} color={Colors.dark.text} />
           </TouchableOpacity>
 
           <View style={styles.imageWrapper}>
             <ExpoImage
-              source={{ uri: "https://i.makeagif.com/media/3-27-2026/8igKus.gif" }}
+              source={label === "Fortune Tiger" ? { uri: "https://i.makeagif.com/media/3-27-2026/8igKus.gif" } : icon}
               style={styles.gameImage}
               contentFit="cover"
               contentPosition="top"

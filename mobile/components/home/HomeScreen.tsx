@@ -123,6 +123,7 @@ function TopGamesSection({ games }: { games: HomepageTopGame[] }) {
             name={game.name}
             winAmount={game.winAmount}
             imageUrl={{ uri: getCasinoImage(game.id) }}
+            vendorName={game.vendorName}
           />
         ))}
       </ScrollView>
