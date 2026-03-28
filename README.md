@@ -122,6 +122,26 @@ O backend e os agentes LLM são **reais e funcionais** — apenas os dados de or
 
 ---
 
+## Instalação do APK (Android)
+
+> O app está disponível como APK para instalação direta em dispositivos Android.
+
+**Download:** https://drive.google.com/file/d/1b98HUeGNcDx8rga9yVZy9duTpi_YwGrH/view?usp=sharing
+
+### Passo a passo
+
+1. **Baixe o APK** pelo link acima
+2. **Habilite o modo desenvolvedor** no Android:
+   - Vá em _Configurações → Sobre o telefone_
+   - Toque 7 vezes em _Número da versão_ até ativar o modo desenvolvedor
+   - Em _Configurações → Opções do desenvolvedor_, ative _Fontes desconhecidas_ (ou _Instalar apps desconhecidos_)
+3. **Desative proteções do Google Play Protect** se necessário:
+   - Abra o _Google Play Store → Menu → Play Protect_
+   - Desative temporariamente a verificação de apps
+4. **Execute o APK** baixado e siga as instruções de instalação
+
+---
+
 ## Estrutura do Repositório
 
 ```
