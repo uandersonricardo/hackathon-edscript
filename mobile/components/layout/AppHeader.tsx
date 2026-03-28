@@ -48,7 +48,7 @@ export function AppHeader({ compact, section = "index" }: { compact: boolean; se
                 <View style={styles.depositIcon}>
                   <Plus size={20} color={Colors.dark.background} strokeWidth={2.5} />
                 </View>
-                <Text style={styles.balanceText}>R${user?.balance?.toFixed(2) ?? "0,00"}</Text>
+                <Text style={styles.balanceText}>R${user?.balance?.toFixed(2).replace(".", ",") ?? "0,00"}</Text>
               </TouchableOpacity>
             </>
           ) : (
