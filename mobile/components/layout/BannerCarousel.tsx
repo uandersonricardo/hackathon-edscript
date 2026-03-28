@@ -86,11 +86,7 @@ const styles = StyleSheet.create({
   },
   pager: {
     height: 90,
-    borderRadius: 15,
-    borderWidth: 1.5,
-    borderColor: Colors.dark.tertiaryStroke,
-    backgroundColor: Colors.dark.background,
-    overflow: "hidden",
+    width: "100%",
   },
   slide: {
     flex: 1,
@@ -123,11 +119,16 @@ const styles = StyleSheet.create({
     opacity: 1,
   },
   carouselFixedOuter: {
-    margin: -3,
+    marginHorizontal: 3,
   },
   carouselFixedInner: {},
   carouselImage: {
     height: 90,
     width: "100%",
+    borderRadius: 15,
+    borderWidth: 1.5,
+    borderColor: Colors.dark.tertiaryStroke,
+    backgroundColor: Colors.dark.background,
+    overflow: "hidden",
   },
 });

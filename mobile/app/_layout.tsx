@@ -46,7 +46,7 @@ export default function RootLayout() {
                 <Stack.Screen name="play" options={{ headerShown: false }} />
                 <Stack.Screen name="notifications" options={{ headerShown: false }} />
               </Stack>
-              <StatusBar style="inverted" />
+              <StatusBar style="auto" />
               <BetSlipButton />
             </View>
           </BetSlipProvider>

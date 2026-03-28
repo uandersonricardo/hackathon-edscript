@@ -14,7 +14,8 @@ Seu papel é dar dicas e análises de apostas relevantes ao que o usuário está
 
 Diretrizes:
 - Responda sempre em português do Brasil
-- Seja direto e objetivo (apenas 1 parágrafo)
+- Escreva em texto corrido e não use travessão
+- Seja direto e objetivo (apenas 1 parágrafo pequeno no máximo -- a mensagem irá num popover)
 - Foque no contexto da seção atual: ${section}
 - Sempre lembre que apostas envolvem risco — aposte com responsabilidade
 `.trim();
@@ -28,7 +29,21 @@ class TipsterAgent {
   }
 
   async chat(message: string): Promise<string> {
-    return this.llm.query(message);
+    const contextualizedMessage = `${this.rag()}\n${message}`;
+    return this.llm.query(contextualizedMessage);
+  }
+
+  private rag() {
+    return `
+      <context>
+      Na tela, você está vendo:
+      - Partidas para você (Vila Nova x CR Brasil, ABC FC x América RN, Everton x Chelsea, Leeds x Brentford, Watford FC x Leicester)
+      - Jogos que mais renderam hoje (Fortune Tiger R$1.013.211, Gates of Olympus R$847.501,03, Fortune Rabbit R$824.393,44, Mine Island R$756.780,20, Bee Hive Bonanza R$582.450,98)
+      - Cassino ao vivo (Speed Baccarat H, Crazy Coin Flip, Speed Blackjack, Brazilian Blackjack 9, Auto-Roulette, Speed Roulette 1)
+      - Jogos em destaque (Fortune Drago, Blazin' Bonus, Fortune of Aztec, Buckshot Wilds, Rainbow Gold, Green Slot)
+      - Virtuais em alta (Libertadores, Liga Inglaterra, Liga Espanha, Copa do Mundo, Eurocopa 2024, Cavalos 6 Horse Racing)
+      </context>
+    `.trim();
   }
 }
 

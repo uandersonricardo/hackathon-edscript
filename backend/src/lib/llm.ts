@@ -13,7 +13,7 @@ class LLM {
     model?: string;
   }) {
     this.apiKey = process.env.OPEN_ROUTER_API_KEY || "";
-    this.model = options?.model || "z-ai/glm-4.5-air:free";
+    this.model = options?.model || "google/gemini-3-flash-preview";
     this.baseUrl = "https://openrouter.ai/api/v1/chat/completions";
   }
 
@@ -62,10 +62,13 @@ class LLM {
       const data = await res.json();
       return data.choices?.[0]?.message?.content || "";
     } catch (err) {
+      console.log(err);
+
       if (retries > 0) {
         await new Promise((r) => setTimeout(r, 500 * (4 - retries)));
         return this.request(messages, retries - 1);
       }
+
       throw err;
     }
   }

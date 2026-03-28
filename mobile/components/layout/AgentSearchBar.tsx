@@ -51,11 +51,13 @@ export function AgentSearchBar({ section }: { section: string }) {
     },
     onSuccess: (text) => {
       LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
+      console.log(text);
       setResponse(text);
     },
-    onError: () => {
+    onError: (err) => {
       LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
       setResponse(null);
+      console.log(err);
     },
   });
 
@@ -76,7 +78,7 @@ export function AgentSearchBar({ section }: { section: string }) {
   const isExpanded = agentMode && (!!response || sendMutation.isPending);
 
   return (
-    <View style={[styles.wrapper, isExpanded && styles.wrapperActive]}>
+    <View style={[styles.wrapper, agentMode && styles.wrapperActive]}>
       {/* Input row */}
       <View style={styles.inputRow}>
         {agentMode ? (
