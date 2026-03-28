@@ -1,6 +1,5 @@
+import { BASE_URL } from "@/constants/api";
 import { useQuery } from "@tanstack/react-query";
-
-const BASE_URL = "http://localhost:3333/api";
 
 export interface PopularOddItem {
   fId: number;

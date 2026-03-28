@@ -1,6 +1,5 @@
+import { BASE_URL } from "@/constants/api";
 import type { ApiResponse } from "../types/api";
-
-const BASE_URL = "http://localhost:3333/api";
 
 export type Category = {
   id: number;

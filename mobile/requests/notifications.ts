@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:3333/api";
+import { BASE_URL } from "@/constants/api";
 
 export type BetSuggestion = {
   match: string;
