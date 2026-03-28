@@ -184,11 +184,7 @@ const styles = StyleSheet.create({
   },
   crown: {
     marginBottom: 2,
-    shadowColor: Colors.dark.secondary,
-    shadowOffset: { width: 0, height: 0 },
-    shadowRadius: 4,
-    elevation: 8,
-    shadowOpacity: 1,
+    boxShadow: `0px 0px 4px ${Colors.dark.secondary}`,
   },
   podiumAvatarRing: {
     borderWidth: 3,

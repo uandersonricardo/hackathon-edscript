@@ -164,11 +164,7 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: Colors.dark.primary,
     marginTop: 4,
-    shadowColor: Colors.dark.primary,
-    shadowOffset: { width: 0, height: 0 },
-    shadowRadius: 4,
-    shadowOpacity: 1,
-    elevation: 4,
+    boxShadow: `0px 0px 4px ${Colors.dark.primary}`,
   },
   timelineLine: {
     flex: 1,

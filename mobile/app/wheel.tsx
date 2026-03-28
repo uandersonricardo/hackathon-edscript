@@ -186,11 +186,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 56,
     paddingVertical: 16,
     borderRadius: 40,
-    elevation: 4,
-    shadowColor: "#FFD700",
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.4,
-    shadowRadius: 8,
+    boxShadow: "0px 4px 8px #FFD700",
   },
   buttonDisabled: {
     backgroundColor: "#888",

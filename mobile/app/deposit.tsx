@@ -295,11 +295,7 @@ const styles = StyleSheet.create({
     paddingVertical: 16,
     alignItems: "center",
     marginTop: 4,
-    shadowColor: Colors.dark.primary,
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.4,
-    shadowRadius: 12,
-    elevation: 6,
+    boxShadow: `0px 4px 12px ${Colors.dark.primary}`,
   },
   ctaButtonDisabled: {
     opacity: 0.4,

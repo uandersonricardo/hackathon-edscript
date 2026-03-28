@@ -251,11 +251,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   logoWrapper: {
-    shadowColor: Colors.dark.primary,
-    shadowOffset: { width: 0, height: 0 },
-    shadowRadius: 4,
-    elevation: 3,
-    shadowOpacity: 1,
+    boxShadow: `0px 0px 4px ${Colors.dark.primary}`,
   },
   logo: {
     width: 120,
@@ -325,11 +321,7 @@ const styles = StyleSheet.create({
     borderRadius: 14,
     paddingVertical: 14,
     alignItems: "center",
-    shadowColor: Colors.dark.primary,
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.4,
-    shadowRadius: 12,
-    elevation: 6,
+    boxShadow: `0px 4px 12px ${Colors.dark.primary}`,
     marginTop: 8,
   },
   confirmBtnDisabled: {

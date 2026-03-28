@@ -22,7 +22,7 @@ export function BetSlipButton() {
 const styles = StyleSheet.create({
   fab: {
     position: "absolute",
-    bottom: 110,
+    bottom: 120,
     right: 20,
     width: 56,
     height: 56,
@@ -31,11 +31,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     zIndex: 999,
-    elevation: 12,
-    shadowColor: Colors.dark.primary,
-    shadowOffset: { width: 0, height: 4 },
-    shadowRadius: 16,
-    shadowOpacity: 0.6,
+    boxShadow: `0px 4px 10px ${Colors.dark.primary}`,
   },
   badge: {
     position: "absolute",

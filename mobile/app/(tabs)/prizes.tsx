@@ -10,7 +10,7 @@ const PRIZES = [
   { label: "Torneios", image: require("../../assets/prizes/torneio.png") },
   { label: "Missões", image: require("../../assets/prizes/missoes.png") },
   { label: "Baús", image: require("../../assets/prizes/baus.png") },
-  { label: "Ranking Semanal", image: require("../../assets/prizes/torneio.png") },
+  { label: "Ranking Semanal", image: require("../../assets/prizes/ranking.png") },
 ];
 
 function PrizeButton({ label, image, onPress }: { label: string; image: number; onPress?: () => void }) {
@@ -81,11 +81,6 @@ const styles = StyleSheet.create({
   },
   cardWrapper: {
     width: "47%",
-    shadowColor: Colors.dark.primary,
-    shadowOffset: { width: 0, height: 0 },
-    shadowRadius: 3,
-    elevation: 1,
-    shadowOpacity: 1,
   },
   card: {
     borderRadius: 15,
@@ -93,11 +88,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.dark.card,
     borderWidth: 1.5,
     borderColor: Colors.dark.primary,
-    shadowColor: Colors.dark.primary,
-    shadowOffset: { width: 0, height: 0 },
-    shadowOpacity: 0.5,
-    shadowRadius: 8,
-    elevation: 6,
+    boxShadow: `0px 0px 8px ${Colors.dark.primary}`,
   },
   gradient: {
     width: "100%",
@@ -116,9 +107,10 @@ const styles = StyleSheet.create({
   },
   cardLabel: {
     color: Colors.dark.text,
-    fontSize: 18,
+    fontSize: 17,
     fontWeight: "600",
     fontStyle: "italic",
+    textAlign: "right",
   },
   tag: {
     backgroundColor: Colors.dark.primary,

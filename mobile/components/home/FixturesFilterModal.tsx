@@ -325,11 +325,7 @@ const styles = StyleSheet.create({
     borderRadius: 14,
     paddingVertical: 15,
     alignItems: "center",
-    shadowColor: Colors.dark.primary,
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.35,
-    shadowRadius: 10,
-    elevation: 6,
+    boxShadow: `0px 4px 10px ${Colors.dark.primary}`,
   },
   applyText: {
     color: Colors.dark.background,

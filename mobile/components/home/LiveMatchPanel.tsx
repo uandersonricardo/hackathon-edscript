@@ -291,10 +291,6 @@ const styles = StyleSheet.create({
     width: "100%",
     height: 1.5,
     backgroundColor: Colors.dark.primary,
-    shadowColor: Colors.dark.primary,
-    shadowOffset: { width: 0, height: 0 },
-    shadowRadius: 10,
-    elevation: 8,
-    shadowOpacity: 1,
+    boxShadow: `0px 0px 10px ${Colors.dark.primary}`,
   },
 });

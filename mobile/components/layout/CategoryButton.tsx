@@ -1,7 +1,5 @@
 import { LinearGradient } from "expo-linear-gradient";
-import { useEffect } from "react";
 import { Image, Pressable, StyleSheet, Text, View } from "react-native";
-import Animated, { useAnimatedStyle, useSharedValue, withTiming } from "react-native-reanimated";
 
 import { useSearch } from "../../contexts/SearchContext";
 import { Colors } from "../../constants/theme";
@@ -15,26 +13,10 @@ export function CategoryButton({ label, icon }: Props) {
   const { activeCategory, toggleCategory } = useSearch();
   const isActive = activeCategory === label;
 
-  const shadowOpacity = useSharedValue(0);
-
-  useEffect(() => {
-    shadowOpacity.value = withTiming(isActive ? 1 : 0, { duration: 150 });
-  }, [isActive]);
-
-  const animStyle = useAnimatedStyle(() => ({
-    shadowOpacity: shadowOpacity.value,
-  }));
-
-  const handlePressIn = () => {
-    toggleCategory(label);
-  };
-
   return (
     <View style={styles.outer}>
-      <Pressable onPressIn={handlePressIn}>
-        <Animated.View
-          style={[styles.inner, activeCategory && (isActive ? styles.active : styles.inactive), animStyle]}
-        >
+      <Pressable onPressIn={() => toggleCategory(label)}>
+        <View style={[styles.inner, activeCategory && (isActive ? styles.active : styles.inactive)]}>
           <LinearGradient
             colors={["rgba(7,4,46,0.20)", "rgba(58,231,126,0.20)"]}
             start={{ x: 0.5, y: 0 }}
@@ -43,7 +25,7 @@ export function CategoryButton({ label, icon }: Props) {
           >
             <Image source={icon} style={styles.icon} resizeMode="contain" />
           </LinearGradient>
-        </Animated.View>
+        </View>
       </Pressable>
       <Text style={styles.label} numberOfLines={2}>
         {label}
@@ -62,10 +44,7 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     width: "100%",
     backgroundColor: Colors.dark.background,
-    shadowColor: Colors.dark.primary,
-    shadowOffset: { width: 0, height: 0 },
-    shadowRadius: 10,
-    elevation: 8,
+    boxShadow: `0 0 10px ${Colors.dark.primary}`,
   },
   active: {
     shadowOpacity: 1,

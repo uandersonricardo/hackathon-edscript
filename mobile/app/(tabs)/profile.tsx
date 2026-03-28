@@ -23,10 +23,16 @@ import { useAuth } from "../../contexts/AuthContext";
 
 function Avatar({ name, rank }: { name: string; rank: string }) {
   return (
-    <View style={[styles.avatarContainer, { shadowColor: Colors.dark[rank as "diamond"] ?? Colors.dark.primary }]}>
+    <View style={[styles.avatarContainer]}>
       <Image
         source={require("../../assets/avatars/1.png")}
-        style={[styles.avatar, { borderColor: Colors.dark[rank as "diamond"] ?? Colors.dark.primary }]}
+        style={[
+          styles.avatar,
+          {
+            borderColor: Colors.dark[rank as "diamond"] ?? Colors.dark.primary,
+            boxShadow: `0px 0px 4px ${Colors.dark[rank as "diamond"] ?? Colors.dark.primary}`,
+          },
+        ]}
       />
     </View>
   );
@@ -370,13 +376,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     gap: 12,
   },
-  avatarContainer: {
-    shadowColor: Colors.dark.primary,
-    shadowOffset: { width: 0, height: 0 },
-    shadowRadius: 4,
-    elevation: 8,
-    shadowOpacity: 1,
-  },
+  avatarContainer: {},
   avatar: {
     width: 90,
     height: 90,
@@ -495,11 +495,7 @@ const styles = StyleSheet.create({
     borderRadius: 14,
     paddingVertical: 16,
     gap: 10,
-    shadowColor: Colors.dark.primary,
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.4,
-    shadowRadius: 12,
-    elevation: 6,
+    boxShadow: `0px 4px 12px ${Colors.dark.primary}`,
   },
   depositButtonText: {
     color: Colors.dark.background,
@@ -613,11 +609,7 @@ const styles = StyleSheet.create({
     height: 20,
     borderRadius: 10,
     backgroundColor: Colors.dark.primary,
-    shadowColor: Colors.dark.primary,
-    shadowOffset: { width: 0, height: 0 },
-    shadowOpacity: 0.8,
-    shadowRadius: 6,
-    elevation: 4,
+    boxShadow: `0px 0px 6px ${Colors.dark.primary}`,
   },
   saveLimitButton: {
     margin: 12,
