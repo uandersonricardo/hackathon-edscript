@@ -8,7 +8,7 @@ import {
   View,
 } from "react-native";
 import { useRef, useState } from "react";
-import { ChevronDown, SlidersHorizontal } from "lucide-react-native";
+import { ChevronDown, ChevronLeft, SlidersHorizontal } from "lucide-react-native";
 
 import { Colors } from "@/constants/theme";
 import { getTeamImage } from "@/utils/images";
@@ -156,6 +156,26 @@ export function FixturesScreen() {
   return (
     <>
       <ScrollView ref={scrollRef} style={styles.container}>
+        <View style={styles.header}>
+          <TouchableOpacity style={styles.backButton} activeOpacity={0.75}>
+            <ChevronLeft size={22} color={Colors.dark.text} />
+          </TouchableOpacity>
+          <Text style={styles.headerTitle}>Cassino</Text>
+          <TouchableOpacity
+            style={[styles.filterButton, activeCount > 0 && styles.filterButtonActive]}
+            onPress={() => setFilterModalOpen(true)}
+            activeOpacity={0.8}
+          >
+            <SlidersHorizontal size={15} color={activeCount > 0 ? Colors.dark.background : Colors.dark.text} />
+            <Text style={[styles.filterButtonText, activeCount > 0 && styles.filterButtonTextActive]}>Filtrar</Text>
+            {activeCount > 0 && (
+              <View style={styles.filterBadge}>
+                <Text style={styles.filterBadgeText}>{activeCount}</Text>
+              </View>
+            )}
+          </TouchableOpacity>
+        </View>
+
         <View style={styles.titleContainer}>
           <Text style={styles.title}>Partidas rolando agora</Text>
           <TouchableOpacity onPress={scrollToFilter} activeOpacity={0.75}>
@@ -209,27 +229,6 @@ export function FixturesScreen() {
           />
         ))}
 
-        <View
-          style={styles.filterTriggerRow}
-          onLayout={(e) => {
-            filterRowY.current = e.nativeEvent.layout.y;
-          }}
-        >
-          <TouchableOpacity
-            style={[styles.filterButton, activeCount > 0 && styles.filterButtonActive]}
-            onPress={() => setFilterModalOpen(true)}
-            activeOpacity={0.8}
-          >
-            <SlidersHorizontal size={15} color={activeCount > 0 ? Colors.dark.background : Colors.dark.text} />
-            <Text style={[styles.filterButtonText, activeCount > 0 && styles.filterButtonTextActive]}>Filtrar</Text>
-            {activeCount > 0 && (
-              <View style={styles.filterBadge}>
-                <Text style={styles.filterBadgeText}>{activeCount}</Text>
-              </View>
-            )}
-          </TouchableOpacity>
-        </View>
-
         {leagues.map((league) => (
           <LeagueSection key={league.key} league={league} />
         ))}
@@ -268,7 +267,7 @@ const styles = StyleSheet.create({
   },
   title: {
     color: Colors.dark.text,
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: "600",
   },
   leagueCountry: {
@@ -322,5 +321,21 @@ const styles = StyleSheet.create({
     color: Colors.dark.primary,
     fontSize: 10,
     fontWeight: "800",
+  },
+  header: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginHorizontal: 16,
+    marginTop: 12,
+    marginBottom: 0,
+  },
+  backButton: {
+    marginRight: 8,
+  },
+  headerTitle: {
+    flex: 1,
+    color: Colors.dark.text,
+    fontSize: 20,
+    fontWeight: "600",
   },
 });

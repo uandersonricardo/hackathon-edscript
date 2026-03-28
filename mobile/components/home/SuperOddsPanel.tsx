@@ -27,12 +27,14 @@ export function SuperOddsPanel({ championship, homeTeam, awayTeam, conditions, o
       end={{ x: 0.77, y: 0 }}
       style={styles.card}
     >
-      <LinearGradient
-        colors={["rgba(50,70,90, 0)", "rgba(28, 53, 79, 1)"]}
-        start={{ x: 0.7, y: 0.8 }}
-        end={{ x: 0.77, y: 0 }}
-        style={styles.circleGradient}
-      />
+      <View style={styles.circleGradient}>
+        <LinearGradient
+          colors={["rgba(50,70,90, 0)", "rgba(28, 53, 79, 1)"]}
+          start={{ x: 0.7, y: 0.8 }}
+          end={{ x: 0.77, y: 0 }}
+          style={{ width: "100%", height: "100%" }}
+        />
+      </View>
       <Text style={styles.championship}>{championship}</Text>
 
       <View style={styles.teamsRow}>
@@ -65,9 +67,23 @@ export function SuperOddsPanel({ championship, homeTeam, awayTeam, conditions, o
         ))}
       </View>
 
-      <Pressable style={styles.oddButton} onPress={() => toggle({ id: selId, homeTeam: homeTeam.name, awayTeam: awayTeam.name, leagueName: championship, oddLabel: `${homeTeam.name} vs ${awayTeam.name}`, oddValue: odd })}>
+      <Pressable
+        style={styles.oddButton}
+        onPress={() =>
+          toggle({
+            id: selId,
+            homeTeam: homeTeam.name,
+            awayTeam: awayTeam.name,
+            leagueName: championship,
+            oddLabel: `${homeTeam.name} vs ${awayTeam.name}`,
+            oddValue: odd,
+          })
+        }
+      >
         <LinearGradient
-          colors={selected ? [Colors.dark.primary, "rgba(58,231,126,0.8)"] : ["rgba(7,4,46,0.60)", "rgba(58,231,126,0.30)"]}
+          colors={
+            selected ? [Colors.dark.primary, "rgba(58,231,126,0.8)"] : ["rgba(7,4,46,0.60)", "rgba(58,231,126,0.30)"]
+          }
           start={{ x: 0.12, y: 0 }}
           end={{ x: 0.11, y: 1.5 }}
           style={styles.oddGradient}

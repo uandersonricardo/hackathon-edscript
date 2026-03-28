@@ -3,8 +3,17 @@ import { FavoriteButton } from "@/components/common/FavoriteButton";
 import { GameModal } from "@/components/common/GameModal";
 import { LinearGradient } from "expo-linear-gradient";
 import { useState } from "react";
-import { type ImageSourcePropType, Image, StyleSheet, View, ImageBackground, Text, TouchableOpacity } from "react-native";
-import CardBackgroundShape from "@/svgs/CardBackgroundShape";
+import {
+  type ImageSourcePropType,
+  Image,
+  StyleSheet,
+  View,
+  ImageBackground,
+  Text,
+  TouchableOpacity,
+} from "react-native";
+
+const CARD_BG = require("../../assets/elements/card_background.png");
 
 interface Props {
   label: string;
@@ -35,7 +44,7 @@ export function VirtualButton({ label, icon, background, instant }: Props) {
         <FavoriteButton />
       </View>
       <View style={styles.infoContainer}>
-        <CardBackgroundShape style={styles.cardBackground} />
+        <Image source={CARD_BG} style={styles.cardBackground} resizeMode="contain" />
       </View>
       <View style={styles.titleContainer}>
         <Image source={icon} style={styles.characterImage} resizeMode="contain" />
@@ -56,12 +65,7 @@ export function VirtualButton({ label, icon, background, instant }: Props) {
         )}
       </TouchableOpacity>
 
-      <GameModal
-        visible={modalVisible}
-        onClose={() => setModalVisible(false)}
-        label={label}
-        icon={icon}
-      />
+      <GameModal visible={modalVisible} onClose={() => setModalVisible(false)} label={label} icon={icon} />
     </>
   );
 }

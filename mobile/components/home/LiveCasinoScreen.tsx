@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
-import { SlidersHorizontal } from "lucide-react-native";
+import { ChevronLeft, SlidersHorizontal } from "lucide-react-native";
 import { ActivityIndicator, FlatList, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 import { Colors } from "@/constants/theme";
@@ -46,10 +46,11 @@ export function LiveCasinoScreen() {
         contentContainerStyle={styles.content}
         ListHeaderComponent={
           <>
-            <TopWinPanel />
-
-            <View style={styles.filterRow}>
-              <Text style={styles.filterTitle}>{activeCategory?.name ?? "Todos os jogos"}</Text>
+            <View style={styles.header}>
+              <TouchableOpacity style={styles.backButton} activeOpacity={0.75}>
+                <ChevronLeft size={22} color={Colors.dark.text} />
+              </TouchableOpacity>
+              <Text style={styles.headerTitle}>Cassino ao vivo</Text>
               <TouchableOpacity
                 style={[styles.filterButton, activeCategoryId != null && styles.filterButtonActive]}
                 onPress={() => setModalVisible(true)}
@@ -57,9 +58,16 @@ export function LiveCasinoScreen() {
               >
                 <SlidersHorizontal size={16} color={activeCategoryId != null ? "#04013A" : Colors.dark.text} />
                 <Text style={[styles.filterText, activeCategoryId != null && styles.filterTextActive]}>
-                  Filtros{activeCategoryId != null ? " · 1" : ""}
+                  {activeCategory?.name ?? "Filtros"}
+                  {activeCategoryId != null ? " · 1" : ""}
                 </Text>
               </TouchableOpacity>
+            </View>
+
+            <TopWinPanel />
+
+            <View style={styles.filterRow}>
+              <Text style={styles.filterTitle}>{activeCategory?.name ?? "Todos os jogos"}</Text>
             </View>
 
             {isFetching && !isFetchingNextPage && (
@@ -116,7 +124,7 @@ const styles = StyleSheet.create({
   },
   filterTitle: {
     color: Colors.dark.text,
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: "600",
   },
   filterButton: {
@@ -154,5 +162,21 @@ const styles = StyleSheet.create({
   },
   footerLoader: {
     marginVertical: 16,
+  },
+  header: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginHorizontal: 16,
+    marginTop: 12,
+    marginBottom: -8,
+  },
+  backButton: {
+    marginRight: 8,
+  },
+  headerTitle: {
+    flex: 1,
+    color: Colors.dark.text,
+    fontSize: 20,
+    fontWeight: "600",
   },
 });

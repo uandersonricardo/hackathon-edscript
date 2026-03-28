@@ -304,10 +304,9 @@ const styles = StyleSheet.create({
   optionChip: {
     borderRadius: 20,
     borderWidth: 1.5,
-    borderColor: Colors.dark.inputBackground,
-    paddingHorizontal: 18,
-    paddingVertical: 10,
-    backgroundColor: Colors.dark.inputBackground,
+    borderColor: Colors.dark.primary,
+    paddingHorizontal: 12,
+    paddingVertical: 8,
   },
   optionChipActive: {
     borderColor: Colors.dark.primary,

@@ -1,10 +1,11 @@
 import { Image, ImageSourcePropType, StyleSheet, Text, View } from "react-native";
 
 import { Colors } from "@/constants/theme";
-import TopGameShape from "@/svgs/TopGameShape";
 import { useState } from "react";
 import { TouchableOpacity } from "react-native";
 import { GameModal } from "../common/GameModal";
+
+const TOP_GAME_BG = require("../../assets/elements/top_game.png");
 
 interface Props {
   position: number;
@@ -21,7 +22,7 @@ export function TopGamePanel({ position, name, winAmount, imageUrl, vendorName }
   return (
     <>
       <TouchableOpacity style={styles.wrapper} onPress={() => setModalVisible(true)} activeOpacity={0.85}>
-        <TopGameShape style={styles.gameShape} />
+        <Image source={TOP_GAME_BG} style={styles.gameShape} resizeMode="contain" />
         <Text style={styles.positionText}>{position}º</Text>
         <Text style={styles.amountText}>{formatted}</Text>
         <View style={styles.content}>
@@ -63,8 +64,8 @@ const styles = StyleSheet.create({
   },
   positionText: {
     position: "absolute",
-    left: 13,
-    top: 5,
+    left: 15,
+    top: 2,
     zIndex: 1,
     fontSize: 18,
     fontWeight: "bold",
@@ -72,8 +73,8 @@ const styles = StyleSheet.create({
   },
   amountText: {
     position: "absolute",
-    left: 44,
-    top: 17,
+    left: 42,
+    top: 15,
     zIndex: 1,
     fontSize: 14,
     fontWeight: "bold",
