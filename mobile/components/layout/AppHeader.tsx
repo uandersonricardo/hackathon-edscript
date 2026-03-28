@@ -32,12 +32,20 @@ export function AppHeader({ compact }: { compact: boolean }) {
         <View style={styles.actions}>
           {isLoggedIn ? (
             <>
-              <TouchableOpacity style={styles.notifButton} activeOpacity={0.7} onPress={() => router.push("/notifications")}>
+              <TouchableOpacity
+                style={styles.notifButton}
+                activeOpacity={0.7}
+                onPress={() => router.push("/notifications")}
+              >
                 <Bell size={24} color={Colors.dark.text} />
                 <View style={styles.notifBadge} />
               </TouchableOpacity>
 
-              <TouchableOpacity style={styles.balanceButton} activeOpacity={0.7} onPress={() => router.push("/deposit")}>
+              <TouchableOpacity
+                style={styles.balanceButton}
+                activeOpacity={0.7}
+                onPress={() => router.replace("/onboarding")}
+              >
                 <View style={styles.depositIcon}>
                   <Plus size={20} color={Colors.dark.background} strokeWidth={2.5} />
                 </View>

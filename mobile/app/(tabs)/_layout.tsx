@@ -5,7 +5,7 @@ import { AppHeader } from "../../components/layout/AppHeader";
 import { BottomBar } from "../../components/layout/BottomBar";
 
 const TABS_WITHOUT_HEADER = new Set(["support"]);
-const TABS_WITHOUT_SEARCH = new Set(["profile", "history", "prizes"]);
+const TABS_WITHOUT_SEARCH = new Set(["profile", "history", "prizes", "onboarding"]);
 
 export default function TabsLayout() {
   const [activeTab, setActiveTab] = useState("index");
@@ -34,6 +34,7 @@ export default function TabsLayout() {
         <Tabs.Screen name="history" />
         <Tabs.Screen name="support" />
         <Tabs.Screen name="profile" />
+        <Tabs.Screen name="onboarding" options={{ href: null }} />
       </Tabs>
     </>
   );

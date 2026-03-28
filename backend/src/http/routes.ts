@@ -19,6 +19,7 @@ import User from "../lib/user";
 import { authenticateUser } from "./middlewares";
 import Ranking from "../lib/ranking";
 import SupportAgent from "../agents/support-agent";
+import OnboardingAgent from "../agents/onboarding-agent";
 
 const router = Router();
 
@@ -553,4 +554,42 @@ router.delete("/support/chat", authenticateUser, (req, res) => {
   res.json({ success: true, data: null });
 });
 
+// ── Onboarding Chat ───────────────────────────────────────────────────────────
+
+const onboardingSessions = new Map<string, OnboardingAgent>();
+
+function getOrCreateOnboardingSession(user: User): OnboardingAgent {
+  if (!onboardingSessions.has(user.id)) {
+    onboardingSessions.set(user.id, new OnboardingAgent(user));
+  }
+  return onboardingSessions.get(user.id)!;
+}
+
+router.get("/onboarding/chat", authenticateUser, (req, res) => {
+  const user = Auth.findUser((req as any).userId)!;
+  const session = getOrCreateOnboardingSession(user);
+  const history = session.getHistory().map((m, i) => ({
+    id: String(i),
+    from: m.from,
+    content: m.content,
+  }));
+  const { options, multiSelect, done } = session.getCurrentOptions();
+  res.json({ success: true, data: { history, options, multiSelect, done } });
+});
+
+router.post("/onboarding/chat", authenticateUser, async (req, res) => {
+  const user = Auth.findUser((req as any).userId)!;
+  const { message } = req.body;
+
+  if (!message || typeof message !== "string" || !message.trim()) {
+    res.status(400).json({ success: false, message: "Message is required" });
+    return;
+  }
+
+  const session = getOrCreateOnboardingSession(user);
+  const response = await session.chat(message.trim());
+  res.json({ success: true, data: response });
+});
+
 export default router;
+

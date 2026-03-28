@@ -12,13 +12,7 @@ import {
 } from "react-native";
 import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import {
-  ChevronLeft,
-  ShieldCheck,
-  CheckCircle2,
-  Circle,
-  Info,
-} from "lucide-react-native";
+import { ChevronLeft, ShieldCheck, CheckCircle2, Circle, Info } from "lucide-react-native";
 
 import { Colors } from "../constants/theme";
 
@@ -73,11 +67,7 @@ export default function DepositScreen() {
         <View style={styles.backButton} />
       </View>
 
-      <ScrollView
-        style={styles.scroll}
-        contentContainerStyle={styles.content}
-        keyboardShouldPersistTaps="handled"
-      >
+      <ScrollView style={styles.scroll} contentContainerStyle={styles.content} keyboardShouldPersistTaps="handled">
         {/* Security badge */}
         <View style={styles.securityBadge}>
           <ShieldCheck size={18} color={Colors.dark.primary} />
@@ -103,9 +93,7 @@ export default function DepositScreen() {
                 ) : (
                   <Circle size={20} color={Colors.dark.textMuted} />
                 )}
-                <Text style={[styles.providerLabel, active && styles.providerLabelActive]}>
-                  {p.label}
-                </Text>
+                <Text style={[styles.providerLabel, active && styles.providerLabelActive]}>{p.label}</Text>
                 {p.badge && (
                   <View style={styles.badge}>
                     <Text style={styles.badgeText}>{p.badge}</Text>
@@ -139,9 +127,7 @@ export default function DepositScreen() {
                 style={[styles.suggestedChip, active && styles.suggestedChipActive]}
                 onPress={() => setAmountCents(v * 100)}
               >
-                <Text style={[styles.suggestedChipText, active && styles.suggestedChipTextActive]}>
-                  R$ {v}
-                </Text>
+                <Text style={[styles.suggestedChipText, active && styles.suggestedChipTextActive]}>R$ {v}</Text>
               </Pressable>
             );
           })}
@@ -159,7 +145,7 @@ export default function DepositScreen() {
         {/* Info card */}
         <View style={styles.infoCard}>
           <View style={styles.infoHeader}>
-            <Info size={15} color={Colors.dark.textMuted} />
+            <Info size={15} color={Colors.dark.text} />
             <Text style={styles.infoTitle}>Informações importantes:</Text>
           </View>
           {INFO_ITEMS.map((item, i) => (
@@ -182,19 +168,19 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "space-between",
     paddingHorizontal: 12,
-    paddingBottom: 10,
+    paddingBottom: 12,
   },
   backButton: {
     width: 36,
     height: 36,
     alignItems: "center",
     justifyContent: "center",
+    marginRight: 8,
   },
   headerTitle: {
     color: Colors.dark.text,
-    fontSize: 17,
+    fontSize: 22,
     fontWeight: "700",
   },
   scroll: {
@@ -233,10 +219,8 @@ const styles = StyleSheet.create({
     marginTop: 4,
   },
   providersCard: {
-    backgroundColor: Colors.dark.card,
+    backgroundColor: Colors.dark.inputBackground,
     borderRadius: 14,
-    borderWidth: 1,
-    borderColor: Colors.dark.inputBackground,
     overflow: "hidden",
   },
   providerRow: {
@@ -248,7 +232,7 @@ const styles = StyleSheet.create({
   },
   providerRowBorder: {
     borderBottomWidth: 1,
-    borderBottomColor: Colors.dark.inputBackground,
+    borderBottomColor: Colors.dark.background,
   },
   providerLabel: {
     color: Colors.dark.textMuted,
@@ -291,7 +275,7 @@ const styles = StyleSheet.create({
     borderWidth: 1.5,
     borderColor: Colors.dark.inputBackground,
     paddingVertical: 11,
-    backgroundColor: Colors.dark.card,
+    backgroundColor: Colors.dark.inputBackground,
   },
   suggestedChipActive: {
     borderColor: Colors.dark.primary,
@@ -328,10 +312,8 @@ const styles = StyleSheet.create({
     fontWeight: "700",
   },
   infoCard: {
-    backgroundColor: Colors.dark.card,
+    backgroundColor: Colors.dark.inputBackground,
     borderRadius: 14,
-    borderWidth: 1,
-    borderColor: Colors.dark.inputBackground,
     padding: 14,
     gap: 8,
     marginTop: 4,
@@ -343,7 +325,7 @@ const styles = StyleSheet.create({
     marginBottom: 2,
   },
   infoTitle: {
-    color: Colors.dark.textMuted,
+    color: Colors.dark.text,
     fontSize: 13,
     fontWeight: "700",
   },

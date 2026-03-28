@@ -32,47 +32,49 @@ export function BottomBar({ state, descriptors, navigation }: BottomTabBarProps)
 
   return (
     <View style={[styles.container, { paddingBottom: insets.bottom }]}>
-      {state.routes.map((route, index) => {
-        const isFocused = state.index === index;
-        const color = isFocused ? Colors.dark.primary : Colors.dark.textMuted;
-        const label = TAB_LABELS[route.name] ?? route.name;
+      {state.routes
+        .filter((route) => route.name !== "onboarding")
+        .map((route, index) => {
+          const isFocused = state.index === index;
+          const color = isFocused ? Colors.dark.primary : Colors.dark.textMuted;
+          const label = TAB_LABELS[route.name] ?? route.name;
 
-        const onPress = () => {
-          if (NOT_ALLOWED_TABS.includes(route.name) && !isLoggedIn) {
-            router.push("/login");
-            return;
-          }
+          const onPress = () => {
+            if (NOT_ALLOWED_TABS.includes(route.name) && !isLoggedIn) {
+              router.push("/login");
+              return;
+            }
 
-          const event = navigation.emit({ type: "tabPress", target: route.key, canPreventDefault: true });
-          if (!isFocused && !event.defaultPrevented) {
-            navigation.navigate(route.name);
-          }
-        };
+            const event = navigation.emit({ type: "tabPress", target: route.key, canPreventDefault: true });
+            if (!isFocused && !event.defaultPrevented) {
+              navigation.navigate(route.name);
+            }
+          };
 
-        return (
-          <TouchableOpacity
-            key={route.key}
-            onPress={onPress}
-            style={styles.tab}
-            activeOpacity={0.7}
-            accessibilityRole="button"
-            accessibilityState={isFocused ? { selected: true } : {}}
-          >
-            {route.name === "profile" ? (
-              isLoggedIn ? (
-                <View style={[styles.avatarWrapper, isFocused && styles.avatarFocused]}>
-                  <Image source={AVATAR_URI} style={styles.avatar} />
-                </View>
+          return (
+            <TouchableOpacity
+              key={route.key}
+              onPress={onPress}
+              style={styles.tab}
+              activeOpacity={0.7}
+              accessibilityRole="button"
+              accessibilityState={isFocused ? { selected: true } : {}}
+            >
+              {route.name === "profile" ? (
+                isLoggedIn ? (
+                  <View style={[styles.avatarWrapper, isFocused && styles.avatarFocused]}>
+                    <Image source={AVATAR_URI} style={styles.avatar} />
+                  </View>
+                ) : (
+                  <UserCircle size={24} color={color} />
+                )
               ) : (
-                <UserCircle size={24} color={color} />
-              )
-            ) : (
-              TAB_ICONS[route.name]?.(color)
-            )}
-            <Text style={[styles.label, { color }]}>{label}</Text>
-          </TouchableOpacity>
-        );
-      })}
+                TAB_ICONS[route.name]?.(color)
+              )}
+              <Text style={[styles.label, { color }]}>{label}</Text>
+            </TouchableOpacity>
+          );
+        })}
     </View>
   );
 }

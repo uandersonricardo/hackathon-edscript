@@ -48,7 +48,7 @@ export default function RegisterScreen() {
         recurrentPlan: null,
         achievements: { rank: "bronze", experience: 0, missions: [], rewards: [] },
       });
-      router.replace("/(tabs)");
+      router.replace("/onboarding");
     } catch {
       // error shown via registerError
     }
