@@ -33,7 +33,7 @@ export function GameModal({ visible, onClose, label, icon, vendorName }: Props) 
   return (
     <Modal visible={visible} animationType="slide" transparent onRequestClose={onClose}>
       <View style={styles.overlay}>
-        <SafeAreaView style={[styles.sheet, label !== "Fortune Tiger" && { minHeight: "55%" }]}>
+        <SafeAreaView style={[styles.sheet, { paddingBottom: 48 }, label !== "Fortune Tiger" && { minHeight: "55%" }]}>
           <TouchableOpacity style={styles.closeButton} onPress={onClose} activeOpacity={0.8}>
             <X size={20} color={Colors.dark.text} />
           </TouchableOpacity>

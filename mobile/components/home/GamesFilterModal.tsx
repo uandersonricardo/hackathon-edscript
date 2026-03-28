@@ -24,13 +24,7 @@ export function GamesFilterModal({ visible, categories, activeCategoryId, onAppl
   };
 
   return (
-    <Modal
-      visible={visible}
-      transparent
-      animationType="slide"
-      onShow={handleOpen}
-      onRequestClose={onClose}
-    >
+    <Modal visible={visible} transparent animationType="slide" onShow={handleOpen} onRequestClose={onClose}>
       <Pressable style={styles.backdrop} onPress={onClose} />
 
       <View style={styles.sheet}>
@@ -44,11 +38,7 @@ export function GamesFilterModal({ visible, categories, activeCategoryId, onAppl
         <Text style={styles.sectionLabel}>Categorias</Text>
 
         <ScrollView style={styles.list} showsVerticalScrollIndicator={false}>
-          <TouchableOpacity
-            style={styles.row}
-            onPress={() => setSelected(undefined)}
-            activeOpacity={0.75}
-          >
+          <TouchableOpacity style={styles.row} onPress={() => setSelected(undefined)} activeOpacity={0.75}>
             <View style={[styles.radio, selected === undefined && styles.radioActive]}>
               {selected === undefined && <View style={styles.radioDot} />}
             </View>
@@ -56,12 +46,7 @@ export function GamesFilterModal({ visible, categories, activeCategoryId, onAppl
           </TouchableOpacity>
 
           {categories.map((cat) => (
-            <TouchableOpacity
-              key={cat.id}
-              style={styles.row}
-              onPress={() => setSelected(cat.id)}
-              activeOpacity={0.75}
-            >
+            <TouchableOpacity key={cat.id} style={styles.row} onPress={() => setSelected(cat.id)} activeOpacity={0.75}>
               <View style={[styles.radio, selected === cat.id && styles.radioActive]}>
                 {selected === cat.id && <View style={styles.radioDot} />}
               </View>
@@ -91,7 +76,7 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 24,
     borderTopRightRadius: 24,
     paddingTop: 20,
-    paddingBottom: 32,
+    paddingBottom: 60,
     maxHeight: "75%",
   },
   header: {
