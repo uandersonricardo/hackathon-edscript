@@ -43,7 +43,7 @@ export function AppHeader({ compact, section = "index" }: { compact: boolean; se
               <TouchableOpacity
                 style={styles.balanceButton}
                 activeOpacity={0.7}
-                onPress={() => router.replace("/onboarding")}
+                onPress={() => router.replace("/deposit")}
               >
                 <View style={styles.depositIcon}>
                   <Plus size={20} color={Colors.dark.background} strokeWidth={2.5} />

@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 1,
   },
   inactive: {
-    opacity: 0.7,
+    opacity: 0.5,
   },
   card: {
     alignItems: "center",

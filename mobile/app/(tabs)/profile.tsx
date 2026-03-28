@@ -1,3 +1,4 @@
+import Slider from "@react-native-community/slider";
 import {
   LogOut,
   ArrowDownToLine,
@@ -113,24 +114,8 @@ function ContaTab({ onDeposit, onNotifications }: { onDeposit: () => void; onNot
   );
 }
 
-function LimitSlider({
-  label,
-  value,
-  onChange,
-  max,
-}: {
-  label: string;
-  value: number;
-  onChange: (v: number) => void;
-  max: number;
-}) {
-  const [trackWidth, setTrackWidth] = useState(1);
-  const pct = Math.max(0, Math.min(1, value / max));
-
-  const handleTouch = (x: number) => {
-    const newPct = Math.max(0, Math.min(1, x / trackWidth));
-    onChange(Math.round(newPct * max));
-  };
+function LimitSlider({ label, max }: { label: string; max: number }) {
+  const [value, setValue] = useState(0);
 
   return (
     <View style={styles.sliderField}>
@@ -138,17 +123,17 @@ function LimitSlider({
         <Text style={styles.sliderLabel}>{label}</Text>
         <Text style={styles.sliderValue}>{value > 0 ? `R$ ${value.toLocaleString("pt-BR")}` : "Sem limite"}</Text>
       </View>
-      <View
-        style={styles.sliderTrack}
-        onLayout={(e) => setTrackWidth(e.nativeEvent.layout.width)}
-        onStartShouldSetResponder={() => true}
-        onMoveShouldSetResponder={() => true}
-        onResponderGrant={(e) => handleTouch(e.nativeEvent.locationX)}
-        onResponderMove={(e) => handleTouch(e.nativeEvent.locationX)}
-      >
-        <View style={[styles.sliderFill, { width: `${pct * 100}%` }]} />
-        <View style={[styles.sliderThumb, { left: pct * (trackWidth - 20) }]} />
-      </View>
+      <Slider
+        style={{ width: "100%", height: 20 }}
+        minimumValue={0}
+        maximumValue={max}
+        step={1}
+        value={value}
+        onValueChange={setValue}
+        minimumTrackTintColor={Colors.dark.primary}
+        maximumTrackTintColor={Colors.dark.inputBackground}
+        thumbTintColor={Colors.dark.primary}
+      />
     </View>
   );
 }
@@ -172,11 +157,7 @@ function CollapsiblePanel({
     >
       <TouchableOpacity style={styles.panelHeader} onPress={() => setOpen((v) => !v)} activeOpacity={0.8}>
         <Text style={styles.panelTitle}>{title}</Text>
-        <ChevronDown
-          size={18}
-          color={Colors.dark.text}
-          style={{ transform: [{ rotate: open ? "180deg" : "0deg" }] }}
-        />
+        <ChevronDown size={18} color={Colors.dark.text} style={{ transform: [{ rotate: open ? "180deg" : "0deg" }] }} />
       </TouchableOpacity>
       {open && children}
     </LinearGradient>
@@ -184,16 +165,12 @@ function CollapsiblePanel({
 }
 
 function LimitPanel({ title }: { title: string }) {
-  const [daily, setDaily] = useState(0);
-  const [weekly, setWeekly] = useState(0);
-  const [monthly, setMonthly] = useState(0);
-
   return (
     <CollapsiblePanel title={title}>
       <View style={styles.limitSliders}>
-        <LimitSlider label="Diário" value={daily} onChange={setDaily} max={1000} />
-        <LimitSlider label="Semanal" value={weekly} onChange={setWeekly} max={5000} />
-        <LimitSlider label="Mensal" value={monthly} onChange={setMonthly} max={20000} />
+        <LimitSlider label="Diário" max={1000} />
+        <LimitSlider label="Semanal" max={5000} />
+        <LimitSlider label="Mensal" max={20000} />
       </View>
       <TouchableOpacity style={styles.saveLimitButton} activeOpacity={0.8}>
         <Text style={styles.saveLimitText}>Salvar limites</Text>
@@ -215,8 +192,8 @@ function AccessibilityToggle({ label, description }: AccessibilityItem) {
       <Switch
         value={enabled}
         onValueChange={setEnabled}
-        trackColor={{ false: Colors.dark.primaryMuted, true: Colors.dark.primary }}
-        thumbColor={enabled ? Colors.dark.background : Colors.dark.primary}
+        trackColor={{ false: Colors.dark.inputBackground, true: Colors.dark.primaryMuted }}
+        thumbColor={enabled ? Colors.dark.primary : Colors.dark.text}
         ios_backgroundColor={Colors.dark.inputBackground}
       />
     </View>
@@ -293,6 +270,8 @@ function ConfigTab() {
       <LimitPanel title="Limite de Depósito" />
 
       <CollapsiblePanel title="Acessibilidade">
+        <AccessibilityToggle label="Modo claro" description="Alterna para o tema claro da interface" />
+        <Divider light />
         <AccessibilityToggle label="Alto contraste" description="Aumenta o contraste de cores na interface" />
         <Divider light />
         <AccessibilityToggle label="Reduzir animações" description="Desativa transições e efeitos animados" />
@@ -549,10 +528,11 @@ const styles = StyleSheet.create({
   grid: {
     flexDirection: "row",
     flexWrap: "wrap",
+    justifyContent: "space-between",
     gap: 10,
   },
   gridTile: {
-    width: "48.5%",
+    width: "48%",
     borderRadius: 14,
     borderWidth: 1,
     borderColor: Colors.dark.primaryLight,
@@ -609,7 +589,7 @@ const styles = StyleSheet.create({
     fontWeight: "500",
   },
   sliderValue: {
-    color: Colors.dark.primary,
+    color: Colors.dark.text,
     fontSize: 13,
     fontWeight: "700",
   },

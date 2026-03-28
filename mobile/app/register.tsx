@@ -59,7 +59,11 @@ export default function RegisterScreen() {
       style={[styles.root, { paddingBottom: insets.bottom }]}
       behavior={Platform.OS === "ios" ? "padding" : "height"}
     >
-      <TouchableOpacity style={[styles.backButton, { top: insets.top + 8 }]} onPress={() => router.back()} activeOpacity={0.7}>
+      <TouchableOpacity
+        style={[styles.backButton, { top: insets.top + 8 }]}
+        onPress={() => router.push("/(tabs)")}
+        activeOpacity={0.7}
+      >
         <ChevronLeft size={24} color={Colors.dark.text} />
       </TouchableOpacity>
 

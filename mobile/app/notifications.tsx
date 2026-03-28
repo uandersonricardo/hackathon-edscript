@@ -1,15 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
-import {
-  Bot,
-  BookOpen,
-  TrendingUp,
-  Headphones,
-  Bell,
-  ChevronRight,
-  CheckCircle,
-  ChevronLeft,
-} from "lucide-react-native";
-import { Animated, ScrollView, StyleSheet, Text, TouchableOpacity, View, ActivityIndicator } from "react-native";
+import { Bot, Bell, ChevronRight, CheckCircle, ChevronLeft } from "lucide-react-native";
+import { Animated, Image, ScrollView, StyleSheet, Text, TouchableOpacity, View, ActivityIndicator } from "react-native";
 import { useRef, useEffect } from "react";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
@@ -68,23 +59,23 @@ function groupBySections(notifications: Notification[]): Section[] {
 
 const AGENT_META: Record<
   AgenticNotification["agent"],
-  { label: string; Icon: typeof Bot; color: string; gradientColors: [string, string] }
+  { label: string; image: ReturnType<typeof require>; color: string; gradientColors: [string, string] }
 > = {
   onboarding: {
     label: "Onboarding",
-    Icon: BookOpen,
-    color: "#7C3AED",
-    gradientColors: ["rgba(124,58,237,0.18)", "rgba(124,58,237,0.04)"],
+    image: require("../assets/elements/onboarding.png"),
+    color: "#3B82F6",
+    gradientColors: ["rgba(59,130,246,0.33)", "rgba(59,130,246,0.04)"],
   },
   tipster: {
     label: "Tipster",
-    Icon: TrendingUp,
+    image: require("../assets/elements/tipster.png"),
     color: Colors.dark.primary,
     gradientColors: ["rgba(58,231,126,0.18)", "rgba(58,231,126,0.04)"],
   },
   support: {
     label: "Suporte",
-    Icon: Headphones,
+    image: require("../assets/elements/support.png"),
     color: Colors.dark.secondary,
     gradientColors: ["rgba(231,225,58,0.18)", "rgba(231,225,58,0.04)"],
   },
@@ -111,7 +102,7 @@ function AgentAvatar({ agent, read }: { agent: AgenticNotification["agent"]; rea
     <View style={styles.agentAvatarWrap}>
       {!read && <Animated.View style={[styles.agentAvatarGlow, { backgroundColor: meta.color, opacity: pulse }]} />}
       <View style={[styles.agentAvatarCircle, { borderColor: meta.color }]}>
-        <meta.Icon size={18} color={meta.color} />
+        <Image source={meta.image} style={styles.agentAvatarImage} resizeMode="contain" />
       </View>
     </View>
   );
@@ -463,10 +454,14 @@ const styles = StyleSheet.create({
     width: 40,
     height: 40,
     borderRadius: 20,
-    backgroundColor: Colors.dark.background,
+    backgroundColor: Colors.dark.text,
     borderWidth: 1.5,
     alignItems: "center",
     justifyContent: "center",
+  },
+  agentAvatarImage: {
+    width: 28,
+    height: 28,
   },
   agentLabelRow: {
     flexDirection: "row",

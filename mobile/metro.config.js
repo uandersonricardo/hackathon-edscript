@@ -6,7 +6,7 @@ const config = getDefaultConfig(__dirname);
 
 config.resolver = {
   sourceExts: ['js', 'jsx', 'json', 'ts', 'tsx', 'cjs', 'mjs'],
-  assetExts: ['glb', 'gltf', 'png', 'jpg'],
+  assetExts: ['glb', 'gltf', 'png', 'jpg', 'svg'],
 }
 
 module.exports = config;

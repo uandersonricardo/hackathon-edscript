@@ -8,6 +8,7 @@ import {
   TextInput,
   TouchableOpacity,
   Text,
+  Image,
 } from "react-native";
 import { useMutation } from "@tanstack/react-query";
 import { Search, Send, Sparkles, X } from "lucide-react-native";
@@ -109,7 +110,7 @@ export function AgentSearchBar({ section }: { section: string }) {
           )
         ) : (
           <TouchableOpacity style={styles.btn} onPress={handleToggle} activeOpacity={0.8}>
-            <Sparkles size={15} color={Colors.dark.background} />
+            <Image source={require("@/assets/elements/support.png")} style={styles.btnImage} resizeMode="contain" />
           </TouchableOpacity>
         )}
       </View>
@@ -170,13 +171,17 @@ const styles = StyleSheet.create({
     width: 28,
     height: 28,
     borderRadius: 14,
-    backgroundColor: Colors.dark.primary,
+    backgroundColor: Colors.dark.text,
     alignItems: "center",
     justifyContent: "center",
     flexShrink: 0,
   },
   btnExit: {
     backgroundColor: Colors.dark.textMuted,
+  },
+  btnImage: {
+    width: 20,
+    height: 20,
   },
   separator: {
     height: 1,

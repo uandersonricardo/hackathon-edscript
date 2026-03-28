@@ -9,10 +9,11 @@ import {
   KeyboardAvoidingView,
   Platform,
   ActivityIndicator,
+  Image,
 } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { LinearGradient } from "expo-linear-gradient";
-import { Send, Headphones, RotateCwIcon } from "lucide-react-native";
+import { Send, RotateCwIcon } from "lucide-react-native";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 
 import { Colors } from "../../constants/theme";
@@ -24,7 +25,7 @@ const avatarStyle = {
   width: 30,
   height: 30,
   borderRadius: 15,
-  backgroundColor: Colors.dark.secondary,
+  backgroundColor: Colors.dark.text,
   alignItems: "center" as const,
   justifyContent: "center" as const,
   flexShrink: 0 as const,
@@ -32,13 +33,21 @@ const avatarStyle = {
 
 const agentAvatar = (
   <View style={avatarStyle}>
-    <Headphones size={14} color={Colors.dark.background} />
+    <Image
+      source={require("../../assets/elements/support.png")}
+      style={{ width: 22, height: 22 }}
+      resizeMode="contain"
+    />
   </View>
 );
 
 const agentAvatarSmall = (
   <View style={avatarStyle}>
-    <Headphones size={12} color={Colors.dark.background} />
+    <Image
+      source={require("../../assets/elements/support.png")}
+      style={{ width: 18, height: 18 }}
+      resizeMode="contain"
+    />
   </View>
 );
 
@@ -129,7 +138,11 @@ export default function Support() {
       <View style={styles.header}>
         <View style={styles.headerAgent}>
           <View style={styles.headerAvatar}>
-            <Headphones size={18} color={Colors.dark.background} />
+            <Image
+              source={require("../../assets/elements/support.png")}
+              style={{ width: 30, height: 30 }}
+              resizeMode="contain"
+            />
           </View>
           <View>
             <Text style={styles.headerName}>Suporte</Text>
@@ -239,9 +252,9 @@ const styles = StyleSheet.create({
     width: 44,
     height: 44,
     borderRadius: 22,
-    backgroundColor: Colors.dark.secondary,
+    backgroundColor: Colors.dark.text,
     borderWidth: 2,
-    borderColor: Colors.dark.secondary,
+    borderColor: Colors.dark.text,
     alignItems: "center",
     justifyContent: "center",
   },

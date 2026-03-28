@@ -5,12 +5,12 @@ import { Colors } from "@/constants/theme";
 import { useBetSlip } from "@/contexts/BetSlipContext";
 
 export function BetSlipButton() {
-  const { count } = useBetSlip();
+  const { count, clear } = useBetSlip();
 
   if (count === 0) return null;
 
   return (
-    <TouchableOpacity style={styles.fab} activeOpacity={0.85}>
+    <TouchableOpacity style={styles.fab} activeOpacity={0.85} onPress={clear}>
       <View style={styles.badge}>
         <Text style={styles.badgeText}>{count}</Text>
       </View>

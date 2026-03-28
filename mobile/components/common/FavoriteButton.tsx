@@ -2,6 +2,7 @@ import { useState } from "react";
 import { StyleSheet, Text, TouchableOpacity } from "react-native";
 
 import { Colors } from "@/constants/theme";
+import { StarIcon } from "lucide-react-native";
 
 export function FavoriteButton() {
   const [favorited, setFavorited] = useState(false);
@@ -12,7 +13,7 @@ export function FavoriteButton() {
       onPress={() => setFavorited((v) => !v)}
       activeOpacity={0.75}
     >
-      <Text style={[styles.icon, favorited && styles.iconFavorited]}>★</Text>
+      <StarIcon color={Colors.dark.background} fill={Colors.dark.background} size={14} />
     </TouchableOpacity>
   );
 }
