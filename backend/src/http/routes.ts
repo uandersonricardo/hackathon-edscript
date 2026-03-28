@@ -216,9 +216,163 @@ router.get("/homepage", authenticateUser, (req, res) => {
     return;
   }
 
-  const homepage = user.embedding.getHomepage();
+  const priority = user.embedding.getHomepage();
 
-  res.json({ success: true, data: homepage });
+  const casinoCatList = (casinoCategories as any).data.categories as { id: number; name: string }[];
+  const liveCasinoCatList = (liveCasinoCategories as any).data.categories as { id: number; name: string }[];
+
+  const MOCKED_POSSIBLE_GAMES = [34476, 34475, 30499, 26405, 26421, 19328, 23214, 30830];
+  const allCasinoGames = (casinoGames as any).data.games as any[];
+  const prefCasinoCatId = casinoCatList[priority.preferredCasinoCategory]?.id;
+  const sortedCasinoGames = (
+    prefCasinoCatId
+      ? [
+          ...allCasinoGames.filter((g) => g.categoryId === prefCasinoCatId),
+          ...allCasinoGames.filter((g) => g.categoryId !== prefCasinoCatId),
+        ]
+      : allCasinoGames
+  ).filter((g) => MOCKED_POSSIBLE_GAMES.includes(g.id));
+
+  const MOCKED_POSSIBLE_LIVE_GAMES = [18452, 19918, 30464, 33104, 9357, 18225];
+  const allLiveCasinoGames = (liveCasinoGames as any).data.games as any[];
+  const prefLiveCasinoCatId = liveCasinoCatList[priority.preferredLiveCasinoCategory]?.id;
+  const sortedLiveCasinoGames = (
+    prefLiveCasinoCatId
+      ? [
+          ...allLiveCasinoGames.filter((g) => g.categoryId === prefLiveCasinoCatId),
+          ...allLiveCasinoGames.filter((g) => g.categoryId !== prefLiveCasinoCatId),
+        ]
+      : allLiveCasinoGames
+  ).filter((g) => MOCKED_POSSIBLE_LIVE_GAMES.includes(g.id));
+
+  const provider = (iframeGames as any).data[0];
+  const allVirtualGames = provider.games as any[];
+  const virtualCatList = provider.categories as { id: number | string; name: string }[];
+  const prefVirtualCatId = virtualCatList[priority.preferredVirtualCategory]?.id;
+  const sortedVirtualGames = (
+    prefVirtualCatId
+      ? [
+          ...allVirtualGames.filter((g) => String(g.categoryId) === String(prefVirtualCatId)),
+          ...allVirtualGames.filter((g) => String(g.categoryId) !== String(prefVirtualCatId)),
+        ]
+      : allVirtualGames
+  ).sort((a, b) => a.order - b.order);
+
+  const GAME_LIMIT = 6;
+  const FIXTURE_LIMIT = 5;
+  const MOCK_FIXTURES = [71707178, 72260562, 70865136, 72275180, 72260570, 72165427, 72165424, 72477242];
+
+  function extractFixtures(sportKey: string, limit: number) {
+    const sportData = fixtures[sportKey] as any;
+    if (!sportData) return [];
+    const entries: any[] = [];
+    const PRIMARY_MARKETS = ["Resultado", "Resultado Final", "Vencedor (incl.prolo)", "Vencedor", "1x2"];
+    for (const sport of sportData.data ?? []) {
+      for (const country of sport.cs ?? []) {
+        for (const season of country.sns ?? []) {
+          for (const f of season.fs ?? []) {
+            const resultBtg = f.btgs?.find((b: any) => PRIMARY_MARKETS.includes(b.btgN));
+            if (!resultBtg) continue;
+            const fos = resultBtg.fos ?? [];
+            if (fos.length < 2) continue;
+            const homeOdd = fos[0]?.hO;
+            const drawOdd = fos.length >= 3 ? fos[1]?.hO : null;
+            const awayOdd = fos.length >= 3 ? fos[2]?.hO : fos[1]?.hO;
+            if (!homeOdd || !awayOdd || !MOCK_FIXTURES.includes(f.fId)) continue;
+            entries.push({
+              id: f.fId,
+              leagueName: season.lName,
+              homeTeam: { name: (f.hcN ?? "").trim(), externalId: f.hcBId },
+              awayTeam: { name: (f.acN ?? "").trim(), externalId: f.acBId },
+              odds: { home: homeOdd, draw: drawOdd, away: awayOdd },
+              startDate: f.fsd,
+              isLive: !!f.lSt,
+              totalOdds: f.oCnt ?? Math.floor(Math.random() * 1000),
+            });
+            if (entries.length >= limit) return entries;
+          }
+        }
+      }
+    }
+    return entries;
+  }
+
+  const allFixtures: any[] = [];
+  for (const sport of priority.preferredSports) {
+    if (allFixtures.length >= FIXTURE_LIMIT) break;
+    allFixtures.push(...extractFixtures(sport, FIXTURE_LIMIT - allFixtures.length));
+  }
+
+  const SECTION_TITLES: Record<string, string> = {
+    casino: "Jogos em destaque",
+    liveCasino: "Cassino ao vivo",
+    virtuals: "Virtuais em alta",
+    fixtures: "Partidas para você",
+  };
+
+  const TOP_WIN_AMOUNTS = [1013211.31, 847501.03, 824393.44, 756780.2, 582450.98];
+  const TOP_GAMES_IDS = [19533, 13485, 22910, 26194, 24214];
+  const topGames = allCasinoGames
+    .filter((g: any) => TOP_GAMES_IDS.includes(g.id))
+    .map((g: any) => ({
+      id: g.id,
+      name: g.name,
+      vendorName: vendorMap.get(g.vendorId) ?? null,
+      winAmount: TOP_WIN_AMOUNTS[TOP_GAMES_IDS.indexOf(g.id)],
+    }))
+    .sort((a, b) => TOP_GAMES_IDS.indexOf(a.id) - TOP_GAMES_IDS.indexOf(b.id));
+
+  const sections = priority.sectionOrder.map((type) => {
+    if (type === "casino") {
+      return {
+        type,
+        title: SECTION_TITLES.casino,
+        games: sortedCasinoGames.slice(0, GAME_LIMIT).map((g: any) => ({
+          id: g.id,
+          name: g.name,
+          vendorName: vendorMap.get(g.vendorId) ?? null,
+          popular: !!g.popular,
+          newGame: !!g.newGame,
+        })),
+      };
+    }
+
+    if (type === "liveCasino") {
+      return {
+        type,
+        title: SECTION_TITLES.liveCasino,
+        games: sortedLiveCasinoGames.slice(0, GAME_LIMIT).map((g: any) => ({
+          id: g.id,
+          name: g.name,
+          vendorName: vendorMap.get(g.vendorId) ?? null,
+          popular: !!g.popular,
+          newGame: !!g.newGame,
+        })),
+      };
+    }
+
+    if (type === "virtuals") {
+      return {
+        type,
+        title: SECTION_TITLES.virtuals,
+        games: sortedVirtualGames.slice(0, GAME_LIMIT).map((g: any) => ({
+          id: g.iframeProviderGameId ?? String(g.id),
+          name: g.name,
+          vendorName: null,
+          popular: false,
+          newGame: false,
+        })),
+      };
+    }
+
+    if (type === "fixtures") {
+      return { type, title: SECTION_TITLES.fixtures, matches: allFixtures };
+    }
+
+    return null;
+  });
+
+  res.json({ success: true, data: { sections, topGames } });
 });
 
 router.get("/ranking", (_req, res) => {
@@ -259,8 +413,7 @@ type AgenticNotification = {
 
 type Notification = NormalNotification | AgenticNotification;
 
-const D = (daysAgo: number, hoursAgo = 0) =>
-  new Date(Date.now() - daysAgo * 864e5 - hoursAgo * 36e5).toISOString();
+const D = (daysAgo: number, hoursAgo = 0) => new Date(Date.now() - daysAgo * 864e5 - hoursAgo * 36e5).toISOString();
 
 const MOCK_NOTIFICATIONS: Notification[] = [
   // ── Hoje ──────────────────────────────────────────────────────────────────

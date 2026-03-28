@@ -100,7 +100,9 @@ export function FutureMatchPanel({
             <View style={styles.oddContainer}>
               <View style={styles.teamContainer}>
                 <Image source={homeTeam.imageUrl} style={styles.teamImage} />
-                <Text style={styles.teamText}>{homeTeam.name}</Text>
+                <Text style={styles.teamText} numberOfLines={1}>
+                  {homeTeam.name}
+                </Text>
               </View>
               <Pressable style={styles.outerButton}>
                 <LinearGradient
@@ -133,7 +135,9 @@ export function FutureMatchPanel({
             <View style={styles.oddContainer}>
               <View style={styles.teamContainer}>
                 <Image source={awayTeam.imageUrl} style={styles.teamImage} />
-                <Text style={styles.teamText}>{awayTeam.name}</Text>
+                <Text style={styles.teamText} numberOfLines={1}>
+                  {awayTeam.name}
+                </Text>
               </View>
               <Pressable style={styles.outerButton}>
                 <LinearGradient

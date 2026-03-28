@@ -1,20 +1,26 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, ImageSourcePropType, StyleSheet, Text, View } from "react-native";
 
 import { Colors } from "@/constants/theme";
 import TopGameShape from "@/svgs/TopGameShape";
 
-const GAME_IMG = require("../../assets/elements/game_example.png");
+interface Props {
+  position: number;
+  name: string;
+  winAmount: number;
+  imageUrl: ImageSourcePropType;
+}
 
-export function TopGamePanel() {
+export function TopGamePanel({ position, name, winAmount, imageUrl }: Props) {
+  const formatted = winAmount.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
   return (
     <View style={styles.wrapper}>
       <TopGameShape style={styles.gameShape} />
-      <Text style={styles.positionText}>1o</Text>
-      <Text style={styles.amountText}>R$ 3.013.211,17</Text>
+      <Text style={styles.positionText}>{position}º</Text>
+      <Text style={styles.amountText}>{formatted}</Text>
       <View style={styles.content}>
-        <Image source={GAME_IMG} style={styles.avatar} />
+        <Image source={imageUrl} style={styles.avatar} />
         <View style={styles.contentWrapper}>
-          <Text style={styles.title}>Fortuna Rabbit</Text>
+          <Text style={styles.title}>{name}</Text>
         </View>
       </View>
     </View>

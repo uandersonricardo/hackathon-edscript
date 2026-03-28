@@ -11,6 +11,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
+import { Image as ExpoImage } from "expo-image";
 import { X } from "lucide-react-native";
 
 interface Props {
@@ -38,11 +39,13 @@ export function GameModal({ visible, onClose, label, icon, vendorName }: Props) 
           </TouchableOpacity>
 
           <View style={styles.imageWrapper}>
-            <Image source={icon} style={styles.gameImage} resizeMode="cover" />
-            <LinearGradient
-              colors={["transparent", Colors.dark.background]}
-              style={styles.imageGradient}
+            <ExpoImage
+              source={{ uri: "https://i.makeagif.com/media/3-27-2026/8igKus.gif" }}
+              style={styles.gameImage}
+              contentFit="cover"
+              contentPosition="top"
             />
+            <LinearGradient colors={["transparent", Colors.dark.background]} style={styles.imageGradient} />
           </View>
 
           <View style={styles.info}>
@@ -70,8 +73,9 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 24,
     borderTopRightRadius: 24,
     overflow: "hidden",
-    minHeight: "60%",
+    minHeight: "80%",
     maxHeight: "90%",
+    position: "relative",
   },
   closeButton: {
     position: "absolute",
@@ -84,10 +88,14 @@ const styles = StyleSheet.create({
   },
   imageWrapper: {
     width: "100%",
-    height: 220,
+    flex: 1,
   },
   gameImage: {
-    width: "100%",
+    position: "absolute",
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
     height: "100%",
   },
   imageGradient: {

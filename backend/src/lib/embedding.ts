@@ -30,12 +30,38 @@ class Embedding {
     this.fixtureLeagues = attributes.fixtureLeagues;
   }
 
-  public getHomepage() {
+  public getHomepage(): {
+    sectionOrder: ("casino" | "liveCasino" | "virtuals" | "fixtures")[];
+    preferredCasinoCategory: number;
+    preferredLiveCasinoCategory: number;
+    preferredVirtualCategory: number;
+    preferredSports: string[];
+  } {
+    const sections = [
+      { type: "casino" as const, weight: this.casino },
+      { type: "liveCasino" as const, weight: this.liveCasino },
+      { type: "virtuals" as const, weight: this.virtuals },
+      { type: "fixtures" as const, weight: this.fixtures },
+    ];
+
+    const sectionOrder = [...sections].sort((a, b) => b.weight - a.weight).map((s) => s.type);
+
+    const preferredCasinoCategory = this.casinoCategories.indexOf(Math.max(...this.casinoCategories));
+    const preferredLiveCasinoCategory = this.liveCasinoCategories.indexOf(Math.max(...this.liveCasinoCategories));
+    const preferredVirtualCategory = this.virtualCategories.indexOf(Math.max(...this.virtualCategories));
+
+    const sportKeys = ["soccer"];
+    const preferredSports = this.fixtureLeagues
+      .map((weight, i) => ({ sport: sportKeys[i] ?? "soccer", weight }))
+      .sort((a, b) => b.weight - a.weight)
+      .map((s) => s.sport);
+
     return {
-      casino: [],
-      liveCasino: [],
-      virtuals: [],
-      fixtures: [],
+      sectionOrder,
+      preferredCasinoCategory,
+      preferredLiveCasinoCategory,
+      preferredVirtualCategory,
+      preferredSports,
     };
   }
 }

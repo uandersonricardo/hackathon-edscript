@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     width: "100%",
     position: "relative",
-    marginBottom: -8,
+    marginBottom: -16,
   },
   gradient: {
     paddingVertical: 20,

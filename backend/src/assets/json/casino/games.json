@@ -18,7 +18,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 8900,
-                "name": "Master Chen's Fortune™",
+                "name": "Master Chen's Fortune",
                 "newGame": false,
                 "open": true,
                 "popular": true,
@@ -29,7 +29,7 @@
                 "maxBetBehind": 0,
                 "orderBy": 13,
                 "fppCoefficient": 0,
-                "defaultGameName": "Master Chen's Fortune™",
+                "defaultGameName": "Master Chen's Fortune",
                 "op": 13,
                 "on": 13
             },
@@ -612,7 +612,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 24477,
-                "name": "8 Golden Dragon Challenge™",
+                "name": "8 Golden Dragon Challenge",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -622,7 +622,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "8 Golden Dragon Challenge™"
+                "defaultGameName": "8 Golden Dragon Challenge"
             },
             {
                 "categoryId": 12,
@@ -1476,7 +1476,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 21658,
-                "name": "Reel Banks™",
+                "name": "Reel Banks",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -1486,7 +1486,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Reel Banks™"
+                "defaultGameName": "Reel Banks"
             },
             {
                 "categoryId": 12,
@@ -1909,7 +1909,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 15669,
-                "name": "Chilli Heat Megaways™",
+                "name": "Chilli Heat Megaways",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -1919,7 +1919,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Chilli Heat Megaways™"
+                "defaultGameName": "Chilli Heat Megaways"
             },
             {
                 "categoryId": 12,
@@ -3276,7 +3276,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 24413,
-                "name": "Fortunes of Aztec™",
+                "name": "Fortunes of Aztec",
                 "newGame": true,
                 "open": true,
                 "popular": false,
@@ -3286,7 +3286,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Fortunes of Aztec™"
+                "defaultGameName": "Fortunes of Aztec"
             },
             {
                 "categoryId": 12,
@@ -3592,7 +3592,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 15912,
-                "name": "Yum Yum Powerways™",
+                "name": "Yum Yum Powerways",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -3602,7 +3602,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Yum Yum Powerways™"
+                "defaultGameName": "Yum Yum Powerways"
             },
             {
                 "categoryId": 12,
@@ -4900,7 +4900,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 25717,
-                "name": "Nile Fortune™",
+                "name": "Nile Fortune",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -4910,7 +4910,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Nile Fortune™"
+                "defaultGameName": "Nile Fortune"
             },
             {
                 "categoryId": 12,
@@ -5177,7 +5177,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 22628,
-                "name": "Mystery of the Orient™",
+                "name": "Mystery of the Orient",
                 "newGame": true,
                 "open": true,
                 "popular": false,
@@ -5187,7 +5187,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Mystery of the Orient™"
+                "defaultGameName": "Mystery of the Orient"
             },
             {
                 "categoryId": 20,
@@ -6690,7 +6690,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 16624,
-                "name": "Bigger Bass Bonanza™",
+                "name": "Bigger Bass Bonanza",
                 "newGame": false,
                 "open": true,
                 "popular": true,
@@ -6701,7 +6701,7 @@
                 "maxBetBehind": 0,
                 "orderBy": 23,
                 "fppCoefficient": 0,
-                "defaultGameName": "Bigger Bass Bonanza™",
+                "defaultGameName": "Bigger Bass Bonanza",
                 "op": 23,
                 "on": 23
             },
@@ -6889,7 +6889,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 14812,
-                "name": "Legend of Cleopatra Megaways™",
+                "name": "Legend of Cleopatra Megaways",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -6899,7 +6899,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Legend of Cleopatra Megaways™"
+                "defaultGameName": "Legend of Cleopatra Megaways"
             },
             {
                 "categoryId": 2,
@@ -7273,7 +7273,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 24360,
-                "name": "Cyclops Smash™",
+                "name": "Cyclops Smash",
                 "newGame": true,
                 "open": true,
                 "popular": false,
@@ -7283,7 +7283,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Cyclops Smash™"
+                "defaultGameName": "Cyclops Smash"
             },
             {
                 "categoryId": 12,
@@ -7572,7 +7572,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 19540,
-                "name": "Eye of Cleopatra™",
+                "name": "Eye of Cleopatra",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -7582,7 +7582,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Eye of Cleopatra™"
+                "defaultGameName": "Eye of Cleopatra"
             },
             {
                 "categoryId": 12,
@@ -7900,7 +7900,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 30703,
-                "name": "Galactic Jaws™ Power Combo",
+                "name": "Galactic Jaws Power Combo",
                 "newGame": true,
                 "open": true,
                 "popular": false,
@@ -7911,7 +7911,7 @@
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
                 "promoStartDate": 1754296088000,
-                "defaultGameName": "Galactic Jaws™ Power Combo"
+                "defaultGameName": "Galactic Jaws Power Combo"
             },
             {
                 "categoryId": 12,
@@ -8624,7 +8624,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 19328,
-                "name": "Rainbow Gold™",
+                "name": "Rainbow Gold",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -8634,7 +8634,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Rainbow Gold™"
+                "defaultGameName": "Rainbow Gold"
             },
             {
                 "categoryId": 12,
@@ -8756,7 +8756,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 18737,
-                "name": "Extra Juicy Megaways™",
+                "name": "Extra Juicy Megaways",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -8766,7 +8766,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Extra Juicy Megaways™"
+                "defaultGameName": "Extra Juicy Megaways"
             },
             {
                 "categoryId": 12,
@@ -9774,7 +9774,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 33931,
-                "name": "Wacky Panda Power Combo",
+                "name": "Wacky Panda",
                 "newGame": true,
                 "open": true,
                 "popular": true,
@@ -10306,7 +10306,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 18734,
-                "name": "Elemental Gems Megaways™",
+                "name": "Elemental Gems Megaways",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -10316,7 +10316,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Elemental Gems Megaways™"
+                "defaultGameName": "Elemental Gems Megaways"
             },
             {
                 "categoryId": 12,
@@ -11065,7 +11065,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 24404,
-                "name": "Book of Tut Megaways™",
+                "name": "Book of Tut Megaways",
                 "newGame": true,
                 "open": true,
                 "popular": false,
@@ -11075,7 +11075,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Book of Tut Megaways™"
+                "defaultGameName": "Book of Tut Megaways"
             },
             {
                 "categoryId": 12,
@@ -11752,7 +11752,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 17511,
-                "name": "Crystal Caverns Megaways™",
+                "name": "Crystal Caverns Megaways",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -11762,7 +11762,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Crystal Caverns Megaways™"
+                "defaultGameName": "Crystal Caverns Megaways"
             },
             {
                 "categoryId": 12,
@@ -12080,7 +12080,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 21656,
-                "name": "Hot Pepper™",
+                "name": "Hot Pepper",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -12090,7 +12090,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Hot Pepper™"
+                "defaultGameName": "Hot Pepper"
             },
             {
                 "categoryId": 12,
@@ -12623,7 +12623,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 25674,
-                "name": "Sugar Supreme Powernudge™",
+                "name": "Sugar Supreme Powernudge",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -12633,7 +12633,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Sugar Supreme Powernudge™"
+                "defaultGameName": "Sugar Supreme Powernudge"
             },
             {
                 "categoryId": 12,
@@ -13263,7 +13263,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 8902,
-                "name": "Da Vinci's Treasure™",
+                "name": "Da Vinci's Treasure",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -13273,7 +13273,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Da Vinci's Treasure™"
+                "defaultGameName": "Da Vinci's Treasure"
             },
             {
                 "categoryId": 12,
@@ -14086,7 +14086,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 17632,
-                "name": "Magician's Secrets™",
+                "name": "Magician's Secrets",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -14096,7 +14096,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Magician's Secrets™"
+                "defaultGameName": "Magician's Secrets"
             },
             {
                 "categoryId": 12,
@@ -14134,7 +14134,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 18736,
-                "name": "Snakes and Ladders Megadice™",
+                "name": "Snakes and Ladders Megadice",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -14144,7 +14144,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Snakes and Ladders Megadice™"
+                "defaultGameName": "Snakes and Ladders Megadice"
             },
             {
                 "categoryId": 12,
@@ -15185,7 +15185,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 21869,
-                "name": "Wild Wild Bananas™",
+                "name": "Wild Wild Bananas",
                 "newGame": true,
                 "open": true,
                 "popular": false,
@@ -15195,7 +15195,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Wild Wild Bananas™"
+                "defaultGameName": "Wild Wild Bananas"
             },
             {
                 "categoryId": 12,
@@ -16104,7 +16104,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 17856,
-                "name": "Gates of Valhalla™",
+                "name": "Gates of Valhalla",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -16114,7 +16114,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Gates of Valhalla™"
+                "defaultGameName": "Gates of Valhalla"
             },
             {
                 "categoryId": 12,
@@ -16975,7 +16975,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 24415,
-                "name": "The Wish Master™ Megaways",
+                "name": "The Wish Master Megaways",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -16985,7 +16985,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "The Wish Master™ Megaways"
+                "defaultGameName": "The Wish Master Megaways"
             },
             {
                 "categoryId": 17,
@@ -17210,7 +17210,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 17684,
-                "name": "Wild Depths™",
+                "name": "Wild Depths",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -17220,7 +17220,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Wild Depths™"
+                "defaultGameName": "Wild Depths"
             },
             {
                 "categoryId": 12,
@@ -17570,7 +17570,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 14067,
-                "name": "Floating Dragon Hold&Spin™",
+                "name": "Floating Dragon Hold&Spin",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -17580,7 +17580,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Floating Dragon Hold&Spin™"
+                "defaultGameName": "Floating Dragon Hold&Spin"
             },
             {
                 "categoryId": 12,
@@ -17718,7 +17718,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 13617,
-                "name": "Fishin' Reels™",
+                "name": "Fishin' Reels",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -17728,7 +17728,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Fishin' Reels™"
+                "defaultGameName": "Fishin' Reels"
             },
             {
                 "categoryId": 12,
@@ -18554,7 +18554,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 13485,
-                "name": "Gates of Olympus™",
+                "name": "Gates of Olympus",
                 "newGame": false,
                 "open": true,
                 "popular": true,
@@ -18568,7 +18568,7 @@
                 "customCategories": [
                     166
                 ],
-                "defaultGameName": "Gates of Olympus™",
+                "defaultGameName": "Gates of Olympus",
                 "op": 3,
                 "on": 0
             },
@@ -19428,7 +19428,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 23394,
-                "name": "Granny VS Zombies™",
+                "name": "Granny VS Zombies",
                 "newGame": true,
                 "open": true,
                 "popular": false,
@@ -19438,7 +19438,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Granny VS Zombies™"
+                "defaultGameName": "Granny VS Zombies"
             },
             {
                 "categoryId": 12,
@@ -19772,7 +19772,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 24073,
-                "name": "Diamond Cascade™",
+                "name": "Diamond Cascade",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -19782,7 +19782,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Diamond Cascade™"
+                "defaultGameName": "Diamond Cascade"
             },
             {
                 "categoryId": 12,
@@ -19925,7 +19925,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 24199,
-                "name": "Candy Blitz™",
+                "name": "Candy Blitz",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -19935,7 +19935,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Candy Blitz™"
+                "defaultGameName": "Candy Blitz"
             },
             {
                 "categoryId": 12,
@@ -20088,7 +20088,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 13030,
-                "name": "Mysterious Egypt™",
+                "name": "Mysterious Egypt",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -20098,7 +20098,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Mysterious Egypt™"
+                "defaultGameName": "Mysterious Egypt"
             },
             {
                 "categoryId": 12,
@@ -20798,7 +20798,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 17225,
-                "name": "Book of Fallen™",
+                "name": "Book of Fallen",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -20808,7 +20808,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Book of Fallen™"
+                "defaultGameName": "Book of Fallen"
             },
             {
                 "categoryId": 12,
@@ -21034,7 +21034,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 24069,
-                "name": "Sky Bounty™",
+                "name": "Sky Bounty",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -21044,7 +21044,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Sky Bounty™"
+                "defaultGameName": "Sky Bounty"
             },
             {
                 "categoryId": 12,
@@ -21311,7 +21311,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 17201,
-                "name": "Super X™",
+                "name": "Super X",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -21321,7 +21321,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Super X™"
+                "defaultGameName": "Super X"
             },
             {
                 "categoryId": 12,
@@ -22278,7 +22278,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 22630,
-                "name": "Cowboy Coins™",
+                "name": "Cowboy Coins",
                 "newGame": true,
                 "open": true,
                 "popular": false,
@@ -22288,7 +22288,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Cowboy Coins™"
+                "defaultGameName": "Cowboy Coins"
             },
             {
                 "categoryId": 12,
@@ -22527,7 +22527,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 22629,
-                "name": "The Dog House Multihold™",
+                "name": "The Dog House Multihold",
                 "newGame": true,
                 "open": true,
                 "popular": false,
@@ -22537,7 +22537,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "The Dog House Multihold™"
+                "defaultGameName": "The Dog House Multihold"
             },
             {
                 "categoryId": 12,
@@ -22727,7 +22727,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 14391,
-                "name": "Buffalo King Megaways™",
+                "name": "Buffalo King Megaways",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -22737,7 +22737,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Buffalo King Megaways™"
+                "defaultGameName": "Buffalo King Megaways"
             },
             {
                 "categoryId": 12,
@@ -22981,7 +22981,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 21001,
-                "name": "Big Bass Keeping it Reel™",
+                "name": "Big Bass Keeping it Reel",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -22991,7 +22991,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Big Bass Keeping it Reel™"
+                "defaultGameName": "Big Bass Keeping it Reel"
             },
             {
                 "categoryId": 12,
@@ -23660,7 +23660,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 20986,
-                "name": "9 Mad Hats™",
+                "name": "9 Mad Hats",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -23670,7 +23670,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "9 Mad Hats™"
+                "defaultGameName": "9 Mad Hats"
             },
             {
                 "categoryId": 12,
@@ -24011,7 +24011,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 15461,
-                "name": "Chicken Drop™",
+                "name": "Chicken Drop",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -24021,7 +24021,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Chicken Drop™"
+                "defaultGameName": "Chicken Drop"
             },
             {
                 "categoryId": 12,
@@ -24517,7 +24517,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 21691,
-                "name": "Gold Blitz™",
+                "name": "Gold Blitz",
                 "newGame": true,
                 "open": true,
                 "popular": true,
@@ -24528,7 +24528,7 @@
                 "maxBetBehind": 0,
                 "orderBy": 8,
                 "fppCoefficient": 0,
-                "defaultGameName": "Gold Blitz™",
+                "defaultGameName": "Gold Blitz",
                 "op": 8,
                 "on": 8
             },
@@ -24585,7 +24585,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 26335,
-                "name": "Jelly Belly™ MegaWays",
+                "name": "Jelly Belly MegaWays",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -24595,7 +24595,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Jelly Belly™ MegaWays"
+                "defaultGameName": "Jelly Belly MegaWays"
             },
             {
                 "categoryId": 12,
@@ -25227,7 +25227,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 23414,
-                "name": "Break Da Bank Again™ MEGAWAYS™",
+                "name": "Break Da Bank Again MEGAWAYS",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -25237,7 +25237,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Break Da Bank Again™ MEGAWAYS™"
+                "defaultGameName": "Break Da Bank Again MEGAWAYS"
             },
             {
                 "categoryId": 12,
@@ -25605,7 +25605,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 20758,
-                "name": "Fishin BIGGER Pots Of Gold™",
+                "name": "Fishin BIGGER Pots Of Gold",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -25615,7 +25615,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Fishin BIGGER Pots Of Gold™"
+                "defaultGameName": "Fishin BIGGER Pots Of Gold"
             },
             {
                 "categoryId": 12,
@@ -28525,7 +28525,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 22543,
-                "name": "Joker's Jewels Dice™",
+                "name": "Joker's Jewels Dice",
                 "newGame": true,
                 "open": true,
                 "popular": false,
@@ -28535,7 +28535,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Joker's Jewels Dice™"
+                "defaultGameName": "Joker's Jewels Dice"
             },
             {
                 "categoryId": 12,
@@ -28674,7 +28674,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 24157,
-                "name": "Big Bass Hold & Spinner Megaways™",
+                "name": "Big Bass Hold & Spinner Megaways",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -28684,7 +28684,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Big Bass Hold & Spinner Megaways™"
+                "defaultGameName": "Big Bass Hold & Spinner Megaways"
             },
             {
                 "categoryId": 12,
@@ -28707,7 +28707,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 17359,
-                "name": "Santa's Wonderland™",
+                "name": "Santa's Wonderland",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -28717,7 +28717,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Santa's Wonderland™"
+                "defaultGameName": "Santa's Wonderland"
             },
             {
                 "categoryId": 12,
@@ -29418,7 +29418,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 24076,
-                "name": "Rocket Blast Megaways™",
+                "name": "Rocket Blast Megaways",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -29428,7 +29428,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Rocket Blast Megaways™"
+                "defaultGameName": "Rocket Blast Megaways"
             },
             {
                 "categoryId": 12,
@@ -29556,7 +29556,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 18787,
-                "name": "Queenie™",
+                "name": "Queenie",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -29566,7 +29566,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Queenie™"
+                "defaultGameName": "Queenie"
             },
             {
                 "categoryId": 17,
@@ -32592,7 +32592,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 17737,
-                "name": "Gold Party™",
+                "name": "Gold Party",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -32602,7 +32602,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Gold Party™"
+                "defaultGameName": "Gold Party"
             },
             {
                 "categoryId": 12,
@@ -33602,7 +33602,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 13997,
-                "name": "Power of Thor Megaways™",
+                "name": "Power of Thor Megaways",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -33612,7 +33612,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Power of Thor Megaways™"
+                "defaultGameName": "Power of Thor Megaways"
             },
             {
                 "categoryId": 12,
@@ -34212,7 +34212,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 21660,
-                "name": "Sweet Powernudge™",
+                "name": "Sweet Powernudge",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -34222,7 +34222,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Sweet Powernudge™"
+                "defaultGameName": "Sweet Powernudge"
             },
             {
                 "categoryId": 12,
@@ -34278,7 +34278,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 21659,
-                "name": "Fury of Odin Megaways™",
+                "name": "Fury of Odin Megaways",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -34288,7 +34288,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Fury of Odin Megaways™"
+                "defaultGameName": "Fury of Odin Megaways"
             },
             {
                 "categoryId": 12,
@@ -37620,7 +37620,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 13179,
-                "name": "Madame Destiny Megaways™",
+                "name": "Madame Destiny Megaways",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -37630,7 +37630,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Madame Destiny Megaways™"
+                "defaultGameName": "Madame Destiny Megaways"
             },
             {
                 "categoryId": 12,
@@ -38952,7 +38952,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 24103,
-                "name": "Fishin Pots of Gold™: Gold Blitz™",
+                "name": "Fishin Pots of Gold: Gold Blitz",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -38962,13 +38962,13 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Fishin Pots of Gold™: Gold Blitz™"
+                "defaultGameName": "Fishin Pots of Gold: Gold Blitz"
             },
             {
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 17510,
-                "name": "Smugglers Cove™",
+                "name": "Smugglers Cove",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -38978,7 +38978,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Smugglers Cove™"
+                "defaultGameName": "Smugglers Cove"
             },
             {
                 "categoryId": 12,
@@ -42615,7 +42615,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 21268,
-                "name": "9 Coins™ Grand Gold Edition",
+                "name": "9 Coins Grand Gold Edition",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -42625,7 +42625,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "9 Coins™ Grand Gold Edition"
+                "defaultGameName": "9 Coins Grand Gold Edition"
             },
             {
                 "categoryId": 12,
@@ -43248,7 +43248,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 15423,
-                "name": "Book of Vikings™",
+                "name": "Book of Vikings",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -43258,7 +43258,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Book of Vikings™"
+                "defaultGameName": "Book of Vikings"
             },
             {
                 "categoryId": 12,
@@ -44606,7 +44606,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 17842,
-                "name": "Fishin' Pots Of Gold™",
+                "name": "Fishin' Pots Of Gold",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -44616,7 +44616,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Fishin' Pots Of Gold™"
+                "defaultGameName": "Fishin' Pots Of Gold"
             },
             {
                 "categoryId": 12,
@@ -45018,7 +45018,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 18732,
-                "name": "Colossal Cash Zone™",
+                "name": "Colossal Cash Zone",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -45028,7 +45028,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Colossal Cash Zone™"
+                "defaultGameName": "Colossal Cash Zone"
             },
             {
                 "categoryId": 12,
@@ -46089,7 +46089,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 17833,
-                "name": "Rock Vegas™",
+                "name": "Rock Vegas",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -46099,7 +46099,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Rock Vegas™"
+                "defaultGameName": "Rock Vegas"
             },
             {
                 "categoryId": 12,
@@ -46749,7 +46749,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 22544,
-                "name": "The Dog House Dice Show™",
+                "name": "The Dog House Dice Show",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -46759,7 +46759,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "The Dog House Dice Show™"
+                "defaultGameName": "The Dog House Dice Show"
             },
             {
                 "categoryId": 12,
@@ -46863,7 +46863,7 @@
                 "categoryId": 2,
                 "hours": "7/24",
                 "id": 25701,
-                "name": "9 Masks of Fire Roulette™",
+                "name": "9 Masks of Fire Roulette",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -46873,7 +46873,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "9 Masks of Fire Roulette™"
+                "defaultGameName": "9 Masks of Fire Roulette"
             },
             {
                 "categoryId": 12,
@@ -47163,7 +47163,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 23008,
-                "name": "Blazing Bison™ Gold Blitz™",
+                "name": "Blazing Bison Gold Blitz",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -47173,7 +47173,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Blazing Bison™ Gold Blitz™"
+                "defaultGameName": "Blazing Bison Gold Blitz"
             },
             {
                 "categoryId": 12,
@@ -47621,7 +47621,7 @@
                 "categoryId": 12,
                 "hours": "7/24",
                 "id": 19391,
-                "name": "Cash 'N Riches Megaways™",
+                "name": "Cash 'N Riches Megaways",
                 "newGame": false,
                 "open": true,
                 "popular": false,
@@ -47631,7 +47631,7 @@
                 "minBetBehind": 0,
                 "maxBetBehind": 0,
                 "fppCoefficient": 0,
-                "defaultGameName": "Cash 'N Riches Megaways™"
+                "defaultGameName": "Cash 'N Riches Megaways"
             },
             {
                 "categoryId": 12,
