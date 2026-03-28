@@ -140,6 +140,13 @@ O backend e os agentes LLM são **reais e funcionais** — apenas os dados de or
    - Desative temporariamente a verificação de apps
 4. **Execute o APK** baixado e siga as instruções de instalação
 
+### Usuário de teste
+
+| Campo | Valor |
+|---|---|
+| Login | `edson` |
+| Senha | `edson` |
+
 ---
 
 ## Estrutura do Repositório
