@@ -4,6 +4,8 @@ import { PlaySquareIcon, Radio } from "lucide-react-native";
 import { useEffect, useRef, useState } from "react";
 import { Image, ImageSourcePropType, Pressable, StyleSheet, Text, View } from "react-native";
 
+import { useBetSlip } from "@/contexts/BetSlipContext";
+
 export interface LiveTeamInfo {
   name: string;
   imageUrl: ImageSourcePropType;
@@ -22,6 +24,7 @@ interface LiveMatchPanelProps {
   awayTeam: LiveTeamInfo;
   odds: LiveMatchOdds;
   startSecond?: number;
+  leagueName?: string;
 }
 
 function randomDelta(base: number): number {
@@ -29,10 +32,19 @@ function randomDelta(base: number): number {
   return Math.round((base + delta) * 100) / 100;
 }
 
-export function LiveMatchPanel({ championshipName, homeTeam, awayTeam, odds, startSecond = 0 }: LiveMatchPanelProps) {
+export function LiveMatchPanel({ championshipName, homeTeam, awayTeam, odds, startSecond = 0, leagueName = "" }: LiveMatchPanelProps) {
   const [second, setSecond] = useState(startSecond);
   const [currentOdds, setCurrentOdds] = useState<LiveMatchOdds>(odds);
   const secondRef = useRef(startSecond);
+  const { toggle, isSelected } = useBetSlip();
+
+  const selId = (type: string) => `${homeTeam.name}-${awayTeam.name}-${type}`;
+
+  const ODD_BUTTONS: { type: "home" | "draw" | "away"; label: string; shortLabel: string; value: number }[] = [
+    { type: "home", label: homeTeam.name, shortLabel: "1", value: currentOdds.home },
+    { type: "draw", label: "Empate", shortLabel: "Empate", value: currentOdds.draw },
+    { type: "away", label: awayTeam.name, shortLabel: "2", value: currentOdds.away },
+  ];
 
   useEffect(() => {
     const clockTimer = setInterval(() => {
@@ -107,44 +119,23 @@ export function LiveMatchPanel({ championshipName, homeTeam, awayTeam, odds, sta
         <Text style={styles.resultadoLabel}>Resultado</Text>
 
         <View style={styles.oddsRow}>
-          <Pressable style={styles.outerButton}>
-            <LinearGradient
-              colors={["rgba(7,4,46,0.80)", "rgba(58,231,126,0.50)"]}
-              start={{ x: 0.2, y: 0 }}
-              end={{ x: 0.05, y: 1 }}
-              style={styles.gradientButton}
-            >
-              <Text style={styles.oddValue}>{currentOdds.home.toFixed(2)}</Text>
-              <View style={styles.oddSeparator} />
-              <Text style={styles.oddLabel}>1</Text>
-            </LinearGradient>
-          </Pressable>
-
-          <Pressable style={styles.outerButton}>
-            <LinearGradient
-              colors={["rgba(7,4,46,0.80)", "rgba(58,231,126,0.50)"]}
-              start={{ x: 0.2, y: 0 }}
-              end={{ x: 0.05, y: 1 }}
-              style={styles.gradientButton}
-            >
-              <Text style={styles.oddValue}>{currentOdds.draw.toFixed(2)}</Text>
-              <View style={styles.oddSeparator} />
-              <Text style={styles.oddLabel}>Empate</Text>
-            </LinearGradient>
-          </Pressable>
-
-          <Pressable style={styles.outerButton}>
-            <LinearGradient
-              colors={["rgba(7,4,46,0.80)", "rgba(58,231,126,0.50)"]}
-              start={{ x: 0.2, y: 0 }}
-              end={{ x: 0.05, y: 1 }}
-              style={styles.gradientButton}
-            >
-              <Text style={styles.oddValue}>{currentOdds.away.toFixed(2)}</Text>
-              <View style={styles.oddSeparator} />
-              <Text style={styles.oddLabel}>2</Text>
-            </LinearGradient>
-          </Pressable>
+          {ODD_BUTTONS.map((btn) => {
+            const selected = isSelected(selId(btn.type));
+            return (
+              <Pressable key={btn.type} style={styles.outerButton} onPress={() => toggle({ id: selId(btn.type), homeTeam: homeTeam.name, awayTeam: awayTeam.name, leagueName, oddLabel: btn.label, oddValue: btn.value })}>
+                <LinearGradient
+                  colors={selected ? [Colors.dark.primary, "rgba(58,231,126,0.8)"] : ["rgba(7,4,46,0.80)", "rgba(58,231,126,0.50)"]}
+                  start={{ x: 0.2, y: 0 }}
+                  end={{ x: 0.05, y: 1 }}
+                  style={styles.gradientButton}
+                >
+                  <Text style={[styles.oddValue, selected && styles.oddValueSelected]}>{btn.value.toFixed(2)}</Text>
+                  <View style={styles.oddSeparator} />
+                  <Text style={[styles.oddLabel, selected && styles.oddLabelSelected]}>{btn.shortLabel}</Text>
+                </LinearGradient>
+              </Pressable>
+            );
+          })}
         </View>
       </LinearGradient>
     </View>
@@ -283,11 +274,18 @@ const styles = StyleSheet.create({
     opacity: 1,
     marginVertical: 4,
   },
+  oddLabelSelected: {
+    color: Colors.dark.background,
+    fontWeight: "700",
+  },
   oddValue: {
     color: Colors.dark.text,
     fontSize: 13,
     fontWeight: "600",
     marginVertical: 4,
+  },
+  oddValueSelected: {
+    color: Colors.dark.background,
   },
   oddSeparator: {
     width: "100%",

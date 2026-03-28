@@ -1,7 +1,8 @@
-import { Image, type ImageSourcePropType, Pressable, StyleSheet, Text, View } from "react-native";
+import { Image, type ImageSourcePropType, Pressable, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 
 import { Colors } from "@/constants/theme";
+import { useBetSlip } from "@/contexts/BetSlipContext";
 
 export interface OddsRow {
   homeTeam: { name: string; imageUrl: ImageSourcePropType };
@@ -13,14 +14,23 @@ export interface OddsRow {
   away: number;
 }
 
-export function OddsTable({ rows }: { rows: OddsRow[] }) {
+export function OddsTable({ rows, leagueName = "" }: { rows: OddsRow[]; leagueName?: string }) {
+  const { toggle, isSelected } = useBetSlip();
+
+  const selId = (row: OddsRow, type: string) => `${row.homeTeam.name}-${row.awayTeam.name}-${type}`;
+
+  const ODD_TYPES: { type: string; label: string; getValue: (row: OddsRow) => number }[] = [
+    { type: "home", label: "1", getValue: (r) => r.home },
+    { type: "draw", label: "x", getValue: (r) => r.draw },
+    { type: "away", label: "2", getValue: (r) => r.away },
+  ];
   return (
     <View style={styles.container}>
       <View style={styles.headerRow}>
         <View style={styles.matchCell} />
-        {(["1", "x", "2"] as const).map((label) => (
-          <View key={label} style={styles.oddCell}>
-            <Text style={styles.headerLabel}>{label}</Text>
+        {ODD_TYPES.map((t) => (
+          <View key={t.type} style={styles.oddCell}>
+            <Text style={styles.headerLabel}>{t.label}</Text>
           </View>
         ))}
       </View>
@@ -48,21 +58,42 @@ export function OddsTable({ rows }: { rows: OddsRow[] }) {
             </View>
           </View>
 
-          {[row.home, row.draw, row.away].map((odd, i) => (
-            <Pressable
-              key={i}
-              style={({ pressed }) => [styles.oddButton, pressed && styles.oddButtonPressed]}
-            >
-              <LinearGradient
-                colors={["rgba(7,4,46,0.20)", "rgba(58,231,126,0.20)"]}
-                start={{ x: 0.5, y: 0 }}
-                end={{ x: 0.5, y: 1 }}
-                style={styles.oddGradient}
+          {ODD_TYPES.map((t) => {
+            const id = selId(row, t.type);
+            const selected = isSelected(id);
+            const value = t.getValue(row);
+            const oddLabel = t.type === "home" ? row.homeTeam.name : t.type === "away" ? row.awayTeam.name : "Empate";
+            return (
+              <TouchableOpacity
+                key={t.type}
+                style={[styles.oddButton, selected && styles.oddButtonSelected]}
+                onPress={() =>
+                  toggle({
+                    id,
+                    homeTeam: row.homeTeam.name,
+                    awayTeam: row.awayTeam.name,
+                    leagueName,
+                    oddLabel,
+                    oddValue: value,
+                  })
+                }
+                activeOpacity={0.85}
               >
-                <Text style={styles.oddValue}>{odd.toFixed(2)}</Text>
-              </LinearGradient>
-            </Pressable>
-          ))}
+                <LinearGradient
+                  colors={
+                    selected
+                      ? [Colors.dark.primary, "rgba(58,231,126,0.8)"]
+                      : ["rgba(7,4,46,0.20)", "rgba(58,231,126,0.20)"]
+                  }
+                  start={{ x: 0.5, y: 0 }}
+                  end={{ x: 0.5, y: 1 }}
+                  style={styles.oddGradient}
+                >
+                  <Text style={[styles.oddValue, selected && styles.oddValueSelected]}>{value.toFixed(2)}</Text>
+                </LinearGradient>
+              </TouchableOpacity>
+            );
+          })}
         </View>
       ))}
     </View>
@@ -86,6 +117,7 @@ const styles = StyleSheet.create({
   teamsRow: { flexDirection: "row", alignItems: "center", gap: 5 },
   metaRow: { flexDirection: "row", alignItems: "center", gap: 6 },
   oddButton: { width: 52, borderRadius: 8, borderWidth: 0.75, borderColor: Colors.dark.primary, overflow: "hidden" },
+  oddButtonSelected: { borderWidth: 1 },
   oddButtonPressed: { opacity: 0.7 },
   oddGradient: { paddingVertical: 6, alignItems: "center" },
   headerLabel: { color: Colors.dark.textMuted, fontSize: 12, fontWeight: "700", width: 52, textAlign: "center" },
@@ -96,4 +128,5 @@ const styles = StyleSheet.create({
   moreBadge: { backgroundColor: Colors.dark.primaryMuted, borderRadius: 4, paddingVertical: 1, paddingHorizontal: 4 },
   moreText: { color: Colors.dark.text, fontSize: 10, fontWeight: "500" },
   oddValue: { color: Colors.dark.primary, fontSize: 13, fontWeight: "600" },
+  oddValueSelected: { color: Colors.dark.background },
 });

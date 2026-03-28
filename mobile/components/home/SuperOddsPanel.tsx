@@ -2,6 +2,8 @@ import { Colors } from "@/constants/theme";
 import { LinearGradient } from "expo-linear-gradient";
 import { Image, ImageSourcePropType, Pressable, StyleSheet, Text, View } from "react-native";
 
+import { useBetSlip } from "@/contexts/BetSlipContext";
+
 export interface SuperOddsCondition {
   label: string;
 }
@@ -15,6 +17,9 @@ export interface SuperOddsPanelProps {
 }
 
 export function SuperOddsPanel({ championship, homeTeam, awayTeam, conditions, odd }: SuperOddsPanelProps) {
+  const { toggle, isSelected } = useBetSlip();
+  const selId = `${homeTeam.name}-${awayTeam.name}-super`;
+  const selected = isSelected(selId);
   return (
     <LinearGradient
       colors={["#568469", "rgba(50,70,90, 0.5)"]}
@@ -60,14 +65,14 @@ export function SuperOddsPanel({ championship, homeTeam, awayTeam, conditions, o
         ))}
       </View>
 
-      <Pressable style={styles.oddButton}>
+      <Pressable style={styles.oddButton} onPress={() => toggle({ id: selId, homeTeam: homeTeam.name, awayTeam: awayTeam.name, leagueName: championship, oddLabel: `${homeTeam.name} vs ${awayTeam.name}`, oddValue: odd })}>
         <LinearGradient
-          colors={["rgba(7,4,46,0.60)", "rgba(58,231,126,0.30)"]}
+          colors={selected ? [Colors.dark.primary, "rgba(58,231,126,0.8)"] : ["rgba(7,4,46,0.60)", "rgba(58,231,126,0.30)"]}
           start={{ x: 0.12, y: 0 }}
           end={{ x: 0.11, y: 1.5 }}
           style={styles.oddGradient}
         >
-          <Text style={styles.oddValue}>{odd.toFixed(2)}</Text>
+          <Text style={[styles.oddValue, selected && styles.oddValueSelected]}>{odd.toFixed(2)}</Text>
         </LinearGradient>
       </Pressable>
     </LinearGradient>
@@ -185,6 +190,9 @@ const styles = StyleSheet.create({
     color: Colors.dark.text,
     fontSize: 15,
     fontWeight: "700",
+  },
+  oddValueSelected: {
+    color: Colors.dark.background,
   },
   circleGradient: {
     position: "absolute",

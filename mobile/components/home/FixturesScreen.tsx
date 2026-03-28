@@ -113,7 +113,7 @@ function LeagueSection({ league }: { league: LeagueGroup }) {
           style={{ transform: [{ rotate: open ? "180deg" : "0deg" }] }}
         />
       </TouchableOpacity>
-      {open && <OddsTable rows={leagueToOddsRows(league)} />}
+      {open && <OddsTable rows={leagueToOddsRows(league)} leagueName={league.name} />}
     </>
   );
 }

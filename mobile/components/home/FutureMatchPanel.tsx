@@ -1,8 +1,10 @@
 import { Colors } from "@/constants/theme";
 import { LinearGradient } from "expo-linear-gradient";
-import { ChartColumnIcon, SquareStarIcon } from "lucide-react-native";
-import { useEffect, useRef, useState } from "react";
+import { ChartColumnIcon } from "lucide-react-native";
+import { Fragment, useEffect, useRef, useState } from "react";
 import { Image, ImageSourcePropType, Pressable, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+
+import { useBetSlip } from "@/contexts/BetSlipContext";
 
 export interface TeamInfo {
   name: string;
@@ -23,6 +25,7 @@ interface FutureMatchPanelProps {
   live?: boolean;
   startSecond?: number;
   more?: number;
+  leagueName?: string;
 }
 
 function randomDelta(base: number): number {
@@ -37,11 +40,26 @@ export function FutureMatchPanel({
   date,
   live = false,
   startSecond = 0,
-  more = Math.floor(Math.random() * 1000),
+  more = odds.away * 100 - 25,
+  leagueName = "",
 }: FutureMatchPanelProps) {
   const [second, setSecond] = useState(startSecond);
   const [currentOdds, setCurrentOdds] = useState<MatchOdds>(odds);
   const secondRef = useRef(startSecond);
+  const { toggle, isSelected } = useBetSlip();
+
+  const selId = (type: string) => `${homeTeam.name}-${awayTeam.name}-${type}`;
+
+  const handleOddPress = (type: "home" | "draw" | "away", label: string, value: number) => {
+    toggle({
+      id: selId(type),
+      homeTeam: homeTeam.name,
+      awayTeam: awayTeam.name,
+      leagueName,
+      oddLabel: label,
+      oddValue: value,
+    });
+  };
 
   useEffect(() => {
     if (!live) return;
@@ -72,6 +90,12 @@ export function FutureMatchPanel({
     ? `${String(Math.floor(second / 60)).padStart(2, "0")}:${String(second % 60).padStart(2, "0")}`
     : (date ?? "");
 
+  const ODD_BUTTONS: { type: "home" | "draw" | "away"; label: string; value: number }[] = [
+    { type: "home", label: homeTeam.name, value: currentOdds.home },
+    { type: "draw", label: "Empate", value: currentOdds.draw },
+    { type: "away", label: awayTeam.name, value: currentOdds.away },
+  ];
+
   return (
     <View style={styles.wrapper}>
       <LinearGradient
@@ -86,70 +110,60 @@ export function FutureMatchPanel({
             <Text style={styles.bbText}>BB</Text>
           </View>
           <View style={styles.timeContainer}>
-            {false && live && (
-              <View style={styles.liveBadge}>
-                <View style={styles.liveDot} />
-                <Text style={styles.liveText}>AO VIVO</Text>
-              </View>
-            )}
             <Text style={styles.moreText}>+{more}</Text>
           </View>
         </View>
         <View style={styles.bottomContainer}>
           <View style={styles.oddsContainer}>
-            <View style={styles.oddContainer}>
-              <View style={styles.teamContainer}>
-                <Image source={homeTeam.imageUrl} style={styles.teamImage} />
-                <Text style={styles.teamText} numberOfLines={1}>
-                  {homeTeam.name}
-                </Text>
-              </View>
-              <Pressable style={styles.outerButton}>
-                <LinearGradient
-                  colors={["rgba(7,4,46,0.20)", "rgba(58,231,126,0.20)"]}
-                  start={{ x: 0.5, y: 0 }}
-                  end={{ x: 0.5, y: 1 }}
-                  style={styles.gradientButton}
-                >
-                  <Text style={styles.textButton}>{currentOdds.home.toFixed(2)}</Text>
-                </LinearGradient>
-              </Pressable>
-            </View>
-            <View style={styles.separator} />
-            <View style={styles.oddContainer}>
-              <View style={styles.teamContainer}>
-                <Text style={styles.teamText}>Empate</Text>
-              </View>
-              <Pressable style={styles.outerButton}>
-                <LinearGradient
-                  colors={["rgba(7,4,46,0.20)", "rgba(58,231,126,0.20)"]}
-                  start={{ x: 0.5, y: 0 }}
-                  end={{ x: 0.5, y: 1 }}
-                  style={styles.gradientButton}
-                >
-                  <Text style={styles.textButton}>{currentOdds.draw.toFixed(2)}</Text>
-                </LinearGradient>
-              </Pressable>
-            </View>
-            <View style={styles.separator} />
-            <View style={styles.oddContainer}>
-              <View style={styles.teamContainer}>
-                <Image source={awayTeam.imageUrl} style={styles.teamImage} />
-                <Text style={styles.teamText} numberOfLines={1}>
-                  {awayTeam.name}
-                </Text>
-              </View>
-              <Pressable style={styles.outerButton}>
-                <LinearGradient
-                  colors={["rgba(7,4,46,0.20)", "rgba(58,231,126,0.20)"]}
-                  start={{ x: 0.5, y: 0 }}
-                  end={{ x: 0.5, y: 1 }}
-                  style={styles.gradientButton}
-                >
-                  <Text style={styles.textButton}>{currentOdds.away.toFixed(2)}</Text>
-                </LinearGradient>
-              </Pressable>
-            </View>
+            {ODD_BUTTONS.map((btn, i) => {
+              const selected = isSelected(selId(btn.type));
+              return (
+                <Fragment key={btn.type}>
+                  <View style={styles.oddContainer}>
+                    {i === 0 ? (
+                      <View style={styles.teamContainer}>
+                        <Image source={homeTeam.imageUrl} style={styles.teamImage} />
+                        <Text style={styles.teamText} numberOfLines={1}>
+                          {homeTeam.name}
+                        </Text>
+                      </View>
+                    ) : i === 2 ? (
+                      <View style={styles.teamContainer}>
+                        <Image source={awayTeam.imageUrl} style={styles.teamImage} />
+                        <Text style={styles.teamText} numberOfLines={1}>
+                          {awayTeam.name}
+                        </Text>
+                      </View>
+                    ) : (
+                      <View style={styles.teamContainer}>
+                        <Text style={styles.teamText}>Empate</Text>
+                      </View>
+                    )}
+                    <TouchableOpacity
+                      style={styles.outerButton}
+                      onPress={() => handleOddPress(btn.type, btn.label, btn.value)}
+                      activeOpacity={0.85}
+                    >
+                      <LinearGradient
+                        colors={
+                          selected
+                            ? [Colors.dark.primary, "rgba(58,231,126,0.8)"]
+                            : ["rgba(7,4,46,0.20)", "rgba(58,231,126,0.20)"]
+                        }
+                        start={{ x: 0.5, y: 0 }}
+                        end={{ x: 0.5, y: 1 }}
+                        style={[styles.gradientButton, selected && styles.gradientButtonSelected]}
+                      >
+                        <Text style={[styles.textButton, selected && styles.textButtonSelected]}>
+                          {btn.value.toFixed(2)}
+                        </Text>
+                      </LinearGradient>
+                    </TouchableOpacity>
+                  </View>
+                  {i < 2 && <View style={styles.separator} />}
+                </Fragment>
+              );
+            })}
           </View>
           <View style={styles.statsContainer}>
             <TouchableOpacity style={styles.statsButton}>
@@ -200,6 +214,7 @@ const styles = StyleSheet.create({
     borderColor: Colors.dark.primary,
     overflow: "hidden",
   },
+  gradientButtonSelected: {},
   timeText: {
     color: Colors.dark.text,
     fontSize: 13,
@@ -214,28 +229,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 4,
     fontWeight: "500",
   },
-  liveBadge: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 4,
-    backgroundColor: "rgba(231,58,58,0.20)",
-    borderRadius: 4,
-    paddingVertical: 1,
-    paddingHorizontal: 5,
-    borderWidth: 0.75,
-    borderColor: "#E73A3A",
-  },
-  liveDot: {
-    width: 5,
-    height: 5,
-    borderRadius: 3,
-    backgroundColor: "#E73A3A",
-  },
-  liveText: {
-    color: "#E73A3A",
-    fontSize: 10,
-    fontWeight: "700",
-  },
   moreText: {
     color: Colors.dark.text,
     backgroundColor: Colors.dark.primaryMuted,
@@ -247,6 +240,12 @@ const styles = StyleSheet.create({
   },
   textButton: {
     color: Colors.dark.text,
+    fontSize: 13,
+    fontWeight: "600",
+  },
+  textButtonSelected: {
+    color: Colors.dark.background,
+    fontWeight: "700",
   },
   bottomContainer: {
     flexDirection: "row",
