@@ -1,5 +1,6 @@
 import { Tabs } from "expo-router";
 import { useState } from "react";
+import { StyleSheet, View } from "react-native";
 
 import { AppHeader } from "../../components/layout/AppHeader";
 import { BottomBar } from "../../components/layout/BottomBar";
@@ -15,27 +16,35 @@ export default function TabsLayout() {
 
   return (
     <>
-      {showHeader && <AppHeader compact={compact} />}
-      <Tabs
-        tabBar={(props) => <BottomBar {...props} />}
-        screenOptions={{ headerShown: false }}
-        screenListeners={{
-          state: (e) => {
-            const routes = e.data?.state?.routes;
-            const index = e.data?.state?.index;
-            if (routes && index != null) {
-              setActiveTab(routes[index].name);
-            }
-          },
-        }}
-      >
-        <Tabs.Screen name="index" />
-        <Tabs.Screen name="prizes" />
-        <Tabs.Screen name="history" />
-        <Tabs.Screen name="support" />
-        <Tabs.Screen name="profile" />
-        <Tabs.Screen name="onboarding" options={{ href: null }} />
-      </Tabs>
+      {showHeader && <AppHeader compact={compact} section={activeTab} />}
+      <View style={styles.tabsContainer}>
+        <Tabs
+          tabBar={(props) => <BottomBar {...props} />}
+          screenOptions={{ headerShown: false }}
+          screenListeners={{
+            state: (e) => {
+              const routes = e.data?.state?.routes;
+              const index = e.data?.state?.index;
+              if (routes && index != null) {
+                setActiveTab(routes[index].name);
+              }
+            },
+          }}
+        >
+          <Tabs.Screen name="index" />
+          <Tabs.Screen name="prizes" />
+          <Tabs.Screen name="history" />
+          <Tabs.Screen name="support" />
+          <Tabs.Screen name="profile" />
+          <Tabs.Screen name="onboarding" options={{ href: null }} />
+        </Tabs>
+      </View>
     </>
   );
 }
+
+const styles = StyleSheet.create({
+  tabsContainer: {
+    flex: 1,
+  },
+});

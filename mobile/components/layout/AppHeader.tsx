@@ -1,12 +1,12 @@
 import { Bell, Plus, Search } from "lucide-react-native";
-import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useRouter } from "expo-router";
 
 import { useAuth } from "../../contexts/AuthContext";
-import { useSearch } from "../../contexts/SearchContext";
 import { Colors } from "../../constants/theme";
 import { CategoryButton } from "./CategoryButton";
+import { AgentSearchBar } from "./AgentSearchBar";
 import { LinearGradient } from "expo-linear-gradient";
 
 const LOGO = require("../../assets/images/logo-reduced-green.png");
@@ -18,11 +18,10 @@ const CATEGORIES = [
   { label: "Virtuais", icon: require("../../assets/icons/virtuals.png") },
 ] as const;
 
-export function AppHeader({ compact }: { compact: boolean }) {
+export function AppHeader({ compact, section = "index" }: { compact: boolean; section?: string }) {
   const insets = useSafeAreaInsets();
   const router = useRouter();
   const { isLoggedIn, user } = useAuth();
-  const { searchQuery, setSearchQuery } = useSearch();
 
   return (
     <View style={[styles.container, { paddingTop: insets.top + 8 }]}>
@@ -71,17 +70,7 @@ export function AppHeader({ compact }: { compact: boolean }) {
       </View>
       {compact && (
         <>
-          <View style={styles.searchRow}>
-            <Search size={16} color={Colors.dark.textMuted} style={styles.searchIcon} />
-            <TextInput
-              style={styles.searchInput}
-              placeholder="Pesquise aqui"
-              placeholderTextColor={Colors.dark.textMuted}
-              selectionColor={Colors.dark.primary}
-              value={searchQuery}
-              onChangeText={setSearchQuery}
-            />
-          </View>
+          <AgentSearchBar section={section} />
           <View style={styles.categoriesRow}>
             {CATEGORIES.map((cat) => (
               <CategoryButton key={cat.label} label={cat.label} icon={cat.icon} />
@@ -181,24 +170,6 @@ const styles = StyleSheet.create({
     color: Colors.dark.background,
     fontSize: 15,
     fontWeight: "700",
-  },
-  searchRow: {
-    flexDirection: "row",
-    alignItems: "center",
-    backgroundColor: Colors.dark.inputBackground,
-    borderRadius: 20,
-    paddingHorizontal: 12,
-    height: 40,
-    gap: 8,
-  },
-  searchIcon: {
-    flexShrink: 0,
-  },
-  searchInput: {
-    flex: 1,
-    color: Colors.dark.text,
-    fontSize: 14,
-    paddingVertical: 0,
   },
   categoriesRow: {
     flexDirection: "row",

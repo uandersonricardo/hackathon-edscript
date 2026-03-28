@@ -20,6 +20,7 @@ import { authenticateUser } from "./middlewares";
 import Ranking from "../lib/ranking";
 import SupportAgent from "../agents/support-agent";
 import OnboardingAgent from "../agents/onboarding-agent";
+import TipsterAgent from "../agents/tipster-agent";
 
 const router = Router();
 
@@ -552,6 +553,29 @@ router.delete("/support/chat", authenticateUser, (req, res) => {
   const session = getOrCreateSession(user);
   session.reset(user);
   res.json({ success: true, data: null });
+});
+
+// ── Tipster Agent Chat ─────────────────────────────────────────────────────────
+
+const tipsterSessions = new Map<string, TipsterAgent>();
+
+router.post("/tipster/chat", authenticateUser, async (req, res) => {
+  const user = Auth.findUser((req as any).userId)!;
+  const { message, section, sessionId } = req.body;
+
+  if (!message || typeof message !== "string" || !message.trim()) {
+    res.status(400).json({ success: false, message: "Message is required" });
+    return;
+  }
+
+  const key = `${user.id}:${sessionId ?? "default"}`;
+  if (!tipsterSessions.has(key)) {
+    tipsterSessions.set(key, new TipsterAgent(user, section ?? "plataforma"));
+  }
+
+  const session = tipsterSessions.get(key)!;
+  const response = await session.chat(message.trim());
+  res.json({ success: true, data: { response } });
 });
 
 // ── Onboarding Chat ───────────────────────────────────────────────────────────

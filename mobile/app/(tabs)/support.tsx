@@ -9,81 +9,38 @@ import {
   KeyboardAvoidingView,
   Platform,
   ActivityIndicator,
-  Animated,
 } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { LinearGradient } from "expo-linear-gradient";
-import { Send, Headphones, Trash2, RotateCwIcon } from "lucide-react-native";
+import { Send, Headphones, RotateCwIcon } from "lucide-react-native";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 
 import { Colors } from "../../constants/theme";
 import { useAuth } from "../../contexts/AuthContext";
 import { fetchChatHistory, sendMessage, resetChatHistory, type ChatMessage } from "../../requests/support";
+import { TypingDots, MessageBubble } from "../../components/agent/AgentChat";
 
-// ── Typing indicator ──────────────────────────────────────────────────────────
+const avatarStyle = {
+  width: 30,
+  height: 30,
+  borderRadius: 15,
+  backgroundColor: Colors.dark.secondary,
+  alignItems: "center" as const,
+  justifyContent: "center" as const,
+  flexShrink: 0 as const,
+};
 
-function TypingDots() {
-  const dots = [
-    useRef(new Animated.Value(0)).current,
-    useRef(new Animated.Value(0)).current,
-    useRef(new Animated.Value(0)).current,
-  ];
+const agentAvatar = (
+  <View style={avatarStyle}>
+    <Headphones size={14} color={Colors.dark.background} />
+  </View>
+);
 
-  useEffect(() => {
-    const anims = dots.map((dot, i) =>
-      Animated.loop(
-        Animated.sequence([
-          Animated.delay(i * 180),
-          Animated.timing(dot, { toValue: 1, duration: 300, useNativeDriver: true }),
-          Animated.timing(dot, { toValue: 0, duration: 300, useNativeDriver: true }),
-          Animated.delay((2 - i) * 180),
-        ]),
-      ),
-    );
-    anims.forEach((a) => a.start());
-    return () => anims.forEach((a) => a.stop());
-  }, []);
-
-  return (
-    <View style={styles.typingBubble}>
-      <View style={styles.agentAvatarSmall}>
-        <Headphones size={12} color={Colors.dark.background} />
-      </View>
-      <View style={styles.typingDots}>
-        {dots.map((dot, i) => (
-          <Animated.View
-            key={i}
-            style={[
-              styles.dot,
-              {
-                opacity: dot,
-                transform: [{ translateY: dot.interpolate({ inputRange: [0, 1], outputRange: [0, -4] }) }],
-              },
-            ]}
-          />
-        ))}
-      </View>
-    </View>
-  );
-}
-
-// ── Message bubble ────────────────────────────────────────────────────────────
-
-function MessageBubble({ message }: { message: ChatMessage }) {
-  const isUser = message.from === "user";
-  return (
-    <View style={[styles.bubbleRow, isUser ? styles.bubbleRowUser : styles.bubbleRowAgent]}>
-      {!isUser && (
-        <View style={styles.agentAvatar}>
-          <Headphones size={14} color={Colors.dark.background} />
-        </View>
-      )}
-      <View style={[styles.bubble, isUser ? styles.bubbleUser : styles.bubbleAgent]}>
-        <Text style={[styles.bubbleText, isUser && styles.bubbleTextUser]}>{message.content}</Text>
-      </View>
-    </View>
-  );
-}
+const agentAvatarSmall = (
+  <View style={avatarStyle}>
+    <Headphones size={12} color={Colors.dark.background} />
+  </View>
+);
 
 // ── Screen ────────────────────────────────────────────────────────────────────
 
@@ -211,9 +168,9 @@ export default function Support() {
             keyboardShouldPersistTaps="handled"
           >
             {localMessages.map((msg) => (
-              <MessageBubble key={msg.id} message={msg} />
+              <MessageBubble key={msg.id} message={msg} agentAvatar={agentAvatar} />
             ))}
-            {isTyping && <TypingDots />}
+            {isTyping && <TypingDots agentAvatar={agentAvatarSmall} />}
           </ScrollView>
         )}
 
@@ -336,85 +293,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-  },
-  bubbleRow: {
-    flexDirection: "row",
-    alignItems: "flex-end",
-    gap: 8,
-    maxWidth: "85%",
-  },
-  bubbleRowUser: {
-    alignSelf: "flex-end",
-    flexDirection: "row-reverse",
-  },
-  bubbleRowAgent: {
-    alignSelf: "flex-start",
-  },
-  agentAvatar: {
-    width: 30,
-    height: 30,
-    borderRadius: 15,
-    backgroundColor: Colors.dark.secondary,
-    borderWidth: 1.5,
-    borderColor: Colors.dark.secondary,
-    alignItems: "center",
-    justifyContent: "center",
-    flexShrink: 0,
-  },
-  bubble: {
-    borderRadius: 16,
-    paddingHorizontal: 14,
-    paddingVertical: 10,
-    maxWidth: "100%",
-  },
-  bubbleAgent: {
-    backgroundColor: Colors.dark.inputBackground,
-    borderBottomLeftRadius: 4,
-  },
-  bubbleUser: {
-    backgroundColor: Colors.dark.primary,
-    borderBottomRightRadius: 4,
-  },
-  bubbleText: {
-    color: Colors.dark.text,
-    fontSize: 14,
-    lineHeight: 20,
-  },
-  bubbleTextUser: {
-    color: Colors.dark.background,
-  },
-  // ── Typing ──
-  typingBubble: {
-    flexDirection: "row",
-    alignItems: "flex-end",
-    gap: 8,
-    alignSelf: "flex-start",
-  },
-  agentAvatarSmall: {
-    width: 30,
-    height: 30,
-    borderRadius: 15,
-    backgroundColor: Colors.dark.secondary,
-    borderWidth: 1.5,
-    borderColor: Colors.dark.secondary,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  typingDots: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 5,
-    backgroundColor: Colors.dark.inputBackground,
-    borderRadius: 16,
-    borderBottomLeftRadius: 4,
-    paddingHorizontal: 14,
-    paddingVertical: 14,
-  },
-  dot: {
-    width: 7,
-    height: 7,
-    borderRadius: 3.5,
-    backgroundColor: Colors.dark.textMuted,
   },
   // ── Input bar ──
   inputBar: {

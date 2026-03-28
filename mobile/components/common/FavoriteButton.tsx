@@ -22,12 +22,12 @@ const styles = StyleSheet.create({
     width: 22,
     height: 22,
     borderRadius: 11,
-    backgroundColor: Colors.dark.primary,
+    backgroundColor: Colors.dark.text,
     alignItems: "center",
     justifyContent: "center",
   },
   circleFavorited: {
-    backgroundColor: Colors.dark.secondary,
+    backgroundColor: Colors.dark.primary,
   },
   icon: {
     color: Colors.dark.card,

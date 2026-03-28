@@ -21,7 +21,8 @@
       "suspicious": {
         "noUnknownAtRules": "off",
         "noArrayIndexKey": "off",
-        "noExplicitAny": "off"
+        "noExplicitAny": "off",
+        "useIterableCallbackReturn": "off"
       },
       "complexity": {
         "noStaticOnlyClass": "off"
