@@ -250,9 +250,7 @@ const styles = StyleSheet.create({
     fontWeight: "500",
     textAlign: "center",
   },
-  logoWrapper: {
-    boxShadow: `0px 0px 4px ${Colors.dark.primary}`,
-  },
+  logoWrapper: {},
   logo: {
     width: 120,
     height: 120,
@@ -260,6 +258,7 @@ const styles = StyleSheet.create({
     borderRadius: 60,
     borderColor: Colors.dark.primary,
     borderWidth: 4,
+    boxShadow: `0px 0px 4px ${Colors.dark.primary}`,
   },
   welcomeSub: {
     color: Colors.dark.text,

@@ -184,7 +184,6 @@ const styles = StyleSheet.create({
   },
   crown: {
     marginBottom: 2,
-    boxShadow: `0px 0px 4px ${Colors.dark.secondary}`,
   },
   podiumAvatarRing: {
     borderWidth: 3,

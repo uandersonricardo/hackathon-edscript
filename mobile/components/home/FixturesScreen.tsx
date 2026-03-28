@@ -160,7 +160,7 @@ export function FixturesScreen() {
           <TouchableOpacity style={styles.backButton} activeOpacity={0.75}>
             <ChevronLeft size={22} color={Colors.dark.text} />
           </TouchableOpacity>
-          <Text style={styles.headerTitle}>Cassino</Text>
+          <Text style={styles.headerTitle}>Esportes</Text>
           <TouchableOpacity
             style={[styles.filterButton, activeCount > 0 && styles.filterButtonActive]}
             onPress={() => setFilterModalOpen(true)}
