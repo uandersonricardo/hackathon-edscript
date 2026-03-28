@@ -20,30 +20,91 @@ Projeto desenvolvido para o **Hackathon EDScript 2026**, Desafio 01: **Mobile & 
 
 ---
 
-## O que foi desenvolvido
+## Funcionalidades
 
 ### Sistema Multiagente
-Três agentes de IA cobrindo o ciclo de vida completo do usuário:
+Três agentes de IA cobrindo o ciclo de vida completo do usuário, com LLMs reais via OpenRouter e backend próprio:
 
 | Agente | Função |
-|---|---|
-| **Onboarding** | Integração e ativação de novos usuários |
-| **Tipster** | Recomendações de apostas personalizadas em tempo real |
-| **Suporte** | Atendimento conversacional inteligente |
+|---|---|---|
+| **Onboarding** | Conduz o novo usuário pelo cadastro, explica funcionalidades e personaliza a experiência inicial com base nas preferências coletadas |
+| **Tipster** | Analisa as partidas disponíveis e sugere apostas personalizadas contextualmente à tela que o usuário está navegando |
+| **Suporte** | Atendimento conversacional com histórico persistido, responde dúvidas, resolve problemas e encaminha ações dentro do app |
+
+Cada agente mantém **sessão e histórico de conversa** no backend, garantindo contexto entre interações.
 
 ### Nova UI/UX
 - **Acessibilidade**: modo claro, alto contraste, redução de animações, texto maior — pensado para o público mais velho
-- **Simplicidade**: fluxos mais claros, menos cliques, ícones maiores
-- **Retenção e exploração**: vídeo do jogo, estatísticas, Copa do Mundo, limitação de valor de aposta, homepage personalizada por análise do perfil do cliente
+- **Simplicidade**: fluxos mais claros, menos cliques, ícones maiores, navegação hierárquica mais direta
+- **Retenção e exploração**: prévia em vídeo dos jogos, estatísticas de partidas, seção Copa do Mundo, homepage personalizada com base no perfil do cliente
+- **Responsabilidade**: limites de aposta e depósito configuráveis (diário, semanal, mensal), exclusão temporária e auto-exclusão permanente de conta
+
+### Homepage Personalizada
+A página inicial é gerada dinamicamente com base no perfil do usuário. Um banco de dados RAG simulado armazena embeddings de perfis e jogos, e ao fazer login o sistema recupera as categorias e jogos mais relevantes para aquele usuário, reordenando a homepage sem intervenção manual.
 
 ### Gamificação
-- Mini-jogo integrado
-- Roleta da Sorte
-- Ranking semanal de jogadores
-- Fluxo de gamificação mais claro com níveis (Bronze → Prata → Ouro → Platina → Ametista)
+- **Roleta da Sorte**: roleta animada com prêmios, acessível pela homepage
+- **Mini-jogo**: jogo integrado para engajamento entre apostas
+- **Ranking semanal**: placar dos maiores ganhos da semana com avatares e níveis
+- **Sistema de níveis**: progressão clara — Bronze → Prata → Ouro → Platina → Ametista — com badge visível no perfil
 
 ### Aumento de Receita
-- Depósito recorrente via **PIX automático**
+- Depósito recorrente via **PIX automático** com valor e frequência configuráveis pelo usuário
+
+---
+
+## Arquitetura
+
+```
+┌─────────────────────┐        ┌─────────────────────────────┐
+│   React Native App  │ ──────▶│        Express Backend      │
+│   (Expo)            │        │                             │
+│                     │        │  ┌──────────────────────┐   │
+│  - UI/UX            │        │  │   Agente Onboarding  │   │
+│  - Contexts         │        │  │   Agente Tipster     │   │
+│  - React Query      │        │  │   Agente Suporte     │   │
+│  - Expo Router      │        │  └──────────┬───────────┘   │
+└─────────────────────┘        │             │               │
+                               │  ┌──────────▼───────────┐   │
+                               │  │   OpenRouter (LLMs)  │   │
+                               │  │  GLM / GPT / Gemini  │   │
+                               │  └──────────────────────┘   │
+                               │                             │
+                               │  ┌──────────────────────┐   │
+                               │  │  RAG Database (mock) │   │
+                               │  │  Embeddings de perfil│   │
+                               │  └──────────────────────┘   │
+                               └─────────────────────────────┘
+```
+
+### Fluxo dos Agentes
+
+```
+Usuário abre o app
+      │
+      ▼
+Agente Onboarding ──▶ coleta preferências ──▶ personaliza homepage via RAG
+      │
+      ▼
+Navega pelo app ──▶ Agente Tipster (contextual por tela)
+      │
+      ▼
+Tem dúvida/problema ──▶ Agente Suporte (histórico persistido)
+```
+
+---
+
+## Dados
+
+Os dados utilizados são **mockados a partir de fontes reais**, com freeze no dia **21/03/2025**:
+
+| Fonte | Dados |
+|---|---|
+| **Sporting Tech** | Catálogo de jogos, slots, provedores e metadados de produtos |
+| **BetsAPI** | Partidas ao vivo, fixtures, odds e estatísticas de esportes |
+| **RAG Database (mock)** | Embeddings de perfis de usuários e histórico de preferências para personalização da homepage |
+
+O backend e os agentes LLM são **reais e funcionais** — apenas os dados de origem são mockados/congelados para garantir consistência durante a apresentação.
 
 ---
 
@@ -53,7 +114,8 @@ Três agentes de IA cobrindo o ciclo de vida completo do usuário:
 |---|---|
 | Mobile | React Native (Expo) |
 | Backend | Node.js + Express |
-| LLMs | OpenRouter — GLM 4.5 Air / GPT-4o Mini / Gemini 3.0 Flash |
+| LLMs | OpenRouter — GLM 4.5 Air / GPT-5 Mini / Gemini 3.0 Flash |
+| Personalização | RAG com embeddings mockados |
 | Deploy | Render |
 
 **Backend:** https://backend-edscript-munix.onrender.com
